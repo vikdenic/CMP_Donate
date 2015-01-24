@@ -26,12 +26,14 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
             Profile.queryForCurrentUserProfile({ (profile, error) -> Void in
                 UniversalProfile.sharedInstance.profile = profile
             })
-
-            Film.queryAllFilms({ (films, error) -> Void in
-                self.filmsArray = films as [Film]
-                self.tableView.reloadData()
-            })
         }
+    }
+
+    override func viewDidAppear(animated: Bool) {
+        Film.queryAllFilms({ (films, error) -> Void in
+            self.filmsArray = films as [Film]
+            self.tableView.reloadData()
+        })
     }
 
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell

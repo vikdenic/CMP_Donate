@@ -20,6 +20,9 @@ class LoginViewController: UIViewController {
             if error == nil
             {
                 self.dismissViewControllerAnimated(true, completion: { () -> Void in
+                    Profile.queryForCurrentUserProfile({ (profile, error) -> Void in
+                        UniversalProfile.sharedInstance.profile = profile
+                    })
                 })
             }
             else
