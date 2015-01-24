@@ -37,6 +37,9 @@
 		930EFDC01A73918200AF96AF /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 930EFDBF1A73918200AF96AF /* Profile.swift */; };
 		930EFDC21A73918E00AF96AF /* CrewMember.swift in Sources */ = {isa = PBXBuildFile; fileRef = 930EFDC11A73918E00AF96AF /* CrewMember.swift */; };
 		9358A11F1A7394DC00CCE374 /* CMPConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9358A11E1A7394DC00CCE374 /* CMPConstants.swift */; };
+		9358A1261A739BB100CCE374 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9358A1251A739BB100CCE374 /* ProfileViewController.swift */; };
+		9358A1281A739E1700CCE374 /* UniversalProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9358A1271A739E1700CCE374 /* UniversalProfile.swift */; };
+		9358A12A1A741B6500CCE374 /* FeedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9358A1291A741B6500CCE374 /* FeedTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,6 +88,9 @@
 		930EFDBF1A73918200AF96AF /* Profile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
 		930EFDC11A73918E00AF96AF /* CrewMember.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CrewMember.swift; sourceTree = "<group>"; };
 		9358A11E1A7394DC00CCE374 /* CMPConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CMPConstants.swift; sourceTree = "<group>"; };
+		9358A1251A739BB100CCE374 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		9358A1271A739E1700CCE374 /* UniversalProfile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UniversalProfile.swift; path = CMP_Donate/UniversalProfile.swift; sourceTree = "<group>"; };
+		9358A1291A741B6500CCE374 /* FeedTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,6 +153,7 @@
 				9358A1211A73950200CCE374 /* Utilities */,
 				9358A1201A7394F600CCE374 /* Data Model */,
 				930EFDB81A73910000AF96AF /* ViewControllers */,
+				9358A12B1A741B6E00CCE374 /* Custom Cells */,
 				930EFD741A738F1400AF96AF /* Images.xcassets */,
 				930EFD761A738F1400AF96AF /* LaunchScreen.xib */,
 				930EFD971A738F3800AF96AF /* Frameworks */,
@@ -211,6 +218,7 @@
 				930EFDAE1A73902A00AF96AF /* FeedViewController.swift */,
 				930EFDB21A73905600AF96AF /* RegisterViewController.swift */,
 				930EFDB01A73904A00AF96AF /* LoginViewController.swift */,
+				9358A1251A739BB100CCE374 /* ProfileViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -219,6 +227,7 @@
 			isa = PBXGroup;
 			children = (
 				930EFDB91A73916400AF96AF /* User.swift */,
+				9358A1271A739E1700CCE374 /* UniversalProfile.swift */,
 				930EFDBB1A73916C00AF96AF /* Event.swift */,
 				930EFDBD1A73917B00AF96AF /* Film.swift */,
 				930EFDBF1A73918200AF96AF /* Profile.swift */,
@@ -235,6 +244,14 @@
 			);
 			name = Utilities;
 			path = ..;
+			sourceTree = "<group>";
+		};
+		9358A12B1A741B6E00CCE374 /* Custom Cells */ = {
+			isa = PBXGroup;
+			children = (
+				9358A1291A741B6500CCE374 /* FeedTableViewCell.swift */,
+			);
+			name = "Custom Cells";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -342,7 +359,10 @@
 				930EFDAF1A73902A00AF96AF /* FeedViewController.swift in Sources */,
 				930EFD6E1A738F1400AF96AF /* AppDelegate.swift in Sources */,
 				930EFDC21A73918E00AF96AF /* CrewMember.swift in Sources */,
+				9358A12A1A741B6500CCE374 /* FeedTableViewCell.swift in Sources */,
 				930EFDBA1A73916400AF96AF /* User.swift in Sources */,
+				9358A1261A739BB100CCE374 /* ProfileViewController.swift in Sources */,
+				9358A1281A739E1700CCE374 /* UniversalProfile.swift in Sources */,
 				930EFDBC1A73916C00AF96AF /* Event.swift in Sources */,
 				930EFDB31A73905600AF96AF /* RegisterViewController.swift in Sources */,
 				9358A11F1A7394DC00CCE374 /* CMPConstants.swift in Sources */,

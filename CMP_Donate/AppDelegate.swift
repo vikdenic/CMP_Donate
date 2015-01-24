@@ -3,7 +3,7 @@
 //  CMP_Donate
 //
 //  Created by Vik Denic on 1/24/15.
-//  Copyright (c) 2015 mobilemakers. All rights reserved.
+//  Copyright (c) 2015 Chicago Media Project. All rights reserved.
 //
 
 import UIKit
@@ -15,12 +15,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
 
+        //MARK: Parse
         //TODO: Local DataStore
         //Parse.enableLocalDatastore()
-
         Parse.setApplicationId("WKvDyqa7Hs23bkdbhPqAM4eadylYMxRlKTboJ56G", clientKey: "JhKakKAmnmp5Zt1dcrlXYtn4phHe9yf6Z3GmxuTp")
-
         PFAnalytics.trackAppOpenedWithLaunchOptionsInBackground(launchOptions, block: nil)
+
+        //MARK: Singleton
+        if PFUser.currentUser() != nil
+        {
+            Profile.queryForCurrentUserProfile({ (profile, error) -> Void in
+                UniversalProfile.sharedInstance.profile = profile
+            })
+        }
+        
         return true
     }
 

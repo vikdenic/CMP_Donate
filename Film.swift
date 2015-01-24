@@ -20,11 +20,22 @@ class Film: PFObject, PFSubclassing
         return "Film"
     }
 
-    @NSManaged var title : NSDate!
-    @NSManaged var synopsis : NSDate!
+    @NSManaged var title : String!
+    @NSManaged var synopsis : String!
     @NSManaged var imageFile : PFFile!
     @NSManaged var videoFile : PFFile!
     @NSManaged var productionTeam : [CrewMember]!
     @NSManaged var productionStatus : String!
     @NSManaged var event : Event!
+
+    class func queryAllFilms(completed:(films:[Film], error:NSError!)->Void)
+    {
+        var query = Film.query()
+        query.includeKey("event")
+        query.includeKey("productionTeam")
+
+        query.findObjectsInBackgroundWithBlock({ (films, error) -> Void in
+            completed(films: films as [Film], error: nil)
+        })
+    }
 }
