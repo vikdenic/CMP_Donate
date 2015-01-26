@@ -3,7 +3,7 @@
 //  CMP_Donate
 //
 //  Created by Vik Denic on 1/25/15.
-//  Copyright (c) 2015 mobilemakers. All rights reserved.
+//  Copyright (c) 2015 Chicago Media Project. All rights reserved.
 //
 
 import UIKit
@@ -31,7 +31,7 @@ class IndividualFilmViewController: UIViewController {
 
         synopsisTextView.text = film.synopsis
         let size = synopsisTextView.contentSize;
-        self.heightConstraint.constant = size.height;    }
+    }
 
     func resizeTextView()
     {

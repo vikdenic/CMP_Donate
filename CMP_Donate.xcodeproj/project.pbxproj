@@ -10,7 +10,6 @@
 		930EFD6E1A738F1400AF96AF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 930EFD6D1A738F1400AF96AF /* AppDelegate.swift */; };
 		930EFD731A738F1400AF96AF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 930EFD711A738F1400AF96AF /* Main.storyboard */; };
 		930EFD751A738F1400AF96AF /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 930EFD741A738F1400AF96AF /* Images.xcassets */; };
-		930EFD781A738F1400AF96AF /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 930EFD761A738F1400AF96AF /* LaunchScreen.xib */; };
 		930EFD841A738F1500AF96AF /* CMP_DonateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 930EFD831A738F1500AF96AF /* CMP_DonateTests.swift */; };
 		930EFD921A738F2F00AF96AF /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 930EFD8D1A738F2F00AF96AF /* Bolts.framework */; };
 		930EFD931A738F2F00AF96AF /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 930EFD8E1A738F2F00AF96AF /* Parse.framework */; };
@@ -61,7 +60,6 @@
 		930EFD6D1A738F1400AF96AF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		930EFD721A738F1400AF96AF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		930EFD741A738F1400AF96AF /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		930EFD771A738F1400AF96AF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		930EFD7D1A738F1500AF96AF /* CMP_DonateTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CMP_DonateTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		930EFD821A738F1500AF96AF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		930EFD831A738F1500AF96AF /* CMP_DonateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CMP_DonateTests.swift; sourceTree = "<group>"; };
@@ -163,7 +161,6 @@
 				9358A12B1A741B6E00CCE374 /* Custom Cells */,
 				936C58011A75E1080027343A /* Third Party UI */,
 				930EFD741A738F1400AF96AF /* Images.xcassets */,
-				930EFD761A738F1400AF96AF /* LaunchScreen.xib */,
 				930EFD971A738F3800AF96AF /* Frameworks */,
 				930EFD6B1A738F1400AF96AF /* Supporting Files */,
 				930EFDB41A7390B100AF96AF /* CMP_Donate-Bridging-Header.h */,
@@ -355,7 +352,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				930EFD731A738F1400AF96AF /* Main.storyboard in Resources */,
-				930EFD781A738F1400AF96AF /* LaunchScreen.xib in Resources */,
 				930EFD751A738F1400AF96AF /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -418,14 +414,6 @@
 				930EFD721A738F1400AF96AF /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		930EFD761A738F1400AF96AF /* LaunchScreen.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				930EFD771A738F1400AF96AF /* Base */,
-			);
-			name = LaunchScreen.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -512,6 +500,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -529,6 +518,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
