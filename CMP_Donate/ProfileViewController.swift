@@ -18,16 +18,30 @@ class ProfileViewController: UIViewController, UITableViewDataSource, UITableVie
 
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
     {
+        if indexPath.row == 0
+        {
             let cell = tableView.dequeueReusableCellWithIdentifier(kProfileCell) as ProfileTableViewCell
             cell.profilePicImageView.file = kProfile?.imageFile
             cell.profilePicImageView.loadInBackground(nil)
             cell.clipsToBounds = true
             cell.coverPhotoImageView.clipsToBounds = true
             return cell
+        }
+        else
+        {
+            let cell = tableView.dequeueReusableCellWithIdentifier(kFundedFilmCell) as FundedFilmTableViewCell
+            let film = kProfile?.fundedFilms[indexPath.row - 1]
+            cell.filmImageView.file = film?.imageFile
+            cell.filmImageView.loadInBackground(nil)
+            cell.filmTitleLabel.text = film?.title
+            cell.clipsToBounds = true
+            cell.filmImageView.clipsToBounds = true
+            return cell
+        }
     }
 
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
-        return 1
+            return kProfile!.fundedFilms.count + 1
     }
 }

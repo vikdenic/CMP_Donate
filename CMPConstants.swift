@@ -20,3 +20,4 @@ let kFundToPaySegue = "FundToPaySegue"
 
 let kFilmCell = "FilmCell"
 let kProfileCell = "ProfileCell"
+let kFundedFilmCell = "FundedFilmCell"
