@@ -50,4 +50,13 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
     {
         return filmsArray.count
     }
+
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)
+    {
+        if segue.identifier == kFeedToIndividualFilmSegue
+        {
+            let individualFilmVC = segue.destinationViewController as IndividualFilmViewController
+            individualFilmVC.film = filmsArray[tableView.indexPathForSelectedRow()!.row]
+        }
+    }
 }

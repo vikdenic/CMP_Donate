@@ -8,5 +8,7 @@
 
 import Foundation
 
-let kFeedToRegisterSegue = "FeedToRegisterSegue"
 let kProfile = UniversalProfile.sharedInstance.profile
+
+let kFeedToRegisterSegue = "FeedToRegisterSegue"
+let kFeedToIndividualFilmSegue = "FeedToIndividualFilmSegue"

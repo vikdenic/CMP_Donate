@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C81h" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="JU9-Cx-VXM">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -275,6 +276,7 @@
                                             <outlet property="filmImageView" destination="Dbd-gm-Q2n" id="zyz-uF-fwa"/>
                                             <outlet property="overlayView" destination="kKD-HC-Hwp" id="RM7-rr-urG"/>
                                             <outlet property="titleLabel" destination="Rt3-yK-yVR" id="VvM-Ap-iCd"/>
+                                            <segue destination="tO2-Vz-vQo" kind="show" identifier="FeedToIndividualFilmSegue" id="frH-VJ-nbn"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -335,6 +337,69 @@
             </objects>
             <point key="canvasLocation" x="1759.5" y="434"/>
         </scene>
+        <!--Individual Film View Controller-->
+        <scene sceneID="sJV-2k-9Iq">
+            <objects>
+                <viewController id="tO2-Vz-vQo" customClass="IndividualFilmViewController" customModule="CMP_Donate" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Uso-K2-Kne"/>
+                        <viewControllerLayoutGuide type="bottom" id="N4O-wM-Ymn"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="tXf-7B-JnM">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ySC-1G-0Sz" customClass="PFImageView">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="180" id="VIC-eh-NOK"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="VIC-eh-NOK"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="VIC-eh-NOK"/>
+                                    </mask>
+                                </variation>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ySC-1G-0Sz" firstAttribute="leading" secondItem="tXf-7B-JnM" secondAttribute="leadingMargin" constant="-16" id="LuB-5e-PKH"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ySC-1G-0Sz" secondAttribute="trailing" constant="-16" id="hW0-En-gjC"/>
+                            <constraint firstItem="ySC-1G-0Sz" firstAttribute="top" secondItem="Uso-K2-Kne" secondAttribute="bottom" id="x3y-xH-vTb"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="ySC-1G-0Sz"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="LuB-5e-PKH"/>
+                                <exclude reference="hW0-En-gjC"/>
+                                <exclude reference="x3y-xH-vTb"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="ySC-1G-0Sz"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="LuB-5e-PKH"/>
+                                <include reference="hW0-En-gjC"/>
+                                <include reference="x3y-xH-vTb"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="filmImageView" destination="ySC-1G-0Sz" id="uwP-8e-Lk5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8om-qr-W8y" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2475" y="434"/>
+        </scene>
         <!--Projects-->
         <scene sceneID="PYo-f2-hTT">
             <objects>
@@ -363,6 +428,7 @@
                         <viewControllerLayoutGuide type="bottom" id="REL-5j-gl4"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="lQD-bf-utf">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Jh5-7z-jhF" userLabel="CoverImageView">
