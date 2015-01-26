@@ -8,25 +8,26 @@
 
 import UIKit
 
-class ProfileViewController: UIViewController
+class ProfileViewController: UIViewController, UITableViewDataSource, UITableViewDelegate
 {
-    @IBOutlet var profileImageView: PFImageView!
-
     override func viewDidLoad()
     {
         super.viewDidLoad()
-        setProfileData()
+        navigationItem.title = kProfile?.name
     }
 
-    func setProfileData()
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
     {
-        profileImageView.layer.cornerRadius = 50
-        profileImageView.clipsToBounds = true
+            let cell = tableView.dequeueReusableCellWithIdentifier(kProfileCell) as ProfileTableViewCell
+            cell.profilePicImageView.file = kProfile?.imageFile
+            cell.profilePicImageView.loadInBackground(nil)
+            cell.clipsToBounds = true
+            cell.coverPhotoImageView.clipsToBounds = true
+            return cell
+    }
 
-        navigationItem.title = kProfile?.name
-
-        profileImageView.image = UIImage(named: "crewMemberImage")
-        profileImageView.file = kProfile?.imageFile
-        profileImageView.loadInBackground(nil)
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int
+    {
+        return 1
     }
 }

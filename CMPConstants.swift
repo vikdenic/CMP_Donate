@@ -12,3 +12,11 @@ let kProfile = UniversalProfile.sharedInstance.profile
 
 let kFeedToRegisterSegue = "FeedToRegisterSegue"
 let kFeedToIndividualFilmSegue = "FeedToIndividualFilmSegue"
+
+let kButton1ToPaySegue = "Button1ToPaySegue"
+let kButton2ToPaySegue = "Button2ToPaySegue"
+let kButton3ToPaySegue = "Button3ToPaySegue"
+let kFundToPaySegue = "FundToPaySegue"
+
+let kFilmCell = "FilmCell"
+let kProfileCell = "ProfileCell"

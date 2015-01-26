@@ -42,6 +42,8 @@
 		936C57FD1A75D26B0027343A /* IndividualFilmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 936C57FC1A75D26B0027343A /* IndividualFilmViewController.swift */; };
 		936C58001A75E0A90027343A /* AYVibrantButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 936C57FF1A75E0A90027343A /* AYVibrantButton.m */; };
 		936C58031A75F2060027343A /* CMPExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 936C58021A75F2060027343A /* CMPExtensions.swift */; };
+		936C58071A7607150027343A /* PaymentSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 936C58061A7607150027343A /* PaymentSelectionViewController.swift */; };
+		936C58091A760A700027343A /* ProfileTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 936C58081A760A700027343A /* ProfileTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -96,6 +98,8 @@
 		936C57FE1A75E0A90027343A /* AYVibrantButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AYVibrantButton.h; sourceTree = "<group>"; };
 		936C57FF1A75E0A90027343A /* AYVibrantButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AYVibrantButton.m; sourceTree = "<group>"; };
 		936C58021A75F2060027343A /* CMPExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CMPExtensions.swift; sourceTree = "<group>"; };
+		936C58061A7607150027343A /* PaymentSelectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaymentSelectionViewController.swift; sourceTree = "<group>"; };
+		936C58081A760A700027343A /* ProfileTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -225,6 +229,7 @@
 				930EFDB21A73905600AF96AF /* RegisterViewController.swift */,
 				930EFDB01A73904A00AF96AF /* LoginViewController.swift */,
 				9358A1251A739BB100CCE374 /* ProfileViewController.swift */,
+				936C58061A7607150027343A /* PaymentSelectionViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -257,6 +262,7 @@
 			isa = PBXGroup;
 			children = (
 				9358A1291A741B6500CCE374 /* FeedTableViewCell.swift */,
+				936C58081A760A700027343A /* ProfileTableViewCell.swift */,
 			);
 			name = "Custom Cells";
 			sourceTree = "<group>";
@@ -370,8 +376,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				936C58071A7607150027343A /* PaymentSelectionViewController.swift in Sources */,
 				930EFDB11A73904A00AF96AF /* LoginViewController.swift in Sources */,
 				930EFDC01A73918200AF96AF /* Profile.swift in Sources */,
+				936C58091A760A700027343A /* ProfileTableViewCell.swift in Sources */,
 				930EFDAF1A73902A00AF96AF /* FeedViewController.swift in Sources */,
 				930EFD6E1A738F1400AF96AF /* AppDelegate.swift in Sources */,
 				930EFDC21A73918E00AF96AF /* CrewMember.swift in Sources */,
