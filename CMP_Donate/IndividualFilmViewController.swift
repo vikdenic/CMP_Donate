@@ -11,7 +11,11 @@ import UIKit
 class IndividualFilmViewController: UIViewController {
 
     @IBOutlet var filmImageView: PFImageView!
+    @IBOutlet var synopsisTextView: UITextView!
     var film = Film()
+    @IBOutlet var heightConstraint: NSLayoutConstraint!
+    @IBOutlet var verticalConstraint: NSLayoutConstraint!
+    @IBOutlet var middleButton: UIButton!
 
     override func viewDidLoad()
     {
@@ -24,5 +28,16 @@ class IndividualFilmViewController: UIViewController {
         title = film.title
         filmImageView.file = film.imageFile
         filmImageView.loadInBackground(nil)
+
+        synopsisTextView.text = film.synopsis
+        let size = synopsisTextView.contentSize;
+        self.heightConstraint.constant = size.height;    }
+
+    func resizeTextView()
+    {
+        let sizeThatShouldFitTheContent = synopsisTextView.sizeThatFits(synopsisTextView.frame.size)
+        heightConstraint.constant = sizeThatShouldFitTheContent.height
+        synopsisTextView.sizeToFit()
+        synopsisTextView.layoutIfNeeded()
     }
 }

@@ -28,8 +28,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 UniversalProfile.sharedInstance.profile = profile
             })
         }
-        
+
+        setUpUI()
+
         return true
+    }
+
+    func setUpUI()
+    {
+        UINavigationBar.appearance().tintColor = UIColor.customRedColor()
+        UITabBar.appearance().selectedImageTintColor = UIColor.customRedColor()
     }
 
     func applicationWillResignActive(application: UIApplication) {

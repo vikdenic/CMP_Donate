@@ -41,6 +41,8 @@
 		9358A1281A739E1700CCE374 /* UniversalProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9358A1271A739E1700CCE374 /* UniversalProfile.swift */; };
 		9358A12A1A741B6500CCE374 /* FeedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9358A1291A741B6500CCE374 /* FeedTableViewCell.swift */; };
 		936C57FD1A75D26B0027343A /* IndividualFilmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 936C57FC1A75D26B0027343A /* IndividualFilmViewController.swift */; };
+		936C58001A75E0A90027343A /* AYVibrantButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 936C57FF1A75E0A90027343A /* AYVibrantButton.m */; };
+		936C58031A75F2060027343A /* CMPExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 936C58021A75F2060027343A /* CMPExtensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -93,6 +95,9 @@
 		9358A1271A739E1700CCE374 /* UniversalProfile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UniversalProfile.swift; path = CMP_Donate/UniversalProfile.swift; sourceTree = "<group>"; };
 		9358A1291A741B6500CCE374 /* FeedTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedTableViewCell.swift; sourceTree = "<group>"; };
 		936C57FC1A75D26B0027343A /* IndividualFilmViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IndividualFilmViewController.swift; sourceTree = "<group>"; };
+		936C57FE1A75E0A90027343A /* AYVibrantButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AYVibrantButton.h; sourceTree = "<group>"; };
+		936C57FF1A75E0A90027343A /* AYVibrantButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AYVibrantButton.m; sourceTree = "<group>"; };
+		936C58021A75F2060027343A /* CMPExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CMPExtensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -156,6 +161,7 @@
 				9358A1201A7394F600CCE374 /* Data Model */,
 				930EFDB81A73910000AF96AF /* ViewControllers */,
 				9358A12B1A741B6E00CCE374 /* Custom Cells */,
+				936C58011A75E1080027343A /* Third Party UI */,
 				930EFD741A738F1400AF96AF /* Images.xcassets */,
 				930EFD761A738F1400AF96AF /* LaunchScreen.xib */,
 				930EFD971A738F3800AF96AF /* Frameworks */,
@@ -244,6 +250,7 @@
 			isa = PBXGroup;
 			children = (
 				9358A11E1A7394DC00CCE374 /* CMPConstants.swift */,
+				936C58021A75F2060027343A /* CMPExtensions.swift */,
 			);
 			name = Utilities;
 			path = ..;
@@ -255,6 +262,16 @@
 				9358A1291A741B6500CCE374 /* FeedTableViewCell.swift */,
 			);
 			name = "Custom Cells";
+			sourceTree = "<group>";
+		};
+		936C58011A75E1080027343A /* Third Party UI */ = {
+			isa = PBXGroup;
+			children = (
+				936C57FE1A75E0A90027343A /* AYVibrantButton.h */,
+				936C57FF1A75E0A90027343A /* AYVibrantButton.m */,
+			);
+			name = "Third Party UI";
+			path = ..;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -364,12 +381,14 @@
 				930EFDC21A73918E00AF96AF /* CrewMember.swift in Sources */,
 				9358A12A1A741B6500CCE374 /* FeedTableViewCell.swift in Sources */,
 				930EFDBA1A73916400AF96AF /* User.swift in Sources */,
+				936C58001A75E0A90027343A /* AYVibrantButton.m in Sources */,
 				9358A1261A739BB100CCE374 /* ProfileViewController.swift in Sources */,
 				9358A1281A739E1700CCE374 /* UniversalProfile.swift in Sources */,
 				936C57FD1A75D26B0027343A /* IndividualFilmViewController.swift in Sources */,
 				930EFDBC1A73916C00AF96AF /* Event.swift in Sources */,
 				930EFDB31A73905600AF96AF /* RegisterViewController.swift in Sources */,
 				9358A11F1A7394DC00CCE374 /* CMPConstants.swift in Sources */,
+				936C58031A75F2060027343A /* CMPExtensions.swift in Sources */,
 				930EFDBE1A73917B00AF96AF /* Film.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

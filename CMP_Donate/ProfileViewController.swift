@@ -20,7 +20,10 @@ class ProfileViewController: UIViewController
 
     func setProfileData()
     {
-        title = kProfile?.name
+        profileImageView.layer.cornerRadius = 50
+        profileImageView.clipsToBounds = true
+
+        navigationItem.title = kProfile?.name
 
         profileImageView.image = UIImage(named: "crewMemberImage")
         profileImageView.file = kProfile?.imageFile
