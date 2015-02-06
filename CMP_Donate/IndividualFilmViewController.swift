@@ -8,14 +8,12 @@
 
 import UIKit
 
-class IndividualFilmViewController: UIViewController {
+class IndividualFilmViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
 
     @IBOutlet var filmImageView: PFImageView!
-    @IBOutlet var synopsisTextView: UITextView!
     var film = Film()
-    @IBOutlet var heightConstraint: NSLayoutConstraint!
-    @IBOutlet var verticalConstraint: NSLayoutConstraint!
     @IBOutlet var middleButton: UIButton!
+    @IBOutlet var collectionView: UICollectionView!
 
     override func viewDidLoad()
     {
@@ -28,16 +26,18 @@ class IndividualFilmViewController: UIViewController {
         title = film.title
         filmImageView.file = film.imageFile
         filmImageView.loadInBackground(nil)
-
-        synopsisTextView.text = film.synopsis
-        let size = synopsisTextView.contentSize;
     }
 
-    func resizeTextView()
+    //UICollectionView
+    func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int
     {
-        let sizeThatShouldFitTheContent = synopsisTextView.sizeThatFits(synopsisTextView.frame.size)
-        heightConstraint.constant = sizeThatShouldFitTheContent.height
-        synopsisTextView.sizeToFit()
-        synopsisTextView.layoutIfNeeded()
+        return 3
+    }
+
+    func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell
+    {
+        let cell = collectionView.dequeueReusableCellWithReuseIdentifier(kCrewCell, forIndexPath: indexPath) as CrewCollectionViewCell
+        
+        return cell
     }
 }
