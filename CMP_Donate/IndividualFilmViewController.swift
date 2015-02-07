@@ -117,12 +117,11 @@ class IndividualFilmViewController: UIViewController, UITableViewDataSource, UIT
         }
     }
 
-    //SCAlertView
-//    func customAlertView(amount : NSNumber)
-//    {
-//        let alert = SCLAlertView()
-//        alert.showSuccess(self, title: "Make a Constribution", subTitle: "Would you like to donate \(amount) toward \(film.title)", closeButtonTitle: "Cancel", duration: 0.0)
-//    }
+    func customAlertView(amount : NSNumber)
+    {
+        let alert = SCLAlertView()
+        alert.showSuccess("Contribute", subTitle: "Give \(amount) toward \(film.title)", closeButtonTitle: "Cancel", duration: 0.0)
+    }
 
     //UICollectionView
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int

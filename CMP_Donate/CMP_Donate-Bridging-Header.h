@@ -6,9 +6,6 @@
 #import <Parse/PFObject+Subclass.h>
 #import <ParseUI/ParseUI.h>
 
-#import "SCLAlertView.h"
-
-#import "AYVibrantButton.h"
 #import <QuartzCore/QuartzCore.h>
 
 #import "CrewTableViewCell.h"
