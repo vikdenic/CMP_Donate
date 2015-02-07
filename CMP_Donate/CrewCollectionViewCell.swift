@@ -11,10 +11,12 @@ import UIKit
 class CrewCollectionViewCell: UICollectionViewCell {
 
     @IBOutlet var crewImageView: UIImageView!
+    @IBOutlet var crewLabel: UILabel!
 
     override func layoutSubviews() {
         super.layoutSubviews()
+        
         crewImageView.frame = CGRect(x: 0, y: 0, width: 65, height: 65)
-        crewImageView.frame.origin = CGPointMake(crewImageView.superview!.center.x - (crewImageView.frame.size.width / 2), crewImageView.superview!.frame.size.height * 0.33)
+        crewImageView.frame.origin = CGPointMake(crewImageView.superview!.center.x - (crewImageView.frame.size.width / 2), crewImageView.superview!.frame.size.height * 0.36)
     }
 }

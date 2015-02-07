@@ -34,11 +34,14 @@ class CrewTableViewCell: UITableViewCell {
 
     override func layoutSubviews() {
         super.layoutSubviews()
+
         let frame = self.contentView.bounds
         collectionView.frame = CGRectMake(0, 0.5, frame.size.width, frame.size.height - 1)
-        
+
         let layout = collectionView.collectionViewLayout as UICollectionViewFlowLayout
         layout.minimumLineSpacing = 0
+        //Silences "item height must be less than CV height minus insets" warning
+        layout.itemSize.height = collectionView.frame.size.height
     }
 
     func setCollectionViewDataSourceDelegate(dataSourceDelegate delegate: protocol<UICollectionViewDelegate,UICollectionViewDataSource>, index: NSInteger) {
