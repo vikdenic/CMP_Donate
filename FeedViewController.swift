@@ -13,6 +13,7 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
     @IBOutlet var tableView: UITableView!
     var filmsArray = [Film]()
 
+    //View Lifecycle
     override func viewDidLoad()
     {
         super.viewDidLoad()
@@ -20,6 +21,7 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
 
     override func viewDidAppear(animated: Bool)
     {
+        //Using selector after view has appeared suppresses "detached view controllers" warning related to modal segue
         var timer = NSTimer.scheduledTimerWithTimeInterval(0, target: self, selector: "decideIfLoggedIn", userInfo: nil, repeats: false)
     }
 
