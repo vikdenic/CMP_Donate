@@ -15,6 +15,7 @@ class IndividualFilmViewController: UIViewController, UITableViewDataSource, UIT
     var theIndexPath = NSIndexPath()
     var synopsisHeight : CGFloat = 28
 
+    //View Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         title = film.title
@@ -97,6 +98,7 @@ class IndividualFilmViewController: UIViewController, UITableViewDataSource, UIT
         }
     }
 
+    //Actions
     @IBAction func onSynopsisTapped(sender: UITapGestureRecognizer)
     {
         if editing == false
