@@ -270,7 +270,7 @@
                                             <outletCollection property="gestureRecognizers" destination="tJf-Nf-8ds" appends="YES" id="NKu-gU-ls1"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="150" id="If6-63-k6W">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="DonateCell" rowHeight="150" id="If6-63-k6W" customClass="DonateTableViewCell" customModule="CMP_Donate" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="If6-63-k6W" id="Pig-tO-3IF">
@@ -292,6 +292,14 @@
                                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
                                                 </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="lT1-6k-ci1">
+                                                    <rect key="frame" x="8" y="99" width="304" height="43"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <state key="normal" title="Contribute Other Amount">
+                                                        <color key="titleColor" red="0.20000000298023224" green="0.20000000298023224" blue="0.20000000298023224" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="14h-te-YF6">
                                                     <rect key="frame" x="237" y="8" width="75" height="75"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -303,6 +311,12 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.90196079015731812" green="0.90196079015731812" blue="0.90196079015731812" alpha="1" colorSpace="calibratedRGB"/>
+                                        <connections>
+                                            <outlet property="bubbleButtonOne" destination="e86-dk-4Oc" id="lVs-We-anW"/>
+                                            <outlet property="bubbleButtonThree" destination="14h-te-YF6" id="KFN-cC-gu2"/>
+                                            <outlet property="bubbleButtonTwo" destination="6JG-e2-EAk" id="HCP-wT-Nap"/>
+                                            <outlet property="otherAmountButton" destination="lT1-6k-ci1" id="hsO-Jd-HW2"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>

@@ -40,6 +40,7 @@
 		9358A1261A739BB100CCE374 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9358A1251A739BB100CCE374 /* ProfileViewController.swift */; };
 		9358A1281A739E1700CCE374 /* UniversalProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9358A1271A739E1700CCE374 /* UniversalProfile.swift */; };
 		9358A12A1A741B6500CCE374 /* FeedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9358A1291A741B6500CCE374 /* FeedTableViewCell.swift */; };
+		936477AE1A860D75000042C5 /* DonateTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 936477AD1A860D75000042C5 /* DonateTableViewCell.swift */; };
 		936C57FD1A75D26B0027343A /* IndividualFilmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 936C57FC1A75D26B0027343A /* IndividualFilmViewController.swift */; };
 		936C58001A75E0A90027343A /* AYVibrantButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 936C57FF1A75E0A90027343A /* AYVibrantButton.m */; };
 		936C58031A75F2060027343A /* CMPExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 936C58021A75F2060027343A /* CMPExtensions.swift */; };
@@ -99,6 +100,7 @@
 		9358A1251A739BB100CCE374 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		9358A1271A739E1700CCE374 /* UniversalProfile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UniversalProfile.swift; path = CMP_Donate/UniversalProfile.swift; sourceTree = "<group>"; };
 		9358A1291A741B6500CCE374 /* FeedTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedTableViewCell.swift; sourceTree = "<group>"; };
+		936477AD1A860D75000042C5 /* DonateTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DonateTableViewCell.swift; sourceTree = "<group>"; };
 		936C57FC1A75D26B0027343A /* IndividualFilmViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IndividualFilmViewController.swift; sourceTree = "<group>"; };
 		936C57FE1A75E0A90027343A /* AYVibrantButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AYVibrantButton.h; sourceTree = "<group>"; };
 		936C57FF1A75E0A90027343A /* AYVibrantButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AYVibrantButton.m; sourceTree = "<group>"; };
@@ -275,6 +277,7 @@
 				93379F6F1A857EF70054BAB8 /* CrewCollectionViewCell.swift */,
 				93ED198D1A85DB0100F06FA1 /* CrewTableViewCell.swift */,
 				93ED19911A85ED0E00F06FA1 /* SynopsisTableViewCell.swift */,
+				936477AD1A860D75000042C5 /* DonateTableViewCell.swift */,
 			);
 			name = "Custom Cells";
 			sourceTree = "<group>";
@@ -398,6 +401,7 @@
 				930EFDC21A73918E00AF96AF /* CrewMember.swift in Sources */,
 				9358A12A1A741B6500CCE374 /* FeedTableViewCell.swift in Sources */,
 				930EFDBA1A73916400AF96AF /* User.swift in Sources */,
+				936477AE1A860D75000042C5 /* DonateTableViewCell.swift in Sources */,
 				936C58001A75E0A90027343A /* AYVibrantButton.m in Sources */,
 				9358A1261A739BB100CCE374 /* ProfileViewController.swift in Sources */,
 				9358A1281A739E1700CCE374 /* UniversalProfile.swift in Sources */,
