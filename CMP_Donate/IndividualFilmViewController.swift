@@ -126,12 +126,14 @@ class IndividualFilmViewController: UIViewController, UITableViewDataSource, UIT
             self.chargeCustomer(amount)
         })
 
-        alert.showCustomAlert("Contribute?", image: UIImage(named: "CMPLogo")!, color: UIColor.customRedColor(), subTitle: "Donate $\(amount) to \(film.title)", closeButtonTitle: "Cancel", duration: 0)
+        alert.showCustomAlert("Contribute?", image: UIImage(named: "CMPLogo")!, color: UIColor.customRedColor(), subTitle: "Donate $\(amount) to \(film.title)?", closeButtonTitle: "Cancel", duration: 0)
     }
 
     //Helpers
     func chargeCustomer(amount : NSNumber)
     {
+        let alert = SCLAlertView()
+
         let amountToCharge = (amount as Double * 100.0)
         if let customerId = kStandardDefaults.valueForKey(kDefaultsCustomerID) as String!
         {
@@ -143,15 +145,14 @@ class IndividualFilmViewController: UIViewController, UITableViewDataSource, UIT
                 else
                 {
                     println("Charge successful")
+                    alert.showSuccess("Thank You!", subTitle: "Your contribution was approved. You will receive a receipt via email shortly.", closeButtonTitle: "Done", duration: 0)
                 }
             }
         }
 
         else
         {
-            let alert = SCLAlertView()
-
-            alert.showWarning("oops", subTitle: "shit son", closeButtonTitle: "Okay", duration: 0)
+            alert.showNotice("Payment Info Needed", subTitle: "Please update your Profile with your payment information.", closeButtonTitle: "Okay", duration: 0)
         }
     }
 
