@@ -89,7 +89,7 @@ class IndividualFilmViewController: UIViewController, UITableViewDataSource, UIT
         }
         else if indexPath.row == 0
         {
-            return 125
+            return 128
         }
         else
         {
