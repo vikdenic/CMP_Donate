@@ -19,6 +19,9 @@ class IndividualFilmViewController: UIViewController, UICollectionViewDataSource
     {
         super.viewDidLoad()
         setUpUI()
+
+        var flowlayout = collectionView.collectionViewLayout as UICollectionViewFlowLayout
+        flowlayout.minimumLineSpacing = 0
     }
 
     func setUpUI()
@@ -37,7 +40,18 @@ class IndividualFilmViewController: UIViewController, UICollectionViewDataSource
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell
     {
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier(kCrewCell, forIndexPath: indexPath) as CrewCollectionViewCell
-        
+        if indexPath.row == 0
+        {
+            cell.backgroundColor = UIColor.redColor()
+        }
+        else if indexPath.row == 1
+        {
+            cell.backgroundColor = UIColor.blueColor()
+        }
+        else
+        {
+            cell.backgroundColor = UIColor.greenColor()
+        }
         return cell
     }
 }
