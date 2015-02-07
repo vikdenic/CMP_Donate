@@ -9,7 +9,6 @@
 import Foundation
 
 let kProfile = UniversalProfile.sharedInstance.profile
-let kStripePublishableKey = "pk_test_oyA5FAsuqYVvFqEOUOSUg2hF"
 
 let kFeedToRegisterSegue = "FeedToRegisterSegue"
 let kFeedToIndividualFilmSegue = "FeedToIndividualFilmSegue"
@@ -30,3 +29,9 @@ let kDonateCell = "DonateCell"
 let kEditProfileCell = "EditProfileCell"
 
 let kCrewMemberImage = "crewMemberImage"
+
+//Stripe
+let kStripePublishableKey = "pk_test_oyA5FAsuqYVvFqEOUOSUg2hF"
+let kDefaultsCardLast4 = "card.last4"
+let kDefaultsCustomerID = "customerId"
+let kStandardDefaults = NSUserDefaults.standardUserDefaults()

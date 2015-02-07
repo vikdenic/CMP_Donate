@@ -8,7 +8,17 @@
 
 import UIKit
 
+@objc protocol DonateTableViewCellDelegate
+{
+    optional func didTapBubbleOne()
+    optional func didTapBubbleTwo()
+    optional func didTapBubbleThree()
+    optional func didTapOtherAmount()
+}
+
 class DonateTableViewCell: UITableViewCell {
+
+    var delegate = DonateTableViewCellDelegate?()
 
     @IBOutlet var bubbleButtonOne: UIButton!
     @IBOutlet var bubbleButtonTwo: UIButton!
@@ -33,4 +43,23 @@ class DonateTableViewCell: UITableViewCell {
         otherAmountButton.layer.borderColor = UIColor.customRedColor().CGColor
     }
 
+    @IBAction func onBubbleOneTapped(sender: UIButton)
+    {
+        delegate?.didTapBubbleOne!()
+    }
+
+    @IBAction func onBubbleTwoTapped(sender: UIButton)
+    {
+        delegate?.didTapBubbleTwo!()
+    }
+
+    @IBAction func onBubbleThreeTapped(sender: UIButton)
+    {
+        delegate?.didTapBubbleThree!()
+    }
+
+    @IBAction func onOtherAmountTapped(sender: UIButton)
+    {
+        delegate?.didTapOtherAmount!()
+    }
 }

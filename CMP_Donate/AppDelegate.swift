@@ -32,7 +32,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         //Stripe
         Stripe.setDefaultPublishableKey(kStripePublishableKey)
 
-
         setUpUI()
 
         return true
