@@ -16,3 +16,21 @@ extension UIColor
         return UIColor(red: 234/255.0, green: 34/255.0, blue: 45/255.0, alpha: 100)
     }
 }
+
+extension String
+{
+    func removeDollarPrefix() -> String
+    {
+        if self.hasPrefix("$")
+        {
+            let convertedString = self as NSString
+            let range = NSMakeRange(1, convertedString.length - 1)
+            let newString = convertedString.substringWithRange(range)
+            return newString
+        }
+        else
+        {
+            return self
+        }
+    }
+}

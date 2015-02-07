@@ -10,10 +10,10 @@ import UIKit
 
 @objc protocol DonateTableViewCellDelegate
 {
-    optional func didTapBubbleOne()
-    optional func didTapBubbleTwo()
-    optional func didTapBubbleThree()
-    optional func didTapOtherAmount()
+    optional func didTapBubbleOne(amount : NSNumber)
+    optional func didTapBubbleTwo(amount : NSNumber)
+    optional func didTapBubbleThree(amount : NSNumber)
+    optional func didTapOtherAmount(amount : NSNumber)
 }
 
 class DonateTableViewCell: UITableViewCell {
@@ -45,21 +45,21 @@ class DonateTableViewCell: UITableViewCell {
 
     @IBAction func onBubbleOneTapped(sender: UIButton)
     {
-        delegate?.didTapBubbleOne!()
+        delegate?.didTapBubbleOne!(bubbleButtonOne.titleLabel!.text!.removeDollarPrefix().toInt()!)
     }
 
     @IBAction func onBubbleTwoTapped(sender: UIButton)
     {
-        delegate?.didTapBubbleTwo!()
+        delegate?.didTapBubbleTwo!(bubbleButtonTwo.titleLabel!.text!.removeDollarPrefix().toInt()!)
     }
 
     @IBAction func onBubbleThreeTapped(sender: UIButton)
     {
-        delegate?.didTapBubbleThree!()
+        delegate?.didTapBubbleThree!(bubbleButtonThree.titleLabel!.text!.removeDollarPrefix().toInt()!)
     }
 
     @IBAction func onOtherAmountTapped(sender: UIButton)
     {
-        delegate?.didTapOtherAmount!()
+        delegate?.didTapOtherAmount!(otherAmountButton.titleLabel!.text!.removeDollarPrefix().toInt()!)
     }
 }

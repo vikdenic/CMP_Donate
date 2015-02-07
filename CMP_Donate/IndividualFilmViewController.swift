@@ -8,7 +8,7 @@
 
 import UIKit
 
-class IndividualFilmViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UICollectionViewDataSource, UICollectionViewDelegate {
+class IndividualFilmViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UICollectionViewDataSource, UICollectionViewDelegate, DonateTableViewCellDelegate {
 
     var film = Film()
     @IBOutlet var tableView: UITableView!
@@ -61,6 +61,7 @@ class IndividualFilmViewController: UIViewController, UITableViewDataSource, UIT
         else
         {
             let cell = tableView.dequeueReusableCellWithIdentifier(kDonateCell) as DonateTableViewCell
+            cell.delegate = self
             let suggestedAmountOne = film.suggestedAmountOne ?? 100
             let suggestedAmountTwo = film.suggestedAmountTwo ?? 500
             let suggestedAmountThree = film.suggestedAmountTwo ?? 1000
@@ -117,12 +118,17 @@ class IndividualFilmViewController: UIViewController, UITableViewDataSource, UIT
         }
     }
 
-    func customAlertView(amount : NSNumber)
+    func showCustomAlertView(amount : NSNumber)
     {
         let alert = SCLAlertView()
         alert.showSuccess("Contribute", subTitle: "Give \(amount) toward \(film.title)", closeButtonTitle: "Cancel", duration: 0.0)
     }
 
+    //DonateTableViewCell
+    func didTapBubbleOne(amount: NSNumber) {
+        println(amount)
+    }
+    
     //UICollectionView
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int
     {
