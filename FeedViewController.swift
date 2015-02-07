@@ -16,7 +16,16 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
     override func viewDidLoad()
     {
         super.viewDidLoad()
-        
+    }
+
+    override func viewDidAppear(animated: Bool)
+    {
+        var timer = NSTimer.scheduledTimerWithTimeInterval(0, target: self, selector: "decideIfLoggedIn", userInfo: nil, repeats: false)
+    }
+
+    //Helper
+    func decideIfLoggedIn()
+    {
         if PFUser.currentUser() == nil
         {
             performSegueWithIdentifier(kFeedToRegisterSegue, sender: self)
@@ -26,16 +35,19 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
             Profile.queryForCurrentUserProfile({ (profile, error) -> Void in
                 UniversalProfile.sharedInstance.profile = profile
             })
+            self.setFilmData()
         }
     }
 
-    override func viewDidAppear(animated: Bool) {
+    func setFilmData()
+    {
         Film.queryAllFilms({ (films, error) -> Void in
             self.filmsArray = films as [Film]
             self.tableView.reloadData()
         })
     }
 
+    //UITableView
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
     {
         let cell = tableView.dequeueReusableCellWithIdentifier("FeedCell") as FeedTableViewCell
@@ -51,6 +63,7 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
         return filmsArray.count
     }
 
+    //Segue
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)
     {
         if segue.identifier == kFeedToIndividualFilmSegue
