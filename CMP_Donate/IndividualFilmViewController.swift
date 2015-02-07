@@ -15,6 +15,7 @@ class IndividualFilmViewController: UIViewController, UITableViewDataSource, UIT
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        title = film.title
     }
 
     //UITableView
@@ -60,7 +61,8 @@ class IndividualFilmViewController: UIViewController, UITableViewDataSource, UIT
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell
     {
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier(kCrewCVCell, forIndexPath: indexPath) as CrewCollectionViewCell
-        let crewMember = film.productionTeam[indexPath.row]
+        let crewMember = film.productionTeam[indexPath.row] as CrewMember
+        cell.crewLabel.text = crewMember.role + ": " + crewMember.name
         cell.crewImageView.file = crewMember.imageFile
         cell.crewImageView.loadInBackground(nil)
         return cell
