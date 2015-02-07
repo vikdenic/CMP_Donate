@@ -104,7 +104,7 @@ class IndividualFilmViewController: UIViewController, UITableViewDataSource, UIT
     {
         if editing == false
         {
-            synopsisHeight = 153.5
+            synopsisHeight = 147
             tableView.beginUpdates()
             tableView.endUpdates()
             editing = true
@@ -121,12 +121,12 @@ class IndividualFilmViewController: UIViewController, UITableViewDataSource, UIT
     func showCustomAlertView(amount : NSNumber)
     {
         let alert = SCLAlertView()
-        alert.showSuccess("Contribute", subTitle: "Give \(amount) toward \(film.title)", closeButtonTitle: "Cancel", duration: 0.0)
+        alert.showNotice("Contribute", subTitle: "Give $\(amount) toward \(film.title)?", closeButtonTitle: "Cancel", duration: 0.0)
     }
 
     //DonateTableViewCell
     func didTapBubbleOne(amount: NSNumber) {
-        println(amount)
+        showCustomAlertView(amount)
     }
 
     func didTapBubbleTwo(amount: NSNumber) {
