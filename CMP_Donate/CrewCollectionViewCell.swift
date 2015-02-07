@@ -16,7 +16,9 @@ class CrewCollectionViewCell: UICollectionViewCell {
     override func layoutSubviews() {
         super.layoutSubviews()
         
-        crewImageView.frame = CGRect(x: 0, y: 0, width: 65, height: 65)
-        crewImageView.frame.origin = CGPointMake(crewImageView.superview!.center.x - (crewImageView.frame.size.width / 2), crewImageView.superview!.frame.size.height * 0.36)
+        crewImageView.frame = CGRect(x: 0, y: 0, width: 75, height: 75)
+        crewImageView.frame.origin = CGPointMake(crewImageView.superview!.center.x - (crewImageView.frame.size.width / 2), crewImageView.superview!.frame.size.height * 0.30)
+        crewImageView.layer.cornerRadius = crewImageView.frame.size.height / 2
+        crewImageView.clipsToBounds = true
     }
 }
