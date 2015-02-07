@@ -370,6 +370,7 @@
 				TargetAttributes = {
 					930EFD671A738F1400AF96AF = {
 						CreatedOnToolsVersion = 6.1.1;
+						DevelopmentTeam = CG5RQBZ7LC;
 					};
 					930EFD7C1A738F1500AF96AF = {
 						CreatedOnToolsVersion = 6.1.1;
@@ -604,6 +605,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -619,6 +621,7 @@
 					"\"Security\"",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "591b2ea7-350a-47e1-8567-4ced57364f8d";
 				SWIFT_OBJC_BRIDGING_HEADER = "CMP_Donate/CMP_Donate-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				VALID_ARCHS = "arm64 armv7 armv7s";
@@ -632,6 +635,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Chicago Media Project";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -647,6 +651,7 @@
 					"\"Security\"",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "591b2ea7-350a-47e1-8567-4ced57364f8d";
 				SWIFT_OBJC_BRIDGING_HEADER = "CMP_Donate/CMP_Donate-Bridging-Header.h";
 				VALID_ARCHS = "arm64 armv7 armv7s";
 			};
