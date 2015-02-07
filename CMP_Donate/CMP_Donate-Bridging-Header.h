@@ -8,3 +8,5 @@
 
 #import "AYVibrantButton.h"
 #import <QuartzCore/QuartzCore.h>
+
+#import "CrewTableViewCell.h"
