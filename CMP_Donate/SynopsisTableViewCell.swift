@@ -24,7 +24,8 @@ class SynopsisTableViewCell: UITableViewCell {
 
     override func layoutSubviews() {
         super.layoutSubviews()
-//        synopsisTextView.frame = CGRectMake(8, 0, bounds.width - 7, bounds.height)
-//        frame.size.height = 29
+        synopsisTextView.font = UIFont(name: "HelveticaNeue-Light", size: 17)
+        synopsisTextView.frame = CGRectMake(8, 0, bounds.width - 7, bounds.height)
+        synopsisTextView.setContentOffset(CGPointZero, animated: false)
     }
 }

@@ -13,7 +13,7 @@ class IndividualFilmViewController: UIViewController, UITableViewDataSource, UIT
     var film = Film()
     @IBOutlet var tableView: UITableView!
     var theIndexPath = NSIndexPath()
-    var synopsisHeight : CGFloat = 20
+    var synopsisHeight : CGFloat = 30
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -84,14 +84,14 @@ class IndividualFilmViewController: UIViewController, UITableViewDataSource, UIT
     {
         if editing == false
         {
-            synopsisHeight = 100
+            synopsisHeight = 153.5
             tableView.beginUpdates()
             tableView.endUpdates()
             editing = true
         }
         else
         {
-            synopsisHeight = 20
+            synopsisHeight = 30
             tableView.beginUpdates()
             tableView.endUpdates()
             editing = false
