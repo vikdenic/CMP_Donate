@@ -9,6 +9,7 @@
 import Foundation
 
 let kProfile = UniversalProfile.sharedInstance.profile
+let kStripePublishableKey = "pk_test_oyA5FAsuqYVvFqEOUOSUg2hF"
 
 let kFeedToRegisterSegue = "FeedToRegisterSegue"
 let kFeedToIndividualFilmSegue = "FeedToIndividualFilmSegue"
@@ -17,6 +18,7 @@ let kButton1ToPaySegue = "Button1ToPaySegue"
 let kButton2ToPaySegue = "Button2ToPaySegue"
 let kButton3ToPaySegue = "Button3ToPaySegue"
 let kFundToPaySegue = "FundToPaySegue"
+let kEditProfileToUpdateCardSegue = "EditProfileToUpdateCardSegue"
 
 let kFilmCell = "FilmCell"
 let kProfileCell = "ProfileCell"

@@ -68,4 +68,14 @@ class EditProfileViewController: UIViewController, UITableViewDataSource, UITabl
 
         return cell
     }
+
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        if indexPath.section == 1
+        {
+            if indexPath.row == 0
+            {
+                performSegueWithIdentifier(kEditProfileToUpdateCardSegue, sender: self)
+            }
+        }
+    }
 }

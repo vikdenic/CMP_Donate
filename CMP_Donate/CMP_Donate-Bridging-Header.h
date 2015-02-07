@@ -10,3 +10,23 @@
 #import <QuartzCore/QuartzCore.h>
 
 #import "CrewTableViewCell.h"
+#import "UpdateCardViewController.h"
+
+#import "Stripe.h"
+#import "PTKView.h"
+
+#import <AudioToolbox/AudioToolbox.h>
+
+#import <CFNetwork/CFNetwork.h>
+
+#import <CoreGraphics/CoreGraphics.h>
+
+#import <CoreLocation/CoreLocation.h>
+
+#import <MobileCoreServices/MobileCoreServices.h>
+
+#import <Security/Security.h>
+
+#import <StoreKit/StoreKit.h>
+
+#import <SystemConfiguration/SystemConfiguration.h>

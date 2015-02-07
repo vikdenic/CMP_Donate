@@ -491,11 +491,27 @@
                     <navigationItem key="navigationItem" id="Kzh-Ye-w6T"/>
                     <connections>
                         <outlet property="tableView" destination="Mkj-TE-8AR" id="cPj-eo-0Cc"/>
+                        <segue destination="XyU-i2-uSb" kind="push" identifier="EditProfileToUpdateCardSegue" id="8ni-2u-UCU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="V8r-vu-72D" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1306" y="1102"/>
+        </scene>
+        <!--Update Card View Controller-->
+        <scene sceneID="D3U-l0-dbW">
+            <objects>
+                <viewController id="XyU-i2-uSb" customClass="UpdateCardViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="wCX-Uv-wuo">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Js5-6a-TMd"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Mhg-e1-lV5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1723" y="1102"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="6aV-in-lri">
