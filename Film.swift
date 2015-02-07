@@ -28,6 +28,10 @@ class Film: PFObject, PFSubclassing
     @NSManaged var productionStatus : String!
     @NSManaged var event : Event!
 
+    @NSManaged var suggestedAmountOne : NSNumber!
+    @NSManaged var suggestedAmountTwo : NSNumber!
+    @NSManaged var suggestedAmountThree : NSNumber!
+
     class func queryAllFilms(completed:(films:[Film], error:NSError!)->Void)
     {
         var query = Film.query()

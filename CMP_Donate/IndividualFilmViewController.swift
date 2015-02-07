@@ -40,7 +40,7 @@ class IndividualFilmViewController: UIViewController, UITableViewDataSource, UIT
 
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
-        return 2
+        return 3
     }
 
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
@@ -50,11 +50,24 @@ class IndividualFilmViewController: UIViewController, UITableViewDataSource, UIT
             let cell = tableView.dequeueReusableCellWithIdentifier(kCrewTVCell) as CrewTableViewCell
             return cell
         }
-        else
+        else if indexPath.row == 1
         {
             let cell = tableView.dequeueReusableCellWithIdentifier(kSynopsisCell) as SynopsisTableViewCell
             cell.synopsisTextView.text = film.synopsis
             theIndexPath = indexPath
+            return cell
+        }
+        else
+        {
+            let cell = tableView.dequeueReusableCellWithIdentifier(kDonateCell) as DonateTableViewCell
+            let suggestedAmountOne = film.suggestedAmountOne ?? 100
+            let suggestedAmountTwo = film.suggestedAmountTwo ?? 500
+            let suggestedAmountThree = film.suggestedAmountTwo ?? 1000
+
+            cell.bubbleButtonOne.setTitle("$" + suggestedAmountOne.stringValue, forState: .Normal)
+            cell.bubbleButtonTwo.setTitle("$" + suggestedAmountTwo.stringValue, forState: .Normal)
+            cell.bubbleButtonThree.setTitle("$" + suggestedAmountThree.stringValue, forState: .Normal)
+
             return cell
         }
     }
@@ -74,9 +87,13 @@ class IndividualFilmViewController: UIViewController, UITableViewDataSource, UIT
         {
             return synopsisHeight
         }
+        else if indexPath.row == 0
+        {
+            return 125
+        }
         else
         {
-            return 120
+            return 165
         }
     }
 

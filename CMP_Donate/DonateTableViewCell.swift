@@ -28,7 +28,8 @@ class DonateTableViewCell: UITableViewCell {
 
     override func layoutSubviews() {
         super.layoutSubviews()
-        otherAmountButton.layer.borderWidth = 2.0
+        otherAmountButton.layer.borderWidth = 1.0
+        otherAmountButton.layer.cornerRadius = 5
         otherAmountButton.layer.borderColor = UIColor.customRedColor().CGColor
     }
 
