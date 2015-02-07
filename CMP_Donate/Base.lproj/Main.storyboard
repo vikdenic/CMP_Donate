@@ -220,8 +220,17 @@
                                                             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                                                 <rect key="frame" x="0.0" y="0.0" width="320" height="134"/>
                                                                 <autoresizingMask key="autoresizingMask"/>
+                                                                <subviews>
+                                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="crewMemberImage" id="GXb-tp-ful">
+                                                                        <rect key="frame" x="128" y="46" width="70" height="70"/>
+                                                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                                    </imageView>
+                                                                </subviews>
                                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                             </view>
+                                                            <connections>
+                                                                <outlet property="crewImageView" destination="GXb-tp-ful" id="vc3-2X-PdA"/>
+                                                            </connections>
                                                         </collectionViewCell>
                                                     </cells>
                                                 </collectionView>
@@ -456,6 +465,7 @@
     </scenes>
     <resources>
         <image name="coverPhoto" width="320" height="126"/>
+        <image name="crewMemberImage" width="70" height="70"/>
         <image name="filmsIcon" width="33" height="30"/>
         <image name="filterIcon" width="23" height="23"/>
         <image name="profileImage" width="30" height="30"/>
