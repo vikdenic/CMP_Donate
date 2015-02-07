@@ -1,0 +1,14 @@
+{
+    "applications": {
+        "CMP_Donations": {
+            "applicationId": "WKvDyqa7Hs23bkdbhPqAM4eadylYMxRlKTboJ56G", 
+            "masterKey": "GThIGs94JOAB2T3jgiNPNEBlNFzKIi2eT6NVw1TP"
+        }, 
+        "_default": {
+            "link": "CMP_Donations"
+		}
+    },
+	"global": {
+	    "parseVersion": "1.3.2"
+    }
+}

@@ -1,0 +1,2 @@
+pod 'Stripe', '~> 3.1'
+pod 'PaymentKit', '~> 1.1'
