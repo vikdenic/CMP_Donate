@@ -222,12 +222,12 @@
                                                                 <rect key="frame" x="0.0" y="0.0" width="320" height="134"/>
                                                                 <autoresizingMask key="autoresizingMask"/>
                                                                 <subviews>
-                                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="crewMemberImage" id="GXb-tp-ful">
+                                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="crewMemberImage" id="GXb-tp-ful" customClass="PFImageView">
                                                                         <rect key="frame" x="128" y="46" width="70" height="70"/>
                                                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                     </imageView>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Director: John Doe" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="vuw-57-Ymh">
-                                                                        <rect key="frame" x="44" y="18" width="232" height="21"/>
+                                                                        <rect key="frame" x="44" y="10" width="232" height="21"/>
                                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -237,7 +237,7 @@
                                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                             </view>
                                                             <connections>
-                                                                <outlet property="crewImageView" destination="GXb-tp-ful" id="vc3-2X-PdA"/>
+                                                                <outlet property="crewImageView" destination="GXb-tp-ful" id="nPi-wK-Gch"/>
                                                                 <outlet property="crewLabel" destination="vuw-57-Ymh" id="ErE-vk-4TB"/>
                                                             </connections>
                                                         </collectionViewCell>

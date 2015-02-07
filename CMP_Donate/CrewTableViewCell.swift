@@ -15,17 +15,6 @@ class CrewTableViewCell: UITableViewCell {
 
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
-//        var layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
-//        layout.sectionInset = UIEdgeInsetsMake(4, 5, 4, 5)
-//        layout.minimumLineSpacing = 5
-//        layout.itemSize = CGSizeMake(91, 91)
-//        layout.scrollDirection = UICollectionViewScrollDirection.Horizontal
-//        collectionView = UICollectionView(frame: CGRectZero, collectionViewLayout: layout)
-//        collectionView.registerClass(UICollectionViewCell.self, forCellWithReuseIdentifier: collectionViewCellIdentifier)
-//        collectionView.backgroundColor = UIColor.greenColor()
-//        collectionView.showsHorizontalScrollIndicator = false
-//        contentView.addSubview(self.collectionView)
-//        layoutMargins = UIEdgeInsetsMake(10, 0, 10, 0)
     }
 
     required init(coder aDecoder: NSCoder) {

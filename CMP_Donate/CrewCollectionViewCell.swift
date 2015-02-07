@@ -10,8 +10,8 @@ import UIKit
 
 class CrewCollectionViewCell: UICollectionViewCell {
 
-    @IBOutlet var crewImageView: UIImageView!
     @IBOutlet var crewLabel: UILabel!
+    @IBOutlet var crewImageView: PFImageView!
 
     override func layoutSubviews() {
         super.layoutSubviews()
