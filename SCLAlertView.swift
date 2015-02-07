@@ -311,6 +311,12 @@ class SCLAlertView: UIViewController {
         return showTitle(title, subTitle: subTitle, duration:duration, completeText:closeButtonTitle, style: style)
     }
 
+    // showCustom
+    // showSuccess(view, title, subTitle)
+    func showCustomAlert(title: String, image : UIImage, color : UIColor, subTitle: String, closeButtonTitle:String?=nil, duration:NSTimeInterval=0.0) -> SCLAlertViewResponder {
+        return showTitle(title, image: image, color: color, subTitle: subTitle, duration: duration, completeText: closeButtonTitle)
+    }
+
     // showTitle(view, title, subTitle, duration, style)
     func showTitle(title: String, subTitle: String, duration: NSTimeInterval?, completeText: String?, style: SCLAlertViewStyle) -> SCLAlertViewResponder {
         view.alpha = 0
@@ -406,6 +412,85 @@ class SCLAlertView: UIViewController {
         // Chainable objects
         return SCLAlertViewResponder(alertview: self)
     }
+
+    ///
+    // showTitle(view, title, subTitle, duration, style)
+    func showTitle(title: String, image : UIImage, color : UIColor, subTitle: String, duration: NSTimeInterval?, completeText: String?) -> SCLAlertViewResponder {
+        view.alpha = 0
+        let rv = UIApplication.sharedApplication().keyWindow?.subviews.first as UIView
+        rv.addSubview(view)
+        view.frame = rv.bounds
+        baseView.frame = rv.bounds
+
+        // Alert colour/icon
+        viewColor = UIColor()
+        var iconImage: UIImage
+
+        // Icon style
+        viewColor = color
+        iconImage = image
+
+        // Title
+        if !title.isEmpty {
+            self.labelTitle.text = title
+        }
+
+        // Subtitle
+        if !subTitle.isEmpty {
+            viewText.text = subTitle
+            // Adjust text view size, if necessary
+            let str = subTitle as NSString
+            let attr = [NSFontAttributeName:viewText.font]
+            let sz = CGSize(width: kWindowWidth - 24, height:90)
+            let r = str.boundingRectWithSize(sz, options: NSStringDrawingOptions.UsesLineFragmentOrigin, attributes:attr, context:nil)
+            let ht = ceil(r.size.height)
+            if ht < kTextHeight {
+                kWindowHeight -= (kTextHeight - ht)
+                kTextHeight = ht
+            }
+        }
+
+        // Done button
+        let txt = completeText != nil ? completeText! : "Done"
+        addButton(txt, target:self, selector:Selector("hideView"))
+
+        // Alert view colour and images
+        self.circleView.backgroundColor = viewColor
+        self.circleIconImageView.image  = iconImage
+        self.circleIconImageView.contentMode = .ScaleAspectFill
+        self.circleIconImageView.bounds = self.circleIconImageView.superview!.bounds
+
+        for txt in inputs {
+            txt.layer.borderColor = viewColor.CGColor
+        }
+        for btn in buttons {
+            btn.backgroundColor = viewColor
+//            if style == SCLAlertViewStyle.Warning {
+//                btn.setTitleColor(UIColor.blackColor(), forState:UIControlState.Normal)
+//            }
+        }
+
+        // Adding duration
+        if duration > 0 {
+            durationTimer?.invalidate()
+            durationTimer = NSTimer.scheduledTimerWithTimeInterval(duration!, target: self, selector: Selector("hideView"), userInfo: nil, repeats: false)
+        }
+
+        // Animate in the alert view
+        self.baseView.frame.origin.y = -400
+        UIView.animateWithDuration(0.2, animations: {
+            self.baseView.center.y = rv.center.y + 15
+            self.view.alpha = 1
+            }, completion: { finished in
+                UIView.animateWithDuration(0.2, animations: {
+                    self.baseView.center = rv.center
+                })
+        })
+        // Chainable objects
+        return SCLAlertViewResponder(alertview: self)
+    }
+
+    ///
 
     // Close SCLAlertView
     func hideView() {

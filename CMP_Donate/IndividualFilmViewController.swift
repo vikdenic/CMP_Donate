@@ -121,7 +121,38 @@ class IndividualFilmViewController: UIViewController, UITableViewDataSource, UIT
     func showCustomAlertView(amount : NSNumber)
     {
         let alert = SCLAlertView()
-        alert.showNotice("Contribute", subTitle: "Give $\(amount) toward \(film.title)?", closeButtonTitle: "Cancel", duration: 0.0)
+
+        alert.addButton("Confirm", action: { () -> Void in
+            self.chargeCustomer(amount)
+        })
+
+        alert.showCustomAlert("Contribute?", image: UIImage(named: "CMPLogo")!, color: UIColor.customRedColor(), subTitle: "Donate $\(amount) to \(film.title)", closeButtonTitle: "Cancel", duration: 0)
+    }
+
+    //Helpers
+    func chargeCustomer(amount : NSNumber)
+    {
+        let amountToCharge = (amount as Double * 100.0)
+        if let customerId = kStandardDefaults.valueForKey(kDefaultsCustomerID) as String!
+        {
+            PFCloud.callFunctionInBackground("createCharge", withParameters: ["amount": amountToCharge, "customer": customerId]) { (chargeId, error) -> Void in
+                if error != nil
+                {
+                    println(error.localizedDescription)
+                }
+                else
+                {
+                    println("Charge successful")
+                }
+            }
+        }
+
+        else
+        {
+            let alert = SCLAlertView()
+
+            alert.showWarning("oops", subTitle: "shit son", closeButtonTitle: "Okay", duration: 0)
+        }
     }
 
     //DonateTableViewCell
