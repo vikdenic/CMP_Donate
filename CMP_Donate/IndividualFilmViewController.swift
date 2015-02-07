@@ -12,6 +12,8 @@ class IndividualFilmViewController: UIViewController, UITableViewDataSource, UIT
 
     var film = Film()
     @IBOutlet var tableView: UITableView!
+    var theIndexPath = NSIndexPath()
+    var synopsisHeight : CGFloat = 20
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,25 +33,69 @@ class IndividualFilmViewController: UIViewController, UITableViewDataSource, UIT
         return headerView
     }
 
-    func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+    func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat
+    {
         return 180
     }
 
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
-        return 1
+        return 2
     }
 
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
     {
-        let cell = tableView.dequeueReusableCellWithIdentifier(kCrewTVCell) as CrewTableViewCell
-        return cell
+        if indexPath.row == 0
+        {
+            let cell = tableView.dequeueReusableCellWithIdentifier(kCrewTVCell) as CrewTableViewCell
+            return cell
+        }
+        else
+        {
+            let cell = tableView.dequeueReusableCellWithIdentifier(kSynopsisCell) as SynopsisTableViewCell
+            cell.synopsisTextView.text = film.synopsis
+            theIndexPath = indexPath
+            return cell
+        }
     }
 
     func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath)
     {
-        let customCell = cell as CrewTableViewCell
-        customCell.setCollectionViewDataSourceDelegate(dataSourceDelegate: self, index: indexPath.row)
+        if indexPath.row == 0
+        {
+            let customCell = cell as CrewTableViewCell
+            customCell.setCollectionViewDataSourceDelegate(dataSourceDelegate: self, index: indexPath.row)
+        }
+    }
+
+    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat
+    {
+        if indexPath.row == 1
+        {
+            return synopsisHeight
+        }
+        else
+        {
+            return 120
+        }
+    }
+
+    @IBAction func onSynopsisTapped(sender: UITapGestureRecognizer)
+    {
+        if editing == false
+        {
+            synopsisHeight = 100
+            tableView.beginUpdates()
+            tableView.endUpdates()
+            editing = true
+        }
+        else
+        {
+            synopsisHeight = 20
+            tableView.beginUpdates()
+            tableView.endUpdates()
+            editing = false
+        }
     }
 
     //UICollectionView

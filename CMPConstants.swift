@@ -23,5 +23,6 @@ let kProfileCell = "ProfileCell"
 let kFundedFilmCell = "FundedFilmCell"
 let kCrewCVCell = "CrewCVCell"
 let kCrewTVCell = "CrewTVCell"
+let kSynopsisCell = "SynopsisCell"
 
 let kCrewMemberImage = "crewMemberImage"

@@ -47,6 +47,7 @@
 		936C58091A760A700027343A /* ProfileTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 936C58081A760A700027343A /* ProfileTableViewCell.swift */; };
 		936C580D1A76190F0027343A /* FundedFilmTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 936C580C1A76190F0027343A /* FundedFilmTableViewCell.swift */; };
 		93ED198E1A85DB0100F06FA1 /* CrewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93ED198D1A85DB0100F06FA1 /* CrewTableViewCell.swift */; };
+		93ED19921A85ED0E00F06FA1 /* SynopsisTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93ED19911A85ED0E00F06FA1 /* SynopsisTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -106,6 +107,7 @@
 		936C58081A760A700027343A /* ProfileTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileTableViewCell.swift; sourceTree = "<group>"; };
 		936C580C1A76190F0027343A /* FundedFilmTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FundedFilmTableViewCell.swift; sourceTree = "<group>"; };
 		93ED198D1A85DB0100F06FA1 /* CrewTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CrewTableViewCell.swift; sourceTree = "<group>"; };
+		93ED19911A85ED0E00F06FA1 /* SynopsisTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SynopsisTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -272,6 +274,7 @@
 				936C580C1A76190F0027343A /* FundedFilmTableViewCell.swift */,
 				93379F6F1A857EF70054BAB8 /* CrewCollectionViewCell.swift */,
 				93ED198D1A85DB0100F06FA1 /* CrewTableViewCell.swift */,
+				93ED19911A85ED0E00F06FA1 /* SynopsisTableViewCell.swift */,
 			);
 			name = "Custom Cells";
 			sourceTree = "<group>";
@@ -400,6 +403,7 @@
 				9358A1281A739E1700CCE374 /* UniversalProfile.swift in Sources */,
 				936C57FD1A75D26B0027343A /* IndividualFilmViewController.swift in Sources */,
 				930EFDBC1A73916C00AF96AF /* Event.swift in Sources */,
+				93ED19921A85ED0E00F06FA1 /* SynopsisTableViewCell.swift in Sources */,
 				930EFDB31A73905600AF96AF /* RegisterViewController.swift in Sources */,
 				93379F701A857EF70054BAB8 /* CrewCollectionViewCell.swift in Sources */,
 				9358A11F1A7394DC00CCE374 /* CMPConstants.swift in Sources */,
