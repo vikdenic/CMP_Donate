@@ -36,6 +36,7 @@
 		930EFDC01A73918200AF96AF /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 930EFDBF1A73918200AF96AF /* Profile.swift */; };
 		930EFDC21A73918E00AF96AF /* CrewMember.swift in Sources */ = {isa = PBXBuildFile; fileRef = 930EFDC11A73918E00AF96AF /* CrewMember.swift */; };
 		93379F701A857EF70054BAB8 /* CrewCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93379F6F1A857EF70054BAB8 /* CrewCollectionViewCell.swift */; };
+		93379F721A85BA660054BAB8 /* CrewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93379F711A85BA660054BAB8 /* CrewTableViewCell.swift */; };
 		9358A11F1A7394DC00CCE374 /* CMPConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9358A11E1A7394DC00CCE374 /* CMPConstants.swift */; };
 		9358A1261A739BB100CCE374 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9358A1251A739BB100CCE374 /* ProfileViewController.swift */; };
 		9358A1281A739E1700CCE374 /* UniversalProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9358A1271A739E1700CCE374 /* UniversalProfile.swift */; };
@@ -93,6 +94,7 @@
 		930EFDBF1A73918200AF96AF /* Profile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
 		930EFDC11A73918E00AF96AF /* CrewMember.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CrewMember.swift; sourceTree = "<group>"; };
 		93379F6F1A857EF70054BAB8 /* CrewCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CrewCollectionViewCell.swift; sourceTree = "<group>"; };
+		93379F711A85BA660054BAB8 /* CrewTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CrewTableViewCell.swift; sourceTree = "<group>"; };
 		9358A11E1A7394DC00CCE374 /* CMPConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CMPConstants.swift; sourceTree = "<group>"; };
 		9358A1251A739BB100CCE374 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		9358A1271A739E1700CCE374 /* UniversalProfile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UniversalProfile.swift; path = CMP_Donate/UniversalProfile.swift; sourceTree = "<group>"; };
@@ -269,6 +271,7 @@
 				936C58081A760A700027343A /* ProfileTableViewCell.swift */,
 				936C580C1A76190F0027343A /* FundedFilmTableViewCell.swift */,
 				93379F6F1A857EF70054BAB8 /* CrewCollectionViewCell.swift */,
+				93379F711A85BA660054BAB8 /* CrewTableViewCell.swift */,
 			);
 			name = "Custom Cells";
 			sourceTree = "<group>";
@@ -384,6 +387,7 @@
 			files = (
 				936C58071A7607150027343A /* PaymentSelectionViewController.swift in Sources */,
 				930EFDB11A73904A00AF96AF /* LoginViewController.swift in Sources */,
+				93379F721A85BA660054BAB8 /* CrewTableViewCell.swift in Sources */,
 				930EFDC01A73918200AF96AF /* Profile.swift in Sources */,
 				936C58091A760A700027343A /* ProfileTableViewCell.swift in Sources */,
 				930EFDAF1A73902A00AF96AF /* FeedViewController.swift in Sources */,
