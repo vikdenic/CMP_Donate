@@ -128,7 +128,19 @@ class IndividualFilmViewController: UIViewController, UITableViewDataSource, UIT
     func didTapBubbleOne(amount: NSNumber) {
         println(amount)
     }
-    
+
+    func didTapBubbleTwo(amount: NSNumber) {
+        println(amount)
+    }
+
+    func didTapBubbleThree(amount: NSNumber) {
+        println(amount)
+    }
+
+    func didTapOtherAmount() {
+        println("other")
+    }
+
     //UICollectionView
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int
     {

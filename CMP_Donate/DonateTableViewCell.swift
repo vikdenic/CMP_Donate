@@ -13,7 +13,7 @@ import UIKit
     optional func didTapBubbleOne(amount : NSNumber)
     optional func didTapBubbleTwo(amount : NSNumber)
     optional func didTapBubbleThree(amount : NSNumber)
-    optional func didTapOtherAmount(amount : NSNumber)
+    optional func didTapOtherAmount()
 }
 
 class DonateTableViewCell: UITableViewCell {
@@ -60,6 +60,6 @@ class DonateTableViewCell: UITableViewCell {
 
     @IBAction func onOtherAmountTapped(sender: UIButton)
     {
-        delegate?.didTapOtherAmount!(otherAmountButton.titleLabel!.text!.removeDollarPrefix().toInt()!)
+        delegate?.didTapOtherAmount!()
     }
 }
