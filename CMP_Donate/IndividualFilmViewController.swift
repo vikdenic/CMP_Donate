@@ -33,8 +33,10 @@ class IndividualFilmViewController: UIViewController, UITableViewDataSource, UIT
         tableView.tableHeaderView = nil
         tableView.addSubview(headerView)
 
-        visualEffectView = UIVisualEffectView(effect: UIBlurEffect(style: .Dark)) as UIVisualEffectView
-        tableView.addSubview(visualEffectView)
+        //Add blur effect view, also as a subview of the tableView
+//        visualEffectView = UIVisualEffectView(effect: UIBlurEffect(style: .Dark)) as UIVisualEffectView
+//        visualEffectView.alpha = 0
+//        tableView.addSubview(visualEffectView)
 
         //makes the scroll view content area larger without changing the size of the subview or the size of the view’s content
         tableView.contentInset = UIEdgeInsets(top: kTableHeaderHeight, left: 0, bottom: 0, right: 0)
@@ -127,6 +129,7 @@ class IndividualFilmViewController: UIViewController, UITableViewDataSource, UIT
             tableView.endUpdates()
             editing = false
         }
+        updateHeaderView()
     }
 
     func showCustomAlertView(amount : NSNumber)
@@ -145,10 +148,12 @@ class IndividualFilmViewController: UIViewController, UITableViewDataSource, UIT
         var headerRect = CGRect(x: 0, y: -kTableHeaderHeight, width: tableView.bounds.width, height: kTableHeaderHeight)
 
         //If user pulling down
-        if tableView.contentOffset.y <= -kTableHeaderHeight
+        if tableView.contentOffset.y < -kTableHeaderHeight
         {
             headerRect.origin.y = tableView.contentOffset.y
             headerRect.size.height = -tableView.contentOffset.y
+            var blurAdjustment = -tableView.contentOffset.y / 180 - 0.8
+            visualEffectView.alpha = blurAdjustment
         }
             //If user scrolling up
         else
@@ -156,8 +161,8 @@ class IndividualFilmViewController: UIViewController, UITableViewDataSource, UIT
             headerRect.origin.y = tableView.contentOffset.y
             headerRect.size.height = -tableView.contentOffset.y
         }
-
-        visualEffectView.frame = headerRect
+        //give both the blur effect and image (which is the tableHeaderView) this adjusted frame
+//        visualEffectView.frame = headerRect
         headerView.frame = headerRect
     }
 
