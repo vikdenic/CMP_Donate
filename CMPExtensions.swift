@@ -34,3 +34,15 @@ extension String
         }
     }
 }
+
+extension UIImageView
+{
+    func addBlurEffect(style : UIBlurEffectStyle)
+    {
+        var visualEffectView = UIVisualEffectView(effect: UIBlurEffect(style: style)) as UIVisualEffectView
+
+        visualEffectView.frame = bounds
+
+        addSubview(visualEffectView)
+    }
+}

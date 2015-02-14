@@ -13,6 +13,7 @@ class IndividualFilmViewController: UIViewController, UITableViewDataSource, UIT
     var film = Film()
     @IBOutlet var tableView: UITableView!
     @IBOutlet var filmImageView: PFImageView!
+    var visualEffectView = UIVisualEffectView()
 
     var headerView: UIView!
     var theIndexPath = NSIndexPath()
@@ -32,6 +33,9 @@ class IndividualFilmViewController: UIViewController, UITableViewDataSource, UIT
         tableView.tableHeaderView = nil
         tableView.addSubview(headerView)
 
+        visualEffectView = UIVisualEffectView(effect: UIBlurEffect(style: .Dark)) as UIVisualEffectView
+        tableView.addSubview(visualEffectView)
+
         //makes the scroll view content area larger without changing the size of the subview or the size of the view’s content
         tableView.contentInset = UIEdgeInsets(top: kTableHeaderHeight, left: 0, bottom: 0, right: 0)
         //always the current location of the top-left corner of the scroll bounds, whether scrolling is in progress or not.
@@ -41,23 +45,6 @@ class IndividualFilmViewController: UIViewController, UITableViewDataSource, UIT
     }
 
     //UITableView
-//    func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView?
-//    {
-//        let headerView = UIView(frame: CGRectMake(0, 0, tableView.frame.size.width, 180))
-//        let filmImageView = PFImageView(frame: CGRectMake(0, 0, headerView.frame.size.width, headerView.frame.size.height))
-//        filmImageView.contentMode = .ScaleAspectFill
-//        filmImageView.clipsToBounds = true
-//        filmImageView.file = film.imageFile
-//        filmImageView.loadInBackground(nil)
-//        headerView.addSubview(filmImageView)
-//        return headerView
-//    }
-
-//    func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat
-//    {
-//        return 180
-//    }
-
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
         return 3
@@ -169,9 +156,11 @@ class IndividualFilmViewController: UIViewController, UITableViewDataSource, UIT
             headerRect.origin.y = tableView.contentOffset.y
             headerRect.size.height = -tableView.contentOffset.y
         }
+
+        visualEffectView.frame = headerRect
         headerView.frame = headerRect
     }
-    
+
     func chargeCustomer(amount : NSNumber)
     {
         let alert = SCLAlertView()
