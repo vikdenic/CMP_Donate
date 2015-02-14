@@ -15,6 +15,11 @@ extension UIColor
     {
         return UIColor(red: 234/255.0, green: 34/255.0, blue: 45/255.0, alpha: 100)
     }
+
+    class func customLightGreyColor() -> UIColor
+    {
+        return UIColor(red: 250/255.0, green: 250/255.0, blue: 250/255.0, alpha: 100)
+    }
 }
 
 extension String

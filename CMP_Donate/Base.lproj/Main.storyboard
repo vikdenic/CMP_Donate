@@ -209,9 +209,9 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" dataMode="prototypes" id="Xu5-61-MbA">
-                                                    <rect key="frame" x="0.0" y="0.0" width="3520" height="1260"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="3840" height="1374.5"/>
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                                    <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                                    <color key="backgroundColor" red="0.96470588235294119" green="0.98039215686274506" blue="0.98039215686274506" alpha="1" colorSpace="calibratedRGB"/>
                                                     <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Tf8-x0-FEP">
                                                         <size key="itemSize" width="320" height="134"/>
                                                         <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -260,7 +260,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" text="Synopsis here" selectable="NO" id="vHe-5E-xVy">
-                                                    <rect key="frame" x="8" y="0.0" width="2567" height="710"/>
+                                                    <rect key="frame" x="8" y="0.0" width="2854" height="747.5"/>
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                     <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                     <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
