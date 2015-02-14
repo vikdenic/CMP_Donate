@@ -8,36 +8,55 @@
 
 import UIKit
 
-class IndividualFilmViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UICollectionViewDataSource, UICollectionViewDelegate, DonateTableViewCellDelegate {
+class IndividualFilmViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UICollectionViewDataSource, UICollectionViewDelegate, DonateTableViewCellDelegate, UIScrollViewDelegate {
 
     var film = Film()
     @IBOutlet var tableView: UITableView!
+    @IBOutlet var filmImageView: PFImageView!
+
+    var headerView: UIView!
     var theIndexPath = NSIndexPath()
     var synopsisHeight : CGFloat = 28
+
+    let kTableHeaderHeight: CGFloat = 120.0
 
     //View Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         title = film.title
+
+        filmImageView.file = film.imageFile
+        filmImageView.loadInBackground(nil)
+
+        headerView = tableView.tableHeaderView
+        tableView.tableHeaderView = nil
+        tableView.addSubview(headerView)
+
+        //makes the scroll view content area larger without changing the size of the subview or the size of the view’s content
+        tableView.contentInset = UIEdgeInsets(top: kTableHeaderHeight, left: 0, bottom: 0, right: 0)
+        //always the current location of the top-left corner of the scroll bounds, whether scrolling is in progress or not.
+        tableView.contentOffset = CGPoint(x: 0, y: -kTableHeaderHeight)
+
+        updateHeaderView()
     }
 
     //UITableView
-    func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView?
-    {
-        let headerView = UIView(frame: CGRectMake(0, 0, tableView.frame.size.width, 180))
-        let filmImageView = PFImageView(frame: CGRectMake(0, 0, headerView.frame.size.width, headerView.frame.size.height))
-        filmImageView.contentMode = .ScaleAspectFill
-        filmImageView.clipsToBounds = true
-        filmImageView.file = film.imageFile
-        filmImageView.loadInBackground(nil)
-        headerView.addSubview(filmImageView)
-        return headerView
-    }
+//    func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView?
+//    {
+//        let headerView = UIView(frame: CGRectMake(0, 0, tableView.frame.size.width, 180))
+//        let filmImageView = PFImageView(frame: CGRectMake(0, 0, headerView.frame.size.width, headerView.frame.size.height))
+//        filmImageView.contentMode = .ScaleAspectFill
+//        filmImageView.clipsToBounds = true
+//        filmImageView.file = film.imageFile
+//        filmImageView.loadInBackground(nil)
+//        headerView.addSubview(filmImageView)
+//        return headerView
+//    }
 
-    func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat
-    {
-        return 180
-    }
+//    func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat
+//    {
+//        return 180
+//    }
 
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
@@ -99,6 +118,11 @@ class IndividualFilmViewController: UIViewController, UITableViewDataSource, UIT
         }
     }
 
+    //UIScrollViewDelegate
+    func scrollViewDidScroll(scrollView: UIScrollView) {
+        updateHeaderView()
+    }
+
     //Actions
     @IBAction func onSynopsisTapped(sender: UITapGestureRecognizer)
     {
@@ -130,12 +154,30 @@ class IndividualFilmViewController: UIViewController, UITableViewDataSource, UIT
     }
 
     //Helpers
+    func updateHeaderView() {
+        var headerRect = CGRect(x: 0, y: -kTableHeaderHeight, width: tableView.bounds.width, height: kTableHeaderHeight)
+
+        //If user pulling down
+        if tableView.contentOffset.y <= -kTableHeaderHeight
+        {
+            headerRect.origin.y = tableView.contentOffset.y
+            headerRect.size.height = -tableView.contentOffset.y
+        }
+            //If user scrolling up
+        else
+        {
+            headerRect.origin.y = tableView.contentOffset.y
+            headerRect.size.height = -tableView.contentOffset.y
+        }
+        headerView.frame = headerRect
+    }
+    
     func chargeCustomer(amount : NSNumber)
     {
         let alert = SCLAlertView()
 
         let amountToCharge = (amount as Double * 100.0)
-        if let customerId = kStandardDefaults.valueForKey(kDefaultsCustomerID) as String!
+        if let customerId = kStandardDefaults.valueForKey(kDefaultsStripeCustomerID) as String!
         {
             PFCloud.callFunctionInBackground("createCharge", withParameters: ["amount": amountToCharge, "customer": customerId]) { (chargeId, error) -> Void in
                 if error != nil
