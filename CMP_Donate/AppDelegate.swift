@@ -32,6 +32,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         //Stripe
         Stripe.setDefaultPublishableKey(kStripePublishableKey)
 
+        //PayPal
+        PayPalMobile.initializeWithClientIdsForEnvironments([PayPalEnvironmentProduction : kPayPalClientIdProduction, PayPalEnvironmentSandbox : kPayPalClientIdSandbox])
+
         setUpUI()
 
         return true

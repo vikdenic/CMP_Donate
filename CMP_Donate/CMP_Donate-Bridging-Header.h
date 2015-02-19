@@ -14,6 +14,8 @@
 #import "Stripe.h"
 #import "PTKView.h"
 
+#import "PayPalMobile.h"
+
 #import <AudioToolbox/AudioToolbox.h>
 
 #import <CFNetwork/CFNetwork.h>
