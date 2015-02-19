@@ -39,3 +39,14 @@ extension String
         }
     }
 }
+
+extension UIButton {
+    func toCircular(borderThickness : CGFloat, borderColor : UIColor)
+    {
+        layer.cornerRadius = frame.height / 2
+        clipsToBounds = true
+
+        layer.borderWidth = borderThickness
+        layer.borderColor = borderColor.CGColor
+    }
+}

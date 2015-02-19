@@ -41,6 +41,10 @@ class DonateTableViewCell: UITableViewCell {
         otherAmountButton.layer.borderWidth = 1.0
         otherAmountButton.layer.cornerRadius = 5
         otherAmountButton.layer.borderColor = UIColor.customRedColor().CGColor
+
+        bubbleButtonOne.toCircular(1.0, borderColor: UIColor.customRedColor())
+        bubbleButtonTwo.toCircular(1.0, borderColor: UIColor.customRedColor())
+        bubbleButtonThree.toCircular(1.0, borderColor: UIColor.customRedColor())
     }
 
     @IBAction func onBubbleOneTapped(sender: UIButton)

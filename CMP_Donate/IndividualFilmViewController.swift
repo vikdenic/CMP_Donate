@@ -13,7 +13,7 @@ class IndividualFilmViewController: UIViewController, UITableViewDataSource, UIT
     var film = Film()
     @IBOutlet var tableView: UITableView!
     @IBOutlet var filmImageView: PFImageView!
-    var visualEffectView = UIVisualEffectView()
+//    var visualEffectView = UIVisualEffectView()
 
     var headerView: UIView!
     var theIndexPath = NSIndexPath()
@@ -152,8 +152,8 @@ class IndividualFilmViewController: UIViewController, UITableViewDataSource, UIT
         {
             headerRect.origin.y = tableView.contentOffset.y
             headerRect.size.height = -tableView.contentOffset.y
-            var blurAdjustment = -tableView.contentOffset.y / 180 - 0.8
-            visualEffectView.alpha = blurAdjustment
+//            var blurAdjustment = -tableView.contentOffset.y / 180 - 0.8
+//            visualEffectView.alpha = blurAdjustment
         }
             //If user scrolling up
         else
