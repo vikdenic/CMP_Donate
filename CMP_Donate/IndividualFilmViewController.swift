@@ -8,7 +8,7 @@
 
 import UIKit
 
-class IndividualFilmViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UICollectionViewDataSource, UICollectionViewDelegate, DonateTableViewCellDelegate, UIScrollViewDelegate {
+class IndividualFilmViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UICollectionViewDataSource, UICollectionViewDelegate, DonateTableViewCellDelegate, UIScrollViewDelegate, PayPalPaymentDelegate {
 
     var film = Film()
     @IBOutlet var tableView: UITableView!
@@ -20,6 +20,32 @@ class IndividualFilmViewController: UIViewController, UITableViewDataSource, UIT
     var synopsisHeight : CGFloat = 28
 
     let kTableHeaderHeight: CGFloat = 120.0
+
+    //PayPal
+    var payPalConfiguration = PayPalConfiguration()
+    var accessDictionary : NSDictionary!
+    var accessToken : String!
+    var theCompletedPayment : PayPalPayment!
+    var thePaymentId : String!
+    var theVerifiedPaymentDict : NSDictionary!
+
+    let kAccessToken = "access_token"
+
+    let kConfirmation = "Confirmation"
+    let kResponse = "response"
+    let kId = "id"
+
+    required init(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+
+        // See PayPalConfiguration.h for details and default values.
+        // Should you wish to change any of the values, you can do so here.
+        // For example, if you wish to accept PayPal but not payment card payments, then add:
+        payPalConfiguration.acceptCreditCards = false
+        // Or if you wish to have the user choose a Shipping Address from those already
+        // associated with the user's PayPal account, then add:
+        payPalConfiguration.payPalShippingAddressOption = PayPalShippingAddressOption.PayPal
+    }
 
     //View Lifecycle
     override func viewDidLoad() {
@@ -44,6 +70,59 @@ class IndividualFilmViewController: UIViewController, UITableViewDataSource, UIT
         tableView.contentOffset = CGPoint(x: 0, y: -kTableHeaderHeight)
 
         updateHeaderView()
+
+        PPDataManager.httpRequestAccessToken(kPayPalClientIdSandbox, secretId: kPayPalSecretIdSandbox) { (data, error) -> Void in
+            if let someData : AnyObject = data
+            {
+                self.accessDictionary = data as NSDictionary
+                self.accessToken = self.accessDictionary.valueForKey(self.kAccessToken) as String!
+            }
+        }
+    }
+
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(true)
+        PayPalMobile.preconnectWithEnvironment(PayPalEnvironmentSandbox)
+    }
+
+    //Helpers
+    func pay()
+    {
+        // Create a PayPalPayment
+        let payment = PayPalPayment()
+
+        // Amount, currency, and description
+        payment.amount = NSDecimalNumber(string: "0.01")
+        payment.currencyCode = "USD"
+        payment.shortDescription = film.title
+
+        // Use the intent property to indicate that this is a "sale" payment,
+        // meaning combined Authorization + Capture.
+        // To perform Authorization only, and defer Capture to your server,
+        // use PayPalPaymentIntentAuthorize.
+        // To place an Order, and defer both Authorization and Capture to
+        // your server, use PayPalPaymentIntentOrder.
+        // (PayPalPaymentIntentOrder is valid only for PayPal payments, not credit card payments.)
+        payment.intent = .Sale
+
+        // If your app collects Shipping Address information from the customer,
+        // or already stores that information on your server, you may provide it here.
+        //payment.shippingAddress = address /// a previously-created PayPalShippingAddress object
+
+        // Several other optional fields that you can set here are documented in PayPalPayment.h,
+        // including paymentDetails, items, invoiceNumber, custom, softDescriptor, etc.
+
+        // Check whether payment is processable.
+        if (!payment.processable) {
+            // If, for example, the amount was negative or the shortDescription was empty, then
+            // this payment would not be processable. You would want to handle that here.
+        }
+
+        // Create a PayPalPaymentViewController.
+        let paymentViewController = PayPalPaymentViewController(payment: payment, configuration: payPalConfiguration, delegate: self)
+
+        // Present the PayPalPaymentViewController.
+        presentViewController(paymentViewController, animated: true, completion: nil)
     }
 
     //UITableView
@@ -192,6 +271,54 @@ class IndividualFilmViewController: UIViewController, UITableViewDataSource, UIT
         }
     }
 
+    //PayPalPaymentDelegate
+    func payPalPaymentDidCancel(paymentViewController: PayPalPaymentViewController!) {
+        // The payment was canceled; dismiss the PayPalPaymentViewController.
+        dismissViewControllerAnimated(true, completion: nil)
+    }
+
+    func verifyComlpetedPayment(completedPayment : PayPalPayment)
+    {
+        // Send the entire confirmation dictionary
+        let confirmation = NSJSONSerialization.dataWithJSONObject(completedPayment.confirmation, options: nil, error: nil)
+
+        // Send confirmation to your server; your server should verify the proof of payment
+        // and give the user their goods or services. If the server is not reachable, save
+        // the confirmation and try again later.
+    }
+
+    func payPalPaymentViewController(paymentViewController: PayPalPaymentViewController!, didCompletePayment completedPayment: PayPalPayment!) {
+        // Payment was processed successfully; send to server for verification and fulfillment.
+        theCompletedPayment = completedPayment
+        verifyComlpetedPayment(theCompletedPayment)
+
+        //This is where we extract the paymentId from the approved payment object
+        let completedConfirmation = completedPayment.confirmation as NSDictionary!
+        let response = completedConfirmation.valueForKey(kResponse) as NSDictionary!
+        thePaymentId = response.valueForKey(kId) as String!
+
+        //This is where we verify the payment
+        //        PPDataManager.httpVerifyPayment(accessToken, paymentId: thePaymentId) { (data, error) -> Void in
+        //            println(data)
+        //        }
+        PPDataManager.httpVerifyPayment(accessToken, paymentId: thePaymentId, viewController: self) { (data, error) -> Void in
+            self.theVerifiedPaymentDict = data as NSDictionary!
+
+            //Compare SDK completed payement with the server's verified payment
+            if self.theVerifiedPaymentDict.valueForKey("payer")!.valueForKey("status")!.isEqualToString("VERIFIED") && (self.theVerifiedPaymentDict.valueForKey("id")! as NSString).isEqualToString(self.thePaymentId)
+            {
+                println("it's verified and the id matches")
+            }
+            else
+            {
+                println("cannot verify payment at this time")
+            }
+        }
+
+        // Dismiss the PayPalPaymentViewController.
+        dismissViewControllerAnimated(true, completion: nil)
+    }
+
     //DonateTableViewCell
     func didTapBubbleOne(amount: NSNumber) {
         showCustomAlertView(amount)
@@ -199,6 +326,7 @@ class IndividualFilmViewController: UIViewController, UITableViewDataSource, UIT
 
     func didTapBubbleTwo(amount: NSNumber) {
         println(amount)
+        pay()
     }
 
     func didTapBubbleThree(amount: NSNumber) {
