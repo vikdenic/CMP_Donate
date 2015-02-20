@@ -69,32 +69,25 @@
         }
         else
         {
-            //If a customer is already on file, add card to that customer
-            if ([[NSUserDefaults standardUserDefaults] valueForKey:@"customerId"])
-            {
 
-            }
-            //else, create a new customer
-            else
-            {
-                [PFCloud callFunctionInBackground:@"createCustomer" withParameters:@{@"token": token.tokenId, @"customerName": PFUser.currentUser.username} block:^(id customer, NSError *error) {
-                    if (error != nil)
-                    {
-                        NSLog(@"%@", error);
-                    }
-                    else
-                    {
-                        NSLog(@"Successfully created customer");
-                        //Save customer (via id) to defaults for future transactions
-                        [[NSUserDefaults standardUserDefaults] setObject:customer[@"id"] forKey:@"customerId"];
-                        [[NSUserDefaults standardUserDefaults] synchronize];
-                    }
-                }];
-            }
+            [PFCloud callFunctionInBackground:@"createCustomer" withParameters:@{@"token": token.tokenId, @"customerName": PFUser.currentUser.username} block:^(id customer, NSError *error) {
+                if (error != nil)
+                {
+                    NSLog(@"%@", error);
+                }
+                else
+                {
+                    NSLog(@"Successfully created customer");
+                    //Save customer (via id) to defaults for future transactions
+                    [[NSUserDefaults standardUserDefaults] setObject:customer[@"id"] forKey:@"customerId"];
+                    [[NSUserDefaults standardUserDefaults] setValue:@"CreditCard" forKey:@"preferredPaymentType"];
+                    [[NSUserDefaults standardUserDefaults] synchronize];
+                }
+            }];
         }
     }];
 
-    [self.navigationController popViewControllerAnimated:YES];
+    [self dismissViewControllerAnimated:true completion:nil];
 }
 
 @end

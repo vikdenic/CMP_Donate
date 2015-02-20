@@ -63,7 +63,7 @@ class EditProfileViewController: UIViewController, UITableViewDataSource, UITabl
         }
         else
         {
-            cell.textLabel?.text = "Update Credit Card"
+            cell.textLabel?.text = "Preferred Payment Method"
         }
 
         return cell
@@ -74,8 +74,15 @@ class EditProfileViewController: UIViewController, UITableViewDataSource, UITabl
         {
             if indexPath.row == 0
             {
-                performSegueWithIdentifier(kEditProfileToUpdateCardSegue, sender: self)
+//                performSegueWithIdentifier(kEditProfileToUpdateCardSegue, sender: self)
+                performSegueWithIdentifier(kUpdateProfileToPreferredPaymentTypeSegue, sender: self)
             }
         }
+    }
+
+    //Unwind
+    @IBAction func unwindToThisViewController(segue: UIStoryboardSegue) {
+        let sourceVC = segue.sourceViewController as UpdatePaymentTypeViewController
+        kStandardDefaults.setValue(sourceVC.selectedStatus, forKey: kDefaultsPreferredPaymentType)
     }
 }

@@ -86,13 +86,13 @@ class IndividualFilmViewController: UIViewController, UITableViewDataSource, UIT
     }
 
     //Helpers
-    func pay()
+    func pay(amount : NSNumber)
     {
         // Create a PayPalPayment
         let payment = PayPalPayment()
 
         // Amount, currency, and description
-        payment.amount = NSDecimalNumber(string: "0.01")
+        payment.amount = NSDecimalNumber(string: amount.stringValue)
         payment.currencyCode = "USD"
         payment.shortDescription = film.title
 
@@ -326,7 +326,7 @@ class IndividualFilmViewController: UIViewController, UITableViewDataSource, UIT
 
     func didTapBubbleTwo(amount: NSNumber) {
         println(amount)
-        pay()
+        pay(amount)
     }
 
     func didTapBubbleThree(amount: NSNumber) {

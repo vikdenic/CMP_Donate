@@ -18,6 +18,7 @@ let kButton2ToPaySegue = "Button2ToPaySegue"
 let kButton3ToPaySegue = "Button3ToPaySegue"
 let kFundToPaySegue = "FundToPaySegue"
 let kEditProfileToUpdateCardSegue = "EditProfileToUpdateCardSegue"
+let kUpdateProfileToPreferredPaymentTypeSegue = "EditProfileToPreferredPaymentTypeSegue"
 
 //Cells
 let kFilmCell = "FilmCell"
@@ -33,6 +34,9 @@ let kEditProfileCell = "EditProfileCell"
 let kStripePublishableKey = "pk_test_oyA5FAsuqYVvFqEOUOSUg2hF"
 let kDefaultsStripeCardLast4 = "card.last4"
 let kDefaultsStripeCustomerID = "customerId"
+
+let kDefaultsPreferredPaymentType = "preferredPaymentType"
+
 
 //PayPal
 let kPayPalClientIdSandbox = "AXwxFSPni98ZG2aXJ3PZYPKBAgH_gOpqMNufOqtL8Me_uvZaxtU2vJ6DYK-XLxHzCYxdftbcAW7WN72H"
