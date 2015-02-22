@@ -29,6 +29,7 @@ let kCrewTVCell = "CrewTVCell"
 let kSynopsisCell = "SynopsisCell"
 let kDonateCell = "DonateCell"
 let kEditProfileCell = "EditProfileCell"
+let kPreferredPaymentCell = "PreferredPaymentCell"
 
 //Stripe
 let kStripePublishableKey = "pk_test_oyA5FAsuqYVvFqEOUOSUg2hF"

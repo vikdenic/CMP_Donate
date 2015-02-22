@@ -8,12 +8,14 @@
 
 import UIKit
 
-class IndividualFilmViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UICollectionViewDataSource, UICollectionViewDelegate, DonateTableViewCellDelegate, UIScrollViewDelegate, PayPalPaymentDelegate {
+class IndividualFilmViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UICollectionViewDataSource, UICollectionViewDelegate, DonateTableViewCellDelegate, UIScrollViewDelegate, PayPalPaymentDelegate, UITextFieldDelegate {
 
     var film = Film()
     @IBOutlet var tableView: UITableView!
     @IBOutlet var filmImageView: PFImageView!
 //    var visualEffectView = UIVisualEffectView()
+    let textFieldAlert = SCLAlertView()
+
 
     var headerView: UIView!
     var theIndexPath = NSIndexPath()
@@ -34,6 +36,8 @@ class IndividualFilmViewController: UIViewController, UITableViewDataSource, UIT
     let kConfirmation = "Confirmation"
     let kResponse = "response"
     let kId = "id"
+
+    var preferredPaymentType = kStandardDefaults.valueForKey(kDefaultsPreferredPaymentType) as String
 
     required init(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
@@ -222,6 +226,30 @@ class IndividualFilmViewController: UIViewController, UITableViewDataSource, UIT
         alert.showCustomAlert("Contribute?", image: UIImage(named: "CMPLogo")!, color: UIColor.customRedColor(), subTitle: "Donate $\(amount) to \(film.title)?", closeButtonTitle: "Cancel", duration: 0)
     }
 
+    func showCustomAlertWithTextField()
+    {
+        let alertCntrl = UIAlertController(title: "Contribute", message: "Help kickstart this film", preferredStyle: UIAlertControllerStyle.Alert)
+        let action = UIAlertAction(title: "", style: .Default) { (action) -> Void in
+            println("present pay alert here?")
+        }
+        
+    }
+
+    func textFieldDidBeginEditing(textField: UITextField) {
+    }
+
+    override func touchesBegan(touches: NSSet, withEvent event: UIEvent)
+    {
+        view.endEditing(true)
+    }
+
+//    - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
+//    UITouch * touch = [touches anyObject];
+//    if(touch.phase == UITouchPhaseBegan) {
+//    [aTextField resignFirstResponder];
+//    }
+//    }
+
     //Helpers
     func updateHeaderView() {
         var headerRect = CGRect(x: 0, y: -kTableHeaderHeight, width: tableView.bounds.width, height: kTableHeaderHeight)
@@ -334,7 +362,7 @@ class IndividualFilmViewController: UIViewController, UITableViewDataSource, UIT
     }
 
     func didTapOtherAmount() {
-        println("other")
+
     }
 
     //UICollectionView

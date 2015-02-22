@@ -8,14 +8,16 @@
 
 import UIKit
 
-class UpdatePaymentTypeViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
+class UpdatePaymentTypeViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
-    @IBOutlet var picker: UIPickerView!
+    @IBOutlet var tableView: UITableView!
     let pickData = ["Credit Card", "PayPal"]
     @IBOutlet var updateButton: UIButton!
     @IBOutlet var preferredStatusLabel: UILabel!
     var selectedStatus : String!
     @IBOutlet var saveButton: UIBarButtonItem!
+
+    var prev = Int()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,6 +27,7 @@ class UpdatePaymentTypeViewController: UIViewController, UIPickerViewDataSource,
         if let somePreference = kStandardDefaults.valueForKey(kDefaultsPreferredPaymentType) as String!
         {
             selectedStatus = somePreference
+            println(somePreference)
         }
     }
 
@@ -49,31 +52,77 @@ class UpdatePaymentTypeViewController: UIViewController, UIPickerViewDataSource,
         }
     }
 
-    //Picker
-    func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
+    override func viewDidAppear(animated: Bool) {
+        if let somePreference = kStandardDefaults.valueForKey(kDefaultsPreferredPaymentType) as String!
+        {
+            if somePreference == "CreditCard"
+            {
+                prev = 0
+                let cell = tableView.cellForRowAtIndexPath(NSIndexPath(forRow: 0, inSection: 0)) as UITableViewCell!
+                cell.accessoryType = .Checkmark
+            }
+            else if somePreference == "PayPal"
+            {
+                prev = 1
+                let cell = tableView.cellForRowAtIndexPath(NSIndexPath(forRow: 0, inSection: 1)) as UITableViewCell!
+                cell.accessoryType = .Checkmark
+            }
+        }
+    }
+
+    //UITableView
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCellWithIdentifier(kPreferredPaymentCell) as UITableViewCell
+
+        if indexPath.section == 0
+        {
+            cell.textLabel?.text = pickData[0]
+        }
+        else
+        {
+            cell.textLabel?.text = pickData[1]
+        }
+
+        return cell
+    }
+
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 1
     }
 
-    func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 2
     }
 
-    func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String! {
-        return pickData[row]
+    func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 10
     }
 
-    func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        UIView.animateWithDuration(0.3, animations: { () -> Void in
-            if row == 0
-            {
-                self.updateButton.alpha = 1
-                self.selectedStatus = "CreditCard"
-            }
-            else if row == 1
-            {
-                self.updateButton.alpha = 0
-                self.selectedStatus = "PayPal"
-            }
-        })
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        let cell = tableView.cellForRowAtIndexPath(indexPath) as UITableViewCell!
+        let otherCell = tableView.cellForRowAtIndexPath(NSIndexPath(forRow: 0, inSection: prev)) as UITableViewCell!
+
+        if cell.accessoryType == .None
+        {
+            cell.accessoryType = .Checkmark
+            otherCell.accessoryType = .None
+            prev = indexPath.section
+        }
+        else
+        {
+            cell.accessoryType = .None
+        }
+
+        if indexPath.section == 0
+        {
+//            kStandardDefaults.setValue("CreditCard", forKey: kDefaultsPreferredPaymentType)
+            selectedStatus = "CreditCard"
+        }
+        else
+        {
+//            kStandardDefaults.setValue("PayPal", forKey: kDefaultsPreferredPaymentType)
+            selectedStatus = "PayPal"
+        }
     }
 }
