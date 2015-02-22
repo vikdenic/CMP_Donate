@@ -60,12 +60,14 @@ class UpdatePaymentTypeViewController: UIViewController, UITableViewDataSource, 
                 prev = 0
                 let cell = tableView.cellForRowAtIndexPath(NSIndexPath(forRow: 0, inSection: 0)) as UITableViewCell!
                 cell.accessoryType = .Checkmark
+                updateButton.alpha = 1
             }
             else if somePreference == "PayPal"
             {
                 prev = 1
                 let cell = tableView.cellForRowAtIndexPath(NSIndexPath(forRow: 0, inSection: 1)) as UITableViewCell!
                 cell.accessoryType = .Checkmark
+                updateButton.alpha = 0
             }
         }
     }
@@ -116,13 +118,18 @@ class UpdatePaymentTypeViewController: UIViewController, UITableViewDataSource, 
 
         if indexPath.section == 0
         {
-//            kStandardDefaults.setValue("CreditCard", forKey: kDefaultsPreferredPaymentType)
             selectedStatus = "CreditCard"
+
+            UIView.animateWithDuration(0.4, animations: { () -> Void in
+                self.updateButton.alpha = 1
+            })
         }
         else
         {
-//            kStandardDefaults.setValue("PayPal", forKey: kDefaultsPreferredPaymentType)
             selectedStatus = "PayPal"
+            UIView.animateWithDuration(0.4, animations: { () -> Void in
+                self.updateButton.alpha = 0
+            })
         }
     }
 }
