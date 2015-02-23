@@ -372,21 +372,39 @@ class IndividualFilmViewController: UIViewController, UITableViewDataSource, UIT
         dismissViewControllerAnimated(true, completion: nil)
     }
 
+    func presentPreferredPaymentMethod(amount: NSNumber)
+    {
+        if let somePreference = kStandardDefaults.valueForKey(kDefaultsPreferredPaymentType) as String!
+        {
+            if somePreference == "CreditCard"
+            {
+                showCustomAlertView(amount)
+            }
+            else if somePreference == "PayPal"
+            {
+                pay(amount)
+            }
+        }
+        else
+        {
+            performSegueWithIdentifier(kIndividualFilmToSelectPreferenceSegue, sender: nil)
+        }
+    }
+
     //DonateTableViewCell
     func didTapBubbleOne(amount: NSNumber) {
-        performSegueWithIdentifier(kIndividualFilmToSelectPreferenceSegue, sender: nil)
-//        showCustomAlertView(amount)
+        presentPreferredPaymentMethod(amount)
     }
 
     func didTapBubbleTwo(amount: NSNumber) {
-//        pay(amount)
+        presentPreferredPaymentMethod(amount)
     }
 
     func didTapBubbleThree(amount: NSNumber) {
+        presentPreferredPaymentMethod(amount)
     }
 
     func didTapOtherAmount() {
-
     }
 
     //UICollectionView
