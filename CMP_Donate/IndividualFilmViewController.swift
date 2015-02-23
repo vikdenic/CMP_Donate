@@ -36,6 +36,8 @@ class IndividualFilmViewController: UIViewController, UITableViewDataSource, UIT
     let kResponse = "response"
     let kId = "id"
 
+    let selectPaymentVC = SelectPaymentPreferenceViewController()
+
     var preferredPaymentType = kStandardDefaults.valueForKey(kDefaultsPreferredPaymentType) as String?
 
     required init(coder aDecoder: NSCoder) {
@@ -372,16 +374,15 @@ class IndividualFilmViewController: UIViewController, UITableViewDataSource, UIT
 
     //DonateTableViewCell
     func didTapBubbleOne(amount: NSNumber) {
-        showCustomAlertView(amount)
+        performSegueWithIdentifier(kIndividualFilmToSelectPreferenceSegue, sender: nil)
+//        showCustomAlertView(amount)
     }
 
     func didTapBubbleTwo(amount: NSNumber) {
-        println(amount)
-        pay(amount)
+//        pay(amount)
     }
 
     func didTapBubbleThree(amount: NSNumber) {
-        println(amount)
     }
 
     func didTapOtherAmount() {
