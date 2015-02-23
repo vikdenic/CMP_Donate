@@ -421,6 +421,9 @@
                     <navigationItem key="navigationItem" id="6SD-YZ-ryk">
                         <barButtonItem key="leftBarButtonItem" style="plain" systemItem="cancel" id="EVs-fA-Tzs">
                             <color key="tintColor" red="0.8980392157" green="0.0" blue="0.10980392160000001" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="onCancelTapped:" destination="6KE-Ch-2BL" id="RP7-dF-omM"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                 </viewController>

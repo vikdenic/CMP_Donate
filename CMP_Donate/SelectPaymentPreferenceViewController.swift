@@ -12,15 +12,21 @@ class SelectPaymentPreferenceViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
 
-        // Do any additional setup after loading the view.
+    @IBAction func onCancelTapped(sender: UIBarButtonItem) {
+        dismissViewControllerAnimated(true, completion: nil)
     }
 
     @IBAction func onCreditCardTapped(sender: UIButton) {
-        kStandardDefaults.setValue(kDefaultsCreditCard, forKey: kDefaultsPreferredPaymentType)
+        dismissViewControllerAnimated(true, completion: { () -> Void in
+            kStandardDefaults.setValue(kDefaultsCreditCard, forKey: kDefaultsPreferredPaymentType)
+        })
     }
 
     @IBAction func OnPayPalTapped(sender: UIButton) {
-        kStandardDefaults.setValue(kDefaultsPayPal, forKey: kDefaultsPreferredPaymentType)
+        dismissViewControllerAnimated(true, completion: { () -> Void in
+            kStandardDefaults.setValue(kDefaultsPayPal, forKey: kDefaultsPreferredPaymentType)
+        })
     }
 }
