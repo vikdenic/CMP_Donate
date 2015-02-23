@@ -342,8 +342,8 @@
 				9358A1291A741B6500CCE374 /* FeedTableViewCell.swift */,
 				936C58081A760A700027343A /* ProfileTableViewCell.swift */,
 				936C580C1A76190F0027343A /* FundedFilmTableViewCell.swift */,
-				93379F6F1A857EF70054BAB8 /* CrewCollectionViewCell.swift */,
 				93ED198D1A85DB0100F06FA1 /* CrewTableViewCell.swift */,
+				93379F6F1A857EF70054BAB8 /* CrewCollectionViewCell.swift */,
 				93ED19911A85ED0E00F06FA1 /* SynopsisTableViewCell.swift */,
 				936477AD1A860D75000042C5 /* DonateTableViewCell.swift */,
 			);

@@ -16,7 +16,6 @@ class IndividualFilmViewController: UIViewController, UITableViewDataSource, UIT
 //    var visualEffectView = UIVisualEffectView()
     let textFieldAlert = SCLAlertView()
 
-
     var headerView: UIView!
     var theIndexPath = NSIndexPath()
     var synopsisHeight : CGFloat = 28
@@ -87,7 +86,20 @@ class IndividualFilmViewController: UIViewController, UITableViewDataSource, UIT
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(true)
         PayPalMobile.preconnectWithEnvironment(PayPalEnvironmentSandbox)
+
+        let cell = tableView.cellForRowAtIndexPath(NSIndexPath(forRow: 0, inSection: 0)) as CrewTableViewCell!
+        cell.pageDots.numberOfPages = film.productionTeam.count
+
+        if film.productionTeam.count <= 1
+        {
+            cell.pageDots.alpha = 0
+        }
     }
+
+//    override func viewDidAppear(animated: Bool) {
+//        let cell = tableView.cellForRowAtIndexPath(NSIndexPath(forRow: 0, inSection: 0)) as CrewTableViewCell!
+//        cell.pageDots.numberOfPages = film.productionTeam.count
+//    }
 
     //Helpers
     func pay(amount : NSNumber)
@@ -182,7 +194,7 @@ class IndividualFilmViewController: UIViewController, UITableViewDataSource, UIT
         }
         else if indexPath.row == 0
         {
-            return 128
+            return 130
         }
         else
         {
@@ -193,6 +205,16 @@ class IndividualFilmViewController: UIViewController, UITableViewDataSource, UIT
     //UIScrollViewDelegate
     func scrollViewDidScroll(scrollView: UIScrollView) {
         updateHeaderView()
+    }
+
+    func scrollViewDidEndDecelerating(scrollView: UIScrollView) {
+        if scrollView.tag == kCrewScrollViewTag
+        {
+            let pageNumber = Int(scrollView.contentOffset.x / (scrollView.frame.size.width))
+
+            let cell = tableView.cellForRowAtIndexPath(NSIndexPath(forRow: 0, inSection: 0)) as CrewTableViewCell!
+            cell.pageDots.currentPage = pageNumber
+        }
     }
 
     //Actions

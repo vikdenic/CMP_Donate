@@ -31,6 +31,8 @@ let kDonateCell = "DonateCell"
 let kEditProfileCell = "EditProfileCell"
 let kPreferredPaymentCell = "PreferredPaymentCell"
 
+let kCrewScrollViewTag = 99
+
 //Stripe
 let kStripePublishableKey = "pk_test_oyA5FAsuqYVvFqEOUOSUg2hF"
 let kDefaultsStripeCardLast4 = "card.last4"

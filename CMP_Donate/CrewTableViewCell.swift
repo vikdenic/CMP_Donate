@@ -12,6 +12,7 @@ let collectionViewCellIdentifier: NSString = "CrewCVCell"
 class CrewTableViewCell: UITableViewCell {
 
     @IBOutlet var collectionView: UICollectionView!
+    @IBOutlet var pageDots: UIPageControl!
 
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -23,6 +24,7 @@ class CrewTableViewCell: UITableViewCell {
 
     override func layoutSubviews() {
         super.layoutSubviews()
+        collectionView.tag = kCrewScrollViewTag
 
         let frame = self.contentView.bounds
         collectionView.frame = CGRectMake(0, 0.5, frame.size.width, frame.size.height - 1)

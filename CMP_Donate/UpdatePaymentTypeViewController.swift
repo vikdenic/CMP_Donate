@@ -53,6 +53,11 @@ class UpdatePaymentTypeViewController: UIViewController, UITableViewDataSource, 
     }
 
     override func viewDidAppear(animated: Bool) {
+        decideUpdateButtonAppearence()
+    }
+
+    func decideUpdateButtonAppearence()
+    {
         if let somePreference = kStandardDefaults.valueForKey(kDefaultsPreferredPaymentType) as String!
         {
             if somePreference == "CreditCard"
