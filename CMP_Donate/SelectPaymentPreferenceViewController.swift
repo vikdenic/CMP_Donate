@@ -19,9 +19,7 @@ class SelectPaymentPreferenceViewController: UIViewController {
     }
 
     @IBAction func onCreditCardTapped(sender: UIButton) {
-        dismissViewControllerAnimated(true, completion: { () -> Void in
-            kStandardDefaults.setValue(kDefaultsCreditCard, forKey: kDefaultsPreferredPaymentType)
-        })
+        //Segue to UpdateCardVC triggered in IB
     }
 
     @IBAction func OnPayPalTapped(sender: UIButton) {
