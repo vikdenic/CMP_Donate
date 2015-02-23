@@ -248,6 +248,8 @@ class IndividualFilmViewController: UIViewController, UITableViewDataSource, UIT
             self.chargeCustomer(amount)
         })
 
+//        let formattedAmount = NSString(format: "%.2f", amount.floatValue)
+
         alert.showCustomAlert("Contribute?", image: UIImage(named: "CMPLogo")!, color: UIColor.customRedColor(), subTitle: "Donate $\(amount) to \(film.title)?", closeButtonTitle: "Cancel", duration: 0)
     }
 
@@ -372,6 +374,31 @@ class IndividualFilmViewController: UIViewController, UITableViewDataSource, UIT
         dismissViewControllerAnimated(true, completion: nil)
     }
 
+    //Helpers
+    func presentCustomAmountEntry()
+    {
+        let alert = UIAlertController(title: "Contribute Custom Amount", message: nil, preferredStyle: .Alert)
+
+        var theTextField = UITextField()
+        alert.addTextFieldWithConfigurationHandler { (textField) -> Void in
+            textField.placeholder = "Amount here"
+            textField.keyboardType = UIKeyboardType.DecimalPad
+            theTextField = textField
+        }
+
+        let cancelAction = UIAlertAction(title: "Cancel", style: .Cancel, handler: nil)
+
+        let action = UIAlertAction(title: "Next", style: .Default) { (action) -> Void in
+            let theAmount = (theTextField.text as NSString).floatValue
+            self.presentPreferredPaymentMethod(theAmount)
+        }
+
+        alert.addAction(cancelAction)
+        alert.addAction(action)
+
+        presentViewController(alert, animated: true, completion: nil)
+    }
+
     func presentPreferredPaymentMethod(amount: NSNumber)
     {
         if let somePreference = kStandardDefaults.valueForKey(kDefaultsPreferredPaymentType) as String!
@@ -405,6 +432,7 @@ class IndividualFilmViewController: UIViewController, UITableViewDataSource, UIT
     }
 
     func didTapOtherAmount() {
+        presentCustomAmountEntry()
     }
 
     //UICollectionView
