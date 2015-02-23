@@ -36,7 +36,7 @@ class IndividualFilmViewController: UIViewController, UITableViewDataSource, UIT
     let kResponse = "response"
     let kId = "id"
 
-    var preferredPaymentType = kStandardDefaults.valueForKey(kDefaultsPreferredPaymentType) as String
+    var preferredPaymentType = kStandardDefaults.valueForKey(kDefaultsPreferredPaymentType) as String?
 
     required init(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
@@ -88,6 +88,7 @@ class IndividualFilmViewController: UIViewController, UITableViewDataSource, UIT
         PayPalMobile.preconnectWithEnvironment(PayPalEnvironmentSandbox)
 
         let cell = tableView.cellForRowAtIndexPath(NSIndexPath(forRow: 0, inSection: 0)) as CrewTableViewCell!
+        cell.pageDots.center.x = cell.pageDots.superview!.center.x
         cell.pageDots.numberOfPages = film.productionTeam.count
 
         if film.productionTeam.count <= 1

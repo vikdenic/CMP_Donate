@@ -82,12 +82,11 @@
                     [[NSUserDefaults standardUserDefaults] setObject:customer[@"id"] forKey:@"customerId"];
                     [[NSUserDefaults standardUserDefaults] setValue:@"CreditCard" forKey:@"preferredPaymentType"];
                     [[NSUserDefaults standardUserDefaults] synchronize];
+                    [self dismissViewControllerAnimated:true completion:nil];
                 }
             }];
         }
     }];
-
-    [self dismissViewControllerAnimated:true completion:nil];
 }
 
 @end

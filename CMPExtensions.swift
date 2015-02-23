@@ -20,9 +20,10 @@ extension UIColor
     {
         return UIColor(red: 250/255.0, green: 250/255.0, blue: 250/255.0, alpha: 100)
     }
-    class func customDarkGreenColor() -> UIColor
+    class func customGreenColor() -> UIColor
     {
-        return UIColor(red: 55/255.0, green: 100/255.0, blue: 20/255.0, alpha: 100)
+//        return UIColor(red: 40/255.0, green: 200/255.0, blue: 85/255.0, alpha: 100)
+        return UIColor(red: 0/255.0, green: 123/255.0, blue: 35/255.0, alpha: 100)
     }
 }
 

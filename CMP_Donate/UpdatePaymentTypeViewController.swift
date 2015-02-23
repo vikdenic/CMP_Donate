@@ -29,6 +29,11 @@ class UpdatePaymentTypeViewController: UIViewController, UITableViewDataSource, 
             selectedStatus = somePreference
             println(somePreference)
         }
+
+        if kStandardDefaults.valueForKey(kDefaultsStripeCustomerID) == nil
+        {
+            saveButton.enabled = false
+        }
     }
 
     override func viewWillAppear(animated: Bool) {
@@ -37,13 +42,12 @@ class UpdatePaymentTypeViewController: UIViewController, UITableViewDataSource, 
             if selectedStatus == "PayPal"
             {
                 preferredStatusLabel.text = "Currently prefer PayPal"
-                preferredStatusLabel.backgroundColor = UIColor.customDarkGreenColor()
             }
             else if selectedStatus == "CreditCard"
             {
                 preferredStatusLabel.text = "Currently prefer card ending in \(kStandardDefaults.valueForKey(kDefaultsStripeCardLast4)!)"
-                preferredStatusLabel.backgroundColor = UIColor.customDarkGreenColor()
             }
+            preferredStatusLabel.backgroundColor = UIColor.customGreenColor()
         }
         else
         {
@@ -63,15 +67,19 @@ class UpdatePaymentTypeViewController: UIViewController, UITableViewDataSource, 
             if somePreference == "CreditCard"
             {
                 prev = 0
-                let cell = tableView.cellForRowAtIndexPath(NSIndexPath(forRow: 0, inSection: 0)) as UITableViewCell!
+                let cell = tableView.cellForRowAtIndexPath(NSIndexPath(forRow: 0, inSection: prev)) as UITableViewCell!
                 cell.accessoryType = .Checkmark
+                let othercell = tableView.cellForRowAtIndexPath(NSIndexPath(forRow: 0, inSection: 1)) as UITableViewCell!
+                othercell.accessoryType = .None
                 updateButton.alpha = 1
             }
             else if somePreference == "PayPal"
             {
                 prev = 1
-                let cell = tableView.cellForRowAtIndexPath(NSIndexPath(forRow: 0, inSection: 1)) as UITableViewCell!
+                let cell = tableView.cellForRowAtIndexPath(NSIndexPath(forRow: 0, inSection: prev)) as UITableViewCell!
                 cell.accessoryType = .Checkmark
+                let othercell = tableView.cellForRowAtIndexPath(NSIndexPath(forRow: 0, inSection: 0)) as UITableViewCell!
+                othercell.accessoryType = .None
                 updateButton.alpha = 0
             }
         }
@@ -118,7 +126,12 @@ class UpdatePaymentTypeViewController: UIViewController, UITableViewDataSource, 
         }
         else
         {
-            cell.accessoryType = .None
+//            cell.accessoryType = .None
+        }
+
+        if selectedStatus == nil
+        {
+            cell.accessoryType = .Checkmark
         }
 
         if indexPath.section == 0
@@ -128,6 +141,11 @@ class UpdatePaymentTypeViewController: UIViewController, UITableViewDataSource, 
             UIView.animateWithDuration(0.4, animations: { () -> Void in
                 self.updateButton.alpha = 1
             })
+
+            if kStandardDefaults.valueForKey(kDefaultsStripeCustomerID) == nil
+            {
+                saveButton.enabled = false
+            }
         }
         else
         {
@@ -135,6 +153,8 @@ class UpdatePaymentTypeViewController: UIViewController, UITableViewDataSource, 
             UIView.animateWithDuration(0.4, animations: { () -> Void in
                 self.updateButton.alpha = 0
             })
+
+            saveButton.enabled = true
         }
     }
 }

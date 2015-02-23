@@ -215,7 +215,7 @@
                                                     <color key="currentPageIndicatorTintColor" red="0.70196080207824707" green="0.70196080207824707" blue="0.70196080207824707" alpha="1" colorSpace="calibratedRGB"/>
                                                 </pageControl>
                                                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" id="Xu5-61-MbA">
-                                                    <rect key="frame" x="0.0" y="0.0" width="6080" height="2216"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="6400" height="2350.5"/>
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                     <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Tf8-x0-FEP">
@@ -273,7 +273,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" text="Synopsis here" selectable="NO" id="vHe-5E-xVy">
-                                                    <rect key="frame" x="8" y="0.0" width="4863" height="1010"/>
+                                                    <rect key="frame" x="8" y="0.0" width="5150" height="1047.5"/>
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                     <color key="backgroundColor" red="0.96470588239999999" green="0.98039215690000003" blue="0.98039215690000003" alpha="1" colorSpace="calibratedRGB"/>
                                                     <color key="textColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -433,7 +433,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="coverPhoto" id="k8z-tS-PTa" userLabel="coverPhotoImageView" customClass="PFImageView">
-                                                    <rect key="frame" x="0.0" y="0.0" width="2560" height="1436"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="2880" height="1615.5"/>
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                 </imageView>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="WVF-IH-ALd" userLabel="profilePicImageView" customClass="PFImageView">
@@ -587,7 +587,7 @@
                                     </subviews>
                                 </view>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="PreferredPaymentCell" editingAccessoryType="checkmark" textLabel="4Rj-hW-caA" style="IBUITableViewCellStyleDefault" id="ctE-CE-RtH">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="PreferredPaymentCell" editingAccessoryType="checkmark" textLabel="4Rj-hW-caA" style="IBUITableViewCellStyleDefault" id="ctE-CE-RtH">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ctE-CE-RtH" id="aXD-9C-ZPJ">

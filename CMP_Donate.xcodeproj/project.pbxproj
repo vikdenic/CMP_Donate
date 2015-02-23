@@ -54,6 +54,7 @@
 		936C58031A75F2060027343A /* CMPExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 936C58021A75F2060027343A /* CMPExtensions.swift */; };
 		936C58091A760A700027343A /* ProfileTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 936C58081A760A700027343A /* ProfileTableViewCell.swift */; };
 		936C580D1A76190F0027343A /* FundedFilmTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 936C580C1A76190F0027343A /* FundedFilmTableViewCell.swift */; };
+		939ACC191A9AB8F900525152 /* libstdc++.6.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 939ACC181A9AB8F900525152 /* libstdc++.6.dylib */; };
 		93C0A8491A96BBAA00F9C069 /* UpdatePaymentTypeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C0A8481A96BBAA00F9C069 /* UpdatePaymentTypeViewController.swift */; };
 		93ED198E1A85DB0100F06FA1 /* CrewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93ED198D1A85DB0100F06FA1 /* CrewTableViewCell.swift */; };
 		93ED19921A85ED0E00F06FA1 /* SynopsisTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93ED19911A85ED0E00F06FA1 /* SynopsisTableViewCell.swift */; };
@@ -137,6 +138,7 @@
 		936C58021A75F2060027343A /* CMPExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CMPExtensions.swift; sourceTree = "<group>"; };
 		936C58081A760A700027343A /* ProfileTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileTableViewCell.swift; sourceTree = "<group>"; };
 		936C580C1A76190F0027343A /* FundedFilmTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FundedFilmTableViewCell.swift; sourceTree = "<group>"; };
+		939ACC181A9AB8F900525152 /* libstdc++.6.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libstdc++.6.dylib"; path = "usr/lib/libstdc++.6.dylib"; sourceTree = SDKROOT; };
 		93C0A8481A96BBAA00F9C069 /* UpdatePaymentTypeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpdatePaymentTypeViewController.swift; sourceTree = "<group>"; };
 		93ED198D1A85DB0100F06FA1 /* CrewTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CrewTableViewCell.swift; sourceTree = "<group>"; };
 		93ED19911A85ED0E00F06FA1 /* SynopsisTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SynopsisTableViewCell.swift; sourceTree = "<group>"; };
@@ -150,6 +152,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				939ACC191A9AB8F900525152 /* libstdc++.6.dylib in Frameworks */,
 				931CA0221A95C9C70069B235 /* MessageUI.framework in Frameworks */,
 				931CA0201A95C9B90069B235 /* CoreMedia.framework in Frameworks */,
 				931CA01E1A95C9B40069B235 /* AVFoundation.framework in Frameworks */,
@@ -371,6 +374,7 @@
 		C1AB4529CED40F599EFF73CD /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				939ACC181A9AB8F900525152 /* libstdc++.6.dylib */,
 				931CA0211A95C9C70069B235 /* MessageUI.framework */,
 				931CA01F1A95C9B90069B235 /* CoreMedia.framework */,
 				931CA01D1A95C9B40069B235 /* AVFoundation.framework */,

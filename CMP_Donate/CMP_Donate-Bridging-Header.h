@@ -5,6 +5,7 @@
 #import <Parse/Parse.h>
 #import <Parse/PFObject+Subclass.h>
 #import <ParseUI/ParseUI.h>
+#import <ParseCrashReporting/ParseCrashReporting.h>
 
 #import <QuartzCore/QuartzCore.h>
 
