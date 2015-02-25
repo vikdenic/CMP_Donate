@@ -106,6 +106,52 @@
             </objects>
             <point key="canvasLocation" x="1336.8" y="-296.30666666666667"/>
         </scene>
+        <!--Film Cats View Controller-->
+        <scene sceneID="Dqh-e3-n4W">
+            <objects>
+                <viewController id="8Yf-o2-whc" customClass="FilmCatsViewController" customModule="CMP_Donate" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Mdz-kz-J09">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="oSo-36-hZr">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="DPA-jj-pPg">
+                                    <size key="itemSize" width="135" height="135"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CatCell" id="Jfu-B5-It9" customClass="CategoryCollectionViewCell" customModule="CMP_Donate" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="135" height="135"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <color key="backgroundColor" red="1" green="0.50196081399917603" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="8Yf-o2-whc" id="c8l-6Z-IwO"/>
+                                    <outlet property="delegate" destination="8Yf-o2-whc" id="Hnl-2I-Ohl"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="ilh-CI-pOo"/>
+                    <connections>
+                        <outlet property="collectionView" destination="oSo-36-hZr" id="n4Y-2L-qeY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gRK-r3-4CM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1748" y="-297"/>
+        </scene>
         <!--Feed View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
@@ -174,6 +220,9 @@
                         </segmentedControl>
                         <barButtonItem key="rightBarButtonItem" image="filterIcon" id="Pvy-aG-1pz">
                             <color key="tintColor" red="0.85882352941176465" green="0.0" blue="0.10196078431372549" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <segue destination="8Yf-o2-whc" kind="push" identifier="HomeToCatsSegue" id="FOg-7Q-p3M"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
@@ -215,7 +264,7 @@
                                                     <color key="currentPageIndicatorTintColor" red="0.70196080207824707" green="0.70196080207824707" blue="0.70196080207824707" alpha="1" colorSpace="calibratedRGB"/>
                                                 </pageControl>
                                                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" id="Xu5-61-MbA">
-                                                    <rect key="frame" x="0.0" y="0.0" width="7040" height="2619.5"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="7360" height="2754"/>
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                     <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Tf8-x0-FEP">
@@ -273,7 +322,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" text="Synopsis here" selectable="NO" id="vHe-5E-xVy">
-                                                    <rect key="frame" x="8" y="0.0" width="5724" height="1122.5"/>
+                                                    <rect key="frame" x="8" y="0.0" width="6011" height="1160"/>
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                     <color key="backgroundColor" red="0.96470588239999999" green="0.98039215690000003" blue="0.98039215690000003" alpha="1" colorSpace="calibratedRGB"/>
                                                     <color key="textColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -471,7 +520,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="coverPhoto" id="k8z-tS-PTa" userLabel="coverPhotoImageView" customClass="PFImageView">
-                                                    <rect key="frame" x="0.0" y="0.0" width="3520" height="1974.5"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="3840" height="2154"/>
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                 </imageView>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="WVF-IH-ALd" userLabel="profilePicImageView" customClass="PFImageView">
