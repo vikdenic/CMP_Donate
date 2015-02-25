@@ -42,4 +42,16 @@ class Film: PFObject, PFSubclassing
             completed(films: films as [Film], error: nil)
         })
     }
+
+    class func queryAllFilms(event : Event, completed:(films:[Film], error:NSError!)->Void)
+    {
+        var query = Film.query()
+        query.includeKey("event")
+        query.includeKey("productionTeam")
+        query.whereKey("event", equalTo: event)
+
+        query.findObjectsInBackgroundWithBlock({ (films, error) -> Void in
+            completed(films: films as [Film], error: nil)
+        })
+    }
 }

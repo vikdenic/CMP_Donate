@@ -12,11 +12,20 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     @IBOutlet var tableView: UITableView!
     var filmsArray = [Film]()
+    var fromCategory = Bool()
+    var event = Event()
+
+    @IBOutlet var segmentedControl: UISegmentedControl!
 
     //View Lifecycle
     override func viewDidLoad()
     {
         super.viewDidLoad()
+
+        if fromCategory == true
+        {
+            adjustUIForCategory()
+        }
     }
 
     override func viewDidAppear(animated: Bool)
@@ -34,19 +43,36 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
         }
         else
         {
-            Profile.queryForCurrentUserProfile({ (profile, error) -> Void in
-                UniversalProfile.sharedInstance.profile = profile
-            })
             self.setFilmData()
         }
     }
 
     func setFilmData()
     {
-        Film.queryAllFilms({ (films, error) -> Void in
-            self.filmsArray = films as [Film]
-            self.tableView.reloadData()
-        })
+        if fromCategory == false
+        {
+            Profile.queryForCurrentUserProfile({ (profile, error) -> Void in
+                UniversalProfile.sharedInstance.profile = profile
+            })
+
+            Film.queryAllFilms({ (films, error) -> Void in
+                self.filmsArray = films as [Film]
+                self.tableView.reloadData()
+            })
+        }
+        else
+        {
+            Film.queryAllFilms(event, completed: { (films, error) -> Void in
+                self.filmsArray = films as [Film]
+                self.tableView.reloadData()
+            })
+        }
+    }
+
+    func adjustUIForCategory()
+    {
+        segmentedControl.hidden = true
+        navigationItem.rightBarButtonItem = nil
     }
 
     //UITableView

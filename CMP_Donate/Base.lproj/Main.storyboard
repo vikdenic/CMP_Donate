@@ -109,7 +109,7 @@
         <!--Events-->
         <scene sceneID="Dqh-e3-n4W">
             <objects>
-                <viewController id="8Yf-o2-whc" customClass="FilmCatsViewController" customModule="CMP_Donate" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="8Yf-o2-whc" customClass="FilmCategoriesViewController" customModule="CMP_Donate" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Mdz-kz-J09">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -150,6 +150,7 @@
                                         <connections>
                                             <outlet property="categoryImageView" destination="KQz-p1-fgq" id="JGb-ZR-XZK"/>
                                             <outlet property="categoryLabel" destination="cBi-h7-anx" id="IpS-Wh-u73"/>
+                                            <segue destination="vXZ-lx-hvc" kind="push" id="6FY-ia-8KG"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -244,6 +245,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="segmentedControl" destination="KNe-9B-qdy" id="LOh-j6-a2M"/>
                         <outlet property="tableView" destination="ACm-eE-riq" id="STG-SW-S4G"/>
                         <segue destination="hwO-xP-Xgv" kind="modal" identifier="FeedToRegisterSegue" id="dWi-yy-zW2"/>
                     </connections>
@@ -282,7 +284,7 @@
                                                     <color key="currentPageIndicatorTintColor" red="0.70196080207824707" green="0.70196080207824707" blue="0.70196080207824707" alpha="1" colorSpace="calibratedRGB"/>
                                                 </pageControl>
                                                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" id="Xu5-61-MbA">
-                                                    <rect key="frame" x="0.0" y="0.0" width="7360" height="2754"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="7680" height="2888.5"/>
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                     <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Tf8-x0-FEP">
@@ -340,7 +342,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" text="Synopsis here" selectable="NO" id="vHe-5E-xVy">
-                                                    <rect key="frame" x="8" y="0.0" width="6011" height="1160"/>
+                                                    <rect key="frame" x="8" y="0.0" width="6298" height="1197.5"/>
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                     <color key="backgroundColor" red="0.96470588239999999" green="0.98039215690000003" blue="0.98039215690000003" alpha="1" colorSpace="calibratedRGB"/>
                                                     <color key="textColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -538,7 +540,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="coverPhoto" id="k8z-tS-PTa" userLabel="coverPhotoImageView" customClass="PFImageView">
-                                                    <rect key="frame" x="0.0" y="0.0" width="3840" height="2154"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="4160" height="2333.5"/>
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                 </imageView>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="WVF-IH-ALd" userLabel="profilePicImageView" customClass="PFImageView">
@@ -857,6 +859,7 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
+        <segue reference="Kn6-Ot-SZX"/>
         <segue reference="LCH-Wz-Wbg"/>
     </inferredMetricsTieBreakers>
 </document>

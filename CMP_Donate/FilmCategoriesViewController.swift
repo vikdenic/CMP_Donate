@@ -8,7 +8,7 @@
 
 import UIKit
 
-class FilmCatsViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
+class FilmCategoriesViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
 
     @IBOutlet var collectionView: UICollectionView!
     var events = [Event]()
@@ -45,5 +45,8 @@ class FilmCatsViewController: UIViewController, UICollectionViewDataSource, UICo
 
     //Segue
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        let feedVC = segue.destinationViewController as FeedViewController
+        feedVC.fromCategory = true
+        feedVC.event = events[collectionView.indexPathsForSelectedItems().first!.row]
     }
 }

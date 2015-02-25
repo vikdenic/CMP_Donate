@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		079827A79E3D87E9B8F3AE36 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C690653828D3D63C095D1E3D /* libPods.a */; };
-		93045C9C1A9D8FC700E3BB3A /* FilmCatsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93045C9B1A9D8FC700E3BB3A /* FilmCatsViewController.swift */; };
+		93045C9C1A9D8FC700E3BB3A /* FilmCategoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93045C9B1A9D8FC700E3BB3A /* FilmCategoriesViewController.swift */; };
 		93045C9E1A9D905D00E3BB3A /* CategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93045C9D1A9D905D00E3BB3A /* CategoryCollectionViewCell.swift */; };
 		930EFD6E1A738F1400AF96AF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 930EFD6D1A738F1400AF96AF /* AppDelegate.swift */; };
 		930EFD731A738F1400AF96AF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 930EFD711A738F1400AF96AF /* Main.storyboard */; };
@@ -74,7 +74,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		93045C9B1A9D8FC700E3BB3A /* FilmCatsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilmCatsViewController.swift; sourceTree = "<group>"; };
+		93045C9B1A9D8FC700E3BB3A /* FilmCategoriesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilmCategoriesViewController.swift; sourceTree = "<group>"; };
 		93045C9D1A9D905D00E3BB3A /* CategoryCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryCollectionViewCell.swift; sourceTree = "<group>"; };
 		930EFD681A738F1400AF96AF /* CMP_Donate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CMP_Donate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		930EFD6C1A738F1400AF96AF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -294,7 +294,7 @@
 				93C0A8481A96BBAA00F9C069 /* UpdatePaymentTypeViewController.swift */,
 				935DB8621A861CA700C9A19F /* UpdateCardViewController.h */,
 				935DB8631A861CA700C9A19F /* UpdateCardViewController.m */,
-				93045C9B1A9D8FC700E3BB3A /* FilmCatsViewController.swift */,
+				93045C9B1A9D8FC700E3BB3A /* FilmCategoriesViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -544,7 +544,7 @@
 				93C0A8491A96BBAA00F9C069 /* UpdatePaymentTypeViewController.swift in Sources */,
 				936C57FD1A75D26B0027343A /* IndividualFilmViewController.swift in Sources */,
 				931CA0241A95CA4F0069B235 /* PPDataManager.swift in Sources */,
-				93045C9C1A9D8FC700E3BB3A /* FilmCatsViewController.swift in Sources */,
+				93045C9C1A9D8FC700E3BB3A /* FilmCategoriesViewController.swift in Sources */,
 				930EFDBC1A73916C00AF96AF /* Event.swift in Sources */,
 				93ED19921A85ED0E00F06FA1 /* SynopsisTableViewCell.swift in Sources */,
 				935DB8641A861CA700C9A19F /* UpdateCardViewController.m in Sources */,
