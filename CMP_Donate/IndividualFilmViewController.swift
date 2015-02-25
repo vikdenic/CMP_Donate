@@ -64,6 +64,8 @@ class IndividualFilmViewController: UIViewController, UITableViewDataSource, UIT
         tableView.tableHeaderView = nil
         tableView.addSubview(headerView)
 
+        navigationController?.setNavBarToClear()
+
         //Add blur effect view, also as a subview of the tableView
 //        visualEffectView = UIVisualEffectView(effect: UIBlurEffect(style: .Dark)) as UIVisualEffectView
 //        visualEffectView.alpha = 0

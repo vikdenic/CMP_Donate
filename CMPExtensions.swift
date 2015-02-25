@@ -55,3 +55,16 @@ extension UIButton {
         layer.borderColor = borderColor.CGColor
     }
 }
+
+extension UINavigationController
+{
+    //MARK: Helpers
+    func setNavBarToClear()
+    {
+        self.navigationBarHidden = false
+        self.navigationBar.setBackgroundImage(UIImage(), forBarMetrics: .Default)
+        self.navigationBar.shadowImage = UIImage()
+        self.navigationBar.translucent = true
+        self.view.backgroundColor = UIColor.clearColor()
+    }
+}
