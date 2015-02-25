@@ -106,7 +106,7 @@
             </objects>
             <point key="canvasLocation" x="1336.8" y="-296.30666666666667"/>
         </scene>
-        <!--Film Cats View Controller-->
+        <!--Events-->
         <scene sceneID="Dqh-e3-n4W">
             <objects>
                 <viewController id="8Yf-o2-whc" customClass="FilmCatsViewController" customModule="CMP_Donate" customModuleProvider="target" sceneMemberID="viewController">
@@ -117,6 +117,7 @@
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="oSo-36-hZr">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" red="0.96470588239999999" green="0.98039215690000003" blue="0.98039215690000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="DPA-jj-pPg">
                                     <size key="itemSize" width="135" height="135"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -132,7 +133,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
-                                        <color key="backgroundColor" red="1" green="0.50196081399917603" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     </collectionViewCell>
                                 </cells>
                                 <connections>
@@ -143,7 +144,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="ilh-CI-pOo"/>
+                    <navigationItem key="navigationItem" title="Events" id="ilh-CI-pOo"/>
                     <connections>
                         <outlet property="collectionView" destination="oSo-36-hZr" id="n4Y-2L-qeY"/>
                     </connections>

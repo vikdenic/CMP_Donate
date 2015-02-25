@@ -11,10 +11,15 @@ import UIKit
 class FilmCatsViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
 
     @IBOutlet var collectionView: UICollectionView!
+    var events = [Event]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-    }
+
+        Event.queryAllEvents { (events, error) -> Void in
+            println(events)
+        }
+    }    
 
     //UICollectionView
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
