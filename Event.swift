@@ -29,9 +29,19 @@ class Event: PFObject, PFSubclassing
 
     class func queryAllEvents(completed:(events:[Event], error:NSError!)->Void)
     {
+        var ldsQuery = Event.query()
+        ldsQuery.fromPinWithName("categoriesPin")
+        ldsQuery.orderByDescending("createdAt")
+
+        ldsQuery.findObjectsInBackgroundWithBlock({ (events, error) -> Void in
+            completed(events: events as [Event], error: nil)
+        })
+
         var query = Event.query()
+        query.orderByDescending("createdAt")
 
         query.findObjectsInBackgroundWithBlock({ (events, error) -> Void in
+            PFObject.pinAllInBackground(events as [Event], withName: "categoriesPin", block: nil)
             completed(events: events as [Event], error: nil)
         })
     }

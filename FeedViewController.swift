@@ -86,7 +86,21 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
         let film = filmsArray[indexPath.row] as Film
         cell.titleLabel.text = film.title
         cell.filmImageView.file = film.imageFile
-        cell.filmImageView.loadInBackground(nil)
+
+        //if the data isn't in memory, animate it in from nothing
+        if film.imageFile.isDataAvailable == false
+        {
+            cell.filmImageView.alpha = 0
+            cell.filmImageView.loadInBackground { (image, error) -> Void in
+                UIView.animateWithDuration(1.0, animations: { () -> Void in
+                    cell.filmImageView.alpha = 1;
+                })
+            }
+        }
+        else //fail safe
+        {
+            cell.filmImageView.loadInBackground(nil) //just grabs it from the file system
+        }
         return cell
     }
 

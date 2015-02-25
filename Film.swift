@@ -34,23 +34,54 @@ class Film: PFObject, PFSubclassing
 
     class func queryAllFilms(completed:(films:[Film], error:NSError!)->Void)
     {
+        var ldsQuery = Film.query()
+        ldsQuery.fromPinWithName("feedFilms")
+        ldsQuery.includeKey("event")
+        ldsQuery.includeKey("productionTeam")
+        ldsQuery.orderByDescending("createdAt")
+
+        ldsQuery.findObjectsInBackgroundWithBlock({ (films, error) -> Void in
+            completed(films: films as [Film], error: nil)
+        })
+
         var query = Film.query()
         query.includeKey("event")
         query.includeKey("productionTeam")
+        query.orderByDescending("createdAt")
 
         query.findObjectsInBackgroundWithBlock({ (films, error) -> Void in
-            completed(films: films as [Film], error: nil)
+            if error != nil
+            {
+
+            }
+            else
+            {
+                PFObject.pinAllInBackground(films, withName: "feedFilms", block: nil)
+                completed(films: films as [Film], error: nil)
+            }
         })
     }
 
     class func queryAllFilms(event : Event, completed:(films:[Film], error:NSError!)->Void)
     {
+        var ldsQuery = Film.query()
+        ldsQuery.fromPinWithName("eventFilms")
+        ldsQuery.includeKey("event")
+        ldsQuery.includeKey("productionTeam")
+        ldsQuery.orderByDescending("createdAt")
+
+        ldsQuery.findObjectsInBackgroundWithBlock({ (films, error) -> Void in
+            completed(films: films as [Film], error: nil)
+        })
+
+
         var query = Film.query()
         query.includeKey("event")
         query.includeKey("productionTeam")
         query.whereKey("event", equalTo: event)
 
         query.findObjectsInBackgroundWithBlock({ (films, error) -> Void in
+            PFObject.pinAllInBackground(films, withName: "eventFilms", block: nil)
             completed(films: films as [Film], error: nil)
         })
     }
