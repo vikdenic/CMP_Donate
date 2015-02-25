@@ -62,6 +62,7 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
         }
         else
         {
+            title = event.name
             Film.queryAllFilms(event, completed: { (films, error) -> Void in
                 self.filmsArray = films as [Film]
                 self.tableView.reloadData()
@@ -72,7 +73,10 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
     func adjustUIForCategory()
     {
         segmentedControl.hidden = true
-        navigationItem.rightBarButtonItem = nil
+        segmentedControl.removeFromSuperview()
+//        navigationItem.rightBarButtonItem = nil
+
+        navigationItem.title = "poop"
     }
 
     //UITableView

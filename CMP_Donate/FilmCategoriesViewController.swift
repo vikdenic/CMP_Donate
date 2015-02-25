@@ -47,6 +47,7 @@ class FilmCategoriesViewController: UIViewController, UICollectionViewDataSource
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         let feedVC = segue.destinationViewController as FeedViewController
         feedVC.fromCategory = true
-        feedVC.event = events[collectionView.indexPathsForSelectedItems().first!.row]
+        let theEvent = events[collectionView.indexPathsForSelectedItems().first!.row]
+        feedVC.event = theEvent
     }
 }
