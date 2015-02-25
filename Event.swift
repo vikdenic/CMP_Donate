@@ -25,6 +25,7 @@ class Event: PFObject, PFSubclassing
     @NSManaged var venue : String!
     @NSManaged var webAddress : String!
     @NSManaged var date : NSDate!
+    @NSManaged var imageFile : PFFile!
 
     class func queryAllEvents(completed:(events:[Event], error:NSError!)->Void)
     {
