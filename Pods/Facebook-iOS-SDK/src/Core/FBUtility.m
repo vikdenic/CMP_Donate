@@ -344,6 +344,7 @@ NSString *const FBPersistedAnonymousIDKey   = @"anon_id";
     Class ASIdentifierManagerClass = fbdfl_ASIdentifierManagerClass();
     if ([ASIdentifierManagerClass class]) {
         ASIdentifierManager *manager = [ASIdentifierManagerClass sharedManager];
+        //TODO: IFDA Issue?
         result = [[manager advertisingIdentifier] UUIDString];
     }
     

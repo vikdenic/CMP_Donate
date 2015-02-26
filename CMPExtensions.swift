@@ -58,7 +58,6 @@ extension UIButton {
 
 extension UINavigationController
 {
-    //MARK: Helpers
     func setNavBarToClear()
     {
         self.navigationBarHidden = false
@@ -66,5 +65,14 @@ extension UINavigationController
         self.navigationBar.shadowImage = UIImage()
         self.navigationBar.translucent = true
         self.view.backgroundColor = UIColor.clearColor()
+    }
+
+    func resetNavBar()
+    {
+        self.navigationBarHidden = false
+        self.navigationBar.setBackgroundImage(nil, forBarMetrics: .Default)
+        self.navigationBar.shadowImage = nil
+        self.navigationBar.translucent = true
+        self.view.backgroundColor = nil
     }
 }

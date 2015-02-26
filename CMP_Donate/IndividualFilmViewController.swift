@@ -55,7 +55,7 @@ class IndividualFilmViewController: UIViewController, UITableViewDataSource, UIT
     //View Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = film.title
+//        title = film.title
 
         filmImageView.file = film.imageFile
         filmImageView.loadInBackground(nil)
@@ -64,7 +64,7 @@ class IndividualFilmViewController: UIViewController, UITableViewDataSource, UIT
         tableView.tableHeaderView = nil
         tableView.addSubview(headerView)
 
-//        navigationController?.setNavBarToClear()
+        navigationController?.setNavBarToClear()
 
         //Add blur effect view, also as a subview of the tableView
 //        visualEffectView = UIVisualEffectView(effect: UIBlurEffect(style: .Dark)) as UIVisualEffectView
