@@ -101,6 +101,10 @@ class IndividualFilmViewController: UIViewController, UITableViewDataSource, UIT
         }
     }
 
+    override func prefersStatusBarHidden() -> Bool {
+        return true
+    }
+
 //    override func viewDidAppear(animated: Bool) {
 //        let cell = tableView.cellForRowAtIndexPath(NSIndexPath(forRow: 0, inSection: 0)) as CrewTableViewCell!
 //        cell.pageDots.numberOfPages = film.productionTeam.count
