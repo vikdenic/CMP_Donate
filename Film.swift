@@ -65,7 +65,7 @@ class Film: PFObject, PFSubclassing
     class func queryAllFilms(event : Event, completed:(films:[Film], error:NSError!)->Void)
     {
         var ldsQuery = Film.query()
-        ldsQuery.fromPinWithName("eventFilms")
+        ldsQuery.fromPinWithName(event.objectId)
         ldsQuery.includeKey("event")
         ldsQuery.includeKey("productionTeam")
         ldsQuery.orderByDescending("createdAt")
@@ -79,10 +79,18 @@ class Film: PFObject, PFSubclassing
         query.includeKey("event")
         query.includeKey("productionTeam")
         query.whereKey("event", equalTo: event)
+        query.orderByDescending("createdAt")
 
         query.findObjectsInBackgroundWithBlock({ (films, error) -> Void in
-            PFObject.pinAllInBackground(films, withName: "eventFilms", block: nil)
-            completed(films: films as [Film], error: nil)
+            if error != nil
+            {
+
+            }
+            else
+            {
+                PFObject.pinAllInBackground(films, withName: event.objectId, block: nil)
+                completed(films: films as [Film], error: nil)
+            }
         })
     }
 }

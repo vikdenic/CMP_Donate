@@ -21,6 +21,7 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
     override func viewDidLoad()
     {
         super.viewDidLoad()
+        title = "Featured"
 
         if fromCategory == true
         {
@@ -33,7 +34,11 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
         //Using selector after view has appeared suppresses "detached view controllers" warning related to modal segue
         var timer = NSTimer.scheduledTimerWithTimeInterval(0, target: self, selector: "decideIfLoggedIn", userInfo: nil, repeats: false)
 
+//        navigationController?.resetNavBar()
+
         navigationController?.resetNavBar()
+        navigationController?.navigationBarHidden = true
+        navigationController?.navigationBarHidden = false
     }
 
     //Helper
@@ -64,7 +69,6 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
         }
         else
         {
-            title = event.name
             Film.queryAllFilms(event, completed: { (films, error) -> Void in
                 self.filmsArray = films as [Film]
                 self.tableView.reloadData()
@@ -74,11 +78,8 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
 
     func adjustUIForCategory()
     {
-        segmentedControl.hidden = true
-        segmentedControl.removeFromSuperview()
-//        navigationItem.rightBarButtonItem = nil
-
-        navigationItem.title = "poop"
+        title = event.name
+        navigationItem.rightBarButtonItem = nil
     }
 
     //UITableView

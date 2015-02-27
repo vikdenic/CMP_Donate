@@ -20,6 +20,8 @@ class FilmCategoriesViewController: UIViewController, UICollectionViewDataSource
             self.events = theEvents
             self.collectionView.reloadData()
         }
+        title = "Events"
+        navigationItem.rightBarButtonItem = nil
     }
 
     //UICollectionView

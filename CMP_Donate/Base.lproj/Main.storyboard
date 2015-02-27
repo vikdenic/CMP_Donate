@@ -106,7 +106,7 @@
             </objects>
             <point key="canvasLocation" x="1336.8" y="-296.30666666666667"/>
         </scene>
-        <!--Events-->
+        <!--Film Categories View Controller-->
         <scene sceneID="Dqh-e3-n4W">
             <objects>
                 <viewController id="8Yf-o2-whc" customClass="FilmCategoriesViewController" customModule="CMP_Donate" customModuleProvider="target" sceneMemberID="viewController">
@@ -162,7 +162,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Events" id="ilh-CI-pOo"/>
+                    <navigationItem key="navigationItem" id="ilh-CI-pOo"/>
                     <connections>
                         <outlet property="collectionView" destination="oSo-36-hZr" id="n4Y-2L-qeY"/>
                     </connections>
@@ -227,17 +227,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="sjc-oZ-SCx">
-                        <nil key="title"/>
                         <barButtonItem key="backBarButtonItem" title=" " id="V3w-PF-hZA"/>
-                        <segmentedControl key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" id="KNe-9B-qdy">
-                            <rect key="frame" x="91.5" y="7.5" width="137" height="29"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <segments>
-                                <segment title="Featured"/>
-                                <segment title="All"/>
-                            </segments>
-                            <color key="tintColor" red="0.85882352941176465" green="0.0" blue="0.10196078431372549" alpha="1" colorSpace="calibratedRGB"/>
-                        </segmentedControl>
                         <barButtonItem key="rightBarButtonItem" image="filterIcon" id="Pvy-aG-1pz">
                             <color key="tintColor" red="0.85882352941176465" green="0.0" blue="0.10196078431372549" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
@@ -246,7 +236,6 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="segmentedControl" destination="KNe-9B-qdy" id="LOh-j6-a2M"/>
                         <outlet property="tableView" destination="ACm-eE-riq" id="STG-SW-S4G"/>
                         <segue destination="hwO-xP-Xgv" kind="modal" identifier="FeedToRegisterSegue" id="dWi-yy-zW2"/>
                     </connections>
@@ -285,7 +274,7 @@
                                                     <color key="currentPageIndicatorTintColor" red="0.70196080207824707" green="0.70196080207824707" blue="0.70196080207824707" alpha="1" colorSpace="calibratedRGB"/>
                                                 </pageControl>
                                                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" id="Xu5-61-MbA">
-                                                    <rect key="frame" x="0.0" y="0.0" width="9600" height="3695.5"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="9920" height="3830"/>
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                     <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Tf8-x0-FEP">
@@ -343,7 +332,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" text="Synopsis here" selectable="NO" id="vHe-5E-xVy">
-                                                    <rect key="frame" x="8" y="0.0" width="8020" height="1422.5"/>
+                                                    <rect key="frame" x="8" y="0.0" width="8307" height="1460"/>
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                     <color key="backgroundColor" red="0.96470588239999999" green="0.98039215690000003" blue="0.98039215690000003" alpha="1" colorSpace="calibratedRGB"/>
                                                     <color key="textColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -860,7 +849,7 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="Kn6-Ot-SZX"/>
+        <segue reference="6FY-ia-8KG"/>
         <segue reference="LCH-Wz-Wbg"/>
     </inferredMetricsTieBreakers>
 </document>
