@@ -228,7 +228,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="sjc-oZ-SCx">
                         <barButtonItem key="backBarButtonItem" title=" " id="V3w-PF-hZA"/>
-                        <barButtonItem key="rightBarButtonItem" image="filterIcon" id="Pvy-aG-1pz">
+                        <barButtonItem key="rightBarButtonItem" image="globeIcon" id="Pvy-aG-1pz">
                             <color key="tintColor" red="0.85882352941176465" green="0.0" blue="0.10196078431372549" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
                                 <segue destination="8Yf-o2-whc" kind="push" identifier="HomeToCatsSegue" id="FOg-7Q-p3M"/>
@@ -274,7 +274,7 @@
                                                     <color key="currentPageIndicatorTintColor" red="0.70196080207824707" green="0.70196080207824707" blue="0.70196080207824707" alpha="1" colorSpace="calibratedRGB"/>
                                                 </pageControl>
                                                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" id="Xu5-61-MbA">
-                                                    <rect key="frame" x="0.0" y="0.0" width="10320" height="4233.5"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="10320" height="4368"/>
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                     <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Tf8-x0-FEP">
@@ -332,7 +332,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" text="Synopsis here" selectable="NO" id="vHe-5E-xVy">
-                                                    <rect key="frame" x="8" y="0.0" width="9168" height="1572.5"/>
+                                                    <rect key="frame" x="8" y="0.0" width="9455" height="1610"/>
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                     <color key="backgroundColor" red="0.96470588239999999" green="0.98039215690000003" blue="0.98039215690000003" alpha="1" colorSpace="calibratedRGB"/>
                                                     <color key="textColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -841,7 +841,7 @@
         <image name="coverPhoto" width="320" height="126"/>
         <image name="crewMemberImage" width="70" height="70"/>
         <image name="filmsIcon" width="33" height="30"/>
-        <image name="filterIcon" width="23" height="23"/>
+        <image name="globeIcon" width="25" height="25"/>
         <image name="profileImage" width="30" height="30"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
