@@ -64,8 +64,8 @@ class IndividualFilmViewController: UIViewController, UITableViewDataSource, UIT
         tableView.tableHeaderView = nil
         tableView.addSubview(headerView)
 
-        navigationController?.setNavBarToClear()
-        navigationController?.navigationBar.backItem?.backBarButtonItem?.tintColor = UIColor.whiteColor()
+//        navigationController?.setNavBarToClear()
+        hideNavBar()
 
         //Add blur effect view, also as a subview of the tableView
 //        visualEffectView = UIVisualEffectView(effect: UIBlurEffect(style: .Dark)) as UIVisualEffectView
@@ -110,6 +110,23 @@ class IndividualFilmViewController: UIViewController, UITableViewDataSource, UIT
 //        let cell = tableView.cellForRowAtIndexPath(NSIndexPath(forRow: 0, inSection: 0)) as CrewTableViewCell!
 //        cell.pageDots.numberOfPages = film.productionTeam.count
 //    }
+
+    func hideNavBar()
+    {
+        navigationController?.navigationBarHidden = true
+
+        let backButton = UIButton(frame: CGRectMake(8, 31, 26, 44))
+        backButton.setImage(UIImage(named: "backImage"), forState: .Normal)
+        backButton.imageView?.contentMode = .ScaleAspectFit
+        backButton.imageEdgeInsets = UIEdgeInsetsMake(-21, -12, 0, 0)
+        backButton.addTarget(self, action: "onBackTapped", forControlEvents: .TouchUpInside)
+        view.addSubview(backButton)
+    }
+
+    func onBackTapped()
+    {
+        navigationController?.popViewControllerAnimated(true)
+    }
 
     //Helpers
     func pay(amount : NSNumber)

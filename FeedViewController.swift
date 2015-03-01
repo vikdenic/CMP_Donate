@@ -29,6 +29,10 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
         }
     }
 
+    override func viewWillAppear(animated: Bool) {
+        navigationController?.navigationBarHidden = false
+    }
+
     override func viewDidAppear(animated: Bool)
     {
         //Using selector after view has appeared suppresses "detached view controllers" warning related to modal segue
@@ -36,9 +40,8 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
 
 //        navigationController?.resetNavBar()
 
-        navigationController?.resetNavBar()
-        navigationController?.navigationBarHidden = true
-        navigationController?.navigationBarHidden = false
+//        navigationController?.resetNavBar()
+//        navigationController?.navigationBarHidden = true
     }
 
     //Helper
@@ -120,5 +123,10 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
             let individualFilmVC = segue.destinationViewController as IndividualFilmViewController
             individualFilmVC.film = filmsArray[tableView.indexPathForSelectedRow()!.row]
         }
+    }
+
+    @IBAction func unwindFromIndividualVC(segue : UIStoryboardSegue)
+    {
+
     }
 }
