@@ -76,3 +76,20 @@ extension UINavigationController
         self.view.backgroundColor = nil
     }
 }
+
+extension UITextField {
+
+    func addBottomBorder()
+    {
+        let bottomBorder = CALayer()
+        bottomBorder.frame = CGRectMake(0.0, frame.size.height - 1, frame.size.width, 1.0)
+        bottomBorder.backgroundColor = UIColor.customLightGreyColor().CGColor
+        layer.addSublayer(bottomBorder)
+/*
+        CALayer *bottomBorder = [CALayer layer];
+        bottomBorder.frame = CGRectMake(0.0f, self.frame.size.height - 1, self.frame.size.width, 1.0f);
+        bottomBorder.backgroundColor = [UIColor blackColor].CGColor;
+        [myTextField.layer addSublayer:bottomBorder];
+*/
+    }
+}

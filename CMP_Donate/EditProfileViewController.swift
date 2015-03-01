@@ -78,6 +78,13 @@ class EditProfileViewController: UIViewController, UITableViewDataSource, UITabl
                 performSegueWithIdentifier(kUpdateProfileToPreferredPaymentTypeSegue, sender: self)
             }
         }
+        else
+        {
+            if indexPath.row == 0
+            {
+                performSegueWithIdentifier(kEditProfileToUpdateProfileInfoSegue, sender: self)
+            }
+        }
     }
 
     //Unwind

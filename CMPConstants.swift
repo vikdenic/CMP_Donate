@@ -20,8 +20,8 @@ let kFundToPaySegue = "FundToPaySegue"
 let kEditProfileToUpdateCardSegue = "EditProfileToUpdateCardSegue"
 let kUpdateProfileToPreferredPaymentTypeSegue = "EditProfileToPreferredPaymentTypeSegue"
 let kIndividualFilmToSelectPreferenceSegue = "IndividualFilmToSelectPreferenceSegue"
-
 let kHomeToCatsSegue = "HomeToCatsSegue"
+let kEditProfileToUpdateProfileInfoSegue = "EditProfileToUpdateProfileInfoSegue"
 
 //Cells
 let kFilmCell = "FilmCell"
@@ -34,6 +34,7 @@ let kDonateCell = "DonateCell"
 let kEditProfileCell = "EditProfileCell"
 let kPreferredPaymentCell = "PreferredPaymentCell"
 let kCatCell = "CatCell"
+let kGeneralInfoCell = "GeneralInfoCell"
 
 let kCrewScrollViewTag = 99
 
