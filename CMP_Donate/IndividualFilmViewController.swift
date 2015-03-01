@@ -8,7 +8,7 @@
 
 import UIKit
 
-class IndividualFilmViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UICollectionViewDataSource, UICollectionViewDelegate, DonateTableViewCellDelegate, UIScrollViewDelegate, PayPalPaymentDelegate, UITextFieldDelegate {
+class IndividualFilmViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UICollectionViewDataSource, UICollectionViewDelegate, DonateTableViewCellDelegate, UIScrollViewDelegate, PayPalPaymentDelegate, UITextFieldDelegate, UIGestureRecognizerDelegate {
 
     var film = Film()
     @IBOutlet var tableView: UITableView!
@@ -79,6 +79,8 @@ class IndividualFilmViewController: UIViewController, UITableViewDataSource, UIT
 
         updateHeaderView()
 
+        addLeftEdgeGesture()
+
         PPDataManager.httpRequestAccessToken(kPayPalClientIdSandbox, secretId: kPayPalSecretIdSandbox) { (data, error) -> Void in
             if let someData : AnyObject = data
             {
@@ -127,6 +129,28 @@ class IndividualFilmViewController: UIViewController, UITableViewDataSource, UIT
     {
         navigationController?.popViewControllerAnimated(true)
     }
+
+    func addLeftEdgeGesture()
+    {
+        let leftEdgeGesture = UIScreenEdgePanGestureRecognizer(target: self, action: "handleLeftEdgeGesture")
+        leftEdgeGesture.edges = .Left
+        leftEdgeGesture.delegate = self
+        view.addGestureRecognizer(leftEdgeGesture)
+    }
+
+    func handleLeftEdgeGesture()
+    {
+        navigationController?.popViewControllerAnimated(true)
+    }
+
+/*
+    
+    UIScreenEdgePanGestureRecognizer *leftEdgeGesture = [[UIScreenEdgePanGestureRecognizer alloc] initWithTarget:self action:@selector(handleLeftEdgeGesture:)];
+    leftEdgeGesture.edges = UIRectEdgeLeft;
+    leftEdgeGesture.delegate = self;
+    [self.view addGestureRecognizer:leftEdgeGesture];
+
+*/
 
     //Helpers
     func pay(amount : NSNumber)
