@@ -117,10 +117,10 @@ class IndividualFilmViewController: UIViewController, UITableViewDataSource, UIT
     {
         navigationController?.navigationBarHidden = true
 
-        let backButton = UIButton(frame: CGRectMake(8, 31, 26, 44))
+        let backButton = UIButton(frame: CGRectMake(8, 31, 60, 60))
         backButton.setImage(UIImage(named: "backImage"), forState: .Normal)
         backButton.imageView?.contentMode = .ScaleAspectFit
-        backButton.imageEdgeInsets = UIEdgeInsetsMake(-21, -12, 0, 0)
+        backButton.imageEdgeInsets = UIEdgeInsetsMake(-41, -32, 0, 0)
         backButton.addTarget(self, action: "onBackTapped", forControlEvents: .TouchUpInside)
         view.addSubview(backButton)
     }
