@@ -36,7 +36,7 @@ class ChangePasswordViewController: UIViewController, UITableViewDataSource, UIT
 
         if cellOne.entryTextField.text == kStandardDefaults.valueForKey(kDefaultsPword) as String! && (cellTwo.entryTextField.text as NSString).length > 5 && cellTwo.entryTextField.text == cellThree.entryTextField.text
         {
-            kProfile?.user.password = cellTwo.entryTextField.text
+            kProfile?.user.password = cellTwo.entryTextField.text.lowercaseString
             kProfile?.saveInBackgroundWithBlock({ (succeeded, error) -> Void in
                 if error != nil
                 {
