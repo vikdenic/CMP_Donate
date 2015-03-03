@@ -84,6 +84,10 @@ class EditProfileViewController: UIViewController, UITableViewDataSource, UITabl
             {
                 performSegueWithIdentifier(kEditProfileToUpdateProfileInfoSegue, sender: self)
             }
+            else
+            {
+                performSegueWithIdentifier(kEditProfileToChangePasswordSegue, sender: self)
+            }
         }
     }
 

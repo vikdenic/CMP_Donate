@@ -51,6 +51,8 @@
 		9358A12A1A741B6500CCE374 /* FeedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9358A1291A741B6500CCE374 /* FeedTableViewCell.swift */; };
 		935DB8611A86195700C9A19F /* EditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 935DB8601A86195700C9A19F /* EditProfileViewController.swift */; };
 		935DB8641A861CA700C9A19F /* UpdateCardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 935DB8631A861CA700C9A19F /* UpdateCardViewController.m */; };
+		9362E0791AA5513E00A18D7F /* ChangePasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9362E0781AA5513E00A18D7F /* ChangePasswordViewController.swift */; };
+		9362E07B1AA57F0600A18D7F /* PasswordEntryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9362E07A1AA57F0600A18D7F /* PasswordEntryTableViewCell.swift */; };
 		936477AE1A860D75000042C5 /* DonateTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 936477AD1A860D75000042C5 /* DonateTableViewCell.swift */; };
 		936C57FD1A75D26B0027343A /* IndividualFilmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 936C57FC1A75D26B0027343A /* IndividualFilmViewController.swift */; };
 		936C58031A75F2060027343A /* CMPExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 936C58021A75F2060027343A /* CMPExtensions.swift */; };
@@ -140,6 +142,8 @@
 		935DB8601A86195700C9A19F /* EditProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditProfileViewController.swift; sourceTree = "<group>"; };
 		935DB8621A861CA700C9A19F /* UpdateCardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UpdateCardViewController.h; sourceTree = "<group>"; };
 		935DB8631A861CA700C9A19F /* UpdateCardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UpdateCardViewController.m; sourceTree = "<group>"; };
+		9362E0781AA5513E00A18D7F /* ChangePasswordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangePasswordViewController.swift; sourceTree = "<group>"; };
+		9362E07A1AA57F0600A18D7F /* PasswordEntryTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasswordEntryTableViewCell.swift; sourceTree = "<group>"; };
 		936477AD1A860D75000042C5 /* DonateTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DonateTableViewCell.swift; sourceTree = "<group>"; };
 		936C57FC1A75D26B0027343A /* IndividualFilmViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IndividualFilmViewController.swift; sourceTree = "<group>"; };
 		936C58021A75F2060027343A /* CMPExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CMPExtensions.swift; sourceTree = "<group>"; };
@@ -300,6 +304,7 @@
 				935DB8621A861CA700C9A19F /* UpdateCardViewController.h */,
 				935DB8631A861CA700C9A19F /* UpdateCardViewController.m */,
 				93F53B651AA2B2AD0053FABF /* EditGeneralInfoViewController.swift */,
+				9362E0781AA5513E00A18D7F /* ChangePasswordViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -364,6 +369,7 @@
 				936477AD1A860D75000042C5 /* DonateTableViewCell.swift */,
 				93045C9D1A9D905D00E3BB3A /* CategoryCollectionViewCell.swift */,
 				93F53B631AA2ABE10053FABF /* EditGeneralInfoTableViewCell.swift */,
+				9362E07A1AA57F0600A18D7F /* PasswordEntryTableViewCell.swift */,
 			);
 			name = "Custom Cells";
 			sourceTree = "<group>";
@@ -540,7 +546,9 @@
 				93045C9E1A9D905D00E3BB3A /* CategoryCollectionViewCell.swift in Sources */,
 				930EFDAF1A73902A00AF96AF /* FeedViewController.swift in Sources */,
 				930EFD6E1A738F1400AF96AF /* AppDelegate.swift in Sources */,
+				9362E07B1AA57F0600A18D7F /* PasswordEntryTableViewCell.swift in Sources */,
 				930EFDC21A73918E00AF96AF /* CrewMember.swift in Sources */,
+				9362E0791AA5513E00A18D7F /* ChangePasswordViewController.swift in Sources */,
 				9358A12A1A741B6500CCE374 /* FeedTableViewCell.swift in Sources */,
 				930EFDBA1A73916400AF96AF /* User.swift in Sources */,
 				936477AE1A860D75000042C5 /* DonateTableViewCell.swift in Sources */,

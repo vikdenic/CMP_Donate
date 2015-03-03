@@ -22,6 +22,7 @@ let kUpdateProfileToPreferredPaymentTypeSegue = "EditProfileToPreferredPaymentTy
 let kIndividualFilmToSelectPreferenceSegue = "IndividualFilmToSelectPreferenceSegue"
 let kHomeToCatsSegue = "HomeToCatsSegue"
 let kEditProfileToUpdateProfileInfoSegue = "EditProfileToUpdateProfileInfoSegue"
+let kEditProfileToChangePasswordSegue = "EditProfileToChangePasswordSegue"
 
 //Cells
 let kFilmCell = "FilmCell"
@@ -35,6 +36,7 @@ let kEditProfileCell = "EditProfileCell"
 let kPreferredPaymentCell = "PreferredPaymentCell"
 let kCatCell = "CatCell"
 let kGeneralInfoCell = "GeneralInfoCell"
+let kPasswordEntryCell = "PasswordEntryCell"
 
 let kCrewScrollViewTag = 99
 
