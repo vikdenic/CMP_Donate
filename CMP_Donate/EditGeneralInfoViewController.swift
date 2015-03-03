@@ -8,10 +8,16 @@
 
 import UIKit
 
-class EditGeneralInfoViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class EditGeneralInfoViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, EditGeneralInfoTableViewDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+
+    let imagePicker = UIImagePickerController()
+    var selectedImage = UIImage()
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        imagePicker.sourceType = UIImagePickerControllerSourceType.PhotoLibrary
+        imagePicker.delegate = self
+        imagePicker.allowsEditing = true
     }
 
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
@@ -31,5 +37,18 @@ class EditGeneralInfoViewController: UIViewController, UITableViewDelegate, UITa
 
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         return 120
+    }
+
+    //EditGeneralInfoTableViewDelegate
+    func didTapEditPhoto(passed: Bool)
+    {
+        presentViewController(imagePicker, animated: true, completion: nil)
+    }
+
+    //ImagePicker
+    func imagePickerController(picker: UIImagePickerController!, didFinishPickingImage image: UIImage!, editingInfo: [NSObject : AnyObject]!) {
+        dismissViewControllerAnimated(true, completion: { () -> Void in
+            self.selectedImage = image
+        })
     }
 }
