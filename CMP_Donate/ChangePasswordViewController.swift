@@ -30,7 +30,28 @@ class ChangePasswordViewController: UIViewController, UITableViewDataSource, UIT
     }
 
     @IBAction func onSaveTapped(sender: UIBarButtonItem) {
+        let cellOne = tableView.cellForRowAtIndexPath(NSIndexPath(forRow: 0, inSection: 0)) as PasswordEntryTableViewCell!
+        let cellTwo = tableView.cellForRowAtIndexPath(NSIndexPath(forRow: 0, inSection: 1)) as PasswordEntryTableViewCell!
+        let cellThree = tableView.cellForRowAtIndexPath(NSIndexPath(forRow: 1, inSection: 1)) as PasswordEntryTableViewCell!
 
+        if cellOne.entryTextField.text == kStandardDefaults.valueForKey(kDefaultsPword) as String! && (cellTwo.entryTextField.text as NSString).length > 5 && cellTwo.entryTextField.text == cellThree.entryTextField.text
+        {
+            kProfile?.user.password = cellTwo.entryTextField.text
+            kProfile?.saveInBackgroundWithBlock({ (succeeded, error) -> Void in
+                if error != nil
+                {
+                    showAlertWithError(error, self)
+                }
+                else
+                {
+                    self.navigationController?.popViewControllerAnimated(true)
+                }
+            })
+        }
+        else
+        {
+            showAlert("Current Password must be correct, and new password fields must match.", nil, self)
+        }
     }
 
     func textFieldDidEndEditing(textField: UITextField) {
@@ -46,18 +67,38 @@ class ChangePasswordViewController: UIViewController, UITableViewDataSource, UIT
             {
                 cell.imageView!.image = UIImage(named: "lockIcon")
             }
+
+            let otherCell = tableView.cellForRowAtIndexPath(NSIndexPath(forRow: 0, inSection: 1)) as PasswordEntryTableViewCell!
+            if (otherCell.entryTextField.text as NSString).length < 6
+            {
+
+            }
+            else
+            {
+                saveBarButtonItem.enabled = true
+            }
         }
 
-        if textField.tag == kTFOneTag
+        if textField.tag == kTFTwoTag
         {
-            let cell = tableView.cellForRowAtIndexPath(NSIndexPath(forRow: 0, inSection: 0)) as PasswordEntryTableViewCell!
-            if textField.text != kStandardDefaults.valueForKey(kDefaultsPword) as String!
+            let cell = tableView.cellForRowAtIndexPath(NSIndexPath(forRow: 0, inSection: 1)) as PasswordEntryTableViewCell!
+            if (textField.text as NSString).length < 6
             {
                 cell.imageView!.image = UIImage(named: "lockIconRed")
             }
             else
             {
                 cell.imageView!.image = UIImage(named: "lockIcon")
+
+            }
+
+            let otherCell = tableView.cellForRowAtIndexPath(NSIndexPath(forRow: 0, inSection: 0)) as PasswordEntryTableViewCell!
+            if otherCell.entryTextField.text != kStandardDefaults.valueForKey(kDefaultsPword) as String!
+            {
+            }
+            else
+            {
+                saveBarButtonItem.enabled = true
             }
         }
     }
