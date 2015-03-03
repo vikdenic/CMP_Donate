@@ -530,7 +530,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="coverPhoto" id="k8z-tS-PTa" userLabel="coverPhotoImageView" customClass="PFImageView">
-                                                    <rect key="frame" x="0.0" y="0.0" width="5440" height="3051.5"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="5760" height="3231"/>
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                 </imageView>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="WVF-IH-ALd" userLabel="profilePicImageView" customClass="PFImageView">
@@ -749,7 +749,7 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="9E4-6O-rYX" id="ocS-qU-SKS">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="1pg-qz-A1Z">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="1pg-qz-A1Z" customClass="PFImageView">
                                                     <rect key="frame" x="8" y="8" width="60" height="60"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
@@ -766,20 +766,20 @@
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" minimumFontSize="17" id="VYj-Im-p9z">
                                                     <rect key="frame" x="78" y="82" width="242" height="30"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                                                    <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="emailAddress"/>
                                                 </textField>
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="First Name" minimumFontSize="17" id="5WJ-UG-lzy">
                                                     <rect key="frame" x="78" y="8" width="242" height="30"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no"/>
                                                 </textField>
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Last Name" minimumFontSize="17" id="DmH-c3-af6">
                                                     <rect key="frame" x="78" y="45" width="242" height="30"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no"/>
                                                 </textField>
                                             </subviews>
                                         </tableViewCellContentView>
@@ -787,7 +787,7 @@
                                             <outlet property="emailTextField" destination="VYj-Im-p9z" id="wWY-dc-umI"/>
                                             <outlet property="firstNameTextField" destination="5WJ-UG-lzy" id="5ND-3O-1rF"/>
                                             <outlet property="lastNameTextField" destination="DmH-c3-af6" id="94i-sn-X8k"/>
-                                            <outlet property="profileImageView" destination="1pg-qz-A1Z" id="4vM-Wp-wbs"/>
+                                            <outlet property="profileImageView" destination="1pg-qz-A1Z" id="mKh-QZ-HPV"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>

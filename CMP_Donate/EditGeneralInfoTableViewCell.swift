@@ -20,7 +20,7 @@ class EditGeneralInfoTableViewCell: UITableViewCell {
     @IBOutlet var firstNameTextField: UITextField!
     @IBOutlet var lastNameTextField: UITextField!
     @IBOutlet var emailTextField: UITextField!
-    @IBOutlet var profileImageView: UIImageView!
+    @IBOutlet var profileImageView: PFImageView!
 
     override func awakeFromNib() {
         super.awakeFromNib()

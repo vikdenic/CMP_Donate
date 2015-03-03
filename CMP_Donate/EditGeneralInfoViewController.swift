@@ -17,7 +17,11 @@ class EditGeneralInfoViewController: UIViewController, UITableViewDelegate, UITa
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
     {
         let cell = tableView.dequeueReusableCellWithIdentifier(kGeneralInfoCell) as EditGeneralInfoTableViewCell
-
+        cell.firstNameTextField.text = kProfile?.firstName
+        cell.lastNameTextField.text = kProfile?.lastName
+        cell.emailTextField.text = kProfile?.user.username
+        cell.profileImageView.file = kProfile?.imageFile
+        cell.profileImageView.loadInBackground(nil)
         return cell
     }
 

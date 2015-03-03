@@ -13,7 +13,7 @@ class ProfileViewController: UIViewController, UITableViewDataSource, UITableVie
     override func viewDidLoad()
     {
         super.viewDidLoad()
-        navigationItem.title = kProfile?.name
+        navigationItem.title = kProfile?.firstName
     }
 
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
