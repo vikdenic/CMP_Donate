@@ -6,6 +6,8 @@
 //  Copyright (c) 2015 Chicago Media Project. All rights reserved.
 //
 
+//TODO: Safen user profile after registration (if no profile data, currently crashes)
+
 import UIKit
 
 class ProfileViewController: UIViewController, UITableViewDataSource, UITableViewDelegate
