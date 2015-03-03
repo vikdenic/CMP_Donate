@@ -49,7 +49,7 @@ let kDefaultsCreditCard = "CreditCard"
 let kDefaultsPayPal = "PayPal"
 
 let kDefaultsPreferredPaymentType = "preferredPaymentType"
-
+let kDefaultsPword = "pword"
 
 //PayPal
 let kPayPalClientIdSandbox = "AXwxFSPni98ZG2aXJ3PZYPKBAgH_gOpqMNufOqtL8Me_uvZaxtU2vJ6DYK-XLxHzCYxdftbcAW7WN72H"

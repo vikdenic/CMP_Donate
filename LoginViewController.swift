@@ -22,12 +22,13 @@ class LoginViewController: UIViewController {
                 self.dismissViewControllerAnimated(true, completion: { () -> Void in
                     Profile.queryForCurrentUserProfile({ (profile, error) -> Void in
                         UniversalProfile.sharedInstance.profile = profile
+                        kStandardDefaults.setValue(self.passwordTextField.text, forKey: kDefaultsPword)
                     })
                 })
             }
             else
             {
-
+                showAlertWithError(error, self)
             }
         }
     }

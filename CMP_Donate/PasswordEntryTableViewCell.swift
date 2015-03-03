@@ -11,7 +11,7 @@ import UIKit
 class PasswordEntryTableViewCell: UITableViewCell {
 
     @IBOutlet var entryTextField: UITextField!
-
+//    let saveBarButtonItem = naviga
 
     override func awakeFromNib() {
         super.awakeFromNib()

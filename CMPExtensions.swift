@@ -43,6 +43,13 @@ extension String
             return self
         }
     }
+
+    func isValidEmail() -> Bool
+    {
+        let emailRegex = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,4}"
+        let emailTest = NSPredicate(format: "SELF MATCHES %@", emailRegex)
+        return emailTest!.evaluateWithObject(self)
+    }
 }
 
 extension UIButton {
@@ -92,4 +99,23 @@ extension UITextField {
         [myTextField.layer addSublayer:bottomBorder];
 */
     }
+}
+
+///Presents an alert displaying the passed-in title and message, all within the specified viewController.
+///
+///If device running iOS8 or higher, present UIAlertController. Else, shows a UIAlert.
+func showAlert(title : String!, message : String!, viewController : UIViewController)
+{
+    var alert : UIAlertController = UIAlertController(title: title,
+        message: message, preferredStyle: UIAlertControllerStyle.Alert)
+    alert.addAction(UIAlertAction(title: "OK", style:.Default, handler: nil))
+    viewController.presentViewController(alert, animated: true, completion: nil)
+}
+
+func showAlertWithError(error : NSError!, forVC : UIViewController)
+{
+    let alert = UIAlertController(title: error.localizedDescription, message: nil, preferredStyle: .Alert)
+    let okAction = UIAlertAction(title: "OK", style: .Cancel, handler: nil)
+    alert.addAction(okAction)
+    forVC.presentViewController(alert, animated: true, completion: nil)
 }

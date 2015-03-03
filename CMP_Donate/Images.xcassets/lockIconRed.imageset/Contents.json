@@ -2,17 +2,13 @@
   "images" : [
     {
       "idiom" : "universal",
-      "scale" : "1x"
-    },
-    {
-      "idiom" : "universal",
       "scale" : "2x",
-      "filename" : "lockIcon@2x.png"
+      "filename" : "lockIconRed@2x.png"
     },
     {
       "idiom" : "universal",
       "scale" : "3x",
-      "filename" : "lockIcon@3x.png"
+      "filename" : "lockIconRed@3x.png"
     }
   ],
   "info" : {
