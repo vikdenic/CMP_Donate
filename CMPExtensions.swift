@@ -83,7 +83,7 @@ extension UITextField {
     {
         let bottomBorder = CALayer()
         bottomBorder.frame = CGRectMake(0.0, frame.size.height - 1, frame.size.width, 1.0)
-        bottomBorder.backgroundColor = UIColor.customLightGreyColor().CGColor
+        bottomBorder.backgroundColor = UIColor.groupTableViewBackgroundColor().CGColor
         layer.addSublayer(bottomBorder)
 /*
         CALayer *bottomBorder = [CALayer layer];

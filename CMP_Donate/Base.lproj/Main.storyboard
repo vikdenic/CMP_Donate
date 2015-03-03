@@ -757,6 +757,7 @@
                                                     <rect key="frame" x="23" y="67" width="30" height="30"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <state key="normal" title="edit">
+                                                        <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
                                                     <connections>
@@ -800,8 +801,15 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="8zi-Ex-1GV">
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="UeT-Sp-6a1"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="UeT-Sp-6a1">
+                            <connections>
+                                <action selector="onSaveButtonTapped:" destination="jWR-A0-fZr" id="SSW-Ww-PLj"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="EBS-kF-mTz" id="0XV-Fz-YaJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="o5a-Ju-A72" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

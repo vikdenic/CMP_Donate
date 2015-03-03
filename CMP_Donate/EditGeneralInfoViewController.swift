@@ -10,8 +10,9 @@ import UIKit
 
 class EditGeneralInfoViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, EditGeneralInfoTableViewDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
+    @IBOutlet var tableView: UITableView!
     let imagePicker = UIImagePickerController()
-    var selectedImage = UIImage()
+    var selectedImage : UIImage!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,12 +24,37 @@ class EditGeneralInfoViewController: UIViewController, UITableViewDelegate, UITa
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
     {
         let cell = tableView.dequeueReusableCellWithIdentifier(kGeneralInfoCell) as EditGeneralInfoTableViewCell
+        cell.delegate = self
         cell.firstNameTextField.text = kProfile?.firstName
         cell.lastNameTextField.text = kProfile?.lastName
         cell.emailTextField.text = kProfile?.user.username
         cell.profileImageView.file = kProfile?.imageFile
         cell.profileImageView.loadInBackground(nil)
+
+        if let someImage = selectedImage
+        {
+            cell.profileImageView.image = someImage
+        }
+
         return cell
+    }
+
+    @IBAction func onSaveButtonTapped(sender: UIBarButtonItem) {
+
+        let cell = tableView.cellForRowAtIndexPath(NSIndexPath(forRow: 0, inSection: 0)) as EditGeneralInfoTableViewCell!
+
+        kProfile?.firstName = cell.firstNameTextField.text
+        kProfile?.lastName = cell.lastNameTextField.text
+        kProfile?.user.username = cell.emailTextField.text
+
+        if let someImage = selectedImage
+        {
+            let imageData = UIImagePNGRepresentation(someImage)
+            kProfile?.imageFile = PFFile(data: imageData)
+        }
+
+        kProfile?.saveInBackgroundWithBlock(nil)
+        navigationController?.popViewControllerAnimated(true)
     }
 
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -49,6 +75,7 @@ class EditGeneralInfoViewController: UIViewController, UITableViewDelegate, UITa
     func imagePickerController(picker: UIImagePickerController!, didFinishPickingImage image: UIImage!, editingInfo: [NSObject : AnyObject]!) {
         dismissViewControllerAnimated(true, completion: { () -> Void in
             self.selectedImage = image
+            self.tableView.reloadData()
         })
     }
 }
