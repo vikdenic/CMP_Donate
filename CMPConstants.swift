@@ -40,6 +40,8 @@ let kPasswordEntryCell = "PasswordEntryCell"
 
 let kCrewScrollViewTag = 99
 
+let kStoryboardIdEditGeneralInfo = "EditGeneralInfo"
+
 //Stripe
 let kStripePublishableKey = "pk_test_oyA5FAsuqYVvFqEOUOSUg2hF"
 let kDefaultsStripeCardLast4 = "card.last4"

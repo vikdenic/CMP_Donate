@@ -61,6 +61,7 @@
 		939ACC191A9AB8F900525152 /* libstdc++.6.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 939ACC181A9AB8F900525152 /* libstdc++.6.dylib */; };
 		939ACC1E1A9B127D00525152 /* SelectPaymentPreferenceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 939ACC1D1A9B127D00525152 /* SelectPaymentPreferenceViewController.swift */; };
 		93C0A8491A96BBAA00F9C069 /* UpdatePaymentTypeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C0A8481A96BBAA00F9C069 /* UpdatePaymentTypeViewController.swift */; };
+		93E964F01AA639B40037FB6D /* ProvideProfileInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93E964EF1AA639B40037FB6D /* ProvideProfileInfoViewController.swift */; };
 		93ED198E1A85DB0100F06FA1 /* CrewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93ED198D1A85DB0100F06FA1 /* CrewTableViewCell.swift */; };
 		93ED19921A85ED0E00F06FA1 /* SynopsisTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93ED19911A85ED0E00F06FA1 /* SynopsisTableViewCell.swift */; };
 		93F53B641AA2ABE10053FABF /* EditGeneralInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93F53B631AA2ABE10053FABF /* EditGeneralInfoTableViewCell.swift */; };
@@ -152,6 +153,7 @@
 		939ACC181A9AB8F900525152 /* libstdc++.6.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libstdc++.6.dylib"; path = "usr/lib/libstdc++.6.dylib"; sourceTree = SDKROOT; };
 		939ACC1D1A9B127D00525152 /* SelectPaymentPreferenceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectPaymentPreferenceViewController.swift; sourceTree = "<group>"; };
 		93C0A8481A96BBAA00F9C069 /* UpdatePaymentTypeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpdatePaymentTypeViewController.swift; sourceTree = "<group>"; };
+		93E964EF1AA639B40037FB6D /* ProvideProfileInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProvideProfileInfoViewController.swift; sourceTree = "<group>"; };
 		93ED198D1A85DB0100F06FA1 /* CrewTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CrewTableViewCell.swift; sourceTree = "<group>"; };
 		93ED19911A85ED0E00F06FA1 /* SynopsisTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SynopsisTableViewCell.swift; sourceTree = "<group>"; };
 		93F53B631AA2ABE10053FABF /* EditGeneralInfoTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditGeneralInfoTableViewCell.swift; sourceTree = "<group>"; };
@@ -305,6 +307,7 @@
 				935DB8631A861CA700C9A19F /* UpdateCardViewController.m */,
 				93F53B651AA2B2AD0053FABF /* EditGeneralInfoViewController.swift */,
 				9362E0781AA5513E00A18D7F /* ChangePasswordViewController.swift */,
+				93E964EF1AA639B40037FB6D /* ProvideProfileInfoViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -568,6 +571,7 @@
 				939ACC1E1A9B127D00525152 /* SelectPaymentPreferenceViewController.swift in Sources */,
 				9358A11F1A7394DC00CCE374 /* CMPConstants.swift in Sources */,
 				936C58031A75F2060027343A /* CMPExtensions.swift in Sources */,
+				93E964F01AA639B40037FB6D /* ProvideProfileInfoViewController.swift in Sources */,
 				930EFDBE1A73917B00AF96AF /* Film.swift in Sources */,
 				93F53B641AA2ABE10053FABF /* EditGeneralInfoTableViewCell.swift in Sources */,
 				936C580D1A76190F0027343A /* FundedFilmTableViewCell.swift in Sources */,

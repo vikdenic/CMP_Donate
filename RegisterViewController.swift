@@ -32,10 +32,21 @@ class RegisterViewController: UIViewController {
                 }
                 else
                 {
-                    self.dismissViewControllerAnimated(true, completion: { () -> Void in
-                        UniversalProfile.sharedInstance.profile = Profile()
-                        kStandardDefaults.setValue(self.passwordTextField.text, forKey: kDefaultsPword)
-                    })
+//                    self.dismissViewControllerAnimated(true, completion: { () -> Void in
+                    let newProfile = Profile()
+                    newProfile.user = PFUser.currentUser()
+                    newProfile.user.username = self.emailTextField.text
+                    newProfile.imageFile = PFFile.file(UIImage(named: kCrewMemberImage))
+                    newProfile.fundedFilms = [Film]()
+                    newProfile.starredFilms = [Film]()
+                    UniversalProfile.sharedInstance.profile = newProfile
+
+                    kStandardDefaults.setValue(self.passwordTextField.text, forKey: kDefaultsPword)
+
+                    let editVC = self.storyboard?.instantiateViewControllerWithIdentifier(kStoryboardIdEditGeneralInfo) as EditGeneralInfoViewController
+                    editVC.fromRegister = true
+                    self.navigationController?.pushViewController(editVC, animated: true)
+//                    })
                 }
             }
         }

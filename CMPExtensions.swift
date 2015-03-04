@@ -101,6 +101,22 @@ extension UITextField {
     }
 }
 
+extension PFFile {
+
+    class func file(image : UIImage!) -> PFFile
+    {
+        let imageData = UIImagePNGRepresentation(image) as NSData!
+        return PFFile(data: imageData)
+    }
+
+//    convenience init(image : UIImage)
+//    {
+//        self.init(data: UIImagePNGRepresentation(image)
+//    }
+}
+
+
+
 ///Presents an alert displaying the passed-in title and message, all within the specified viewController.
 ///
 ///If device running iOS8 or higher, present UIAlertController. Else, shows a UIAlert.

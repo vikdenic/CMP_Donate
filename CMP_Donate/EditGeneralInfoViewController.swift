@@ -13,6 +13,10 @@ class EditGeneralInfoViewController: UIViewController, UITableViewDelegate, UITa
     @IBOutlet var tableView: UITableView!
     let imagePicker = UIImagePickerController()
     var selectedImage : UIImage!
+    var fromRegister = false
+
+    var enteredFirstName = String()
+    var enteredLastName = String()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,8 +32,16 @@ class EditGeneralInfoViewController: UIViewController, UITableViewDelegate, UITa
         cell.firstNameTextField.text = kProfile?.firstName
         cell.lastNameTextField.text = kProfile?.lastName
         cell.emailTextField.text = kProfile?.user.username
+
         cell.profileImageView.file = kProfile?.imageFile
+
+        if fromRegister == true
+        {
+            cell.profileImageView.image = UIImage(named: kCrewMemberImage)
+        }
+
         cell.profileImageView.loadInBackground(nil)
+
 
         if let someImage = selectedImage
         {
@@ -49,12 +61,19 @@ class EditGeneralInfoViewController: UIViewController, UITableViewDelegate, UITa
 
         if let someImage = selectedImage
         {
-            let imageData = UIImagePNGRepresentation(someImage)
-            kProfile?.imageFile = PFFile(data: imageData)
+            kProfile?.imageFile = PFFile.file(someImage)
         }
 
         kProfile?.saveInBackgroundWithBlock(nil)
-        navigationController?.popViewControllerAnimated(true)
+
+        if fromRegister == false
+        {
+            navigationController?.popViewControllerAnimated(true)
+        }
+        else
+        {
+            dismissViewControllerAnimated(true, completion: nil)
+        }
     }
 
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -68,14 +87,22 @@ class EditGeneralInfoViewController: UIViewController, UITableViewDelegate, UITa
     //EditGeneralInfoTableViewDelegate
     func didTapEditPhoto(passed: Bool)
     {
-        presentViewController(imagePicker, animated: true, completion: nil)
+        presentViewController(imagePicker, animated: true) { () -> Void in
+            let cell = self.tableView.cellForRowAtIndexPath(NSIndexPath(forRow: 0, inSection: 0)) as EditGeneralInfoTableViewCell!
+            self.enteredFirstName = cell.firstNameTextField.text
+            self.enteredLastName = cell.lastNameTextField.text
+        }
     }
 
     //ImagePicker
     func imagePickerController(picker: UIImagePickerController!, didFinishPickingImage image: UIImage!, editingInfo: [NSObject : AnyObject]!) {
         dismissViewControllerAnimated(true, completion: { () -> Void in
             self.selectedImage = image
-            self.tableView.reloadData()
+
+            let cell = self.tableView.cellForRowAtIndexPath(NSIndexPath(forRow: 0, inSection: 0)) as EditGeneralInfoTableViewCell!
+            cell.firstNameTextField.text = self.enteredFirstName
+            cell.lastNameTextField.text = self.enteredLastName
+            cell.profileImageView.image = image
         })
     }
 }
