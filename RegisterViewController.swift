@@ -32,7 +32,6 @@ class RegisterViewController: UIViewController {
                 }
                 else
                 {
-//                    self.dismissViewControllerAnimated(true, completion: { () -> Void in
                     let newProfile = Profile()
                     newProfile.user = PFUser.currentUser()
                     newProfile.user.username = self.emailTextField.text
@@ -40,13 +39,14 @@ class RegisterViewController: UIViewController {
                     newProfile.fundedFilms = [Film]()
                     newProfile.starredFilms = [Film]()
                     UniversalProfile.sharedInstance.profile = newProfile
-
                     kStandardDefaults.setValue(self.passwordTextField.text, forKey: kDefaultsPword)
 
-                    let editVC = self.storyboard?.instantiateViewControllerWithIdentifier(kStoryboardIdEditGeneralInfo) as EditGeneralInfoViewController
-                    editVC.fromRegister = true
-                    self.navigationController?.pushViewController(editVC, animated: true)
-//                    })
+                    newProfile.saveInBackgroundWithBlock({ (succeeded, error) -> Void in
+
+                        let editVC = self.storyboard?.instantiateViewControllerWithIdentifier(kStoryboardIdEditGeneralInfo) as EditGeneralInfoViewController
+                        editVC.fromRegister = true
+                        self.navigationController?.pushViewController(editVC, animated: true)
+                    })
                 }
             }
         }

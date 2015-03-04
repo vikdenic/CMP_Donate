@@ -12,10 +12,15 @@ import UIKit
 
 class ProfileViewController: UIViewController, UITableViewDataSource, UITableViewDelegate
 {
+    @IBOutlet var tableView: UITableView!
     override func viewDidLoad()
     {
         super.viewDidLoad()
         navigationItem.title = kProfile?.firstName
+    }
+
+    override func viewWillAppear(animated: Bool) {
+        tableView.reloadData()
     }
 
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
@@ -32,18 +37,25 @@ class ProfileViewController: UIViewController, UITableViewDataSource, UITableVie
         else
         {
             let cell = tableView.dequeueReusableCellWithIdentifier(kFundedFilmCell) as FundedFilmTableViewCell
-            let film = kProfile?.fundedFilms[indexPath.row - 1]
-            cell.filmImageView.file = film?.imageFile
-            cell.filmImageView.loadInBackground(nil)
-            cell.filmTitleLabel.text = film?.title
-            cell.clipsToBounds = true
-            cell.filmImageView.clipsToBounds = true
+//            let film = kProfile?.fundedFilms[indexPath.row - 1]
+//            cell.filmImageView.file = film?.imageFile
+//            cell.filmImageView.loadInBackground(nil)
+//            cell.filmTitleLabel.text = film?.title
+//            cell.clipsToBounds = true
+//            cell.filmImageView.clipsToBounds = true
             return cell
         }
     }
 
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
+        if let someFundedFilms = kProfile?.fundedFilms
+        {
             return kProfile!.fundedFilms.count + 1
+        }
+        else
+        {
+            return 1
+        }
     }
 }
