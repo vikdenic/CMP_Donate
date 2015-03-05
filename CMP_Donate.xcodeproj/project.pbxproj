@@ -45,6 +45,7 @@
 		931CA0241A95CA4F0069B235 /* PPDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 931CA0231A95CA4F0069B235 /* PPDataManager.swift */; };
 		931D1E111A867EC700B3DC4D /* SCLAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 931D1E101A867EC700B3DC4D /* SCLAlertView.swift */; };
 		93327FC61AA7EAB400214D74 /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93327FC51AA7EAB400214D74 /* Transaction.swift */; };
+		93327FCA1AA81BF800214D74 /* ActivityItemProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93327FC91AA81BF800214D74 /* ActivityItemProvider.swift */; };
 		93379F701A857EF70054BAB8 /* CrewCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93379F6F1A857EF70054BAB8 /* CrewCollectionViewCell.swift */; };
 		9358A11F1A7394DC00CCE374 /* CMPConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9358A11E1A7394DC00CCE374 /* CMPConstants.swift */; };
 		9358A1261A739BB100CCE374 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9358A1251A739BB100CCE374 /* ProfileViewController.swift */; };
@@ -137,6 +138,7 @@
 		931CA0231A95CA4F0069B235 /* PPDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PPDataManager.swift; sourceTree = "<group>"; };
 		931D1E101A867EC700B3DC4D /* SCLAlertView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCLAlertView.swift; sourceTree = "<group>"; };
 		93327FC51AA7EAB400214D74 /* Transaction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Transaction.swift; sourceTree = "<group>"; };
+		93327FC91AA81BF800214D74 /* ActivityItemProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ActivityItemProvider.swift; path = ../ActivityItemProvider.swift; sourceTree = "<group>"; };
 		93379F6F1A857EF70054BAB8 /* CrewCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CrewCollectionViewCell.swift; sourceTree = "<group>"; };
 		9358A11E1A7394DC00CCE374 /* CMPConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CMPConstants.swift; sourceTree = "<group>"; };
 		9358A1251A739BB100CCE374 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
@@ -298,6 +300,7 @@
 			children = (
 				930EFDAE1A73902A00AF96AF /* FeedViewController.swift */,
 				936C57FC1A75D26B0027343A /* IndividualFilmViewController.swift */,
+				93327FC91AA81BF800214D74 /* ActivityItemProvider.swift */,
 				93045C9B1A9D8FC700E3BB3A /* FilmCategoriesViewController.swift */,
 				939ACC1D1A9B127D00525152 /* SelectPaymentPreferenceViewController.swift */,
 				930EFDB21A73905600AF96AF /* RegisterViewController.swift */,
@@ -568,6 +571,7 @@
 				931CA0241A95CA4F0069B235 /* PPDataManager.swift in Sources */,
 				93045C9C1A9D8FC700E3BB3A /* FilmCategoriesViewController.swift in Sources */,
 				930EFDBC1A73916C00AF96AF /* Event.swift in Sources */,
+				93327FCA1AA81BF800214D74 /* ActivityItemProvider.swift in Sources */,
 				93ED19921A85ED0E00F06FA1 /* SynopsisTableViewCell.swift in Sources */,
 				935DB8641A861CA700C9A19F /* UpdateCardViewController.m in Sources */,
 				930EFDB31A73905600AF96AF /* RegisterViewController.swift in Sources */,

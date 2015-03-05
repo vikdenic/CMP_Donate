@@ -36,6 +36,9 @@ class IndividualFilmViewController: UIViewController, UITableViewDataSource, UIT
     let kResponse = "response"
     let kId = "id"
 
+    var shareImage = UIImage()
+    var shareLink = String()
+
     let selectPaymentVC = SelectPaymentPreferenceViewController()
 
     var preferredPaymentType = kStandardDefaults.valueForKey(kDefaultsPreferredPaymentType) as String?
@@ -87,6 +90,21 @@ class IndividualFilmViewController: UIViewController, UITableViewDataSource, UIT
                 self.accessDictionary = data as NSDictionary
                 self.accessToken = self.accessDictionary.valueForKey(self.kAccessToken) as String!
             }
+        }
+
+        film.imageFile.getDataInBackgroundWithBlock { (data, error) -> Void in
+            if error != nil
+            {
+
+            }
+            else
+            {
+                self.shareImage = UIImage(data: data)!
+            }
+        }
+
+        PFConfig.getConfigInBackgroundWithBlock { (config, error) -> Void in
+            self.shareLink = config["shareLink"] as String
         }
     }
 
@@ -324,6 +342,20 @@ class IndividualFilmViewController: UIViewController, UITableViewDataSource, UIT
 //    [aTextField resignFirstResponder];
 //    }
 //    }
+    @IBAction func onShareTapped(sender: UIButton)
+    {
+        let message = "Join me in supporting \"\(film.title)\", an independant film project"
+
+        let link = NSURL(string: shareLink)
+        let postItems = [shareImage, link, message] as [AnyObject!]
+        let activityVC = UIActivityViewController(activityItems: postItems, applicationActivities: nil)
+
+        
+
+        presentViewController(activityVC, animated: true, completion: nil)
+    }
+
+
 
     //Helpers
     func updateHeaderView() {

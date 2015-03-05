@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:ActivityItemProvider.swift">
+   </FileRef>
+   <FileRef
       location = "group:CMP_Donate.xcodeproj">
    </FileRef>
    <FileRef
