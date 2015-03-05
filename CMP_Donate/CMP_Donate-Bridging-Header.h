@@ -9,6 +9,8 @@
 
 #import <QuartzCore/QuartzCore.h>
 
+#import "CustomActivityItemProvider.h"
+
 #import "CrewTableViewCell.h"
 #import "UpdateCardViewController.h"
 

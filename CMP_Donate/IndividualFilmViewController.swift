@@ -344,13 +344,16 @@ class IndividualFilmViewController: UIViewController, UITableViewDataSource, UIT
 //    }
     @IBAction func onShareTapped(sender: UIButton)
     {
-        let message = "Join me in supporting \"\(film.title)\", an independant film project"
+//        let message = "Join me in supporting \"\(film.title)\", an independant film project"
+//
+//        let link = NSURL(string: shareLink)
+//        let postItems = [shareImage, link, message] as [AnyObject!]
 
-        let link = NSURL(string: shareLink)
-        let postItems = [shareImage, link, message] as [AnyObject!]
+        let activityProvider = CustomActivityItemProvider(text: film.title)
+
+        let postItems = [activityProvider]
+
         let activityVC = UIActivityViewController(activityItems: postItems, applicationActivities: nil)
-
-        
 
         presentViewController(activityVC, animated: true, completion: nil)
     }
