@@ -10,6 +10,8 @@
 
 @interface CustomActivityItemProvider : UIActivityItemProvider
 
-- (id)initWithText:(NSString *)text;
+- (id)initWithText:(NSString *)text link:(NSString *)link;
+
+@property NSString *link;
 
 @end

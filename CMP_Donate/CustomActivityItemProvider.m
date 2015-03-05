@@ -16,10 +16,11 @@
 
 @implementation CustomActivityItemProvider
 
-- (id)initWithText:(NSString *)text{
+- (id)initWithText:(NSString *)text link:(NSString *)link{
 
     if ((self = [super initWithPlaceholderItem:text])) {
         self.text = text ?: @"";
+        self.link = link ?: @"";
     }
     return self;
 }
@@ -37,15 +38,15 @@
 - (id)activityViewController:(UIActivityViewController *)activityViewController itemForActivityType:(NSString *)activityType
 {
     if ([activityType isEqualToString:UIActivityTypePostToTwitter]) {
-        return [NSString stringWithFormat:@"Join me in supporting %@, an independant film project via @ChiMediaProject", self.text];
+        return [NSString stringWithFormat:@"Join me in supporting \"%@\", via @ChiMediaProject", self.text];
     }
 
     if ([activityType isEqualToString:UIActivityTypePostToFacebook] ||
         [activityType isEqualToString:UIActivityTypePostToWeibo] ||
         [activityType isEqualToString:UIActivityTypeMail]) {
-        return [NSString stringWithFormat:@"Join me in supporting %@, an independant film project \r \r https://appsto.re/us/nLPBu.i", self.text];;
+        return [NSString stringWithFormat:@"Join me in supporting \"%@\", an independant film project. \r \r %@", self.text, self.link];
     }
 
-    return self.text;
+    return [NSString stringWithFormat:@"Join me in supporting \"%@\", an independant film project. \r \r %@", self.text, self.link];;
 }
 @end

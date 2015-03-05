@@ -349,7 +349,7 @@ class IndividualFilmViewController: UIViewController, UITableViewDataSource, UIT
 //        let link = NSURL(string: shareLink)
 //        let postItems = [shareImage, link, message] as [AnyObject!]
 
-        let activityProvider = CustomActivityItemProvider(text: film.title)
+        let activityProvider = CustomActivityItemProvider(text: film.title, link: shareLink)
 
         let postItems = [activityProvider]
 
