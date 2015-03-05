@@ -364,6 +364,10 @@ class IndividualFilmViewController: UIViewController, UITableViewDataSource, UIT
                 {
                     println("Charge successful")
                     alert.showSuccess("Thank You!", subTitle: "Your contribution was approved. You will receive a receipt via email shortly.", closeButtonTitle: "Done", duration: 0)
+
+                    //TODO: Create payment object
+                    let transaction = Transaction(contributor: kProfile!, film: self.film, amount: amount)
+                    transaction.saveInBackgroundWithBlock(nil)
                 }
             }
         }
@@ -411,6 +415,9 @@ class IndividualFilmViewController: UIViewController, UITableViewDataSource, UIT
             if self.theVerifiedPaymentDict.valueForKey("payer")!.valueForKey("status")!.isEqualToString("VERIFIED") && (self.theVerifiedPaymentDict.valueForKey("id")! as NSString).isEqualToString(self.thePaymentId)
             {
                 println("it's verified and the id matches")
+                //TODO: Create payment object
+                let transaction = Transaction(contributor: kProfile!, film: self.film, amount: completedPayment.amount)
+                transaction.saveInBackgroundWithBlock(nil)
             }
             else
             {

@@ -38,11 +38,11 @@ class RegisterViewController: UIViewController {
                     newProfile.imageFile = PFFile.file(UIImage(named: kCrewMemberImage))
                     newProfile.fundedFilms = [Film]()
                     newProfile.starredFilms = [Film]()
+
                     UniversalProfile.sharedInstance.profile = newProfile
                     kStandardDefaults.setValue(self.passwordTextField.text, forKey: kDefaultsPword)
 
                     newProfile.saveInBackgroundWithBlock({ (succeeded, error) -> Void in
-
                         let editVC = self.storyboard?.instantiateViewControllerWithIdentifier(kStoryboardIdEditGeneralInfo) as EditGeneralInfoViewController
                         editVC.fromRegister = true
                         self.navigationController?.pushViewController(editVC, animated: true)
