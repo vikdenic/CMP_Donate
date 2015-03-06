@@ -95,7 +95,7 @@ class IndividualFilmViewController: UIViewController, UITableViewDataSource, UIT
         film.imageFile.getDataInBackgroundWithBlock { (data, error) -> Void in
             if error != nil
             {
-
+                
             }
             else
             {
@@ -104,7 +104,14 @@ class IndividualFilmViewController: UIViewController, UITableViewDataSource, UIT
         }
 
         PFConfig.getConfigInBackgroundWithBlock { (config, error) -> Void in
-            self.shareLink = config["shareLink"] as String
+            if error != nil
+            {
+                self.shareLink = "http://www.chicagomediaproject.org"
+            }
+            else
+            {
+                self.shareLink = config["shareLink"] as String
+            }
         }
     }
 
@@ -236,7 +243,7 @@ class IndividualFilmViewController: UIViewController, UITableViewDataSource, UIT
             cell.delegate = self
             let suggestedAmountOne = film.suggestedAmountOne ?? 100
             let suggestedAmountTwo = film.suggestedAmountTwo ?? 500
-            let suggestedAmountThree = film.suggestedAmountTwo ?? 1000
+            let suggestedAmountThree = film.suggestedAmountThree ?? 1000
 
             cell.bubbleButtonOne.setTitle("$" + suggestedAmountOne.stringValue, forState: .Normal)
             cell.bubbleButtonTwo.setTitle("$" + suggestedAmountTwo.stringValue, forState: .Normal)
