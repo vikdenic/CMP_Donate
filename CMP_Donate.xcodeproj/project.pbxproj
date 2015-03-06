@@ -47,6 +47,9 @@
 		93327FC61AA7EAB400214D74 /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93327FC51AA7EAB400214D74 /* Transaction.swift */; };
 		93327FD01AA8221E00214D74 /* CustomActivityItemProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 93327FCF1AA8221E00214D74 /* CustomActivityItemProvider.m */; };
 		93379F701A857EF70054BAB8 /* CrewCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93379F6F1A857EF70054BAB8 /* CrewCollectionViewCell.swift */; };
+		9355DED51AA98CA90005058A /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9355DECC1AA982910005058A /* Alamofire.framework */; };
+		9355DED61AA98CA90005058A /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9355DECC1AA982910005058A /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		9355DEDB1AA997460005058A /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9355DEDA1AA997460005058A /* CoreTelephony.framework */; };
 		9358A11F1A7394DC00CCE374 /* CMPConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9358A11E1A7394DC00CCE374 /* CMPConstants.swift */; };
 		9358A1261A739BB100CCE374 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9358A1251A739BB100CCE374 /* ProfileViewController.swift */; };
 		9358A1281A739E1700CCE374 /* UniversalProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9358A1271A739E1700CCE374 /* UniversalProfile.swift */; };
@@ -113,7 +116,28 @@
 			remoteGlobalIDString = F8111E3219A95C8B0040E7D1;
 			remoteInfo = "Alamofire iOS";
 		};
+		9355DED71AA98CA90005058A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9355DEC41AA982910005058A /* Alamofire.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = F8111E3219A95C8B0040E7D1;
+			remoteInfo = "Alamofire iOS";
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		9355DED91AA98CAA0005058A /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				9355DED61AA98CA90005058A /* Alamofire.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		93045C9B1A9D8FC700E3BB3A /* FilmCategoriesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilmCategoriesViewController.swift; sourceTree = "<group>"; };
@@ -177,6 +201,7 @@
 		93327FCF1AA8221E00214D74 /* CustomActivityItemProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomActivityItemProvider.m; sourceTree = "<group>"; };
 		93379F6F1A857EF70054BAB8 /* CrewCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CrewCollectionViewCell.swift; sourceTree = "<group>"; };
 		9355DEC41AA982910005058A /* Alamofire.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Alamofire.xcodeproj; path = Alamofire/Alamofire.xcodeproj; sourceTree = "<group>"; };
+		9355DEDA1AA997460005058A /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
 		9358A11E1A7394DC00CCE374 /* CMPConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CMPConstants.swift; sourceTree = "<group>"; };
 		9358A1251A739BB100CCE374 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		9358A1271A739E1700CCE374 /* UniversalProfile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UniversalProfile.swift; path = CMP_Donate/UniversalProfile.swift; sourceTree = "<group>"; };
@@ -209,7 +234,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9355DEDB1AA997460005058A /* CoreTelephony.framework in Frameworks */,
 				939ACC191A9AB8F900525152 /* libstdc++.6.dylib in Frameworks */,
+				9355DED51AA98CA90005058A /* Alamofire.framework in Frameworks */,
 				931CA0221A95C9C70069B235 /* MessageUI.framework in Frameworks */,
 				931CA0201A95C9B90069B235 /* CoreMedia.framework in Frameworks */,
 				931CA01E1A95C9B40069B235 /* AVFoundation.framework in Frameworks */,
@@ -454,6 +481,7 @@
 		C1AB4529CED40F599EFF73CD /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9355DEDA1AA997460005058A /* CoreTelephony.framework */,
 				939ACC181A9AB8F900525152 /* libstdc++.6.dylib */,
 				931CA0211A95C9C70069B235 /* MessageUI.framework */,
 				931CA01F1A95C9B90069B235 /* CoreMedia.framework */,
@@ -475,11 +503,13 @@
 				930EFD651A738F1400AF96AF /* Frameworks */,
 				930EFD661A738F1400AF96AF /* Resources */,
 				4E1D8B5BA19B2DB1A2DD7954 /* Copy Pods Resources */,
+				9355DED91AA98CAA0005058A /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 				9355DED41AA983850005058A /* PBXTargetDependency */,
+				9355DED81AA98CA90005058A /* PBXTargetDependency */,
 			);
 			name = CMP_Donate;
 			productName = CMP_Donate;
@@ -695,6 +725,11 @@
 			name = "Alamofire iOS";
 			targetProxy = 9355DED31AA983850005058A /* PBXContainerItemProxy */;
 		};
+		9355DED81AA98CA90005058A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Alamofire iOS";
+			targetProxy = 9355DED71AA98CA90005058A /* PBXContainerItemProxy */;
+		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
@@ -802,6 +837,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -839,6 +875,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",

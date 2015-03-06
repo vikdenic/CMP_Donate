@@ -34,6 +34,8 @@
 #import "CardIOPaymentViewControllerDelegate.h"
 #import "CardIOUtilities.h"
 
+@import CoreTelephony;
+
 #import <AudioToolbox/AudioToolbox.h>
 
 #import <CFNetwork/CFNetwork.h>

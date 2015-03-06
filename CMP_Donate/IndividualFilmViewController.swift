@@ -39,7 +39,7 @@ class IndividualFilmViewController: UIViewController, UITableViewDataSource, UIT
 
     var shareImage = UIImage()
     var shareLink = String()
-    let rateKey = "jr-850d1e0bc3c23bed30132ee78f4e16c2"
+    let rateKey = "jr-850d1e0bc3c23bed30132ee78f4e16c2" as String!
 
     let selectPaymentVC = SelectPaymentPreferenceViewController()
 
@@ -131,14 +131,64 @@ class IndividualFilmViewController: UIViewController, UITableViewDataSource, UIT
         }
 
         convertCurrency()
+        let it = formatAmount(100)
     }
 
     func convertCurrency()
     {
-        Alamofire.request(.GET, "http://jsonrates.com/get/?from=USD&to=EUR&apiKey=\(rateKey)").responseJSON() {
+        Alamofire.request(.GET, "http://jsonrates.com/get/?from=JPY&to=USD&apiKey=\(rateKey)").responseJSON() {
             (_, _, data, _) in
-            println(data!)
+
+            let dict = data! as NSDictionary
+            let rate = 1 / (dict.valueForKey("rate") as NSString).floatValue
         }
+
+        let networkInfo = CTTelephonyNetworkInfo()
+        let carrier = networkInfo.subscriberCellularProvider
+
+        let countryCode = carrier.mobileCountryCode
+
+        //http://en.wikipedia.org/wiki/Mobile_country_code
+        switch countryCode{
+//        case "310", "311", "312", "313", "316":
+//            println("america")
+        case "208", "340", "547":
+            println("france")
+        case "722":
+            println("argentina")
+        case "242":
+            println("norway")
+        case "505":
+            println("australia")
+        case "505":
+            println("uk")
+        default:
+            let preferredLanguage = NSLocale.preferredLanguages()[0] as String
+            println(preferredLanguage)
+            switch preferredLanguage {
+            case "en":
+                println("english!")
+            case "fr":
+                println("french!")
+            case "nb":
+                println("norsk!")
+            case "es":
+                println("spanish!")
+            case "en-AU":
+                println("australian!")
+            default:
+                println("unrecognized")
+            }
+        }
+    }
+
+    func formatAmount(number : NSNumber) -> String!
+    {
+        let formatter = NSNumberFormatter()
+        formatter.numberStyle = .CurrencyStyle
+        formatter.locale = NSLocale.currentLocale()
+        let localizedMoneyString = formatter.stringFromNumber(number)
+        return localizedMoneyString!
     }
 
     override func prefersStatusBarHidden() -> Bool {
