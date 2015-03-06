@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Alamofire
 
 class IndividualFilmViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UICollectionViewDataSource, UICollectionViewDelegate, DonateTableViewCellDelegate, UIScrollViewDelegate, PayPalPaymentDelegate, UITextFieldDelegate, UIGestureRecognizerDelegate {
 
@@ -38,6 +39,7 @@ class IndividualFilmViewController: UIViewController, UITableViewDataSource, UIT
 
     var shareImage = UIImage()
     var shareLink = String()
+    let rateKey = "jr-850d1e0bc3c23bed30132ee78f4e16c2"
 
     let selectPaymentVC = SelectPaymentPreferenceViewController()
 
@@ -126,6 +128,16 @@ class IndividualFilmViewController: UIViewController, UITableViewDataSource, UIT
         if film.productionTeam.count <= 1
         {
             cell.pageDots.alpha = 0
+        }
+
+        convertCurrency()
+    }
+
+    func convertCurrency()
+    {
+        Alamofire.request(.GET, "http://jsonrates.com/get/?from=USD&to=EUR&apiKey=\(rateKey)").responseJSON() {
+            (_, _, data, _) in
+            println(data!)
         }
     }
 
