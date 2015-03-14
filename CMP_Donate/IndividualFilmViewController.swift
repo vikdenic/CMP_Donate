@@ -130,55 +130,117 @@ class IndividualFilmViewController: UIViewController, UITableViewDataSource, UIT
             cell.pageDots.alpha = 0
         }
 
-        convertCurrency()
-        let it = formatAmount(100)
+        obtainLocaleInformation()
+//        convertCurrency("EUR")
+//        let it = formatAmount(100)
     }
 
-    func convertCurrency()
+    func obtainLocaleInformation()
     {
-        Alamofire.request(.GET, "http://jsonrates.com/get/?from=JPY&to=USD&apiKey=\(rateKey)").responseJSON() {
+        var originCode = "USD"
+
+        let networkInfo = CTTelephonyNetworkInfo()
+
+        if let carrier = networkInfo.subscriberCellularProvider
+        {
+            //http://en.wikipedia.org/wiki/Mobile_country_code
+            switch carrier.mobileCountryCode {
+//            case "310", "311", "312", "313", "316":
+//                originCode = "USD"
+//                println("america")
+            case "208", "340", "547":
+                originCode = "EUR"
+                println("france")
+            case "722":
+                originCode = "ARS"
+                println("argentina")
+            case "242":
+                originCode = "NOK"
+                println("norway")
+            case "505":
+                originCode = "AUD"
+                println("australia")
+            case "505":
+                originCode = "GBP"
+                println("gb")
+            default:
+                if let preferredLanguage = NSLocale.preferredLanguages()[0] as? NSString
+                {
+                    switch preferredLanguage {
+                    case "en":
+                        originCode = "USD"
+                        println("english!")
+                    case "fr":
+                        originCode = "EUR"
+                        println("french!")
+                    case "nb":
+                        originCode = "NOK"
+                        println("norsk!")
+                    case "en-AU":
+                        originCode = "AUD"
+                        println("australian!")
+                    default:
+                        println("unrecognized")
+                    }
+                }
+            }
+        }
+        else
+        {
+            if let preferredLanguage = NSLocale.preferredLanguages()[0] as? NSString
+            {
+                switch preferredLanguage {
+                case "en":
+                    originCode = "USD"
+                    println("English is preferred language")
+                case "fr":
+                    originCode = "EUR"
+                    println("French is preferred language")
+                case "nb":
+                    originCode = "NOK"
+                    println("Norsk is preferred language")
+                case "en-AU":
+                    originCode = "AUD"
+                    println("Australian is preferred language")
+                default:
+                    println("unrecognized")
+                }
+            }
+        }
+
+        convertCurrency(originCode, completion: { (rate) -> Void in
+            let convertedAmount = self.film.suggestedAmountOne.floatValue * rate
+            self.formatTheAmount(convertedAmount)
+        })
+    }
+
+//    func determineCurrencyFromLanguage()
+//    {
+//        if let preferredLanguage = NSLocale.preferredLanguages()[0] as? NSString
+//        {
+//            switch preferredLanguage {
+//            case "en":
+//                println("english!")
+//            case "fr":
+//                println("french!")
+//            case "nb":
+//                println("norsk!")
+//            case "en-AU":
+//                println("australian!")
+//            default:
+//                println("unrecognized")
+//            }
+//        }
+//    }
+
+    func convertCurrency(abbrev : String, completion : (rate : Float) -> Void)
+    {
+        Alamofire.request(.GET, "http://jsonrates.com/get/?from=" + abbrev + "&to=USD&apiKey=\(rateKey)").responseJSON() {
             (_, _, data, _) in
 
             let dict = data! as NSDictionary
             let rate = 1 / (dict.valueForKey("rate") as NSString).floatValue
-        }
-
-        let networkInfo = CTTelephonyNetworkInfo()
-        let carrier = networkInfo.subscriberCellularProvider
-
-        let countryCode = carrier.mobileCountryCode
-
-        //http://en.wikipedia.org/wiki/Mobile_country_code
-        switch countryCode{
-//        case "310", "311", "312", "313", "316":
-//            println("america")
-        case "208", "340", "547":
-            println("france")
-        case "722":
-            println("argentina")
-        case "242":
-            println("norway")
-        case "505":
-            println("australia")
-        case "505":
-            println("uk")
-        default:
-            let preferredLanguage = NSLocale.preferredLanguages()[0] as String
-            println(preferredLanguage)
-            switch preferredLanguage {
-            case "en":
-                println("english!")
-            case "fr":
-                println("french!")
-            case "nb":
-                println("norsk!")
-            case "es":
-                println("spanish!")
-            case "en-AU":
-                println("australian!")
-            default:
-                println("unrecognized")
-            }
+            completion(rate: rate)
         }
     }
 
@@ -189,6 +251,21 @@ class IndividualFilmViewController: UIViewController, UITableViewDataSource, UIT
         formatter.locale = NSLocale.currentLocale()
         let localizedMoneyString = formatter.stringFromNumber(number)
         return localizedMoneyString!
+    }
+
+    func formatTheAmount(number : NSNumber)
+    {
+        var currencyFormatter = NSNumberFormatter()
+        currencyFormatter.numberStyle = NSNumberFormatterStyle.CurrencyStyle
+        currencyFormatter.locale = NSLocale.currentLocale()
+        var currencyString = currencyFormatter.internationalCurrencySymbol as String!
+        var format = currencyFormatter.positiveFormat
+        format = format.stringByReplacingOccurrencesOfString("¤", withString: currencyString)
+        currencyFormatter.positiveFormat = format
+
+        var formattedCurrency = currencyFormatter.stringFromNumber(number) //SKProduct->price
+
+        println("formattedCurrency: \(formattedCurrency!)")//formattedCurrency: 0,89 EUR
     }
 
     override func prefersStatusBarHidden() -> Bool {
