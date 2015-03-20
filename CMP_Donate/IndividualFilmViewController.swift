@@ -23,28 +23,34 @@ class IndividualFilmViewController: UIViewController, UITableViewDataSource, UIT
 
     let kTableHeaderHeight: CGFloat = 120.0
 
-    //PayPal
+    //MARK: PayPal Properties
     var payPalConfiguration = PayPalConfiguration()
     var accessDictionary : NSDictionary!
     var accessToken : String!
     var theCompletedPayment : PayPalPayment!
     var thePaymentId : String!
     var theVerifiedPaymentDict : NSDictionary!
-
     let kAccessToken = "access_token"
-
-    let kConfirmation = "Confirmation"
     let kResponse = "response"
     let kId = "id"
 
+    //MARK: ActivityViewController Properties
     var shareImage = UIImage()
+    ///To be set via Parse Config when the view loads
     var shareLink = String()
+
+    //MARK: Currency Conversion Properties
+    /// For jsonrates API
     let rateKey = "jr-850d1e0bc3c23bed30132ee78f4e16c2" as String!
 
+    //MARK: General Payment Properties
+    /// To select between PayPal or Credit Card if first time contributing
     let selectPaymentVC = SelectPaymentPreferenceViewController()
 
+    /// The most recent payment type the user has preferred to use for contributions
     var preferredPaymentType = kStandardDefaults.valueForKey(kDefaultsPreferredPaymentType) as String?
 
+    //MARK: init
     required init(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
 
@@ -57,7 +63,7 @@ class IndividualFilmViewController: UIViewController, UITableViewDataSource, UIT
         payPalConfiguration.payPalShippingAddressOption = PayPalShippingAddressOption.PayPal
     }
 
-    //View Lifecycle
+    //MARK: View Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
 //        title = film.title
@@ -144,7 +150,7 @@ class IndividualFilmViewController: UIViewController, UITableViewDataSource, UIT
 
         //https://gist.github.com/jacobbubu/1836273
         switch currentLocale.localeIdentifier {
-        case "fr_FR":
+        case "en_FR":
             originCode = "EUR"
         case "en_AR":
             originCode = "ARS"
@@ -190,25 +196,7 @@ class IndividualFilmViewController: UIViewController, UITableViewDataSource, UIT
         println("formattedCurrency: \(formattedCurrency!)")//formattedCurrency: 0,89 EUR
     }
 
-
     //MARK: View Helpers
-    override func prefersStatusBarHidden() -> Bool {
-        return true
-    }
-
-
-    func hideNavBar()
-    {
-        navigationController?.navigationBarHidden = true
-
-        let backButton = UIButton(frame: CGRectMake(8, 31, 60, 60))
-        backButton.setImage(UIImage(named: "backImage"), forState: .Normal)
-        backButton.imageView?.contentMode = .ScaleAspectFit
-        backButton.imageEdgeInsets = UIEdgeInsetsMake(-38, -46, 0, 0)
-        backButton.addTarget(self, action: "onBackTapped", forControlEvents: .TouchUpInside)
-        view.addSubview(backButton)
-    }
-
     func updateHeaderView() {
         var headerRect = CGRect(x: 0, y: -kTableHeaderHeight, width: tableView.bounds.width, height: kTableHeaderHeight)
 
@@ -231,6 +219,29 @@ class IndividualFilmViewController: UIViewController, UITableViewDataSource, UIT
         headerView.frame = headerRect
     }
 
+    override func touchesBegan(touches: NSSet, withEvent event: UIEvent)
+    {
+        view.endEditing(true)
+    }
+
+    //MARK: Navigation Helpers
+    override func prefersStatusBarHidden() -> Bool {
+        return true
+    }
+
+
+    func hideNavBar()
+    {
+        navigationController?.navigationBarHidden = true
+
+        let backButton = UIButton(frame: CGRectMake(8, 31, 60, 60))
+        backButton.setImage(UIImage(named: "backImage"), forState: .Normal)
+        backButton.imageView?.contentMode = .ScaleAspectFit
+        backButton.imageEdgeInsets = UIEdgeInsetsMake(-38, -46, 0, 0)
+        backButton.addTarget(self, action: "onBackTapped", forControlEvents: .TouchUpInside)
+        view.addSubview(backButton)
+    }
+
     func onBackTapped()
     {
         navigationController?.popViewControllerAnimated(true)
@@ -249,77 +260,7 @@ class IndividualFilmViewController: UIViewController, UITableViewDataSource, UIT
         navigationController?.popViewControllerAnimated(true)
     }
 
-    //MARK: Stripe
-    func pay(amount : NSNumber)
-    {
-        // Create a PayPalPayment
-        let payment = PayPalPayment()
-
-        // Amount, currency, and description
-        payment.amount = NSDecimalNumber(string: amount.stringValue)
-        payment.currencyCode = "USD"
-        payment.shortDescription = film.title
-
-        // Use the intent property to indicate that this is a "sale" payment,
-        // meaning combined Authorization + Capture.
-        // To perform Authorization only, and defer Capture to your server,
-        // use PayPalPaymentIntentAuthorize.
-        // To place an Order, and defer both Authorization and Capture to
-        // your server, use PayPalPaymentIntentOrder.
-        // (PayPalPaymentIntentOrder is valid only for PayPal payments, not credit card payments.)
-        payment.intent = .Sale
-
-        // If your app collects Shipping Address information from the customer,
-        // or already stores that information on your server, you may provide it here.
-        //payment.shippingAddress = address /// a previously-created PayPalShippingAddress object
-
-        // Several other optional fields that you can set here are documented in PayPalPayment.h,
-        // including paymentDetails, items, invoiceNumber, custom, softDescriptor, etc.
-
-        // Check whether payment is processable.
-        if (!payment.processable) {
-            // If, for example, the amount was negative or the shortDescription was empty, then
-            // this payment would not be processable. You would want to handle that here.
-        }
-
-        // Create a PayPalPaymentViewController.
-        let paymentViewController = PayPalPaymentViewController(payment: payment, configuration: payPalConfiguration, delegate: self)
-
-        // Present the PayPalPaymentViewController.
-        presentViewController(paymentViewController, animated: true, completion: nil)
-    }
-
-    func chargeCustomer(amount : NSNumber)
-    {
-        let alert = SCLAlertView()
-
-        let amountToCharge = (amount as Double * 100.0)
-        if let customerId = kStandardDefaults.valueForKey(kDefaultsStripeCustomerID) as String!
-        {
-            PFCloud.callFunctionInBackground("createCharge", withParameters: ["amount": amountToCharge, "customer": customerId]) { (chargeId, error) -> Void in
-                if error != nil
-                {
-                    println(error.localizedDescription)
-                }
-                else
-                {
-                    println("Charge successful")
-                    alert.showSuccess("Thank You!", subTitle: "Your contribution was approved. You will receive a receipt via email shortly.", closeButtonTitle: "Done", duration: 0)
-
-                    //TODO: Create payment object
-                    let transaction = Transaction(contributor: kProfile!, film: self.film, amount: amount)
-                    transaction.saveInBackgroundWithBlock(nil)
-                }
-            }
-        }
-
-        else
-        {
-            alert.showNotice("Payment Info Needed", subTitle: "Please update your Profile with your payment information.", closeButtonTitle: "Okay", duration: 0)
-        }
-    }
-
-    //UITableView
+    //MARK: UITableView
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
         return 3
@@ -380,7 +321,7 @@ class IndividualFilmViewController: UIViewController, UITableViewDataSource, UIT
         }
     }
 
-    //UIScrollViewDelegate
+    //MARK: UIScrollViewDelegate
     func scrollViewDidScroll(scrollView: UIScrollView) {
         updateHeaderView()
     }
@@ -415,37 +356,6 @@ class IndividualFilmViewController: UIViewController, UITableViewDataSource, UIT
         updateHeaderView()
     }
 
-    func showCustomAlertView(amount : NSNumber)
-    {
-        let alert = SCLAlertView()
-
-        alert.addButton("Confirm", action: { () -> Void in
-            self.chargeCustomer(amount)
-        })
-
-//        let formattedAmount = NSString(format: "%.2f", amount.floatValue)
-
-        alert.showCustomAlert("Contribute?", image: UIImage(named: "CMPLogo")!, color: UIColor.customRedColor(), subTitle: "Donate $\(amount) to \(film.title)?", closeButtonTitle: "Cancel", duration: 0)
-    }
-
-    func showCustomAlertWithTextField()
-    {
-        let alertCntrl = UIAlertController(title: "Contribute", message: "Help kickstart this film", preferredStyle: UIAlertControllerStyle.Alert)
-        let action = UIAlertAction(title: "", style: .Default) { (action) -> Void in
-            println("present pay alert here?")
-        }
-        
-    }
-
-    func textFieldDidBeginEditing(textField: UITextField) {
-    }
-
-    override func touchesBegan(touches: NSSet, withEvent event: UIEvent)
-    {
-        view.endEditing(true)
-    }
-
-
     @IBAction func onShareTapped(sender: UIButton)
     {
 
@@ -458,29 +368,85 @@ class IndividualFilmViewController: UIViewController, UITableViewDataSource, UIT
         presentViewController(activityVC, animated: true, completion: nil)
     }
 
-    //Helpers
-    func presentCustomAmountEntry()
+    //MARK: SCLAlertView
+    func showCustomAlertView(amount : NSNumber)
     {
-        let alert = UIAlertController(title: "Contribute Custom Amount", message: nil, preferredStyle: .Alert)
+        let alert = SCLAlertView()
 
-        var theTextField = UITextField()
-        alert.addTextFieldWithConfigurationHandler { (textField) -> Void in
-            textField.placeholder = "Amount here"
-            textField.keyboardType = UIKeyboardType.DecimalPad
-            theTextField = textField
+        alert.addButton("Confirm", action: { () -> Void in
+            self.chargeCustomer(amount)
+        })
+
+        alert.showCustomAlert("Contribute?", image: UIImage(named: "CMPLogo")!, color: UIColor.customRedColor(), subTitle: "Donate $\(amount) to \(film.title)?", closeButtonTitle: "Cancel", duration: 0)
+    }
+
+    //MARK: Stripe
+    func pay(amount : NSNumber)
+    {
+        // Create a PayPalPayment
+        let payment = PayPalPayment()
+
+        // Amount, currency, and description
+        payment.amount = NSDecimalNumber(string: amount.stringValue)
+        payment.currencyCode = "USD"
+        payment.shortDescription = film.title
+
+        // Use the intent property to indicate that this is a "sale" payment,
+        // meaning combined Authorization + Capture.
+        // To perform Authorization only, and defer Capture to your server,
+        // use PayPalPaymentIntentAuthorize.
+        // To place an Order, and defer both Authorization and Capture to
+        // your server, use PayPalPaymentIntentOrder.
+        // (PayPalPaymentIntentOrder is valid only for PayPal payments, not credit card payments.)
+        payment.intent = .Sale
+
+        // If your app collects Shipping Address information from the customer,
+        // or already stores that information on your server, you may provide it here.
+        //payment.shippingAddress = address /// a previously-created PayPalShippingAddress object
+
+        // Several other optional fields that you can set here are documented in PayPalPayment.h,
+        // including paymentDetails, items, invoiceNumber, custom, softDescriptor, etc.
+
+        // Check whether payment is processable.
+        if (!payment.processable) {
+            // If, for example, the amount was negative or the shortDescription was empty, then
+            // this payment would not be processable. You would want to handle that here.
         }
 
-        let cancelAction = UIAlertAction(title: "Cancel", style: .Cancel, handler: nil)
+        // Create a PayPalPaymentViewController.
+        let paymentViewController = PayPalPaymentViewController(payment: payment, configuration: payPalConfiguration, delegate: self)
 
-        let action = UIAlertAction(title: "Next", style: .Default) { (action) -> Void in
-            let theAmount = (theTextField.text as NSString).floatValue
-            self.presentPreferredPaymentMethod(theAmount)
+        // Present the PayPalPaymentViewController.
+        presentViewController(paymentViewController, animated: true, completion: nil)
+    }
+
+    func chargeCustomer(amount : NSNumber)
+    {
+        let alert = SCLAlertView()
+
+        let amountToCharge = (amount as Double * 100.0)
+        if let customerId = kStandardDefaults.valueForKey(kDefaultsStripeCustomerID) as String!
+        {
+            PFCloud.callFunctionInBackground("createCharge", withParameters: ["amount": amountToCharge, "customer": customerId]) { (chargeId, error) -> Void in
+                if error != nil
+                {
+                    println(error.localizedDescription)
+                }
+                else
+                {
+                    println("Charge successful")
+                    alert.showSuccess("Thank You!", subTitle: "Your contribution was approved. You will receive a receipt via email shortly.", closeButtonTitle: "Done", duration: 0)
+
+                    let transaction = Transaction(contributor: kProfile!, film: self.film, amount: amount)
+                    transaction.saveInBackgroundWithBlock(nil)
+                }
+            }
         }
 
-        alert.addAction(cancelAction)
-        alert.addAction(action)
-
-        presentViewController(alert, animated: true, completion: nil)
+        else
+        {
+            alert.showNotice("Payment Info Needed", subTitle: "Please update your Profile with your payment information.", closeButtonTitle: "Okay", duration: 0)
+        }
     }
 
     //MARK: PayPal
@@ -520,7 +486,6 @@ class IndividualFilmViewController: UIViewController, UITableViewDataSource, UIT
             if self.theVerifiedPaymentDict.valueForKey("payer")!.valueForKey("status")!.isEqualToString("VERIFIED") && (self.theVerifiedPaymentDict.valueForKey("id")! as NSString).isEqualToString(self.thePaymentId)
             {
                 println("it's verified and the id matches")
-                //TODO: Create payment object
                 let transaction = Transaction(contributor: kProfile!, film: self.film, amount: completedPayment.amount)
                 transaction.saveInBackgroundWithBlock(nil)
             }
@@ -534,6 +499,7 @@ class IndividualFilmViewController: UIViewController, UITableViewDataSource, UIT
         dismissViewControllerAnimated(true, completion: nil)
     }
 
+    //MARK: Payment Helpers
     func presentPreferredPaymentMethod(amount: NSNumber)
     {
         if let somePreference = kStandardDefaults.valueForKey(kDefaultsPreferredPaymentType) as String!
@@ -553,7 +519,31 @@ class IndividualFilmViewController: UIViewController, UITableViewDataSource, UIT
         }
     }
 
-    //DonateTableViewCell
+    func presentCustomAmountEntry()
+    {
+        let alert = UIAlertController(title: "Contribute Custom Amount", message: nil, preferredStyle: .Alert)
+
+        var theTextField = UITextField()
+        alert.addTextFieldWithConfigurationHandler { (textField) -> Void in
+            textField.placeholder = "Amount here"
+            textField.keyboardType = UIKeyboardType.DecimalPad
+            theTextField = textField
+        }
+
+        let cancelAction = UIAlertAction(title: "Cancel", style: .Cancel, handler: nil)
+
+        let action = UIAlertAction(title: "Next", style: .Default) { (action) -> Void in
+            let theAmount = (theTextField.text as NSString).floatValue
+            self.presentPreferredPaymentMethod(theAmount)
+        }
+
+        alert.addAction(cancelAction)
+        alert.addAction(action)
+
+        presentViewController(alert, animated: true, completion: nil)
+    }
+
+    //MARK: DonateTableViewCellDelegate
     func didTapBubbleOne(amount: NSNumber) {
         presentPreferredPaymentMethod(amount)
     }
@@ -570,7 +560,7 @@ class IndividualFilmViewController: UIViewController, UITableViewDataSource, UIT
         presentCustomAmountEntry()
     }
 
-    //UICollectionView
+    //MARK: UICollectionView
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int
     {
         return film.productionTeam.count
