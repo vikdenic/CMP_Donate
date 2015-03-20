@@ -61,26 +61,15 @@ extension NSNumber {
     /**
     :returns: A String representation of the number, formatted for the currency of the user's current region
     */
-    func formatCurrencyForCurrentLocale() -> String!
-    {
-        var currencyFormatter = NSNumberFormatter()
-        currencyFormatter.numberStyle = NSNumberFormatterStyle.CurrencyStyle
-        currencyFormatter.locale = NSLocale.currentLocale()
-        var currencyString = currencyFormatter.internationalCurrencySymbol as String!
-        var format = currencyFormatter.positiveFormat
-        format = format.stringByReplacingOccurrencesOfString("¤", withString: currencyString)
-        currencyFormatter.positiveFormat = format
-
-        var formattedCurrency = currencyFormatter.stringFromNumber(self) //SKProduct->price
-        return formattedCurrency
-    }
-
     func formatCurrencyWithSymbol() -> String!
     {
         let theLocale = NSLocale.currentLocale()
-        let currencySymbol: AnyObject? = theLocale.objectForKey(NSLocaleCurrencySymbol)
-        let currencyCode: AnyObject? = theLocale.objectForKey(NSLocaleCurrencyCode)
-        return "\(currencyCode!): \(currencySymbol!)\(self.stringValue)"
+        let currencySymbol = theLocale.objectForKey(NSLocaleCurrencySymbol) as String!
+        var currencyFormatter = NSNumberFormatter()
+        currencyFormatter.roundingMode = NSNumberFormatterRoundingMode.RoundUp
+        var formattedCurrency = currencyFormatter.stringFromNumber(self) as String!
+
+        return currencySymbol + formattedCurrency
     }
 }
 

@@ -50,6 +50,11 @@ class IndividualFilmViewController: UIViewController, UITableViewDataSource, UIT
     /// The most recent payment type the user has preferred to use for contributions
     var preferredPaymentType = kStandardDefaults.valueForKey(kDefaultsPreferredPaymentType) as String?
 
+    //MARK: Currency Conversion Properties
+    var convertedCurrencyStringOne : String!
+    var convertedCurrencyStringTwo : String!
+    var convertedCurrencyStringThree : String!
+
     //MARK: init
     required init(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
@@ -136,9 +141,14 @@ class IndividualFilmViewController: UIViewController, UITableViewDataSource, UIT
         }
 
         VZCurrency.obtainConversationRateForCurrentLocale { (rate) -> Void in
-            let convertedAmount = (self.film.suggestedAmountOne.floatValue * rate) as NSNumber
-            let formattedCurrencyString = convertedAmount.formatCurrencyWithSymbol()
-            println(formattedCurrencyString)
+            let convertedAmountOne = (self.film.suggestedAmountOne.floatValue * rate) as NSNumber
+            let convertedAmountTwo = (self.film.suggestedAmountTwo.floatValue * rate) as NSNumber
+            let convertedAmountThree = (self.film.suggestedAmountThree.floatValue * rate) as NSNumber
+
+            self.convertedCurrencyStringOne = convertedAmountOne.formatCurrencyWithSymbol()
+            self.convertedCurrencyStringTwo = convertedAmountTwo.formatCurrencyWithSymbol()
+            self.convertedCurrencyStringThree = convertedAmountThree.formatCurrencyWithSymbol()
+            self.tableView.reloadData()
         }
     }
 
@@ -237,6 +247,21 @@ class IndividualFilmViewController: UIViewController, UITableViewDataSource, UIT
             cell.bubbleButtonOne.setTitle("$" + suggestedAmountOne.stringValue, forState: .Normal)
             cell.bubbleButtonTwo.setTitle("$" + suggestedAmountTwo.stringValue, forState: .Normal)
             cell.bubbleButtonThree.setTitle("$" + suggestedAmountThree.stringValue, forState: .Normal)
+
+            if let someConvertedAmountOne = self.convertedCurrencyStringOne
+            {
+                cell.bubbleButtonOne.setTitle(someConvertedAmountOne, forState: .Normal)
+            }
+
+            if let someConvertedAmountTwo = self.convertedCurrencyStringTwo
+            {
+                cell.bubbleButtonTwo.setTitle(someConvertedAmountTwo, forState: .Normal)
+            }
+
+            if let someConvertedAmountThree = self.convertedCurrencyStringThree
+            {
+                cell.bubbleButtonThree.setTitle(someConvertedAmountThree, forState: .Normal)
+            }
 
             return cell
         }
