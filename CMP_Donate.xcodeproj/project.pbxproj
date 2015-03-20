@@ -379,8 +379,7 @@
 				93F53B651AA2B2AD0053FABF /* EditGeneralInfoViewController.swift */,
 				9362E0781AA5513E00A18D7F /* ChangePasswordViewController.swift */,
 				93E964EF1AA639B40037FB6D /* ProvideProfileInfoViewController.swift */,
-				93327FCE1AA8221E00214D74 /* CustomActivityItemProvider.h */,
-				93327FCF1AA8221E00214D74 /* CustomActivityItemProvider.m */,
+				93FE724D1ABBE9EC00E09542 /* Custom Views */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -470,6 +469,15 @@
 			);
 			name = "Third Party UI";
 			path = ..;
+			sourceTree = "<group>";
+		};
+		93FE724D1ABBE9EC00E09542 /* Custom Views */ = {
+			isa = PBXGroup;
+			children = (
+				93327FCE1AA8221E00214D74 /* CustomActivityItemProvider.h */,
+				93327FCF1AA8221E00214D74 /* CustomActivityItemProvider.m */,
+			);
+			name = "Custom Views";
 			sourceTree = "<group>";
 		};
 		A615DE66E0EE85B8E35956E5 /* Pods */ = {
