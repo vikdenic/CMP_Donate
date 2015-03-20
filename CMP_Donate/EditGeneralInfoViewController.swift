@@ -3,7 +3,7 @@
 //  CMP_Donate
 //
 //  Created by Vik Denic on 2/28/15.
-//  Copyright (c) 2015 mobilemakers. All rights reserved.
+//  Copyright (c) 2015 Chicago Media Project. All rights reserved.
 //
 
 import UIKit
