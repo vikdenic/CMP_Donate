@@ -131,81 +131,31 @@ class IndividualFilmViewController: UIViewController, UITableViewDataSource, UIT
         }
 
         obtainLocaleInformation()
-//        convertCurrency("EUR")
-//        let it = formatAmount(100)
     }
 
+
+    //MARK: Currency Conversion
     func obtainLocaleInformation()
     {
         var originCode = "USD"
 
-        let networkInfo = CTTelephonyNetworkInfo()
+        let currentLocale = NSLocale.currentLocale()
+        println(currentLocale.localeIdentifier)
 
-        if let carrier = networkInfo.subscriberCellularProvider
-        {
-            //http://en.wikipedia.org/wiki/Mobile_country_code
-            switch carrier.mobileCountryCode {
-//            case "310", "311", "312", "313", "316":
-//                originCode = "USD"
-//                println("america")
-            case "208", "340", "547":
-                originCode = "EUR"
-                println("france")
-            case "722":
-                originCode = "ARS"
-                println("argentina")
-            case "242":
-                originCode = "NOK"
-                println("norway")
-            case "505":
-                originCode = "AUD"
-                println("australia")
-            case "505":
-                originCode = "GBP"
-                println("gb")
-            default:
-                if let preferredLanguage = NSLocale.preferredLanguages()[0] as? NSString
-                {
-                    switch preferredLanguage {
-                    case "en":
-                        originCode = "USD"
-                        println("english!")
-                    case "fr":
-                        originCode = "EUR"
-                        println("french!")
-                    case "nb":
-                        originCode = "NOK"
-                        println("norsk!")
-                    case "en-AU":
-                        originCode = "AUD"
-                        println("australian!")
-                    default:
-                        println("unrecognized")
-                    }
-                }
-            }
-        }
-        else
-        {
-            if let preferredLanguage = NSLocale.preferredLanguages()[0] as? NSString
-            {
-                switch preferredLanguage {
-                case "en":
-                    originCode = "USD"
-                    println("English is preferred language")
-                case "fr":
-                    originCode = "EUR"
-                    println("French is preferred language")
-                case "nb":
-                    originCode = "NOK"
-                    println("Norsk is preferred language")
-                case "en-AU":
-                    originCode = "AUD"
-                    println("Australian is preferred language")
-                default:
-                    println("unrecognized")
-                }
-            }
+        //https://gist.github.com/jacobbubu/1836273
+        switch currentLocale.localeIdentifier {
+        case "fr_FR":
+            originCode = "EUR"
+        case "en_AR":
+            originCode = "ARS"
+        case "en_NO":
+            originCode = "NOK"
+        case "en_AU":
+            originCode = "AUD"
+        case "en_GB":
+            originCode = "GBP"
+        default:
+            break
         }
 
         convertCurrency(originCode, completion: { (rate) -> Void in
@@ -213,25 +163,6 @@ class IndividualFilmViewController: UIViewController, UITableViewDataSource, UIT
             self.formatTheAmount(convertedAmount)
         })
     }
-
-//    func determineCurrencyFromLanguage()
-//    {
-//        if let preferredLanguage = NSLocale.preferredLanguages()[0] as? NSString
-//        {
-//            switch preferredLanguage {
-//            case "en":
-//                println("english!")
-//            case "fr":
-//                println("french!")
-//            case "nb":
-//                println("norsk!")
-//            case "en-AU":
-//                println("australian!")
-//            default:
-//                println("unrecognized")
-//            }
-//        }
-//    }
 
     func convertCurrency(abbrev : String, completion : (rate : Float) -> Void)
     {
@@ -242,15 +173,6 @@ class IndividualFilmViewController: UIViewController, UITableViewDataSource, UIT
             let rate = 1 / (dict.valueForKey("rate") as NSString).floatValue
             completion(rate: rate)
         }
-    }
-
-    func formatAmount(number : NSNumber) -> String!
-    {
-        let formatter = NSNumberFormatter()
-        formatter.numberStyle = .CurrencyStyle
-        formatter.locale = NSLocale.currentLocale()
-        let localizedMoneyString = formatter.stringFromNumber(number)
-        return localizedMoneyString!
     }
 
     func formatTheAmount(number : NSNumber)
@@ -268,14 +190,12 @@ class IndividualFilmViewController: UIViewController, UITableViewDataSource, UIT
         println("formattedCurrency: \(formattedCurrency!)")//formattedCurrency: 0,89 EUR
     }
 
+
+    //MARK: View Helpers
     override func prefersStatusBarHidden() -> Bool {
         return true
     }
 
-//    override func viewDidAppear(animated: Bool) {
-//        let cell = tableView.cellForRowAtIndexPath(NSIndexPath(forRow: 0, inSection: 0)) as CrewTableViewCell!
-//        cell.pageDots.numberOfPages = film.productionTeam.count
-//    }
 
     func hideNavBar()
     {
@@ -287,6 +207,28 @@ class IndividualFilmViewController: UIViewController, UITableViewDataSource, UIT
         backButton.imageEdgeInsets = UIEdgeInsetsMake(-38, -46, 0, 0)
         backButton.addTarget(self, action: "onBackTapped", forControlEvents: .TouchUpInside)
         view.addSubview(backButton)
+    }
+
+    func updateHeaderView() {
+        var headerRect = CGRect(x: 0, y: -kTableHeaderHeight, width: tableView.bounds.width, height: kTableHeaderHeight)
+
+        //If user pulling down
+        if tableView.contentOffset.y < -kTableHeaderHeight
+        {
+            headerRect.origin.y = tableView.contentOffset.y
+            headerRect.size.height = -tableView.contentOffset.y
+            //            var blurAdjustment = -tableView.contentOffset.y / 180 - 0.8
+            //            visualEffectView.alpha = blurAdjustment
+        }
+            //If user scrolling up
+        else
+        {
+            headerRect.origin.y = tableView.contentOffset.y
+            headerRect.size.height = -tableView.contentOffset.y
+        }
+        //give both the blur effect and image (which is the tableHeaderView) this adjusted frame
+        //        visualEffectView.frame = headerRect
+        headerView.frame = headerRect
     }
 
     func onBackTapped()
@@ -307,16 +249,7 @@ class IndividualFilmViewController: UIViewController, UITableViewDataSource, UIT
         navigationController?.popViewControllerAnimated(true)
     }
 
-/*
-    
-    UIScreenEdgePanGestureRecognizer *leftEdgeGesture = [[UIScreenEdgePanGestureRecognizer alloc] initWithTarget:self action:@selector(handleLeftEdgeGesture:)];
-    leftEdgeGesture.edges = UIRectEdgeLeft;
-    leftEdgeGesture.delegate = self;
-    [self.view addGestureRecognizer:leftEdgeGesture];
-
-*/
-
-    //Helpers
+    //MARK: Stripe
     func pay(amount : NSNumber)
     {
         // Create a PayPalPayment
@@ -354,6 +287,36 @@ class IndividualFilmViewController: UIViewController, UITableViewDataSource, UIT
 
         // Present the PayPalPaymentViewController.
         presentViewController(paymentViewController, animated: true, completion: nil)
+    }
+
+    func chargeCustomer(amount : NSNumber)
+    {
+        let alert = SCLAlertView()
+
+        let amountToCharge = (amount as Double * 100.0)
+        if let customerId = kStandardDefaults.valueForKey(kDefaultsStripeCustomerID) as String!
+        {
+            PFCloud.callFunctionInBackground("createCharge", withParameters: ["amount": amountToCharge, "customer": customerId]) { (chargeId, error) -> Void in
+                if error != nil
+                {
+                    println(error.localizedDescription)
+                }
+                else
+                {
+                    println("Charge successful")
+                    alert.showSuccess("Thank You!", subTitle: "Your contribution was approved. You will receive a receipt via email shortly.", closeButtonTitle: "Done", duration: 0)
+
+                    //TODO: Create payment object
+                    let transaction = Transaction(contributor: kProfile!, film: self.film, amount: amount)
+                    transaction.saveInBackgroundWithBlock(nil)
+                }
+            }
+        }
+
+        else
+        {
+            alert.showNotice("Payment Info Needed", subTitle: "Please update your Profile with your payment information.", closeButtonTitle: "Okay", duration: 0)
+        }
     }
 
     //UITableView
@@ -482,18 +445,9 @@ class IndividualFilmViewController: UIViewController, UITableViewDataSource, UIT
         view.endEditing(true)
     }
 
-//    - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
-//    UITouch * touch = [touches anyObject];
-//    if(touch.phase == UITouchPhaseBegan) {
-//    [aTextField resignFirstResponder];
-//    }
-//    }
+
     @IBAction func onShareTapped(sender: UIButton)
     {
-//        let message = "Join me in supporting \"\(film.title)\", an independant film project"
-//
-//        let link = NSURL(string: shareLink)
-//        let postItems = [shareImage, link, message] as [AnyObject!]
 
         let activityProvider = CustomActivityItemProvider(text: film.title, link: shareLink)
 
@@ -504,62 +458,32 @@ class IndividualFilmViewController: UIViewController, UITableViewDataSource, UIT
         presentViewController(activityVC, animated: true, completion: nil)
     }
 
-
-
     //Helpers
-    func updateHeaderView() {
-        var headerRect = CGRect(x: 0, y: -kTableHeaderHeight, width: tableView.bounds.width, height: kTableHeaderHeight)
-
-        //If user pulling down
-        if tableView.contentOffset.y < -kTableHeaderHeight
-        {
-            headerRect.origin.y = tableView.contentOffset.y
-            headerRect.size.height = -tableView.contentOffset.y
-//            var blurAdjustment = -tableView.contentOffset.y / 180 - 0.8
-//            visualEffectView.alpha = blurAdjustment
-        }
-            //If user scrolling up
-        else
-        {
-            headerRect.origin.y = tableView.contentOffset.y
-            headerRect.size.height = -tableView.contentOffset.y
-        }
-        //give both the blur effect and image (which is the tableHeaderView) this adjusted frame
-//        visualEffectView.frame = headerRect
-        headerView.frame = headerRect
-    }
-
-    func chargeCustomer(amount : NSNumber)
+    func presentCustomAmountEntry()
     {
-        let alert = SCLAlertView()
+        let alert = UIAlertController(title: "Contribute Custom Amount", message: nil, preferredStyle: .Alert)
 
-        let amountToCharge = (amount as Double * 100.0)
-        if let customerId = kStandardDefaults.valueForKey(kDefaultsStripeCustomerID) as String!
-        {
-            PFCloud.callFunctionInBackground("createCharge", withParameters: ["amount": amountToCharge, "customer": customerId]) { (chargeId, error) -> Void in
-                if error != nil
-                {
-                    println(error.localizedDescription)
-                }
-                else
-                {
-                    println("Charge successful")
-                    alert.showSuccess("Thank You!", subTitle: "Your contribution was approved. You will receive a receipt via email shortly.", closeButtonTitle: "Done", duration: 0)
-
-                    //TODO: Create payment object
-                    let transaction = Transaction(contributor: kProfile!, film: self.film, amount: amount)
-                    transaction.saveInBackgroundWithBlock(nil)
-                }
-            }
+        var theTextField = UITextField()
+        alert.addTextFieldWithConfigurationHandler { (textField) -> Void in
+            textField.placeholder = "Amount here"
+            textField.keyboardType = UIKeyboardType.DecimalPad
+            theTextField = textField
         }
 
-        else
-        {
-            alert.showNotice("Payment Info Needed", subTitle: "Please update your Profile with your payment information.", closeButtonTitle: "Okay", duration: 0)
+        let cancelAction = UIAlertAction(title: "Cancel", style: .Cancel, handler: nil)
+
+        let action = UIAlertAction(title: "Next", style: .Default) { (action) -> Void in
+            let theAmount = (theTextField.text as NSString).floatValue
+            self.presentPreferredPaymentMethod(theAmount)
         }
+
+        alert.addAction(cancelAction)
+        alert.addAction(action)
+
+        presentViewController(alert, animated: true, completion: nil)
     }
 
-    //PayPalPaymentDelegate
+    //MARK: PayPal
     func payPalPaymentDidCancel(paymentViewController: PayPalPaymentViewController!) {
         // The payment was canceled; dismiss the PayPalPaymentViewController.
         dismissViewControllerAnimated(true, completion: nil)
@@ -608,31 +532,6 @@ class IndividualFilmViewController: UIViewController, UITableViewDataSource, UIT
 
         // Dismiss the PayPalPaymentViewController.
         dismissViewControllerAnimated(true, completion: nil)
-    }
-
-    //Helpers
-    func presentCustomAmountEntry()
-    {
-        let alert = UIAlertController(title: "Contribute Custom Amount", message: nil, preferredStyle: .Alert)
-
-        var theTextField = UITextField()
-        alert.addTextFieldWithConfigurationHandler { (textField) -> Void in
-            textField.placeholder = "Amount here"
-            textField.keyboardType = UIKeyboardType.DecimalPad
-            theTextField = textField
-        }
-
-        let cancelAction = UIAlertAction(title: "Cancel", style: .Cancel, handler: nil)
-
-        let action = UIAlertAction(title: "Next", style: .Default) { (action) -> Void in
-            let theAmount = (theTextField.text as NSString).floatValue
-            self.presentPreferredPaymentMethod(theAmount)
-        }
-
-        alert.addAction(cancelAction)
-        alert.addAction(action)
-
-        presentViewController(alert, animated: true, completion: nil)
     }
 
     func presentPreferredPaymentMethod(amount: NSNumber)
