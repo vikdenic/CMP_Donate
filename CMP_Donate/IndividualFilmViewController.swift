@@ -75,13 +75,7 @@ class IndividualFilmViewController: UIViewController, UITableViewDataSource, UIT
         tableView.tableHeaderView = nil
         tableView.addSubview(headerView)
 
-//        navigationController?.setNavBarToClear()
         hideNavBar()
-
-        //Add blur effect view, also as a subview of the tableView
-//        visualEffectView = UIVisualEffectView(effect: UIBlurEffect(style: .Dark)) as UIVisualEffectView
-//        visualEffectView.alpha = 0
-//        tableView.addSubview(visualEffectView)
 
         //makes the scroll view content area larger without changing the size of the subview or the size of the view’s content
         tableView.contentInset = UIEdgeInsets(top: kTableHeaderHeight, left: 0, bottom: 0, right: 0)
@@ -121,6 +115,11 @@ class IndividualFilmViewController: UIViewController, UITableViewDataSource, UIT
                 self.shareLink = config["shareLink"] as String
             }
         }
+
+//        //Add blur effect view, also as a subview of the tableView
+//        visualEffectView = UIVisualEffectView(effect: UIBlurEffect(style: .Dark)) as UIVisualEffectView
+//        visualEffectView.alpha = 0
+//        tableView.addSubview(visualEffectView)
     }
 
     override func viewWillAppear(animated: Bool) {
@@ -136,64 +135,10 @@ class IndividualFilmViewController: UIViewController, UITableViewDataSource, UIT
             cell.pageDots.alpha = 0
         }
 
-        obtainLocaleInformation()
-    }
-
-
-    //MARK: Currency Conversion
-    func obtainLocaleInformation()
-    {
-        var originCode = "USD"
-
-        let currentLocale = NSLocale.currentLocale()
-        println(currentLocale.localeIdentifier)
-
-        //https://gist.github.com/jacobbubu/1836273
-        switch currentLocale.localeIdentifier {
-        case "en_FR":
-            originCode = "EUR"
-        case "en_AR":
-            originCode = "ARS"
-        case "en_NO":
-            originCode = "NOK"
-        case "en_AU":
-            originCode = "AUD"
-        case "en_GB":
-            originCode = "GBP"
-        default:
-            break
+        VZCurrency.obtainConversationRateForCurrentLocale { (rate) -> Void in
+            let convertedAmount = (self.film.suggestedAmountOne.floatValue * rate) as NSNumber
+            println(convertedAmount.formatCurrencyForCurrentLocale())
         }
-
-        convertCurrency(originCode, completion: { (rate) -> Void in
-            let convertedAmount = self.film.suggestedAmountOne.floatValue * rate
-            self.formatTheAmount(convertedAmount)
-        })
-    }
-
-    func convertCurrency(abbrev : String, completion : (rate : Float) -> Void)
-    {
-        Alamofire.request(.GET, "http://jsonrates.com/get/?from=" + abbrev + "&to=USD&apiKey=\(rateKey)").responseJSON() {
-            (_, _, data, _) in
-
-            let dict = data! as NSDictionary
-            let rate = 1 / (dict.valueForKey("rate") as NSString).floatValue
-            completion(rate: rate)
-        }
-    }
-
-    func formatTheAmount(number : NSNumber)
-    {
-        var currencyFormatter = NSNumberFormatter()
-        currencyFormatter.numberStyle = NSNumberFormatterStyle.CurrencyStyle
-        currencyFormatter.locale = NSLocale.currentLocale()
-        var currencyString = currencyFormatter.internationalCurrencySymbol as String!
-        var format = currencyFormatter.positiveFormat
-        format = format.stringByReplacingOccurrencesOfString("¤", withString: currencyString)
-        currencyFormatter.positiveFormat = format
-
-        var formattedCurrency = currencyFormatter.stringFromNumber(number) //SKProduct->price
-
-        println("formattedCurrency: \(formattedCurrency!)")//formattedCurrency: 0,89 EUR
     }
 
     //MARK: View Helpers
