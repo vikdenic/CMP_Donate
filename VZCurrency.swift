@@ -32,7 +32,8 @@ class VZCurrency {
         let currentLocale = NSLocale.currentLocale()
         println(currentLocale.localeIdentifier)
 
-        //https://gist.github.com/jacobbubu/1836273
+        //List of localeIdentifiers: https://gist.github.com/jacobbubu/1836273
+        //List of currencies for JSONRates API: http://jsonrates.com/docs/currencies/
         switch currentLocale.localeIdentifier {
         case "en_FR":
             originCode = "EUR"
@@ -44,6 +45,8 @@ class VZCurrency {
             originCode = "AUD"
         case "en_GB":
             originCode = "GBP"
+        case "en_IN":
+            originCode = "INR"
         default:
             break
         }
@@ -70,6 +73,14 @@ extension NSNumber {
 
         var formattedCurrency = currencyFormatter.stringFromNumber(self) //SKProduct->price
         return formattedCurrency
+    }
+
+    func formatCurrencyWithSymbol() -> String!
+    {
+        let theLocale = NSLocale.currentLocale()
+        let currencySymbol: AnyObject? = theLocale.objectForKey(NSLocaleCurrencySymbol)
+        let currencyCode: AnyObject? = theLocale.objectForKey(NSLocaleCurrencyCode)
+        return "\(currencyCode!): \(currencySymbol!)\(self.stringValue)"
     }
 }
 

@@ -137,7 +137,9 @@ class IndividualFilmViewController: UIViewController, UITableViewDataSource, UIT
 
         VZCurrency.obtainConversationRateForCurrentLocale { (rate) -> Void in
             let convertedAmount = (self.film.suggestedAmountOne.floatValue * rate) as NSNumber
-            let formattedCurrencyString = convertedAmount.formatCurrencyForCurrentLocale()        }
+            let formattedCurrencyString = convertedAmount.formatCurrencyWithSymbol()
+            println(formattedCurrencyString)
+        }
     }
 
     //MARK: View Helpers
