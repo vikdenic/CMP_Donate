@@ -22,6 +22,7 @@ class ProfileViewController: UIViewController, UITableViewDataSource, UITableVie
     }
 
     override func viewWillAppear(animated: Bool) {
+        navigationController?.navigationBarHidden = false
         obtainTransactionData()
     }
 
