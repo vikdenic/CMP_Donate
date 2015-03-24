@@ -53,10 +53,11 @@ class ProfileViewController: UIViewController, UITableViewDataSource, UITableVie
         {
             let cell = tableView.dequeueReusableCellWithIdentifier(kFundedFilmCell) as FundedFilmTableViewCell
 
-            let film = transactionsArray[indexPath.row - 1].film
-            cell.filmImageView.file = film?.imageFile
+            let transaction = transactionsArray[indexPath.row - 1]
+            cell.filmImageView.file = transaction.film!.imageFile
             cell.filmImageView.loadInBackground(nil)
-            cell.filmTitleLabel.text = film?.title
+            cell.filmTitleLabel.text = transaction.film!.title
+            cell.amountLabel.text = "$\(transaction.amount)"
             cell.clipsToBounds = true
             cell.filmImageView.clipsToBounds = true
             return cell
@@ -72,6 +73,18 @@ class ProfileViewController: UIViewController, UITableViewDataSource, UITableVie
         else
         {
             return 1
+        }
+    }
+
+    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+
+        if indexPath.row == 1
+        {
+            return 120
+        }
+        else
+        {
+            return 180
         }
     }
 }

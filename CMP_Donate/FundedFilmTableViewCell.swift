@@ -12,7 +12,8 @@ class FundedFilmTableViewCell: UITableViewCell {
 
     @IBOutlet var filmImageView: PFImageView!
     @IBOutlet var filmTitleLabel: UILabel!
-    
+    @IBOutlet var amountLabel: UILabel!
+
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
