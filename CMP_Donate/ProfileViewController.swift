@@ -33,7 +33,15 @@ class ProfileViewController: UIViewController, UITableViewDataSource, UITableVie
             println(self.transactionsArray)
 
             let profileCell = self.tableView.cellForRowAtIndexPath(NSIndexPath(forRow: 0, inSection: 0)) as ProfileTableViewCell
-            profileCell.fundingLabel.text = "Funding \(self.transactionsArray.count) Projects"
+
+            if self.transactionsArray.count == 1
+            {
+                profileCell.fundingLabel.text = "Funding 1 Project"
+            }
+            else
+            {
+                profileCell.fundingLabel.text = "Funding \(self.transactionsArray.count) Projects"
+            }
 
             self.tableView.reloadData()
         })
