@@ -30,6 +30,10 @@ class ProfileViewController: UIViewController, UITableViewDataSource, UITableVie
         Transaction.queryTransactions(kProfile!, completed: { (transactions, error) -> Void in
             self.transactionsArray = transactions
             println(self.transactionsArray)
+
+            let profileCell = self.tableView.cellForRowAtIndexPath(NSIndexPath(forRow: 0, inSection: 0)) as ProfileTableViewCell
+            profileCell.fundingLabel.text = "Funding \(self.transactionsArray.count) Projects"
+
             self.tableView.reloadData()
         })
     }
