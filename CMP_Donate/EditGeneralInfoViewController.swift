@@ -27,28 +27,36 @@ class EditGeneralInfoViewController: UIViewController, UITableViewDelegate, UITa
 
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
     {
-        let cell = tableView.dequeueReusableCellWithIdentifier(kGeneralInfoCell) as EditGeneralInfoTableViewCell
-        cell.delegate = self
-        cell.firstNameTextField.text = kProfile?.firstName
-        cell.lastNameTextField.text = kProfile?.lastName
-        cell.emailTextField.text = kProfile?.user.username
-
-        cell.profileImageView.file = kProfile?.imageFile
-
-        if fromRegister == true
+        if indexPath.section == 0
         {
-            cell.profileImageView.image = UIImage(named: kCrewMemberImage)
+            let cell = tableView.dequeueReusableCellWithIdentifier(kGeneralInfoCell) as EditGeneralInfoTableViewCell
+            cell.delegate = self
+            cell.firstNameTextField.text = kProfile?.firstName
+            cell.lastNameTextField.text = kProfile?.lastName
+            cell.emailTextField.text = kProfile?.user.username
+
+            cell.profileImageView.file = kProfile?.imageFile
+
+            if fromRegister == true
+            {
+                cell.profileImageView.image = UIImage(named: kCrewMemberImage)
+            }
+
+            cell.profileImageView.loadInBackground(nil)
+
+
+            if let someImage = selectedImage
+            {
+                cell.profileImageView.image = someImage
+            }
+
+            return cell
         }
-
-        cell.profileImageView.loadInBackground(nil)
-
-
-        if let someImage = selectedImage
+        else
         {
-            cell.profileImageView.image = someImage
+            let cell = tableView.dequeueReusableCellWithIdentifier(kCenteredTextCell) as CenteredTextTableViewCell
+            return cell
         }
-
-        return cell
     }
 
     @IBAction func onSaveButtonTapped(sender: UIBarButtonItem) {
@@ -76,12 +84,32 @@ class EditGeneralInfoViewController: UIViewController, UITableViewDelegate, UITa
         }
     }
 
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        return 2
+    }
+
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 1
     }
 
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        return 120
+        if indexPath.section == 0
+        {
+            return 120
+        }
+        else
+        {
+            return 44
+        }
+    }
+
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        if indexPath.section == 1
+        {
+            PFUser.logOut()
+            tabBarController?.selectedIndex = 0
+            performSegueWithIdentifier(kEditInfoToLogInSegue, sender: self)
+        }
     }
 
     //EditGeneralInfoTableViewDelegate

@@ -18,11 +18,11 @@ class ProfileViewController: UIViewController, UITableViewDataSource, UITableVie
     override func viewDidLoad()
     {
         super.viewDidLoad()
-        navigationItem.title = kProfile?.firstName
     }
 
     override func viewWillAppear(animated: Bool) {
         navigationController?.navigationBarHidden = false
+        navigationItem.title = kProfile?.firstName
         obtainTransactionData()
     }
 

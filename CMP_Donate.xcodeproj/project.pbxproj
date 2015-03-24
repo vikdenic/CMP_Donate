@@ -43,6 +43,7 @@
 		931CA0201A95C9B90069B235 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 931CA01F1A95C9B90069B235 /* CoreMedia.framework */; };
 		931CA0221A95C9C70069B235 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 931CA0211A95C9C70069B235 /* MessageUI.framework */; };
 		931CA0241A95CA4F0069B235 /* PPDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 931CA0231A95CA4F0069B235 /* PPDataManager.swift */; };
+		931CEAA01AC157B0002689D5 /* CenteredTextTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 931CEA9F1AC157B0002689D5 /* CenteredTextTableViewCell.swift */; };
 		931D1E111A867EC700B3DC4D /* SCLAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 931D1E101A867EC700B3DC4D /* SCLAlertView.swift */; };
 		93251D451AC141BA0032F71A /* UIImage+animatedGif.m in Sources */ = {isa = PBXBuildFile; fileRef = 93251D441AC141BA0032F71A /* UIImage+animatedGif.m */; };
 		93251D4C1AC1461D0032F71A /* overheadGif.gif in Resources */ = {isa = PBXBuildFile; fileRef = 93251D4B1AC1461D0032F71A /* overheadGif.gif */; };
@@ -198,6 +199,7 @@
 		931CA01F1A95C9B90069B235 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
 		931CA0211A95C9C70069B235 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		931CA0231A95CA4F0069B235 /* PPDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PPDataManager.swift; sourceTree = "<group>"; };
+		931CEA9F1AC157B0002689D5 /* CenteredTextTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CenteredTextTableViewCell.swift; sourceTree = "<group>"; };
 		931D1E101A867EC700B3DC4D /* SCLAlertView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCLAlertView.swift; sourceTree = "<group>"; };
 		93251D431AC141BA0032F71A /* UIImage+animatedGif.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+animatedGif.h"; sourceTree = "<group>"; };
 		93251D441AC141BA0032F71A /* UIImage+animatedGif.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+animatedGif.m"; sourceTree = "<group>"; };
@@ -463,6 +465,7 @@
 				93045C9D1A9D905D00E3BB3A /* CategoryCollectionViewCell.swift */,
 				93F53B631AA2ABE10053FABF /* EditGeneralInfoTableViewCell.swift */,
 				9362E07A1AA57F0600A18D7F /* PasswordEntryTableViewCell.swift */,
+				931CEA9F1AC157B0002689D5 /* CenteredTextTableViewCell.swift */,
 			);
 			name = "Custom Cells";
 			sourceTree = "<group>";
@@ -699,6 +702,7 @@
 				930EFDC21A73918E00AF96AF /* CrewMember.swift in Sources */,
 				9362E0791AA5513E00A18D7F /* ChangePasswordViewController.swift in Sources */,
 				9358A12A1A741B6500CCE374 /* FeedTableViewCell.swift in Sources */,
+				931CEAA01AC157B0002689D5 /* CenteredTextTableViewCell.swift in Sources */,
 				930EFDBA1A73916400AF96AF /* User.swift in Sources */,
 				936477AE1A860D75000042C5 /* DonateTableViewCell.swift in Sources */,
 				93327FC61AA7EAB400214D74 /* Transaction.swift in Sources */,

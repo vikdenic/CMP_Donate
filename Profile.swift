@@ -23,8 +23,6 @@ class Profile: PFObject, PFSubclassing
     @NSManaged var user : PFUser!
     @NSManaged var firstName : String!
     @NSManaged var lastName : String!
-    @NSManaged var fundedFilms : [Film]!
-    @NSManaged var starredFilms : [Film]!
     @NSManaged var imageFile : PFFile!
 
     class func queryForCurrentUserProfile(completed: (profile: Profile!, error: NSError!)-> Void)
