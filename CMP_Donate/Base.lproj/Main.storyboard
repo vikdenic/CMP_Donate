@@ -600,6 +600,7 @@
                                             <outlet property="amountLabel" destination="G63-WH-ZB7" id="VuM-Jh-bWe"/>
                                             <outlet property="filmImageView" destination="Z1r-wl-a85" id="cMX-Dd-xjo"/>
                                             <outlet property="filmTitleLabel" destination="E0Q-zn-9WB" id="x0D-iN-uXv"/>
+                                            <segue destination="tO2-Vz-vQo" kind="push" identifier="FundedCellToIndividualSegue" id="CmG-5p-rVU"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -1018,6 +1019,7 @@
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
         <segue reference="6FY-ia-8KG"/>
+        <segue reference="CmG-5p-rVU"/>
         <segue reference="GYE-dk-sxQ"/>
     </inferredMetricsTieBreakers>
 </document>

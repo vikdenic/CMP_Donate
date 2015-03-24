@@ -87,4 +87,12 @@ class ProfileViewController: UIViewController, UITableViewDataSource, UITableVie
             return 180
         }
     }
+
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == kFundedCellToIndividualSegue
+        {
+            let individualVC = segue.destinationViewController as IndividualFilmViewController
+            individualVC.film = transactionsArray[tableView.indexPathForSelectedRow()!.row - 1].film
+        }
+    }
 }

@@ -37,6 +37,7 @@ let kPreferredPaymentCell = "PreferredPaymentCell"
 let kCatCell = "CatCell"
 let kGeneralInfoCell = "GeneralInfoCell"
 let kPasswordEntryCell = "PasswordEntryCell"
+let kFundedCellToIndividualSegue = "FundedCellToIndividualSegue"
 
 let kCrewScrollViewTag = 99
 
