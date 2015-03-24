@@ -13,6 +13,8 @@ import UIKit
 class ProfileViewController: UIViewController, UITableViewDataSource, UITableViewDelegate
 {
     @IBOutlet var tableView: UITableView!
+    var transactionsArray = [Transaction]()
+
     override func viewDidLoad()
     {
         super.viewDidLoad()
@@ -20,7 +22,16 @@ class ProfileViewController: UIViewController, UITableViewDataSource, UITableVie
     }
 
     override func viewWillAppear(animated: Bool) {
-        tableView.reloadData()
+        obtainTransactionData()
+    }
+
+    func obtainTransactionData()
+    {
+        Transaction.queryTransactions(kProfile!, completed: { (transactions, error) -> Void in
+            self.transactionsArray = transactions
+            println(self.transactionsArray)
+            self.tableView.reloadData()
+        })
     }
 
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
@@ -37,21 +48,22 @@ class ProfileViewController: UIViewController, UITableViewDataSource, UITableVie
         else
         {
             let cell = tableView.dequeueReusableCellWithIdentifier(kFundedFilmCell) as FundedFilmTableViewCell
-//            let film = kProfile?.fundedFilms[indexPath.row - 1]
-//            cell.filmImageView.file = film?.imageFile
-//            cell.filmImageView.loadInBackground(nil)
-//            cell.filmTitleLabel.text = film?.title
-//            cell.clipsToBounds = true
-//            cell.filmImageView.clipsToBounds = true
+
+            let film = transactionsArray[indexPath.row - 1].film
+            cell.filmImageView.file = film?.imageFile
+            cell.filmImageView.loadInBackground(nil)
+            cell.filmTitleLabel.text = film?.title
+            cell.clipsToBounds = true
+            cell.filmImageView.clipsToBounds = true
             return cell
         }
     }
 
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
-        if let someFundedFilms = kProfile?.fundedFilms
+        if self.transactionsArray.count > 0
         {
-            return kProfile!.fundedFilms.count + 1
+            return self.transactionsArray.count + 1
         }
         else
         {
