@@ -12,6 +12,19 @@ class LoginViewController: UIViewController {
 
     @IBOutlet var emailTextField: UITextField!
     @IBOutlet var passwordTextField: UITextField!
+    @IBOutlet var loginButton: UIButton!
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+        passwordTextField.addBottomBorder()
+        emailTextField.addBottomBorder()
+
+        loginButton.layer.cornerRadius = 5
+        loginButton.clipsToBounds = true
+
+        view.backgroundColor = UIColor.clearColor()
+    }
 
     @IBAction func onLoginButtonTapped(sender: UIButton)
     {

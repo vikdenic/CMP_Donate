@@ -44,6 +44,8 @@
 		931CA0221A95C9C70069B235 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 931CA0211A95C9C70069B235 /* MessageUI.framework */; };
 		931CA0241A95CA4F0069B235 /* PPDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 931CA0231A95CA4F0069B235 /* PPDataManager.swift */; };
 		931D1E111A867EC700B3DC4D /* SCLAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 931D1E101A867EC700B3DC4D /* SCLAlertView.swift */; };
+		93251D451AC141BA0032F71A /* UIImage+animatedGif.m in Sources */ = {isa = PBXBuildFile; fileRef = 93251D441AC141BA0032F71A /* UIImage+animatedGif.m */; };
+		93251D4C1AC1461D0032F71A /* overheadGif.gif in Resources */ = {isa = PBXBuildFile; fileRef = 93251D4B1AC1461D0032F71A /* overheadGif.gif */; };
 		93327FC61AA7EAB400214D74 /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93327FC51AA7EAB400214D74 /* Transaction.swift */; };
 		93327FD01AA8221E00214D74 /* CustomActivityItemProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 93327FCF1AA8221E00214D74 /* CustomActivityItemProvider.m */; };
 		93379F701A857EF70054BAB8 /* CrewCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93379F6F1A857EF70054BAB8 /* CrewCollectionViewCell.swift */; };
@@ -197,6 +199,9 @@
 		931CA0211A95C9C70069B235 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		931CA0231A95CA4F0069B235 /* PPDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PPDataManager.swift; sourceTree = "<group>"; };
 		931D1E101A867EC700B3DC4D /* SCLAlertView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCLAlertView.swift; sourceTree = "<group>"; };
+		93251D431AC141BA0032F71A /* UIImage+animatedGif.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+animatedGif.h"; sourceTree = "<group>"; };
+		93251D441AC141BA0032F71A /* UIImage+animatedGif.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+animatedGif.m"; sourceTree = "<group>"; };
+		93251D4B1AC1461D0032F71A /* overheadGif.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = overheadGif.gif; path = ../overheadGif.gif; sourceTree = "<group>"; };
 		93327FC51AA7EAB400214D74 /* Transaction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Transaction.swift; sourceTree = "<group>"; };
 		93327FCE1AA8221E00214D74 /* CustomActivityItemProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomActivityItemProvider.h; sourceTree = "<group>"; };
 		93327FCF1AA8221E00214D74 /* CustomActivityItemProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomActivityItemProvider.m; sourceTree = "<group>"; };
@@ -476,6 +481,9 @@
 			children = (
 				93327FCE1AA8221E00214D74 /* CustomActivityItemProvider.h */,
 				93327FCF1AA8221E00214D74 /* CustomActivityItemProvider.m */,
+				93251D431AC141BA0032F71A /* UIImage+animatedGif.h */,
+				93251D441AC141BA0032F71A /* UIImage+animatedGif.m */,
+				93251D4B1AC1461D0032F71A /* overheadGif.gif */,
 			);
 			name = "Custom Views";
 			sourceTree = "<group>";
@@ -626,6 +634,7 @@
 			files = (
 				930EFD731A738F1400AF96AF /* Main.storyboard in Resources */,
 				930EFD751A738F1400AF96AF /* Images.xcassets in Resources */,
+				93251D4C1AC1461D0032F71A /* overheadGif.gif in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -685,6 +694,7 @@
 				93045C9E1A9D905D00E3BB3A /* CategoryCollectionViewCell.swift in Sources */,
 				930EFDAF1A73902A00AF96AF /* FeedViewController.swift in Sources */,
 				930EFD6E1A738F1400AF96AF /* AppDelegate.swift in Sources */,
+				93251D451AC141BA0032F71A /* UIImage+animatedGif.m in Sources */,
 				9362E07B1AA57F0600A18D7F /* PasswordEntryTableViewCell.swift in Sources */,
 				930EFDC21A73918E00AF96AF /* CrewMember.swift in Sources */,
 				9362E0791AA5513E00A18D7F /* ChangePasswordViewController.swift in Sources */,

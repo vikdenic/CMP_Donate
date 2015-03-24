@@ -51,3 +51,6 @@
 #import <StoreKit/StoreKit.h>
 
 #import <SystemConfiguration/SystemConfiguration.h>
+
+#import "UIImage+animatedGIF.h"
+#import <ImageIO/ImageIO.h>
