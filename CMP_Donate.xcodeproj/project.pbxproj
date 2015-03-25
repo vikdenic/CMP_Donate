@@ -304,7 +304,6 @@
 		930EFD6A1A738F1400AF96AF /* CMP_Donate */ = {
 			isa = PBXGroup;
 			children = (
-				931CA00B1A95C9390069B235 /* PayPalMobile */,
 				930EFD6D1A738F1400AF96AF /* AppDelegate.swift */,
 				930EFD711A738F1400AF96AF /* Main.storyboard */,
 				9358A1211A73950200CCE374 /* Utilities */,
@@ -314,6 +313,7 @@
 				936C58011A75E1080027343A /* Third Party UI */,
 				930EFD741A738F1400AF96AF /* Images.xcassets */,
 				930EFD971A738F3800AF96AF /* Frameworks */,
+				931CA00B1A95C9390069B235 /* PayPalMobile */,
 				930EFD6B1A738F1400AF96AF /* Supporting Files */,
 				930EFDB41A7390B100AF96AF /* CMP_Donate-Bridging-Header.h */,
 			);
