@@ -33,21 +33,28 @@ class ProfileViewController: UIViewController, UITableViewDataSource, UITableVie
     func obtainTransactionData()
     {
         Transaction.queryTransactions(kProfile!, completed: { (transactions, error) -> Void in
-            self.transactionsArray = transactions
-            println(self.transactionsArray)
 
-            let profileCell = self.tableView.cellForRowAtIndexPath(NSIndexPath(forRow: 0, inSection: 0)) as ProfileTableViewCell
-
-            if self.transactionsArray.count == 1
+            if error != nil
             {
-                profileCell.fundingLabel.text = "Funding 1 Project"
+                showAlertWithError(error, self)
             }
             else
             {
-                profileCell.fundingLabel.text = "Funding \(self.transactionsArray.count) Projects"
-            }
+                self.transactionsArray = transactions!
 
-            self.tableView.reloadData()
+                let profileCell = self.tableView.cellForRowAtIndexPath(NSIndexPath(forRow: 0, inSection: 0)) as ProfileTableViewCell
+
+                if self.transactionsArray.count == 1
+                {
+                    profileCell.fundingLabel.text = "Funding 1 Project"
+                }
+                else
+                {
+                    profileCell.fundingLabel.text = "Funding \(self.transactionsArray.count) Projects"
+                }
+                
+                self.tableView.reloadData()
+            }
         })
     }
 

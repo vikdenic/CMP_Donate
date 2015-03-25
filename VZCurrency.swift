@@ -84,8 +84,14 @@ func convertCurrency(abbrev : String, completion : (rate : Float) -> Void)
     Alamofire.request(.GET, "http://jsonrates.com/get/?from=" + abbrev + "&to=USD&apiKey=\(rateKey)").responseJSON() {
         (_, _, data, _) in
 
-        let dict = data! as NSDictionary
-        let rate = 1 / (dict.valueForKey("rate") as NSString).floatValue
-        completion(rate: rate)
+        if let someDict = data as NSDictionary!
+        {
+            let rate = 1 / (someDict.valueForKey("rate") as NSString).floatValue
+            completion(rate: rate)
+        }
+        else
+        {
+            completion(rate: 1.0)
+        }
     }
 }

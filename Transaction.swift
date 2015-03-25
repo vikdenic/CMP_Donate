@@ -36,14 +36,14 @@ class Transaction: PFObject, PFSubclassing
         amount = theAmount
     }
 
-    class func queryTransactions(profile : Profile, completed:(transactions:[Transaction], error:NSError!)->Void)
+    class func queryTransactions(profile : Profile, completed:(transactions:[Transaction]?, error:NSError!)->Void)
     {
         var ldsQuery = Transaction.query()
         ldsQuery.fromPinWithName(kPinTransactions)
         ldsQuery.orderByDescending(kCreatedAt)
 
         ldsQuery.findObjectsInBackgroundWithBlock({ (transactions, error) -> Void in
-            completed(transactions: transactions as [Transaction], error: nil)
+            completed(transactions: transactions as? [Transaction], error: nil)
         })
 
         var query = Transaction.query()
@@ -51,8 +51,22 @@ class Transaction: PFObject, PFSubclassing
         query.orderByDescending(kCreatedAt)
 
         query.findObjectsInBackgroundWithBlock({ (transactions, error) -> Void in
-            PFObject.pinAllInBackground(transactions as [Transaction], withName: kPinTransactions, block: nil)
-            completed(transactions: transactions as [Transaction], error: nil)
+
+            completed(transactions: transactions as? [Transaction], error: error)
+
+            if let someTransactions = transactions as [Transaction]!
+            {
+                PFObject.pinAllInBackground(someTransactions, withName: kPinTransactions, block: nil)
+            }
+//            if error != nil
+//            {
+//                completed(transactions: nil, error: error)
+//            }
+//            else
+//            {
+//                PFObject.pinAllInBackground(transactions as [Transaction], withName: kPinTransactions, block: nil)
+//                completed(transactions: transactions as [Transaction], error: nil)
+//            }
         })
     }
 }

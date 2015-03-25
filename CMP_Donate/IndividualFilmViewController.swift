@@ -141,13 +141,16 @@ class IndividualFilmViewController: UIViewController, UITableViewDataSource, UIT
         }
 
         VZCurrency.obtainConversationRateForCurrentLocale { (rate) -> Void in
-            let convertedAmountOne = (self.film.suggestedAmountOne.floatValue * rate) as NSNumber
-            let convertedAmountTwo = (self.film.suggestedAmountTwo.floatValue * rate) as NSNumber
-            let convertedAmountThree = (self.film.suggestedAmountThree.floatValue * rate) as NSNumber
+            if rate != 1.0
+            {
+                let convertedAmountOne = (self.film.suggestedAmountOne.floatValue * rate) as NSNumber
+                let convertedAmountTwo = (self.film.suggestedAmountTwo.floatValue * rate) as NSNumber
+                let convertedAmountThree = (self.film.suggestedAmountThree.floatValue * rate) as NSNumber
 
-            self.convertedCurrencyStringOne = convertedAmountOne.formatCurrencyWithSymbol()
-            self.convertedCurrencyStringTwo = convertedAmountTwo.formatCurrencyWithSymbol()
-            self.convertedCurrencyStringThree = convertedAmountThree.formatCurrencyWithSymbol()
+                self.convertedCurrencyStringOne = convertedAmountOne.formatCurrencyWithSymbol()
+                self.convertedCurrencyStringTwo = convertedAmountTwo.formatCurrencyWithSymbol()
+                self.convertedCurrencyStringThree = convertedAmountThree.formatCurrencyWithSymbol()
+            }
             self.tableView.reloadData()
         }
     }
