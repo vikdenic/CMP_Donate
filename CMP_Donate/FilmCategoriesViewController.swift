@@ -17,8 +17,16 @@ class FilmCategoriesViewController: UIViewController, UICollectionViewDataSource
         super.viewDidLoad()
 
         Event.queryAllEvents { (theEvents, error) -> Void in
-            self.events = theEvents
-            self.collectionView.reloadData()
+
+            if error != nil
+            {
+                showAlertWithError(error, self)
+            }
+            else
+            {
+                self.events = theEvents!
+                self.collectionView.reloadData()
+            }
         }
         title = "Events"
         navigationItem.rightBarButtonItem = nil
