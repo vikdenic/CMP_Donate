@@ -72,20 +72,27 @@ class EditGeneralInfoViewController: UIViewController, UITableViewDelegate, UITa
             kProfile?.imageFile = PFFile.file(someImage)
         }
 
-        kProfile?.saveInBackgroundWithBlock(nil)
-
-        if fromRegister == false
-        {
-            navigationController?.popViewControllerAnimated(true)
-        }
-        else
-        {
-            dismissViewControllerAnimated(true, completion: nil)
-        }
+        kProfile?.saveInBackgroundWithBlock({ (succeeded, error) -> Void in
+            if self.fromRegister == false
+            {
+                self.navigationController?.popViewControllerAnimated(true)
+            }
+            else
+            {
+                self.dismissViewControllerAnimated(true, completion: nil)
+            }
+        })
     }
 
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        return 2
+        if fromRegister == true
+        {
+            return 1
+        }
+        else
+        {
+            return 2
+        }
     }
 
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

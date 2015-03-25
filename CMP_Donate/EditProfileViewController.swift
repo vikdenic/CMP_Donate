@@ -18,6 +18,15 @@ class EditProfileViewController: UIViewController, UITableViewDataSource, UITabl
         // Do any additional setup after loading the view.
     }
 
+    override func viewWillAppear(animated: Bool) {
+        if PFUser.currentUser() != nil
+        {
+            Profile.queryForCurrentUserProfile { (profile, error) -> Void in
+                UniversalProfile.sharedInstance.profile = profile
+            }
+        }
+    }
+
     //UITableView
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 2

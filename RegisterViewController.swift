@@ -69,8 +69,6 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
                     newProfile.user = PFUser.currentUser()
                     newProfile.user.username = self.emailTextField.text
                     newProfile.imageFile = PFFile.file(UIImage(named: kCrewMemberImage))
-                    newProfile.fundedFilms = [Film]()
-                    newProfile.starredFilms = [Film]()
 
                     UniversalProfile.sharedInstance.profile = newProfile
                     kStandardDefaults.setValue(self.passwordTextField.text, forKey: kDefaultsPword)

@@ -27,15 +27,15 @@ class User: PFUser, PFSubclassing
             if signUpError == nil
             {
                 //Create new profile that points to this user
-                let newProfile = Profile()
-                newProfile.user = newUser
-                newProfile.saveInBackgroundWithBlock({ (profileCreationSucceeded, profileCreationError) -> Void in
-                    completed(result: false, error: signUpError)
-                })
+//                let newProfile = Profile()
+//                newProfile.user = newUser
+//                newProfile.saveInBackgroundWithBlock({ (profileCreationSucceeded, profileCreationError) -> Void in
+                    completed(result: true, error: signUpError)
+//                })
             }
             else
             {
-                completed(result: true, error: nil)
+                completed(result: false, error: signUpError)
             }
         }
     }

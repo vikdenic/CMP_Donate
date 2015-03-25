@@ -10,7 +10,7 @@ import Foundation
 
 let kProfile = UniversalProfile.sharedInstance.profile
 
-//Segues
+//MARK: Segue Identifiers
 let kFeedToRegisterSegue = "FeedToRegisterSegue"
 let kFeedToIndividualFilmSegue = "FeedToIndividualFilmSegue"
 let kButton1ToPaySegue = "Button1ToPaySegue"
@@ -24,8 +24,9 @@ let kHomeToCatsSegue = "HomeToCatsSegue"
 let kEditProfileToUpdateProfileInfoSegue = "EditProfileToUpdateProfileInfoSegue"
 let kEditProfileToChangePasswordSegue = "EditProfileToChangePasswordSegue"
 let kEditInfoToLogInSegue = "EditInfoToLogInSegue"
+let kFundedCellToIndividualSegue = "FundedCellToIndividualSegue"
 
-//Cells
+//MARK: Cells Identifiers
 let kFilmCell = "FilmCell"
 let kProfileCell = "ProfileCell"
 let kFundedFilmCell = "FundedFilmCell"
@@ -38,14 +39,9 @@ let kPreferredPaymentCell = "PreferredPaymentCell"
 let kCatCell = "CatCell"
 let kGeneralInfoCell = "GeneralInfoCell"
 let kPasswordEntryCell = "PasswordEntryCell"
-let kFundedCellToIndividualSegue = "FundedCellToIndividualSegue"
 let kCenteredTextCell = "CenteredTextCell"
 
-let kCrewScrollViewTag = 99
-
-let kStoryboardIdEditGeneralInfo = "EditGeneralInfo"
-
-//Stripe
+//MARK: Stripe
 let kStripePublishableKey = "pk_test_oyA5FAsuqYVvFqEOUOSUg2hF"
 let kDefaultsStripeCardLast4 = "card.last4"
 let kDefaultsStripeCustomerID = "customerId"
@@ -56,13 +52,15 @@ let kDefaultsPayPal = "PayPal"
 let kDefaultsPreferredPaymentType = "preferredPaymentType"
 let kDefaultsPword = "pword"
 
-//PayPal
+//MARK: PayPal
 let kPayPalClientIdSandbox = "AXwxFSPni98ZG2aXJ3PZYPKBAgH_gOpqMNufOqtL8Me_uvZaxtU2vJ6DYK-XLxHzCYxdftbcAW7WN72H"
 let kPayPalClientIdProduction = "AeZRMN460sD44G7JnU5isWLY3VSXDp9sPQVQ7b3EXH6OWPNnHwvQZIgKE5PBlLhhLpglXS9ia7QYLGHA"
 
 let kPayPalSecretIdSandbox = "EA0ebKbeiF-jRmEoaxIFaJ0k1HAJt4eIEtjQ0ob1Ht7lqihj3lzCAOsjpv8B8ssS774ZSrde6BUjC4Fc"
 let kPayPalSecretIdProduction = "EH5yosQg45yEdlSr7RYeLmXFUDQHeAgDrgAtriXbgmuYlVlHOf20F_5cmwbaCd8xPrLbFNxEdidkKKZi"
 
-//Other
+//MARK: Misc
+let kCrewScrollViewTag = 99
+let kStoryboardIdEditGeneralInfo = "EditGeneralInfo"
 let kStandardDefaults = NSUserDefaults.standardUserDefaults()
 let kCrewMemberImage = "crewMemberImage"

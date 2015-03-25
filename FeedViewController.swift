@@ -31,6 +31,13 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
 
     override func viewWillAppear(animated: Bool) {
         navigationController?.navigationBarHidden = false
+
+        if PFUser.currentUser() != nil
+        {
+            Profile.queryForCurrentUserProfile { (profile, error) -> Void in
+                UniversalProfile.sharedInstance.profile = profile
+            }
+        }
     }
 
     override func viewDidAppear(animated: Bool)

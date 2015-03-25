@@ -18,14 +18,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
 
         //MARK: Parse
-        //TODO: Local DataStore
         Parse.enableLocalDatastore()
         //TODO: Crash Reporting
 //        ParseCrashReporting.enable()
         Parse.setApplicationId("WKvDyqa7Hs23bkdbhPqAM4eadylYMxRlKTboJ56G", clientKey: "JhKakKAmnmp5Zt1dcrlXYtn4phHe9yf6Z3GmxuTp")
         PFAnalytics.trackAppOpenedWithLaunchOptionsInBackground(launchOptions, block: nil)
 
-        //MARK: Singleton
+        //MARK: Stripe
+        Stripe.setDefaultPublishableKey(kStripePublishableKey)
+
+        //MARK: PayPal
+        PayPalMobile.initializeWithClientIdsForEnvironments([PayPalEnvironmentProduction : kPayPalClientIdProduction, PayPalEnvironmentSandbox : kPayPalClientIdSandbox])
+
+        //MARK: Profile
         if PFUser.currentUser() != nil
         {
             Profile.queryForCurrentUserProfile({ (profile, error) -> Void in
@@ -33,12 +38,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             })
         }
 
-        //Stripe
-        Stripe.setDefaultPublishableKey(kStripePublishableKey)
-
-        //PayPal
-        PayPalMobile.initializeWithClientIdsForEnvironments([PayPalEnvironmentProduction : kPayPalClientIdProduction, PayPalEnvironmentSandbox : kPayPalClientIdSandbox])
-
+        //MARK: UI
         setUpUI()
 
         return true

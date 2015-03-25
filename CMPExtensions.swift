@@ -10,19 +10,19 @@ import Foundation
 
 extension UIColor
 {
-    /// :returns: the custom pink color from the PiggyBack design team
+    /// :returns: CMP's custom red color
     class func customRedColor() -> UIColor
     {
         return UIColor(red: 234/255.0, green: 34/255.0, blue: 45/255.0, alpha: 100)
     }
-
+    /// :returns: a custom light gray color
     class func customLightGreyColor() -> UIColor
     {
         return UIColor(red: 250/255.0, green: 250/255.0, blue: 250/255.0, alpha: 100)
     }
+    /// :returns: a custom green color
     class func customGreenColor() -> UIColor
     {
-//        return UIColor(red: 40/255.0, green: 200/255.0, blue: 85/255.0, alpha: 100)
         return UIColor(red: 0/255.0, green: 123/255.0, blue: 35/255.0, alpha: 100)
     }
 }

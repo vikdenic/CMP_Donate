@@ -24,6 +24,10 @@ class ProfileViewController: UIViewController, UITableViewDataSource, UITableVie
         navigationController?.navigationBarHidden = false
         navigationItem.title = kProfile?.firstName
         obtainTransactionData()
+
+        Profile.queryForCurrentUserProfile({ (profile, error) -> Void in
+            UniversalProfile.sharedInstance.profile = profile
+        })
     }
 
     func obtainTransactionData()
