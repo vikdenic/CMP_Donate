@@ -23,6 +23,11 @@ class EditGeneralInfoViewController: UIViewController, UITableViewDelegate, UITa
         imagePicker.sourceType = UIImagePickerControllerSourceType.PhotoLibrary
         imagePicker.delegate = self
         imagePicker.allowsEditing = true
+
+        if fromRegister == true
+        {
+            navigationItem.hidesBackButton = true
+        }
     }
 
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
@@ -65,7 +70,8 @@ class EditGeneralInfoViewController: UIViewController, UITableViewDelegate, UITa
 
         kProfile?.firstName = cell.firstNameTextField.text
         kProfile?.lastName = cell.lastNameTextField.text
-        kProfile?.user.username = cell.emailTextField.text
+//        kProfile?.user.username = cell.emailTextField.text
+        kProfile?.user.username
 
         if let someImage = selectedImage
         {
@@ -114,6 +120,7 @@ class EditGeneralInfoViewController: UIViewController, UITableViewDelegate, UITa
         if indexPath.section == 1
         {
             PFUser.logOut()
+            UniversalProfile.sharedInstance.profile = nil
             tabBarController?.selectedIndex = 0
             performSegueWithIdentifier(kEditInfoToLogInSegue, sender: self)
         }

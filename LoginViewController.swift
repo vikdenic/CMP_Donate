@@ -14,6 +14,8 @@ class LoginViewController: UIViewController {
     @IBOutlet var passwordTextField: UITextField!
     @IBOutlet var loginButton: UIButton!
 
+    @IBOutlet var spinner: UIActivityIndicatorView!
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -28,21 +30,22 @@ class LoginViewController: UIViewController {
 
     @IBAction func onLoginButtonTapped(sender: UIButton)
     {
+        self.spinner.startAnimating()
         User.logInWithUsernameInBackground(emailTextField.text, password: passwordTextField.text) { (user, error) -> Void in
             
             if error == nil
             {
-                //self.dismissViewControllerAnimated(true, completion: { () -> Void in
-                    Profile.queryForCurrentUserProfile({ (profile, error) -> Void in
-                        UniversalProfile.sharedInstance.profile = profile
-                        kStandardDefaults.setValue(self.passwordTextField.text, forKey: kDefaultsPword)
-                        self.dismissViewControllerAnimated(true, completion: nil)
-                    })
-                //})
+                Profile.queryForCurrentUserProfile({ (profile, error) -> Void in
+                    UniversalProfile.sharedInstance.profile = profile
+                    kStandardDefaults.setValue(self.passwordTextField.text, forKey: kDefaultsPword)
+                    self.dismissViewControllerAnimated(true, completion: nil)
+                    self.spinner.stopAnimating()
+                })
             }
             else
             {
                 showAlertWithError(error, self)
+                self.spinner.stopAnimating()
             }
         }
     }

@@ -17,6 +17,7 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet var registerButton: UIButton!
     @IBOutlet var loginButton: UIButton!
 
+    @IBOutlet var spinner: UIActivityIndicatorView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -48,6 +49,8 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
 
     @IBAction func onRegisterButtonTapped(sender: UIButton)
     {
+        spinner.startAnimating()
+
         if emailTextField.text.isValidEmail() != true
         {
             showAlert("Please enter a valid email address", nil, self)
@@ -62,6 +65,7 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
                 if error != nil
                 {
                     showAlertWithError(error, self)
+                    self.spinner.stopAnimating()
                 }
                 else
                 {
@@ -77,6 +81,7 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
                         let editVC = self.storyboard?.instantiateViewControllerWithIdentifier(kStoryboardIdEditGeneralInfo) as EditGeneralInfoViewController
                         editVC.fromRegister = true
                         self.navigationController?.pushViewController(editVC, animated: true)
+                        self.spinner.stopAnimating()
                     })
                 }
             }
