@@ -42,7 +42,12 @@ let kPasswordEntryCell = "PasswordEntryCell"
 let kCenteredTextCell = "CenteredTextCell"
 
 //MARK: Stripe
-let kStripePublishableKey = "pk_test_oyA5FAsuqYVvFqEOUOSUg2hF"
+let kStripeTestSecretKey = "sk_test_cmF6f52RMUGJu2bcSVth21tX"
+let kStripeTestPublishableKey = "pk_test_oyA5FAsuqYVvFqEOUOSUg2hF"
+
+let kStripeLiveSecretKey = "sk_live_CmWB5dEXCgC8DvfgWzXSW8Xc"
+let kStripeLivePublishableKey = "pk_live_vxf6BTKJ8mlCtIz1RkCS9dmg"
+
 let kDefaultsStripeCardLast4 = "card.last4"
 let kDefaultsStripeCustomerID = "customerId"
 

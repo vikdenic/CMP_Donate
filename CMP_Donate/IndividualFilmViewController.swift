@@ -91,7 +91,7 @@ class IndividualFilmViewController: UIViewController, UITableViewDataSource, UIT
 
         addLeftEdgeGesture()
 
-        PPDataManager.httpRequestAccessToken(kPayPalClientIdSandbox, secretId: kPayPalSecretIdSandbox) { (data, error) -> Void in
+        PPDataManager.httpRequestAccessToken(kPayPalClientIdProduction, secretId: kPayPalSecretIdProduction) { (data, error) -> Void in
             if let someData : AnyObject = data
             {
                 self.accessDictionary = data as NSDictionary
@@ -129,7 +129,7 @@ class IndividualFilmViewController: UIViewController, UITableViewDataSource, UIT
 
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(true)
-        PayPalMobile.preconnectWithEnvironment(PayPalEnvironmentSandbox)
+        PayPalMobile.preconnectWithEnvironment(PayPalEnvironmentProduction)
 
         let cell = tableView.cellForRowAtIndexPath(NSIndexPath(forRow: 0, inSection: 0)) as CrewTableViewCell!
         cell.pageDots.center.x = cell.pageDots.superview!.center.x
@@ -449,25 +449,28 @@ class IndividualFilmViewController: UIViewController, UITableViewDataSource, UIT
         let response = completedConfirmation.valueForKey(kResponse) as NSDictionary!
         thePaymentId = response.valueForKey(kId) as String!
 
+        let transaction = Transaction(contributor: kProfile!, film: self.film, amount: completedPayment.amount)
+        transaction.saveInBackgroundWithBlock(nil)
+
         //This is where we verify the payment
         //        PPDataManager.httpVerifyPayment(accessToken, paymentId: thePaymentId) { (data, error) -> Void in
         //            println(data)
         //        }
-        PPDataManager.httpVerifyPayment(accessToken, paymentId: thePaymentId, viewController: self) { (data, error) -> Void in
-            self.theVerifiedPaymentDict = data as NSDictionary!
-
-            //Compare SDK completed payement with the server's verified payment
-            if self.theVerifiedPaymentDict.valueForKey("payer")!.valueForKey("status")!.isEqualToString("VERIFIED") && (self.theVerifiedPaymentDict.valueForKey("id")! as NSString).isEqualToString(self.thePaymentId)
-            {
-                println("it's verified and the id matches")
-                let transaction = Transaction(contributor: kProfile!, film: self.film, amount: completedPayment.amount)
-                transaction.saveInBackgroundWithBlock(nil)
-            }
-            else
-            {
-                println("cannot verify payment at this time")
-            }
-        }
+//        PPDataManager.httpVerifyPayment(accessToken, paymentId: thePaymentId, viewController: self) { (data, error) -> Void in
+//            self.theVerifiedPaymentDict = data as NSDictionary!
+//
+//            //Compare SDK completed payement with the server's verified payment
+//            if self.theVerifiedPaymentDict.valueForKey("payer")!.valueForKey("status")!.isEqualToString("VERIFIED") && (self.theVerifiedPaymentDict.valueForKey("id")! as NSString).isEqualToString(self.thePaymentId)
+//            {
+//                println("it's verified and the id matches")
+//                let transaction = Transaction(contributor: kProfile!, film: self.film, amount: completedPayment.amount)
+//                transaction.saveInBackgroundWithBlock(nil)
+//            }
+//            else
+//            {
+//                println("cannot verify payment at this time")
+//            }
+//        }
 
         // Dismiss the PayPalPaymentViewController.
         dismissViewControllerAnimated(true, completion: nil)

@@ -11,8 +11,6 @@ import UIKit
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-
-
     var window: UIWindow?
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
@@ -25,7 +23,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         PFAnalytics.trackAppOpenedWithLaunchOptionsInBackground(launchOptions, block: nil)
 
         //MARK: Stripe
-        Stripe.setDefaultPublishableKey(kStripePublishableKey)
+        Stripe.setDefaultPublishableKey(kStripeLivePublishableKey)
 
         //MARK: PayPal
         PayPalMobile.initializeWithClientIdsForEnvironments([PayPalEnvironmentProduction : kPayPalClientIdProduction, PayPalEnvironmentSandbox : kPayPalClientIdSandbox])
