@@ -404,6 +404,7 @@ class IndividualFilmViewController: UIViewController, UITableViewDataSource, UIT
             PFCloud.callFunctionInBackground("createCharge", withParameters: ["amount": amountToCharge, "customer": customerId]) { (chargeId, error) -> Void in
                 if error != nil
                 {
+                    alert.showError("Uh oh", subTitle: "Payment unsuccessful", closeButtonTitle: "Okay", duration: 0)
                     println(error.localizedDescription)
                 }
                 else
