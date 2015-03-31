@@ -121,6 +121,7 @@ class EditGeneralInfoViewController: UIViewController, UITableViewDelegate, UITa
         {
             PFUser.logOut()
             UniversalProfile.sharedInstance.profile = nil
+            UniversalProfile.clearUserDefaults()
             tabBarController?.selectedIndex = 0
             performSegueWithIdentifier(kEditInfoToLogInSegue, sender: self)
         }

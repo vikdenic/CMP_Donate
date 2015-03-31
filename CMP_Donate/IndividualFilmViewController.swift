@@ -399,9 +399,10 @@ class IndividualFilmViewController: UIViewController, UITableViewDataSource, UIT
         let alert = SCLAlertView()
 
         let amountToCharge = (amount as Double * 100.0)
+
         if let customerId = kStandardDefaults.valueForKey(kDefaultsStripeCustomerID) as String!
         {
-            PFCloud.callFunctionInBackground("createCharge", withParameters: ["amount": amountToCharge, "customer": customerId]) { (chargeId, error) -> Void in
+            PFCloud.callFunctionInBackground("createCharge", withParameters: ["amount": amountToCharge, "customer": customerId, "description": film.title,"receipt_email": PFUser.currentUser().username]) { (chargeId, error) -> Void in
                 if error != nil
                 {
                     alert.showError("Uh oh", subTitle: "Payment unsuccessful", closeButtonTitle: "Okay", duration: 0)

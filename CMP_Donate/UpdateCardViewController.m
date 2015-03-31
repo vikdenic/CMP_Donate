@@ -16,6 +16,8 @@
 
 @property IBOutlet PTKView* paymentView;
 
+@property NSString *emailString;
+
 @end
 
 @implementation UpdateCardViewController
@@ -38,6 +40,9 @@
     self.paymentView.delegate = self;
 
     [self.view addSubview:self.paymentView];
+
+    self.emailString = [[PFUser currentUser] username];
+    NSLog(@"%@", self.emailString);
 }
 
 
@@ -69,8 +74,7 @@
         }
         else
         {
-
-            [PFCloud callFunctionInBackground:@"createCustomer" withParameters:@{@"token": token.tokenId, @"customerName": PFUser.currentUser.username} block:^(id customer, NSError *error) {
+            [PFCloud callFunctionInBackground:@"createCustomer" withParameters:@{@"token": token.tokenId, @"customerName": PFUser.currentUser.username, @"email": self.emailString} block:^(id customer, NSError *error) {
                 if (error != nil)
                 {
                     NSLog(@"%@", error);

@@ -18,4 +18,14 @@ private let SharedProfile = UniversalProfile()
     }
 
     var profile = Profile?()
+
+    class func clearUserDefaults()
+    {
+        kStandardDefaults.setObject(nil, forKey: kDefaultsStripeCardLast4)
+        kStandardDefaults.setObject(nil, forKey: kDefaultsStripeCustomerID)
+        kStandardDefaults.setObject(nil, forKey: kDefaultsCreditCard)
+        kStandardDefaults.setObject(nil, forKey: kDefaultsPayPal)
+        kStandardDefaults.setObject(nil, forKey: kDefaultsPreferredPaymentType)
+        kStandardDefaults.setObject(nil, forKey: kDefaultsPword)
+    }
 }

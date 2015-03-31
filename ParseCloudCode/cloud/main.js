@@ -14,6 +14,7 @@ Parse.Cloud.define("createCustomer", function(request, response) {
   Stripe.Customers.create({
     account_balance: 0,
     description: request.params.customerName,
+	email: request.params.email,
     card: request.params.token
   }, {
     success: function(httpResponse) {

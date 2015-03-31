@@ -48,14 +48,14 @@ let kStripeTestPublishableKey = "pk_test_oyA5FAsuqYVvFqEOUOSUg2hF"
 let kStripeLiveSecretKey = "sk_live_CmWB5dEXCgC8DvfgWzXSW8Xc"
 let kStripeLivePublishableKey = "pk_live_vxf6BTKJ8mlCtIz1RkCS9dmg"
 
-let kDefaultsStripeCardLast4 = "card.last4"
-let kDefaultsStripeCustomerID = "customerId"
+var kDefaultsStripeCardLast4 = "card.last4"
+var kDefaultsStripeCustomerID = "customerId"
 
-let kDefaultsCreditCard = "CreditCard"
-let kDefaultsPayPal = "PayPal"
+var kDefaultsCreditCard = "CreditCard"
+var kDefaultsPayPal = "PayPal"
 
-let kDefaultsPreferredPaymentType = "preferredPaymentType"
-let kDefaultsPword = "pword"
+var kDefaultsPreferredPaymentType = "preferredPaymentType"
+var kDefaultsPword = "pword"
 
 //MARK: PayPal
 let kPayPalClientIdSandbox = "AXwxFSPni98ZG2aXJ3PZYPKBAgH_gOpqMNufOqtL8Me_uvZaxtU2vJ6DYK-XLxHzCYxdftbcAW7WN72H"
