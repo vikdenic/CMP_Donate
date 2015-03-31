@@ -498,7 +498,7 @@ class IndividualFilmViewController: UIViewController, UITableViewDataSource, UIT
 
     func presentCustomAmountEntry()
     {
-        let alert = UIAlertController(title: "Contribute Custom Amount", message: nil, preferredStyle: .Alert)
+        let alert = UIAlertController(title: "Contribute Custom Amount (in $USD)", message: nil, preferredStyle: .Alert)
 
         var theTextField = UITextField()
         alert.addTextFieldWithConfigurationHandler { (textField) -> Void in

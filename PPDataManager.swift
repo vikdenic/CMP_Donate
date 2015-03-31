@@ -65,7 +65,7 @@ class PPDataManager {
         let session = NSURLSession(configuration: configuration)
 
         //Create request
-        let request = NSMutableURLRequest(URL: NSURL(string: "https://api.sandbox.paypal.com/v1/payments/payment/\(paymentId!)")!)
+        let request = NSMutableURLRequest(URL: NSURL(string: "https://api.paypal.com/v1/payments/payment/\(paymentId!)")!)
         request.HTTPMethod = "GET"
 
         let dataTask = session.dataTaskWithRequest(request, completionHandler: { (data, response, serverError) -> Void in
