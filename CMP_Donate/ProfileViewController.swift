@@ -101,13 +101,13 @@ class ProfileViewController: UIViewController, UITableViewDataSource, UITableVie
 
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
 
-        if indexPath.row == 1
+        if indexPath.row == 0
         {
-            return 120
+            return 180
         }
         else
         {
-            return 180
+            return 120
         }
     }
 
