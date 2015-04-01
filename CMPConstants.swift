@@ -69,3 +69,13 @@ let kCrewScrollViewTag = 99
 let kStoryboardIdEditGeneralInfo = "EditGeneralInfo"
 let kStandardDefaults = NSUserDefaults.standardUserDefaults()
 let kCrewMemberImage = "crewMemberImage"
+
+/// Screen size of the current device. Used for obtaining device height (in points).
+let kScreenSize: CGRect = UIScreen.mainScreen().bounds
+/// The width (in points) of the device size
+let kScreenWidth = kScreenSize.width
+/// The height (in points) of the device size
+let kScreenHeight = kScreenSize.height
+
+/// The height (in points) of an iPhone 4
+let kiPhone4Height : CGFloat = 480

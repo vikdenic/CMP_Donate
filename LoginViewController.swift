@@ -26,6 +26,21 @@ class LoginViewController: UIViewController {
         loginButton.clipsToBounds = true
 
         view.backgroundColor = UIColor.clearColor()
+
+        raiseViewsFor4S()
+    }
+
+    override func prefersStatusBarHidden() -> Bool {
+        return true
+    }
+
+
+    func raiseViewsFor4S()
+    {
+        for aView in self.view.subviews as [UIView]
+        {
+            aView.center.y -= 65
+        }
     }
 
     @IBAction func onLoginButtonTapped(sender: UIButton)
@@ -48,5 +63,29 @@ class LoginViewController: UIViewController {
                 self.spinner.stopAnimating()
             }
         }
+    }
+
+    func textFieldDidBeginEditing(textField: UITextField)
+    {
+        if editing == false
+        {
+            UIView.animateWithDuration(0.3, animations: { () -> Void in
+                self.view.center.y -= 40
+            })
+        }
+        editing = true
+    }
+
+    override func touchesBegan(touches: NSSet, withEvent event: UIEvent)
+    {
+        view.endEditing(true)
+
+        if editing == true
+        {
+            UIView.animateWithDuration(0.2, animations: { () -> Void in
+                self.view.center.y += 40
+            })
+        }
+        editing = false
     }
 }

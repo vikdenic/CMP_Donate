@@ -23,16 +23,18 @@ class ProfileViewController: UIViewController, UITableViewDataSource, UITableVie
     override func viewWillAppear(animated: Bool) {
         navigationController?.navigationBarHidden = false
         navigationItem.title = kProfile?.firstName
-        obtainTransactionData()
 
-        Profile.queryForCurrentUserProfile({ (profile, error) -> Void in
-            UniversalProfile.sharedInstance.profile = profile
-        })
+        self.obtainTransactionData()
+
+//        Profile.queryForCurrentUserProfile({ (profile, error) -> Void in
+//            UniversalProfile.sharedInstance.profile = profile!
+//            self.obtainTransactionData()
+//        })
     }
 
     func obtainTransactionData()
     {
-        Transaction.queryTransactions(kProfile!, completed: { (transactions, error) -> Void in
+        Transaction.queryTransactions(UniversalProfile.sharedInstance.profile!, completed: { (transactions, error) -> Void in
 
             if error != nil
             {

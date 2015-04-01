@@ -41,10 +41,24 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
 
         loginButton.layer.cornerRadius = 5
         loginButton.clipsToBounds = true
+
+        raiseViewsFor4S()
     }
 
     override func viewWillAppear(animated: Bool) {
         view.alpha = 1
+    }
+
+    override func prefersStatusBarHidden() -> Bool {
+        return true
+    }
+
+    func raiseViewsFor4S()
+    {
+        for aView in self.view.subviews as [UIView]
+        {
+            aView.center.y -= 65
+        }
     }
 
     @IBAction func onRegisterButtonTapped(sender: UIButton)
