@@ -81,6 +81,10 @@ Retrieves and calculates currency conversion rate information from the JSONRates
 */
 func convertCurrency(abbrev : String, completion : (rate : Float) -> Void)
 {
+//    Alamofire.request(.GET, "http://jsonrates.com/get/?from=" + abbrev + "&to=USD&apiKey=\(rateKey)", parameters: [:], encoding: .URL).responseJSON() {
+//        (_, _, data, _) in
+//        //
+//    }
 //    Alamofire.request(.GET, "http://jsonrates.com/get/?from=" + abbrev + "&to=USD&apiKey=\(rateKey)").responseJSON() {
 //        (_, _, data, _) in
 //

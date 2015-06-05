@@ -17,6 +17,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         //MARK: Parse
         Parse.enableLocalDatastore()
+        Profile.registerSubclass()
+        CrewMember.registerSubclass()
+        
         //TODO: Crash Reporting
 //        ParseCrashReporting.enable()
         Parse.setApplicationId("WKvDyqa7Hs23bkdbhPqAM4eadylYMxRlKTboJ56G", clientKey: "JhKakKAmnmp5Zt1dcrlXYtn4phHe9yf6Z3GmxuTp")

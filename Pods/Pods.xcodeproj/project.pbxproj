@@ -1,2724 +1,810 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
-<plist version="1.0">
-<dict>
-	<key>archiveVersion</key>
-	<string>1</string>
-	<key>classes</key>
-	<dict/>
-	<key>objectVersion</key>
-	<string>46</string>
-	<key>objects</key>
-	<dict>
-		<key>02FFD2B77BE4405BF06E5D4F</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>Pods-PaymentKit-prefix.pch</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>04069EDDE78D8F2740174420</key>
-		<dict>
-			<key>fileRef</key>
-			<string>2F6CB0BAE60170FC2F51FC6F</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>04A393989A2FE1BA1DAF6E98</key>
-		<dict>
-			<key>fileRef</key>
-			<string>46F74B5612118DA6C96AD99E</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>060A356C75BDB40FB10CC8D7</key>
-		<dict>
-			<key>fileRef</key>
-			<string>DE765FF6EEC0ED27E2418182</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>COMPILER_FLAGS</key>
-				<string>-DOS_OBJECT_USE_OBJC=0</string>
-			</dict>
-		</dict>
-		<key>06634250AEB556E89E573FE7</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>5377837D48BB76EB079681F9</string>
-				<string>62DB372B0F9B010E8157F004</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Pods</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>08AF0A48BE944BBEEC1C551D</key>
-		<dict>
-			<key>fileRef</key>
-			<string>7055D2D2B3E24A2B6AE9C5AC</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>0B5DF8E11B2C0F82CD6BCCB9</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>name</key>
-			<string>PTKCard.m</string>
-			<key>path</key>
-			<string>PaymentKit/PTKCard.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>0B7686868020A2E0CAC3B4BC</key>
-		<dict>
-			<key>fileRef</key>
-			<string>67D642922B39CDE09ADAEA81</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>0B8E98DDAF559DC9E51DB17B</key>
-		<dict>
-			<key>fileRef</key>
-			<string>288F32E9ABA07E4DA6B851D3</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>0BBD9762B2622BF26CAE6FA6</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>54D02AF7304A9AC20D03B9D3</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Targets Support Files</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>0BC34DA3B23FC1CB70200B60</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>name</key>
-			<string>STPCheckoutViewController.m</string>
-			<key>path</key>
-			<string>Stripe/Checkout/STPCheckoutViewController.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>0E32A9B75464DC0BB200DD49</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>path</key>
-			<string>Pods.release.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>0E8AD0849BA04A5EF2BDBF9D</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>name</key>
-			<string>STPCheckoutOptions.m</string>
-			<key>path</key>
-			<string>Stripe/Checkout/STPCheckoutOptions.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>13BCD9CAE2E5FACE225A68BA</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>Stripe.h</string>
-			<key>path</key>
-			<string>Stripe/PublicHeaders/Stripe.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>1438ED64CD64E1D3B5BF0574</key>
-		<dict>
-			<key>fileRef</key>
-			<string>6E0AC4965C72686D1E745C0A</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>150DDC41B861086C5127E51F</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>896174071551BC48AE20E3A8</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
-				<string>YES</string>
-				<key>GCC_PREFIX_HEADER</key>
-				<string>Target Support Files/Pods-Stripe/Pods-Stripe-prefix.pch</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>8.1</string>
-				<key>MTL_ENABLE_DEBUG_INFO</key>
-				<string>YES</string>
-				<key>OTHER_LDFLAGS</key>
-				<string></string>
-				<key>OTHER_LIBTOOLFLAGS</key>
-				<string></string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>SDKROOT</key>
-				<string>iphoneos</string>
-				<key>SKIP_INSTALL</key>
-				<string>YES</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Debug</string>
-		</dict>
-		<key>170D7C4C1640105CFBA6BC2A</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>visa.png</string>
-			<key>path</key>
-			<string>PaymentKit/Resources/Cards/visa.png</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>1B73A2E9B66E6AD3DBB06A7E</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>3B934EE50917E5272CEB4892</string>
-				<string>9344D6E6D4DB9C1BA68CBBC4</string>
-				<string>E3A10EBDBEA36AE5FB6445FE</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Products</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>1BC688C9335BE52E30783208</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>PTKComponent.h</string>
-			<key>path</key>
-			<string>PaymentKit/PTKComponent.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>1C876A069FE59C7351B8B3B4</key>
-		<dict>
-			<key>fileRef</key>
-			<string>FFF0F685A3784D56E90BC9BC</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>20D856D267290373AC038F2C</key>
-		<dict>
-			<key>buildConfigurationList</key>
-			<string>616A52C8B14D7FDE4476BEAB</string>
-			<key>buildPhases</key>
-			<array>
-				<string>E7041DE93B5CCACD2D87DA3B</string>
-				<string>ED772EB94E899EC79F5BF536</string>
-				<string>D238667D10DAA5F619D952FD</string>
-			</array>
-			<key>buildRules</key>
-			<array/>
-			<key>dependencies</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXNativeTarget</string>
-			<key>name</key>
-			<string>Pods-Stripe</string>
-			<key>productName</key>
-			<string>Pods-Stripe</string>
-			<key>productReference</key>
-			<string>E3A10EBDBEA36AE5FB6445FE</string>
-			<key>productType</key>
-			<string>com.apple.product-type.library.static</string>
-		</dict>
-		<key>21B22135D7187981E1264777</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>amex.png</string>
-			<key>path</key>
-			<string>PaymentKit/Resources/Cards/amex.png</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>221311996F90D6A234736AA1</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>4D03F1DD9DB22A197D330B8C</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
-				<string>YES</string>
-				<key>GCC_PREFIX_HEADER</key>
-				<string>Target Support Files/Pods-PaymentKit/Pods-PaymentKit-prefix.pch</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>8.1</string>
-				<key>MTL_ENABLE_DEBUG_INFO</key>
-				<string>YES</string>
-				<key>OTHER_LDFLAGS</key>
-				<string></string>
-				<key>OTHER_LIBTOOLFLAGS</key>
-				<string></string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>SDKROOT</key>
-				<string>iphoneos</string>
-				<key>SKIP_INSTALL</key>
-				<string>YES</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Debug</string>
-		</dict>
-		<key>25F7F22972BC91717E18E4B2</key>
-		<dict>
-			<key>fileRef</key>
-			<string>FDC9A2FC58F3130643F1A257</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>COMPILER_FLAGS</key>
-				<string>-DOS_OBJECT_USE_OBJC=0</string>
-			</dict>
-		</dict>
-		<key>288F32E9ABA07E4DA6B851D3</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>name</key>
-			<string>STPStrictURLProtocol.m</string>
-			<key>path</key>
-			<string>Stripe/Checkout/STPStrictURLProtocol.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>29DA48D4423FB63918CD0D83</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>wrapper.framework</string>
-			<key>name</key>
-			<string>Security.framework</string>
-			<key>path</key>
-			<string>Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/Security.framework</string>
-			<key>sourceTree</key>
-			<string>DEVELOPER_DIR</string>
-		</dict>
-		<key>2D56B209116308E1B2EA7099</key>
-		<dict>
-			<key>fileRef</key>
-			<string>29DA48D4423FB63918CD0D83</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>2DB1884C0CCEDE29CED84635</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>name</key>
-			<string>STPAPIConnection.m</string>
-			<key>path</key>
-			<string>Stripe/STPAPIConnection.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>2E8B70188401B26D681A3187</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>PTKCard.h</string>
-			<key>path</key>
-			<string>PaymentKit/PTKCard.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>2F6CB0BAE60170FC2F51FC6F</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>name</key>
-			<string>STPCheckoutInternalUIWebViewController.m</string>
-			<key>path</key>
-			<string>Stripe/Checkout/STPCheckoutInternalUIWebViewController.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>305E9DBD6B848FFA4A46021D</key>
-		<dict>
-			<key>fileRef</key>
-			<string>FAC8F8E3AA273CE0E2EC3359</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>30980B0974D7144BCDD33BB5</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>StripeError.h</string>
-			<key>path</key>
-			<string>Stripe/PublicHeaders/StripeError.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>31DAE841549925DC3416622D</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>PTKCardType.h</string>
-			<key>path</key>
-			<string>PaymentKit/PTKCardType.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>33AB5262A4CD62056258B84D</key>
-		<dict>
-			<key>fileRef</key>
-			<string>1BC688C9335BE52E30783208</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>34409079BF72A5E866CEF029</key>
-		<dict>
-			<key>fileRef</key>
-			<string>9822338690C057BC1AC5CD01</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>344BEDD0E5985B92654B3432</key>
-		<dict>
-			<key>fileRef</key>
-			<string>AE2F7B3C6BC2A09ABB339B15</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>34A776CA3246859FCF020FE5</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>221311996F90D6A234736AA1</string>
-				<string>FF4A4CE50932D4D262B58D32</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>defaultConfigurationName</key>
-			<string>Release</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>35FE084D2B469AF10494A927</key>
-		<dict>
-			<key>fileRef</key>
-			<string>921AC4C99528AA52E1325E3A</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>379559046187A6E343912D72</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>Pods-Stripe-prefix.pch</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>38D9E03ACB93355E79E26E4A</key>
-		<dict>
-			<key>fileRef</key>
-			<string>40D504C1EC78257858B8EEDB</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>398716BCD1BF4FA868EA6F49</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>Pods-PaymentKit-dummy.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>39FFC90A63B5456E714D5FE2</key>
-		<dict>
-			<key>fileRef</key>
-			<string>D32A946F1715E96CB45A4F43</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>3B934EE50917E5272CEB4892</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>archive.ar</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>libPods.a</string>
-			<key>path</key>
-			<string>libPods.a</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>3CE69CE1B57B1C6E21154517</key>
-		<dict>
-			<key>fileRef</key>
-			<string>AABD660FF0C61E0EB66F227F</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>3DDB1F027693A2AAA36955E0</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>803F034925B7AE97D40AF5EF</string>
-				<string>29DA48D4423FB63918CD0D83</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>iOS</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>3F5925858BFEC0A0F7A5CDD0</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.script.sh</string>
-			<key>path</key>
-			<string>Pods-resources.sh</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>40D504C1EC78257858B8EEDB</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>name</key>
-			<string>StripeError.m</string>
-			<key>path</key>
-			<string>Stripe/StripeError.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>42C2FBB0C37949D57FE92A7A</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>name</key>
-			<string>PTKComponent.m</string>
-			<key>path</key>
-			<string>PaymentKit/PTKComponent.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>441EADC8B1F2CF893C9DC975</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>cvc-amex.png</string>
-			<key>path</key>
-			<string>PaymentKit/Resources/Cards/cvc-amex.png</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>45495FAA310B0DAF96A968EF</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>placeholder@2x.png</string>
-			<key>path</key>
-			<string>PaymentKit/Resources/Cards/placeholder@2x.png</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>46F74B5612118DA6C96AD99E</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>STPAPIConnection.h</string>
-			<key>path</key>
-			<string>Stripe/STPAPIConnection.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>49FAAA673FB631D4EC089C76</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXTargetDependency</string>
-			<key>name</key>
-			<string>Pods-Stripe</string>
-			<key>target</key>
-			<string>20D856D267290373AC038F2C</string>
-			<key>targetProxy</key>
-			<string>75EF41E285CA4672CE951110</string>
-		</dict>
-		<key>4A4D471825BF39A5F961B551</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>jcb.png</string>
-			<key>path</key>
-			<string>PaymentKit/Resources/Cards/jcb.png</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>4D03F1DD9DB22A197D330B8C</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>path</key>
-			<string>Pods-PaymentKit-Private.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>4E8F89E58584CB5CF8281FCD</key>
-		<dict>
-			<key>fileRef</key>
-			<string>803F034925B7AE97D40AF5EF</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>4FACB73F89F666AFCB9A2312</key>
-		<dict>
-			<key>fileRef</key>
-			<string>537E243A3113070A0204199B</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>50DEE7BBC213F3D9C1E4CB61</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>PTKCardNumber.h</string>
-			<key>path</key>
-			<string>PaymentKit/PTKCardNumber.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>51FE65FD7448E76968045228</key>
-		<dict>
-			<key>fileRef</key>
-			<string>97B59083B65E0FCA7623E95A</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>COMPILER_FLAGS</key>
-				<string>-DOS_OBJECT_USE_OBJC=0</string>
-			</dict>
-		</dict>
-		<key>521D3FD09E35827C127DB05C</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>path</key>
-			<string>Pods-Stripe.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>5237A863D640D1CE49AA7528</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>diners.png</string>
-			<key>path</key>
-			<string>PaymentKit/Resources/Cards/diners.png</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>5377837D48BB76EB079681F9</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>9822338690C057BC1AC5CD01</string>
-				<string>FF17EF2909B29FACFDFA93AE</string>
-				<string>2E8B70188401B26D681A3187</string>
-				<string>0B5DF8E11B2C0F82CD6BCCB9</string>
-				<string>AABD660FF0C61E0EB66F227F</string>
-				<string>97B59083B65E0FCA7623E95A</string>
-				<string>921AC4C99528AA52E1325E3A</string>
-				<string>BC5C4A12B37BD267DF189D8E</string>
-				<string>50DEE7BBC213F3D9C1E4CB61</string>
-				<string>62E2C54D4DC24B3CEE61520F</string>
-				<string>31DAE841549925DC3416622D</string>
-				<string>1BC688C9335BE52E30783208</string>
-				<string>42C2FBB0C37949D57FE92A7A</string>
-				<string>EA144D6F618E682E6D1044C7</string>
-				<string>FDC9A2FC58F3130643F1A257</string>
-				<string>537E243A3113070A0204199B</string>
-				<string>DE765FF6EEC0ED27E2418182</string>
-				<string>70C34233C8D31768FF5F73CB</string>
-				<string>8766342001BF61091757969B</string>
-				<string>814FA3050BBD5A3D7D8B1948</string>
-				<string>8A6128E5153D1A14DEE73166</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>PaymentKit</string>
-			<key>path</key>
-			<string>PaymentKit</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>537E243A3113070A0204199B</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>PTKUSAddressZip.h</string>
-			<key>path</key>
-			<string>PaymentKit/PTKUSAddressZip.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>54D02AF7304A9AC20D03B9D3</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>F4470812BD3AC05A83B44675</string>
-				<string>B75576EDEB203FFB89661BFF</string>
-				<string>6359CCCD6E371DF83BD5E863</string>
-				<string>ED212F3AC0F2D5101245E47B</string>
-				<string>3F5925858BFEC0A0F7A5CDD0</string>
-				<string>B41116C7000C74A7ED9034A9</string>
-				<string>0E32A9B75464DC0BB200DD49</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Pods</string>
-			<key>path</key>
-			<string>Target Support Files/Pods</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>58CF4551A62627BC20D98A16</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXTargetDependency</string>
-			<key>name</key>
-			<string>Pods-PaymentKit</string>
-			<key>target</key>
-			<string>C3044B9D7EBB6DBE49B26434</string>
-			<key>targetProxy</key>
-			<string>A5AD3C116FD279B6CD1EBBDA</string>
-		</dict>
-		<key>5913640EB2F9365AD795B357</key>
-		<dict>
-			<key>fileRef</key>
-			<string>DEE04AF8647358593D68075E</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>5D7D1F99DE244EF1225EC80F</key>
-		<dict>
-			<key>buildConfigurationList</key>
-			<string>DAB1E2A42822F8E7B6C70A9A</string>
-			<key>buildPhases</key>
-			<array>
-				<string>F7E42310A36618B58083AB96</string>
-				<string>E09F6B37658BCCD1BF68F44D</string>
-			</array>
-			<key>buildRules</key>
-			<array/>
-			<key>dependencies</key>
-			<array>
-				<string>58CF4551A62627BC20D98A16</string>
-				<string>49FAAA673FB631D4EC089C76</string>
-			</array>
-			<key>isa</key>
-			<string>PBXNativeTarget</string>
-			<key>name</key>
-			<string>Pods</string>
-			<key>productName</key>
-			<string>Pods</string>
-			<key>productReference</key>
-			<string>3B934EE50917E5272CEB4892</string>
-			<key>productType</key>
-			<string>com.apple.product-type.library.static</string>
-		</dict>
-		<key>5E3019011AF4E14264C0DF8C</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>D06B30E150431367CCECC685</string>
-				<string>D5C87A74840E9F97AEF1C778</string>
-				<string>06634250AEB556E89E573FE7</string>
-				<string>1B73A2E9B66E6AD3DBB06A7E</string>
-				<string>0BBD9762B2622BF26CAE6FA6</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>616A52C8B14D7FDE4476BEAB</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>150DDC41B861086C5127E51F</string>
-				<string>D06C862A1E200C5C3FAE929E</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>defaultConfigurationName</key>
-			<string>Release</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>6279E782CFD51ECBF6B7EA63</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>STPCard.h</string>
-			<key>path</key>
-			<string>Stripe/PublicHeaders/STPCard.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>62DB372B0F9B010E8157F004</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>6B1F045BA3E2F9F3B46CBE8F</string>
-				<string>9F3551D693EDDE0545B57098</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Stripe</string>
-			<key>path</key>
-			<string>Stripe</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>62E2C54D4DC24B3CEE61520F</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>name</key>
-			<string>PTKCardNumber.m</string>
-			<key>path</key>
-			<string>PaymentKit/PTKCardNumber.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>62EAFCAC849504B05D3D1647</key>
-		<dict>
-			<key>fileRef</key>
-			<string>0B5DF8E11B2C0F82CD6BCCB9</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>COMPILER_FLAGS</key>
-				<string>-DOS_OBJECT_USE_OBJC=0</string>
-			</dict>
-		</dict>
-		<key>6359CCCD6E371DF83BD5E863</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>Pods-dummy.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>650B65D4FEDAFB973B501B36</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>STPToken.h</string>
-			<key>path</key>
-			<string>Stripe/PublicHeaders/STPToken.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>6654F33A47FAD97E09922FFE</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>visa@2x.png</string>
-			<key>path</key>
-			<string>PaymentKit/Resources/Cards/visa@2x.png</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>67D642922B39CDE09ADAEA81</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>STPStrictURLProtocol.h</string>
-			<key>path</key>
-			<string>Stripe/Checkout/STPStrictURLProtocol.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>6B1F045BA3E2F9F3B46CBE8F</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>94DD3C9D86A724BCE2C9E057</string>
-				<string>7CEBECBC931659AC8AB3A66F</string>
-				<string>46F74B5612118DA6C96AD99E</string>
-				<string>2DB1884C0CCEDE29CED84635</string>
-				<string>AE2F7B3C6BC2A09ABB339B15</string>
-				<string>BB59C480CE23376C8311510D</string>
-				<string>6279E782CFD51ECBF6B7EA63</string>
-				<string>D32A946F1715E96CB45A4F43</string>
-				<string>BE58CFF8EDB3F611ED674519</string>
-				<string>D7DB54A224B3E29856B8C84E</string>
-				<string>2F6CB0BAE60170FC2F51FC6F</string>
-				<string>C7F3E77D97ACDAB81C4EAD08</string>
-				<string>0E8AD0849BA04A5EF2BDBF9D</string>
-				<string>FAC8F8E3AA273CE0E2EC3359</string>
-				<string>0BC34DA3B23FC1CB70200B60</string>
-				<string>BEC416ABB11F5141069DCD21</string>
-				<string>76184C56B44CB133F6667FAB</string>
-				<string>B546335356A905FB7E6A6271</string>
-				<string>6E0AC4965C72686D1E745C0A</string>
-				<string>E32186527C93C1158A65D926</string>
-				<string>DEE04AF8647358593D68075E</string>
-				<string>FA94513EE0196439F3EFB829</string>
-				<string>87CB9C0C75947A77020DDEB1</string>
-				<string>9BBA56D537C07B10F27EB854</string>
-				<string>67D642922B39CDE09ADAEA81</string>
-				<string>288F32E9ABA07E4DA6B851D3</string>
-				<string>650B65D4FEDAFB973B501B36</string>
-				<string>7055D2D2B3E24A2B6AE9C5AC</string>
-				<string>13BCD9CAE2E5FACE225A68BA</string>
-				<string>30980B0974D7144BCDD33BB5</string>
-				<string>40D504C1EC78257858B8EEDB</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Core</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>6D83A43E95EB186D85B6F851</key>
-		<dict>
-			<key>fileRef</key>
-			<string>70C34233C8D31768FF5F73CB</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>6E0AC4965C72686D1E745C0A</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>STPFormEncoder.h</string>
-			<key>path</key>
-			<string>Stripe/STPFormEncoder.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>7055D2D2B3E24A2B6AE9C5AC</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>name</key>
-			<string>STPToken.m</string>
-			<key>path</key>
-			<string>Stripe/STPToken.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>70C34233C8D31768FF5F73CB</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>PTKView.h</string>
-			<key>path</key>
-			<string>PaymentKit/PTKView.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>70E113CF83AF0FB0A64A53E0</key>
-		<dict>
-			<key>fileRef</key>
-			<string>6279E782CFD51ECBF6B7EA63</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>71004CFE8858AFD241BCF31A</key>
-		<dict>
-			<key>attributes</key>
-			<dict>
-				<key>LastUpgradeCheck</key>
-				<string>0510</string>
-			</dict>
-			<key>buildConfigurationList</key>
-			<string>E0F8D7FB39475A158AF04854</string>
-			<key>compatibilityVersion</key>
-			<string>Xcode 3.2</string>
-			<key>developmentRegion</key>
-			<string>English</string>
-			<key>hasScannedForEncodings</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXProject</string>
-			<key>knownRegions</key>
-			<array>
-				<string>en</string>
-			</array>
-			<key>mainGroup</key>
-			<string>5E3019011AF4E14264C0DF8C</string>
-			<key>productRefGroup</key>
-			<string>1B73A2E9B66E6AD3DBB06A7E</string>
-			<key>projectDirPath</key>
-			<string></string>
-			<key>projectReferences</key>
-			<array/>
-			<key>projectRoot</key>
-			<string></string>
-			<key>targets</key>
-			<array>
-				<string>5D7D1F99DE244EF1225EC80F</string>
-				<string>C3044B9D7EBB6DBE49B26434</string>
-				<string>20D856D267290373AC038F2C</string>
-			</array>
-		</dict>
-		<key>730E052868ECA7A20FFF9624</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>amex@2x.png</string>
-			<key>path</key>
-			<string>PaymentKit/Resources/Cards/amex@2x.png</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>75EF41E285CA4672CE951110</key>
-		<dict>
-			<key>containerPortal</key>
-			<string>71004CFE8858AFD241BCF31A</string>
-			<key>isa</key>
-			<string>PBXContainerItemProxy</string>
-			<key>proxyType</key>
-			<string>1</string>
-			<key>remoteGlobalIDString</key>
-			<string>20D856D267290373AC038F2C</string>
-			<key>remoteInfo</key>
-			<string>Pods-Stripe</string>
-		</dict>
-		<key>76184C56B44CB133F6667FAB</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>STPColorUtils.h</string>
-			<key>path</key>
-			<string>Stripe/Checkout/STPColorUtils.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>78BE740C63EDF242A961ED36</key>
-		<dict>
-			<key>fileRef</key>
-			<string>42C2FBB0C37949D57FE92A7A</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>COMPILER_FLAGS</key>
-				<string>-DOS_OBJECT_USE_OBJC=0</string>
-			</dict>
-		</dict>
-		<key>7AAE580140DE8A50CF937233</key>
-		<dict>
-			<key>fileRef</key>
-			<string>803F034925B7AE97D40AF5EF</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>7B6CF1B3FC525DA8ADCEF747</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>mastercard@2x.png</string>
-			<key>path</key>
-			<string>PaymentKit/Resources/Cards/mastercard@2x.png</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>7CEBECBC931659AC8AB3A66F</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>name</key>
-			<string>STPAPIClient.m</string>
-			<key>path</key>
-			<string>Stripe/STPAPIClient.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>803F034925B7AE97D40AF5EF</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>wrapper.framework</string>
-			<key>name</key>
-			<string>Foundation.framework</string>
-			<key>path</key>
-			<string>Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/Foundation.framework</string>
-			<key>sourceTree</key>
-			<string>DEVELOPER_DIR</string>
-		</dict>
-		<key>814FA3050BBD5A3D7D8B1948</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>21B22135D7187981E1264777</string>
-				<string>730E052868ECA7A20FFF9624</string>
-				<string>DEEEB2601CF44063022A4918</string>
-				<string>441EADC8B1F2CF893C9DC975</string>
-				<string>CFCE54D26AA77C7B433CA574</string>
-				<string>96C60C4CFF3DB6A41E731F1F</string>
-				<string>5237A863D640D1CE49AA7528</string>
-				<string>AE4A1787D77F9C349CF55A5F</string>
-				<string>A76C9381F0FBC44BA1D22FFD</string>
-				<string>9DE100D7C3CDE8C205066E6F</string>
-				<string>DB68918ED7E88280961AEEFE</string>
-				<string>4A4D471825BF39A5F961B551</string>
-				<string>D828BDB26F0868B9C181ED0F</string>
-				<string>D4D9C695CA5DDCF56130BB70</string>
-				<string>7B6CF1B3FC525DA8ADCEF747</string>
-				<string>E63E6807E6D19C5F17A60166</string>
-				<string>45495FAA310B0DAF96A968EF</string>
-				<string>A9B5F1D930380D98C7BA5250</string>
-				<string>F3B24270243D1552E5FA7292</string>
-				<string>170D7C4C1640105CFBA6BC2A</string>
-				<string>6654F33A47FAD97E09922FFE</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Resources</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>828E87F70AC713C731372513</key>
-		<dict>
-			<key>fileRef</key>
-			<string>FF17EF2909B29FACFDFA93AE</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>COMPILER_FLAGS</key>
-				<string>-DOS_OBJECT_USE_OBJC=0</string>
-			</dict>
-		</dict>
-		<key>8394D6BE8379D2803043B7B4</key>
-		<dict>
-			<key>fileRef</key>
-			<string>FA94513EE0196439F3EFB829</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>84D71392ED4DC34B139F9C82</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>path</key>
-			<string>Pods-PaymentKit.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>8766342001BF61091757969B</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>name</key>
-			<string>PTKView.m</string>
-			<key>path</key>
-			<string>PaymentKit/PTKView.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>87CB9C0C75947A77020DDEB1</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>STPOSXCheckoutWebViewAdapter.h</string>
-			<key>path</key>
-			<string>Stripe/Checkout/STPOSXCheckoutWebViewAdapter.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>896174071551BC48AE20E3A8</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>path</key>
-			<string>Pods-Stripe-Private.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>8A6128E5153D1A14DEE73166</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>84D71392ED4DC34B139F9C82</string>
-				<string>4D03F1DD9DB22A197D330B8C</string>
-				<string>398716BCD1BF4FA868EA6F49</string>
-				<string>02FFD2B77BE4405BF06E5D4F</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Support Files</string>
-			<key>path</key>
-			<string>../Target Support Files/Pods-PaymentKit</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>8D40F625617BD95BC98E45D7</key>
-		<dict>
-			<key>fileRef</key>
-			<string>30980B0974D7144BCDD33BB5</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>8D855F0AA856F6BDB72A635B</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>34409079BF72A5E866CEF029</string>
-				<string>CB4F7AF814295C55504EA894</string>
-				<string>3CE69CE1B57B1C6E21154517</string>
-				<string>35FE084D2B469AF10494A927</string>
-				<string>D1A72E3739A9791B2ECC9885</string>
-				<string>8E7C3AD4773777A4836A7028</string>
-				<string>33AB5262A4CD62056258B84D</string>
-				<string>DD4403B4EF3E57932C1B69E7</string>
-				<string>4FACB73F89F666AFCB9A2312</string>
-				<string>6D83A43E95EB186D85B6F851</string>
-			</array>
-			<key>isa</key>
-			<string>PBXHeadersBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>8E7C3AD4773777A4836A7028</key>
-		<dict>
-			<key>fileRef</key>
-			<string>31DAE841549925DC3416622D</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>921AC4C99528AA52E1325E3A</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>PTKCardExpiry.h</string>
-			<key>path</key>
-			<string>PaymentKit/PTKCardExpiry.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>9344D6E6D4DB9C1BA68CBBC4</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>archive.ar</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>libPods-PaymentKit.a</string>
-			<key>path</key>
-			<string>libPods-PaymentKit.a</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>94DD3C9D86A724BCE2C9E057</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>STPAPIClient.h</string>
-			<key>path</key>
-			<string>Stripe/PublicHeaders/STPAPIClient.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>9646489C6C3868DF9A6CD6D0</key>
-		<dict>
-			<key>fileRef</key>
-			<string>7CEBECBC931659AC8AB3A66F</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>96C60C4CFF3DB6A41E731F1F</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>cvc@2x.png</string>
-			<key>path</key>
-			<string>PaymentKit/Resources/Cards/cvc@2x.png</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>97B59083B65E0FCA7623E95A</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>name</key>
-			<string>PTKCardCVC.m</string>
-			<key>path</key>
-			<string>PaymentKit/PTKCardCVC.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>9822338690C057BC1AC5CD01</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>PTKAddressZip.h</string>
-			<key>path</key>
-			<string>PaymentKit/PTKAddressZip.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>9BBA56D537C07B10F27EB854</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>name</key>
-			<string>STPOSXCheckoutWebViewAdapter.m</string>
-			<key>path</key>
-			<string>Stripe/Checkout/STPOSXCheckoutWebViewAdapter.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>9DE100D7C3CDE8C205066E6F</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>discover@2x.png</string>
-			<key>path</key>
-			<string>PaymentKit/Resources/Cards/discover@2x.png</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>9F3551D693EDDE0545B57098</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>521D3FD09E35827C127DB05C</string>
-				<string>896174071551BC48AE20E3A8</string>
-				<string>FFF0F685A3784D56E90BC9BC</string>
-				<string>379559046187A6E343912D72</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Support Files</string>
-			<key>path</key>
-			<string>../Target Support Files/Pods-Stripe</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>A1555D4097DD3ACE2C0FD421</key>
-		<dict>
-			<key>fileRef</key>
-			<string>C7F3E77D97ACDAB81C4EAD08</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>A55824DA58EFFBEE21B58C4A</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>0E32A9B75464DC0BB200DD49</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
-				<string>YES</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>8.1</string>
-				<key>MTL_ENABLE_DEBUG_INFO</key>
-				<string>NO</string>
-				<key>OTHER_LDFLAGS</key>
-				<string></string>
-				<key>OTHER_LIBTOOLFLAGS</key>
-				<string></string>
-				<key>PODS_ROOT</key>
-				<string>$(SRCROOT)</string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>SDKROOT</key>
-				<string>iphoneos</string>
-				<key>SKIP_INSTALL</key>
-				<string>YES</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
-		</dict>
-		<key>A5AD3C116FD279B6CD1EBBDA</key>
-		<dict>
-			<key>containerPortal</key>
-			<string>71004CFE8858AFD241BCF31A</string>
-			<key>isa</key>
-			<string>PBXContainerItemProxy</string>
-			<key>proxyType</key>
-			<string>1</string>
-			<key>remoteGlobalIDString</key>
-			<string>C3044B9D7EBB6DBE49B26434</string>
-			<key>remoteInfo</key>
-			<string>Pods-PaymentKit</string>
-		</dict>
-		<key>A76C9381F0FBC44BA1D22FFD</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>discover.png</string>
-			<key>path</key>
-			<string>PaymentKit/Resources/Cards/discover.png</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>A9B5F1D930380D98C7BA5250</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>textfield.png</string>
-			<key>path</key>
-			<string>PaymentKit/Resources/textfield.png</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>AABD660FF0C61E0EB66F227F</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>PTKCardCVC.h</string>
-			<key>path</key>
-			<string>PaymentKit/PTKCardCVC.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>ACC772C1A8ABFB46F1A9552E</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>828E87F70AC713C731372513</string>
-				<string>62EAFCAC849504B05D3D1647</string>
-				<string>51FE65FD7448E76968045228</string>
-				<string>ECD2C5326FBC030F0169D8FA</string>
-				<string>B916A7A7BE78B7B5FF376577</string>
-				<string>78BE740C63EDF242A961ED36</string>
-				<string>25F7F22972BC91717E18E4B2</string>
-				<string>060A356C75BDB40FB10CC8D7</string>
-				<string>AF731F7F6D3748232BF2217A</string>
-				<string>B91586EC1CBE89CB5AFC6836</string>
-			</array>
-			<key>isa</key>
-			<string>PBXSourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>AE2F7B3C6BC2A09ABB339B15</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>STPBankAccount.h</string>
-			<key>path</key>
-			<string>Stripe/PublicHeaders/STPBankAccount.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>AE4A1787D77F9C349CF55A5F</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>diners@2x.png</string>
-			<key>path</key>
-			<string>PaymentKit/Resources/Cards/diners@2x.png</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>AEA7B8FD3D244F8C9EE85FED</key>
-		<dict>
-			<key>fileRef</key>
-			<string>BE58CFF8EDB3F611ED674519</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>AF731F7F6D3748232BF2217A</key>
-		<dict>
-			<key>fileRef</key>
-			<string>8766342001BF61091757969B</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>COMPILER_FLAGS</key>
-				<string>-DOS_OBJECT_USE_OBJC=0</string>
-			</dict>
-		</dict>
-		<key>B113258B5C304E4D30F42B81</key>
-		<dict>
-			<key>fileRef</key>
-			<string>E32186527C93C1158A65D926</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>B3ABFF6DE14DEE54869C20A4</key>
-		<dict>
-			<key>fileRef</key>
-			<string>650B65D4FEDAFB973B501B36</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>B41116C7000C74A7ED9034A9</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>path</key>
-			<string>Pods.debug.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>B546335356A905FB7E6A6271</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>name</key>
-			<string>STPColorUtils.m</string>
-			<key>path</key>
-			<string>Stripe/Checkout/STPColorUtils.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>B6CD8C19C3CD02A64E7F3DF1</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>4E8F89E58584CB5CF8281FCD</string>
-			</array>
-			<key>isa</key>
-			<string>PBXFrameworksBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>B75576EDEB203FFB89661BFF</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.plist.xml</string>
-			<key>path</key>
-			<string>Pods-acknowledgements.plist</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>B88FD5A5B2F3892D81429E8B</key>
-		<dict>
-			<key>buildSettings</key>
-			<dict>
-				<key>ALWAYS_SEARCH_USER_PATHS</key>
-				<string>NO</string>
-				<key>CLANG_CXX_LANGUAGE_STANDARD</key>
-				<string>gnu++0x</string>
-				<key>CLANG_CXX_LIBRARY</key>
-				<string>libc++</string>
-				<key>CLANG_ENABLE_MODULES</key>
-				<string>YES</string>
-				<key>CLANG_ENABLE_OBJC_ARC</key>
-				<string>YES</string>
-				<key>CLANG_WARN_BOOL_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_CONSTANT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_DIRECT_OBJC_ISA_USAGE</key>
-				<string>YES</string>
-				<key>CLANG_WARN_EMPTY_BODY</key>
-				<string>YES</string>
-				<key>CLANG_WARN_ENUM_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_INT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_OBJC_ROOT_CLASS</key>
-				<string>YES</string>
-				<key>CLANG_WARN_UNREACHABLE_CODE</key>
-				<string>YES</string>
-				<key>CLANG_WARN__DUPLICATE_METHOD_MATCH</key>
-				<string>YES</string>
-				<key>COPY_PHASE_STRIP</key>
-				<string>YES</string>
-				<key>GCC_C_LANGUAGE_STANDARD</key>
-				<string>gnu99</string>
-				<key>GCC_DYNAMIC_NO_PIC</key>
-				<string>NO</string>
-				<key>GCC_OPTIMIZATION_LEVEL</key>
-				<string>0</string>
-				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
-				<array>
-					<string>DEBUG=1</string>
-					<string>$(inherited)</string>
-				</array>
-				<key>GCC_SYMBOLS_PRIVATE_EXTERN</key>
-				<string>NO</string>
-				<key>GCC_WARN_64_TO_32_BIT_CONVERSION</key>
-				<string>YES</string>
-				<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNDECLARED_SELECTOR</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNUSED_FUNCTION</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNUSED_VARIABLE</key>
-				<string>YES</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>8.1</string>
-				<key>ONLY_ACTIVE_ARCH</key>
-				<string>YES</string>
-				<key>STRIP_INSTALLED_PRODUCT</key>
-				<string>NO</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Debug</string>
-		</dict>
-		<key>B91586EC1CBE89CB5AFC6836</key>
-		<dict>
-			<key>fileRef</key>
-			<string>398716BCD1BF4FA868EA6F49</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>B916A7A7BE78B7B5FF376577</key>
-		<dict>
-			<key>fileRef</key>
-			<string>62E2C54D4DC24B3CEE61520F</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>COMPILER_FLAGS</key>
-				<string>-DOS_OBJECT_USE_OBJC=0</string>
-			</dict>
-		</dict>
-		<key>BB59C480CE23376C8311510D</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>name</key>
-			<string>STPBankAccount.m</string>
-			<key>path</key>
-			<string>Stripe/STPBankAccount.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>BC5C4A12B37BD267DF189D8E</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>name</key>
-			<string>PTKCardExpiry.m</string>
-			<key>path</key>
-			<string>PaymentKit/PTKCardExpiry.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>BC90DE653D8BF8F8319DA612</key>
-		<dict>
-			<key>fileRef</key>
-			<string>BEC416ABB11F5141069DCD21</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>BE58CFF8EDB3F611ED674519</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>STPCheckoutDelegate.h</string>
-			<key>path</key>
-			<string>Stripe/Checkout/STPCheckoutDelegate.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>BE72BA82A5F3C96D1D26F346</key>
-		<dict>
-			<key>fileRef</key>
-			<string>0E8AD0849BA04A5EF2BDBF9D</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>BEC416ABB11F5141069DCD21</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>STPCheckoutWebViewAdapter.h</string>
-			<key>path</key>
-			<string>Stripe/Checkout/STPCheckoutWebViewAdapter.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>C3044B9D7EBB6DBE49B26434</key>
-		<dict>
-			<key>buildConfigurationList</key>
-			<string>34A776CA3246859FCF020FE5</string>
-			<key>buildPhases</key>
-			<array>
-				<string>ACC772C1A8ABFB46F1A9552E</string>
-				<string>B6CD8C19C3CD02A64E7F3DF1</string>
-				<string>8D855F0AA856F6BDB72A635B</string>
-			</array>
-			<key>buildRules</key>
-			<array/>
-			<key>dependencies</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXNativeTarget</string>
-			<key>name</key>
-			<string>Pods-PaymentKit</string>
-			<key>productName</key>
-			<string>Pods-PaymentKit</string>
-			<key>productReference</key>
-			<string>9344D6E6D4DB9C1BA68CBBC4</string>
-			<key>productType</key>
-			<string>com.apple.product-type.library.static</string>
-		</dict>
-		<key>C7F3E77D97ACDAB81C4EAD08</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>STPCheckoutOptions.h</string>
-			<key>path</key>
-			<string>Stripe/PublicHeaders/Checkout/STPCheckoutOptions.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>C884418C0D04EF90145C80FB</key>
-		<dict>
-			<key>fileRef</key>
-			<string>94DD3C9D86A724BCE2C9E057</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>CACFBB82F636932B92CA2EB5</key>
-		<dict>
-			<key>buildSettings</key>
-			<dict>
-				<key>ALWAYS_SEARCH_USER_PATHS</key>
-				<string>NO</string>
-				<key>CLANG_CXX_LANGUAGE_STANDARD</key>
-				<string>gnu++0x</string>
-				<key>CLANG_CXX_LIBRARY</key>
-				<string>libc++</string>
-				<key>CLANG_ENABLE_MODULES</key>
-				<string>YES</string>
-				<key>CLANG_ENABLE_OBJC_ARC</key>
-				<string>YES</string>
-				<key>CLANG_WARN_BOOL_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_CONSTANT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_DIRECT_OBJC_ISA_USAGE</key>
-				<string>YES</string>
-				<key>CLANG_WARN_EMPTY_BODY</key>
-				<string>YES</string>
-				<key>CLANG_WARN_ENUM_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_INT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_OBJC_ROOT_CLASS</key>
-				<string>YES</string>
-				<key>CLANG_WARN_UNREACHABLE_CODE</key>
-				<string>YES</string>
-				<key>CLANG_WARN__DUPLICATE_METHOD_MATCH</key>
-				<string>YES</string>
-				<key>COPY_PHASE_STRIP</key>
-				<string>NO</string>
-				<key>ENABLE_NS_ASSERTIONS</key>
-				<string>NO</string>
-				<key>GCC_C_LANGUAGE_STANDARD</key>
-				<string>gnu99</string>
-				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
-				<array>
-					<string>RELEASE=1</string>
-				</array>
-				<key>GCC_WARN_64_TO_32_BIT_CONVERSION</key>
-				<string>YES</string>
-				<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNDECLARED_SELECTOR</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNUSED_FUNCTION</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNUSED_VARIABLE</key>
-				<string>YES</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>8.1</string>
-				<key>STRIP_INSTALLED_PRODUCT</key>
-				<string>NO</string>
-				<key>VALIDATE_PRODUCT</key>
-				<string>YES</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
-		</dict>
-		<key>CB4F7AF814295C55504EA894</key>
-		<dict>
-			<key>fileRef</key>
-			<string>2E8B70188401B26D681A3187</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>CE32DD4CACBC771689EBA92D</key>
-		<dict>
-			<key>fileRef</key>
-			<string>803F034925B7AE97D40AF5EF</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>CFCE54D26AA77C7B433CA574</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>cvc-amex@2x.png</string>
-			<key>path</key>
-			<string>PaymentKit/Resources/Cards/cvc-amex@2x.png</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>D06B30E150431367CCECC685</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text</string>
-			<key>name</key>
-			<string>Podfile</string>
-			<key>path</key>
-			<string>../Podfile</string>
-			<key>sourceTree</key>
-			<string>SOURCE_ROOT</string>
-			<key>xcLanguageSpecificationIdentifier</key>
-			<string>xcode.lang.ruby</string>
-		</dict>
-		<key>D06C862A1E200C5C3FAE929E</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>896174071551BC48AE20E3A8</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
-				<string>YES</string>
-				<key>GCC_PREFIX_HEADER</key>
-				<string>Target Support Files/Pods-Stripe/Pods-Stripe-prefix.pch</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>8.1</string>
-				<key>MTL_ENABLE_DEBUG_INFO</key>
-				<string>NO</string>
-				<key>OTHER_LDFLAGS</key>
-				<string></string>
-				<key>OTHER_LIBTOOLFLAGS</key>
-				<string></string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>SDKROOT</key>
-				<string>iphoneos</string>
-				<key>SKIP_INSTALL</key>
-				<string>YES</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
-		</dict>
-		<key>D1A72E3739A9791B2ECC9885</key>
-		<dict>
-			<key>fileRef</key>
-			<string>50DEE7BBC213F3D9C1E4CB61</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>D238667D10DAA5F619D952FD</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>C884418C0D04EF90145C80FB</string>
-				<string>04A393989A2FE1BA1DAF6E98</string>
-				<string>344BEDD0E5985B92654B3432</string>
-				<string>70E113CF83AF0FB0A64A53E0</string>
-				<string>AEA7B8FD3D244F8C9EE85FED</string>
-				<string>E281E16F1859F5155879684C</string>
-				<string>A1555D4097DD3ACE2C0FD421</string>
-				<string>305E9DBD6B848FFA4A46021D</string>
-				<string>BC90DE653D8BF8F8319DA612</string>
-				<string>F483E8905F7E1D03992710C8</string>
-				<string>1438ED64CD64E1D3B5BF0574</string>
-				<string>5913640EB2F9365AD795B357</string>
-				<string>EEE79266B6E75753A9004463</string>
-				<string>0B7686868020A2E0CAC3B4BC</string>
-				<string>B3ABFF6DE14DEE54869C20A4</string>
-				<string>E1AF21498627975AFACC4D6F</string>
-				<string>8D40F625617BD95BC98E45D7</string>
-			</array>
-			<key>isa</key>
-			<string>PBXHeadersBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>D32A946F1715E96CB45A4F43</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>name</key>
-			<string>STPCard.m</string>
-			<key>path</key>
-			<string>Stripe/STPCard.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>D4D9C695CA5DDCF56130BB70</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>mastercard.png</string>
-			<key>path</key>
-			<string>PaymentKit/Resources/Cards/mastercard.png</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>D5C87A74840E9F97AEF1C778</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>3DDB1F027693A2AAA36955E0</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Frameworks</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>D7DB54A224B3E29856B8C84E</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>STPCheckoutInternalUIWebViewController.h</string>
-			<key>path</key>
-			<string>Stripe/Checkout/STPCheckoutInternalUIWebViewController.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>D828BDB26F0868B9C181ED0F</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>jcb@2x.png</string>
-			<key>path</key>
-			<string>PaymentKit/Resources/Cards/jcb@2x.png</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>D9F72C0FCFCAC9ECB9E49449</key>
-		<dict>
-			<key>fileRef</key>
-			<string>B546335356A905FB7E6A6271</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>DAB1E2A42822F8E7B6C70A9A</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>E1A03EAB13C87811F82A3DD9</string>
-				<string>A55824DA58EFFBEE21B58C4A</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>defaultConfigurationName</key>
-			<string>Release</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>DB68918ED7E88280961AEEFE</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>gradient@2x.png</string>
-			<key>path</key>
-			<string>PaymentKit/Resources/gradient@2x.png</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>DD4403B4EF3E57932C1B69E7</key>
-		<dict>
-			<key>fileRef</key>
-			<string>EA144D6F618E682E6D1044C7</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>DE765FF6EEC0ED27E2418182</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>name</key>
-			<string>PTKUSAddressZip.m</string>
-			<key>path</key>
-			<string>PaymentKit/PTKUSAddressZip.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>DEE04AF8647358593D68075E</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>STPIOSCheckoutWebViewAdapter.h</string>
-			<key>path</key>
-			<string>Stripe/Checkout/STPIOSCheckoutWebViewAdapter.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>DEEEB2601CF44063022A4918</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>cvc.png</string>
-			<key>path</key>
-			<string>PaymentKit/Resources/Cards/cvc.png</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>DF179CF7CFA9B205D3740EA4</key>
-		<dict>
-			<key>fileRef</key>
-			<string>6359CCCD6E371DF83BD5E863</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>E09F6B37658BCCD1BF68F44D</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>CE32DD4CACBC771689EBA92D</string>
-			</array>
-			<key>isa</key>
-			<string>PBXFrameworksBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>E0F8D7FB39475A158AF04854</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>B88FD5A5B2F3892D81429E8B</string>
-				<string>CACFBB82F636932B92CA2EB5</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>defaultConfigurationName</key>
-			<string>Release</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>E14FAF80AFDAE71756273310</key>
-		<dict>
-			<key>fileRef</key>
-			<string>0BC34DA3B23FC1CB70200B60</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>E1A03EAB13C87811F82A3DD9</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>B41116C7000C74A7ED9034A9</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
-				<string>YES</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>8.1</string>
-				<key>MTL_ENABLE_DEBUG_INFO</key>
-				<string>YES</string>
-				<key>OTHER_LDFLAGS</key>
-				<string></string>
-				<key>OTHER_LIBTOOLFLAGS</key>
-				<string></string>
-				<key>PODS_ROOT</key>
-				<string>$(SRCROOT)</string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>SDKROOT</key>
-				<string>iphoneos</string>
-				<key>SKIP_INSTALL</key>
-				<string>YES</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Debug</string>
-		</dict>
-		<key>E1AF21498627975AFACC4D6F</key>
-		<dict>
-			<key>fileRef</key>
-			<string>13BCD9CAE2E5FACE225A68BA</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>E281E16F1859F5155879684C</key>
-		<dict>
-			<key>fileRef</key>
-			<string>D7DB54A224B3E29856B8C84E</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>E32186527C93C1158A65D926</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>name</key>
-			<string>STPFormEncoder.m</string>
-			<key>path</key>
-			<string>Stripe/STPFormEncoder.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>E3A10EBDBEA36AE5FB6445FE</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>archive.ar</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>libPods-Stripe.a</string>
-			<key>path</key>
-			<string>libPods-Stripe.a</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>E63E6807E6D19C5F17A60166</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>placeholder.png</string>
-			<key>path</key>
-			<string>PaymentKit/Resources/Cards/placeholder.png</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>E6A6EE1BF28D8055BB44EE0C</key>
-		<dict>
-			<key>fileRef</key>
-			<string>BB59C480CE23376C8311510D</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>E7041DE93B5CCACD2D87DA3B</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>1C876A069FE59C7351B8B3B4</string>
-				<string>9646489C6C3868DF9A6CD6D0</string>
-				<string>F3458BD77B38104ECD7D14A0</string>
-				<string>E6A6EE1BF28D8055BB44EE0C</string>
-				<string>39FFC90A63B5456E714D5FE2</string>
-				<string>04069EDDE78D8F2740174420</string>
-				<string>BE72BA82A5F3C96D1D26F346</string>
-				<string>E14FAF80AFDAE71756273310</string>
-				<string>D9F72C0FCFCAC9ECB9E49449</string>
-				<string>B113258B5C304E4D30F42B81</string>
-				<string>8394D6BE8379D2803043B7B4</string>
-				<string>F5CA3E6CD9B105660B79C5D4</string>
-				<string>0B8E98DDAF559DC9E51DB17B</string>
-				<string>08AF0A48BE944BBEEC1C551D</string>
-				<string>38D9E03ACB93355E79E26E4A</string>
-			</array>
-			<key>isa</key>
-			<string>PBXSourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>EA144D6F618E682E6D1044C7</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>PTKTextField.h</string>
-			<key>path</key>
-			<string>PaymentKit/PTKTextField.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>ECD2C5326FBC030F0169D8FA</key>
-		<dict>
-			<key>fileRef</key>
-			<string>BC5C4A12B37BD267DF189D8E</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>COMPILER_FLAGS</key>
-				<string>-DOS_OBJECT_USE_OBJC=0</string>
-			</dict>
-		</dict>
-		<key>ED212F3AC0F2D5101245E47B</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>Pods-environment.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>ED772EB94E899EC79F5BF536</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>7AAE580140DE8A50CF937233</string>
-				<string>2D56B209116308E1B2EA7099</string>
-			</array>
-			<key>isa</key>
-			<string>PBXFrameworksBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>EEE79266B6E75753A9004463</key>
-		<dict>
-			<key>fileRef</key>
-			<string>87CB9C0C75947A77020DDEB1</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>F3458BD77B38104ECD7D14A0</key>
-		<dict>
-			<key>fileRef</key>
-			<string>2DB1884C0CCEDE29CED84635</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>F3B24270243D1552E5FA7292</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>textfield@2x.png</string>
-			<key>path</key>
-			<string>PaymentKit/Resources/textfield@2x.png</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>F4470812BD3AC05A83B44675</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text</string>
-			<key>path</key>
-			<string>Pods-acknowledgements.markdown</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>F483E8905F7E1D03992710C8</key>
-		<dict>
-			<key>fileRef</key>
-			<string>76184C56B44CB133F6667FAB</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>F5CA3E6CD9B105660B79C5D4</key>
-		<dict>
-			<key>fileRef</key>
-			<string>9BBA56D537C07B10F27EB854</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>F7E42310A36618B58083AB96</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>DF179CF7CFA9B205D3740EA4</string>
-			</array>
-			<key>isa</key>
-			<string>PBXSourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>FA94513EE0196439F3EFB829</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>name</key>
-			<string>STPIOSCheckoutWebViewAdapter.m</string>
-			<key>path</key>
-			<string>Stripe/Checkout/STPIOSCheckoutWebViewAdapter.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>FAC8F8E3AA273CE0E2EC3359</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>STPCheckoutViewController.h</string>
-			<key>path</key>
-			<string>Stripe/PublicHeaders/Checkout/STPCheckoutViewController.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>FDC9A2FC58F3130643F1A257</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>name</key>
-			<string>PTKTextField.m</string>
-			<key>path</key>
-			<string>PaymentKit/PTKTextField.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>FF17EF2909B29FACFDFA93AE</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>name</key>
-			<string>PTKAddressZip.m</string>
-			<key>path</key>
-			<string>PaymentKit/PTKAddressZip.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>FF4A4CE50932D4D262B58D32</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>4D03F1DD9DB22A197D330B8C</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
-				<string>YES</string>
-				<key>GCC_PREFIX_HEADER</key>
-				<string>Target Support Files/Pods-PaymentKit/Pods-PaymentKit-prefix.pch</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>8.1</string>
-				<key>MTL_ENABLE_DEBUG_INFO</key>
-				<string>NO</string>
-				<key>OTHER_LDFLAGS</key>
-				<string></string>
-				<key>OTHER_LIBTOOLFLAGS</key>
-				<string></string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>SDKROOT</key>
-				<string>iphoneos</string>
-				<key>SKIP_INSTALL</key>
-				<string>YES</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
-		</dict>
-		<key>FFF0F685A3784D56E90BC9BC</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>Pods-Stripe-dummy.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-	</dict>
-	<key>rootObject</key>
-	<string>71004CFE8858AFD241BCF31A</string>
-</dict>
-</plist>
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		03EC4F6685E8D47C5834F881 /* PTKUSAddressZip.m in Sources */ = {isa = PBXBuildFile; fileRef = B58439B3901C1FF98171AC56 /* PTKUSAddressZip.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		0DCEB933A2C1BB6FB97C785E /* PTKCardExpiry.m in Sources */ = {isa = PBXBuildFile; fileRef = 666A25F321B3E01E6AFA7F4E /* PTKCardExpiry.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		0EBCFCADE2145C5592FD417A /* Pods-Stripe-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 004A9DBCA6EACB238F1FA99C /* Pods-Stripe-dummy.m */; };
+		146D2CF2EE37A543EC8DE84E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A2FE2210A33998E44C7EC5E /* Foundation.framework */; };
+		1933C3AC2FBEFCD51CAD32D3 /* PTKTextField.h in Headers */ = {isa = PBXBuildFile; fileRef = 1FC3E1BC02BD11D281364511 /* PTKTextField.h */; };
+		1D2FB281652C32740930A5EC /* STPAPIClient.h in Headers */ = {isa = PBXBuildFile; fileRef = 80E89F45C1930BEC44FB6B9F /* STPAPIClient.h */; };
+		204B308EF95CF0B0FAF9E46E /* Pods-PaymentKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 71C24B1DAE6303F592E38FA3 /* Pods-PaymentKit-dummy.m */; };
+		2507B1D99952FCCF5E84F401 /* STPAPIConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = F3D679C11D8A3782F3BA1FA1 /* STPAPIConnection.m */; };
+		2602BD51F1CDBD83626D36EC /* STPCheckoutViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = EBFC4C944A6FE13AC12F2B61 /* STPCheckoutViewController.h */; };
+		277AF5F7EEE0E240539E86C8 /* PTKAddressZip.h in Headers */ = {isa = PBXBuildFile; fileRef = 10BF8569C898659783EB3442 /* PTKAddressZip.h */; };
+		342E3158D46854887F0BD208 /* STPCheckoutWebViewAdapter.h in Headers */ = {isa = PBXBuildFile; fileRef = 74B2FCC4F7718D32243DF858 /* STPCheckoutWebViewAdapter.h */; };
+		3E7D122390805504320A6CBD /* Pods-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B6F117699DF24A4137CBBE1 /* Pods-dummy.m */; };
+		406D44BCCB36A218E472AACA /* STPCard.m in Sources */ = {isa = PBXBuildFile; fileRef = 578B62031FB51BD7331728E3 /* STPCard.m */; };
+		4152BDA006B036E6B3A26EA9 /* PTKComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E71A6041B0D498718F19285 /* PTKComponent.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		4C3B38B4CFDD24D329C58B76 /* STPCheckoutOptions.h in Headers */ = {isa = PBXBuildFile; fileRef = 45B907CC5D74115AB10AB8A4 /* STPCheckoutOptions.h */; };
+		52153A2139C98793C5E33D75 /* StripeError.h in Headers */ = {isa = PBXBuildFile; fileRef = 80D15FF00D8DD88A96F7EA1A /* StripeError.h */; };
+		5C37F0E4F9045628D6F29D2C /* PTKView.h in Headers */ = {isa = PBXBuildFile; fileRef = E0984741EB29B37EA3AD7A29 /* PTKView.h */; };
+		5D5C1CC2518F44E8261162AD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A2FE2210A33998E44C7EC5E /* Foundation.framework */; };
+		5E3D569988E7FDFFE7E4D965 /* STPCheckoutOptions.m in Sources */ = {isa = PBXBuildFile; fileRef = 277CF5E9F471933D616919BA /* STPCheckoutOptions.m */; };
+		61A12F010C298978B3ACD119 /* PTKCardNumber.h in Headers */ = {isa = PBXBuildFile; fileRef = 816385BEDA937EA65657373D /* PTKCardNumber.h */; };
+		679B672453DDED16794D392B /* STPColorUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 1C295CFAFD2B8F1394BD25B2 /* STPColorUtils.h */; };
+		68FE6A01253822228B086714 /* STPIOSCheckoutWebViewAdapter.h in Headers */ = {isa = PBXBuildFile; fileRef = 4CEC0E1B0B101C6651CEC7F6 /* STPIOSCheckoutWebViewAdapter.h */; };
+		6AC944D3F52AD208B561D482 /* STPCard.h in Headers */ = {isa = PBXBuildFile; fileRef = ABA6BE157B56BF28E6708EAE /* STPCard.h */; };
+		7DCB35F52798EF274CABA775 /* PTKTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 7660822B4B723BB23F142B4C /* PTKTextField.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		7E95EADDB13DDC173BDF7F39 /* PTKCard.h in Headers */ = {isa = PBXBuildFile; fileRef = B9E0DF352582BE9075600C8F /* PTKCard.h */; };
+		825DCC6270DF9DB312700382 /* Stripe.h in Headers */ = {isa = PBXBuildFile; fileRef = 28A437ECE62AC4675559531E /* Stripe.h */; };
+		8705E955FD2C67EB6B4546E4 /* PTKCardType.h in Headers */ = {isa = PBXBuildFile; fileRef = AB9CC96762846949B0B79028 /* PTKCardType.h */; };
+		8C42125305C2318C46DC639C /* STPBankAccount.m in Sources */ = {isa = PBXBuildFile; fileRef = C12F0D3F80FCE3EA60F58874 /* STPBankAccount.m */; };
+		8CABD7B2BC81ECCB3E1915BE /* STPStrictURLProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = F3FBA6AC513D2CD06C5AA0F1 /* STPStrictURLProtocol.h */; };
+		92A2AC274EA9A4D8BA7BFEE7 /* STPAPIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 28243A4F6D0B29DEC02E694F /* STPAPIClient.m */; };
+		99D34FC2BF52DC21C6A1F00B /* STPOSXCheckoutWebViewAdapter.h in Headers */ = {isa = PBXBuildFile; fileRef = 3793C25FD9B8E025E0988441 /* STPOSXCheckoutWebViewAdapter.h */; };
+		9D0FD4D6D9D1CA32550A9276 /* PTKComponent.h in Headers */ = {isa = PBXBuildFile; fileRef = 66A1F69C57A2CB30CFA49D02 /* PTKComponent.h */; };
+		9DC2F037B9B9F2981B923E4A /* STPFormEncoder.h in Headers */ = {isa = PBXBuildFile; fileRef = 3F9D78D37C774B17A6B742B4 /* STPFormEncoder.h */; };
+		A4CC8D830080DE6D67B045DA /* STPIOSCheckoutWebViewAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = CBA50CC5D30CC5DA337A7497 /* STPIOSCheckoutWebViewAdapter.m */; };
+		A992B2B65CBD6EBF3AC9B5B2 /* PTKCardExpiry.h in Headers */ = {isa = PBXBuildFile; fileRef = 1A1ABA81639F12AFFDA2D0DF /* PTKCardExpiry.h */; };
+		ABF71920FE69B143D100DA6D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A2FE2210A33998E44C7EC5E /* Foundation.framework */; };
+		AEDA3A6E0EB6465CB9C5D400 /* STPToken.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B2A03DD452326E0133B9481 /* STPToken.m */; };
+		AEE950836415BE4546AE9F8A /* PTKCardCVC.h in Headers */ = {isa = PBXBuildFile; fileRef = E15CB0B9A30DCDC3466700CA /* PTKCardCVC.h */; };
+		B7FBC1167DA734B7603EC168 /* PTKCardNumber.m in Sources */ = {isa = PBXBuildFile; fileRef = D47BDF75F9D9D285A65ACC10 /* PTKCardNumber.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		B9AF53657619777F0812FD52 /* STPBankAccount.h in Headers */ = {isa = PBXBuildFile; fileRef = 23EA3CE114EA988CF56DA093 /* STPBankAccount.h */; };
+		C9CE3814AEBF10EEDD311B3E /* StripeError.m in Sources */ = {isa = PBXBuildFile; fileRef = FA6D6C1F1A1A99899ACFE452 /* StripeError.m */; };
+		D4589058F494DC49BE62C20D /* PTKAddressZip.m in Sources */ = {isa = PBXBuildFile; fileRef = 261582C8B3F18D3EBC092883 /* PTKAddressZip.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		D61C9B6DF62FAE867E8320FB /* PTKView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E4866C85BECBBE350109FAF /* PTKView.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		D6F81B2746FCF77CCAF53C2E /* STPColorUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 850512402BCC6825E3201895 /* STPColorUtils.m */; };
+		D7502EFD865A2566E3DAC74B /* PTKUSAddressZip.h in Headers */ = {isa = PBXBuildFile; fileRef = 6A5DAD8E40A87456F8919B06 /* PTKUSAddressZip.h */; };
+		DA3ACB251C5AC8D3882280A8 /* STPCheckoutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F66E3A37C220CC8096826E07 /* STPCheckoutViewController.m */; };
+		DE71B30BE7CDD59DABFBE569 /* STPCheckoutDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D18EBF0765D4074199C29B /* STPCheckoutDelegate.h */; };
+		E4645F380DC5B3BB80F3C33A /* STPStrictURLProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = 071917F60D008BCDF02FCCD8 /* STPStrictURLProtocol.m */; };
+		E5556B0427AC396B55CC313E /* PTKCard.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C2C774387F1E896E80EC7E2 /* PTKCard.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		E6992283A9627734430A818B /* STPOSXCheckoutWebViewAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C4DB9C87D23A73698B9BE25 /* STPOSXCheckoutWebViewAdapter.m */; };
+		E8A55CC2492948587C2AD321 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E69EA272B0BFB5FB111B03CC /* Security.framework */; };
+		ECA7632967AA0F05A30D9BFB /* STPFormEncoder.m in Sources */ = {isa = PBXBuildFile; fileRef = BFD8A1839BFCE120CC20DEF3 /* STPFormEncoder.m */; };
+		F317AD12F4F2AEC0315A4C38 /* STPToken.h in Headers */ = {isa = PBXBuildFile; fileRef = A7C6BBE6B4290D4169B1A3AF /* STPToken.h */; };
+		F48A1157581F332D414D08C9 /* STPAPIConnection.h in Headers */ = {isa = PBXBuildFile; fileRef = 284988DD7324BEEABF78D3CA /* STPAPIConnection.h */; };
+		F7906C1B2DDBE2BACD46773D /* STPCheckoutInternalUIWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83CC954D85735382D47481EE /* STPCheckoutInternalUIWebViewController.m */; };
+		F940CD02B9EEC4E26F72A54C /* STPCheckoutInternalUIWebViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 7301BFAB317B5A78E8FA0219 /* STPCheckoutInternalUIWebViewController.h */; };
+		FD98AF92E2B89D511EF90A1A /* PTKCardCVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 96999E5F25BC78279E70A704 /* PTKCardCVC.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		46734CE9DC2E6B28A9C82D0C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CEF5AF5E00B604B065995334 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0DD6A16EB421E7603C973C0D;
+			remoteInfo = "Pods-Stripe";
+		};
+		A18EB948E6F434D7A741721F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CEF5AF5E00B604B065995334 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 38EDCB2378144A88459C979F;
+			remoteInfo = "Pods-PaymentKit";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0012B5EB56614736A9A0F069 /* Pods-PaymentKit-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PaymentKit-Private.xcconfig"; sourceTree = "<group>"; };
+		004A9DBCA6EACB238F1FA99C /* Pods-Stripe-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Stripe-dummy.m"; sourceTree = "<group>"; };
+		03C6BD7D4D819F6808625179 /* diners.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = diners.png; path = PaymentKit/Resources/Cards/diners.png; sourceTree = "<group>"; };
+		04A4FA05F373F656A978A08B /* Pods-Stripe.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Stripe.xcconfig"; sourceTree = "<group>"; };
+		04D18EBF0765D4074199C29B /* STPCheckoutDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = STPCheckoutDelegate.h; path = Stripe/Checkout/STPCheckoutDelegate.h; sourceTree = "<group>"; };
+		071917F60D008BCDF02FCCD8 /* STPStrictURLProtocol.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = STPStrictURLProtocol.m; path = Stripe/Checkout/STPStrictURLProtocol.m; sourceTree = "<group>"; };
+		09F579C5C33E6543BF3A2F4F /* Pods-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-acknowledgements.markdown"; sourceTree = "<group>"; };
+		107934E1B1DC416013D90B9D /* discover.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = discover.png; path = PaymentKit/Resources/Cards/discover.png; sourceTree = "<group>"; };
+		10BF8569C898659783EB3442 /* PTKAddressZip.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PTKAddressZip.h; path = PaymentKit/PTKAddressZip.h; sourceTree = "<group>"; };
+		19223AB8116353C58DC7B29B /* cvc-amex.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "cvc-amex.png"; path = "PaymentKit/Resources/Cards/cvc-amex.png"; sourceTree = "<group>"; };
+		1A1ABA81639F12AFFDA2D0DF /* PTKCardExpiry.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PTKCardExpiry.h; path = PaymentKit/PTKCardExpiry.h; sourceTree = "<group>"; };
+		1C295CFAFD2B8F1394BD25B2 /* STPColorUtils.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = STPColorUtils.h; path = Stripe/Checkout/STPColorUtils.h; sourceTree = "<group>"; };
+		1FC3E1BC02BD11D281364511 /* PTKTextField.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PTKTextField.h; path = PaymentKit/PTKTextField.h; sourceTree = "<group>"; };
+		214D8935EB6571713A0D564F /* placeholder.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = placeholder.png; path = PaymentKit/Resources/Cards/placeholder.png; sourceTree = "<group>"; };
+		23EA3CE114EA988CF56DA093 /* STPBankAccount.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = STPBankAccount.h; path = Stripe/PublicHeaders/STPBankAccount.h; sourceTree = "<group>"; };
+		24E1A4B39021E40E578EE5C0 /* Pods-environment.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-environment.h"; sourceTree = "<group>"; };
+		261582C8B3F18D3EBC092883 /* PTKAddressZip.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PTKAddressZip.m; path = PaymentKit/PTKAddressZip.m; sourceTree = "<group>"; };
+		277CF5E9F471933D616919BA /* STPCheckoutOptions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = STPCheckoutOptions.m; path = Stripe/Checkout/STPCheckoutOptions.m; sourceTree = "<group>"; };
+		28243A4F6D0B29DEC02E694F /* STPAPIClient.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = STPAPIClient.m; path = Stripe/STPAPIClient.m; sourceTree = "<group>"; };
+		284988DD7324BEEABF78D3CA /* STPAPIConnection.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = STPAPIConnection.h; path = Stripe/STPAPIConnection.h; sourceTree = "<group>"; };
+		28A437ECE62AC4675559531E /* Stripe.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Stripe.h; path = Stripe/PublicHeaders/Stripe.h; sourceTree = "<group>"; };
+		28C4316341C648FA00D2A8FF /* placeholder@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "placeholder@2x.png"; path = "PaymentKit/Resources/Cards/placeholder@2x.png"; sourceTree = "<group>"; };
+		2B6F117699DF24A4137CBBE1 /* Pods-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-dummy.m"; sourceTree = "<group>"; };
+		345FD6F1894B829BAEF42F3D /* mastercard@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "mastercard@2x.png"; path = "PaymentKit/Resources/Cards/mastercard@2x.png"; sourceTree = "<group>"; };
+		3793C25FD9B8E025E0988441 /* STPOSXCheckoutWebViewAdapter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = STPOSXCheckoutWebViewAdapter.h; path = Stripe/Checkout/STPOSXCheckoutWebViewAdapter.h; sourceTree = "<group>"; };
+		3869457DAA0349D0EB9D3BD5 /* amex@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "amex@2x.png"; path = "PaymentKit/Resources/Cards/amex@2x.png"; sourceTree = "<group>"; };
+		3CB313B9D63A6B4054464F05 /* Pods-PaymentKit.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PaymentKit.xcconfig"; sourceTree = "<group>"; };
+		3D3BE18FB9317EE71A30BC49 /* libPods-PaymentKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PaymentKit.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3F9D78D37C774B17A6B742B4 /* STPFormEncoder.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = STPFormEncoder.h; path = Stripe/STPFormEncoder.h; sourceTree = "<group>"; };
+		42AFA2B3CEE3694D76F3C965 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		436072F27D0841244CED0845 /* gradient@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "gradient@2x.png"; path = "PaymentKit/Resources/gradient@2x.png"; sourceTree = "<group>"; };
+		45B907CC5D74115AB10AB8A4 /* STPCheckoutOptions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = STPCheckoutOptions.h; path = Stripe/PublicHeaders/Checkout/STPCheckoutOptions.h; sourceTree = "<group>"; };
+		4B2A03DD452326E0133B9481 /* STPToken.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = STPToken.m; path = Stripe/STPToken.m; sourceTree = "<group>"; };
+		4CEC0E1B0B101C6651CEC7F6 /* STPIOSCheckoutWebViewAdapter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = STPIOSCheckoutWebViewAdapter.h; path = Stripe/Checkout/STPIOSCheckoutWebViewAdapter.h; sourceTree = "<group>"; };
+		50B0761836C3FAAD7D620A6C /* Pods-Stripe-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Stripe-prefix.pch"; sourceTree = "<group>"; };
+		550FB5A67516917C98CD5B8B /* Pods-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-resources.sh"; sourceTree = "<group>"; };
+		578B62031FB51BD7331728E3 /* STPCard.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = STPCard.m; path = Stripe/STPCard.m; sourceTree = "<group>"; };
+		5AED4AB6CB1069888E70E705 /* cvc-amex@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "cvc-amex@2x.png"; path = "PaymentKit/Resources/Cards/cvc-amex@2x.png"; sourceTree = "<group>"; };
+		5C4DB9C87D23A73698B9BE25 /* STPOSXCheckoutWebViewAdapter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = STPOSXCheckoutWebViewAdapter.m; path = Stripe/Checkout/STPOSXCheckoutWebViewAdapter.m; sourceTree = "<group>"; };
+		62E08728C7D1650DB74DA30C /* cvc@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "cvc@2x.png"; path = "PaymentKit/Resources/Cards/cvc@2x.png"; sourceTree = "<group>"; };
+		666A25F321B3E01E6AFA7F4E /* PTKCardExpiry.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PTKCardExpiry.m; path = PaymentKit/PTKCardExpiry.m; sourceTree = "<group>"; };
+		66A1F69C57A2CB30CFA49D02 /* PTKComponent.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PTKComponent.h; path = PaymentKit/PTKComponent.h; sourceTree = "<group>"; };
+		6A5DAD8E40A87456F8919B06 /* PTKUSAddressZip.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PTKUSAddressZip.h; path = PaymentKit/PTKUSAddressZip.h; sourceTree = "<group>"; };
+		6C6DCDB2EB8774029E8228D5 /* Pods-Stripe-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Stripe-Private.xcconfig"; sourceTree = "<group>"; };
+		6E314E51CA5AE7F2C602C00D /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Pods.debug.xcconfig; sourceTree = "<group>"; };
+		71C24B1DAE6303F592E38FA3 /* Pods-PaymentKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-PaymentKit-dummy.m"; sourceTree = "<group>"; };
+		7301BFAB317B5A78E8FA0219 /* STPCheckoutInternalUIWebViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = STPCheckoutInternalUIWebViewController.h; path = Stripe/Checkout/STPCheckoutInternalUIWebViewController.h; sourceTree = "<group>"; };
+		7402B8581F2018B3BA1DEFDA /* textfield.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = textfield.png; path = PaymentKit/Resources/textfield.png; sourceTree = "<group>"; };
+		74B2FCC4F7718D32243DF858 /* STPCheckoutWebViewAdapter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = STPCheckoutWebViewAdapter.h; path = Stripe/Checkout/STPCheckoutWebViewAdapter.h; sourceTree = "<group>"; };
+		7660822B4B723BB23F142B4C /* PTKTextField.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PTKTextField.m; path = PaymentKit/PTKTextField.m; sourceTree = "<group>"; };
+		7B0DE030D2BDC2672A8863B2 /* amex.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = amex.png; path = PaymentKit/Resources/Cards/amex.png; sourceTree = "<group>"; };
+		7B1163B8FD37EEA30093EE36 /* libPods-Stripe.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Stripe.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7C2C774387F1E896E80EC7E2 /* PTKCard.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PTKCard.m; path = PaymentKit/PTKCard.m; sourceTree = "<group>"; };
+		7E71A6041B0D498718F19285 /* PTKComponent.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PTKComponent.m; path = PaymentKit/PTKComponent.m; sourceTree = "<group>"; };
+		80D15FF00D8DD88A96F7EA1A /* StripeError.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = StripeError.h; path = Stripe/PublicHeaders/StripeError.h; sourceTree = "<group>"; };
+		80E89F45C1930BEC44FB6B9F /* STPAPIClient.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = STPAPIClient.h; path = Stripe/PublicHeaders/STPAPIClient.h; sourceTree = "<group>"; };
+		816385BEDA937EA65657373D /* PTKCardNumber.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PTKCardNumber.h; path = PaymentKit/PTKCardNumber.h; sourceTree = "<group>"; };
+		839C63B62DE81294F2783A34 /* cvc.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = cvc.png; path = PaymentKit/Resources/Cards/cvc.png; sourceTree = "<group>"; };
+		83CC954D85735382D47481EE /* STPCheckoutInternalUIWebViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = STPCheckoutInternalUIWebViewController.m; path = Stripe/Checkout/STPCheckoutInternalUIWebViewController.m; sourceTree = "<group>"; };
+		850512402BCC6825E3201895 /* STPColorUtils.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = STPColorUtils.m; path = Stripe/Checkout/STPColorUtils.m; sourceTree = "<group>"; };
+		89B507BC0E187B700A1F02BC /* discover@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "discover@2x.png"; path = "PaymentKit/Resources/Cards/discover@2x.png"; sourceTree = "<group>"; };
+		8E4866C85BECBBE350109FAF /* PTKView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PTKView.m; path = PaymentKit/PTKView.m; sourceTree = "<group>"; };
+		9622800752D28FA730F5729C /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Pods.release.xcconfig; sourceTree = "<group>"; };
+		96999E5F25BC78279E70A704 /* PTKCardCVC.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PTKCardCVC.m; path = PaymentKit/PTKCardCVC.m; sourceTree = "<group>"; };
+		994292358BCCD18B665B72E9 /* Pods-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-acknowledgements.plist"; sourceTree = "<group>"; };
+		9A2FE2210A33998E44C7EC5E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		9D30CFF61E6BCFE79D231068 /* mastercard.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = mastercard.png; path = PaymentKit/Resources/Cards/mastercard.png; sourceTree = "<group>"; };
+		A7C6BBE6B4290D4169B1A3AF /* STPToken.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = STPToken.h; path = Stripe/PublicHeaders/STPToken.h; sourceTree = "<group>"; };
+		AB9CC96762846949B0B79028 /* PTKCardType.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PTKCardType.h; path = PaymentKit/PTKCardType.h; sourceTree = "<group>"; };
+		ABA6BE157B56BF28E6708EAE /* STPCard.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = STPCard.h; path = Stripe/PublicHeaders/STPCard.h; sourceTree = "<group>"; };
+		B3685D3BEB02A0083F137130 /* textfield@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "textfield@2x.png"; path = "PaymentKit/Resources/textfield@2x.png"; sourceTree = "<group>"; };
+		B58439B3901C1FF98171AC56 /* PTKUSAddressZip.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PTKUSAddressZip.m; path = PaymentKit/PTKUSAddressZip.m; sourceTree = "<group>"; };
+		B9E0DF352582BE9075600C8F /* PTKCard.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PTKCard.h; path = PaymentKit/PTKCard.h; sourceTree = "<group>"; };
+		BF34CF8B232670450F7CB02D /* visa@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "visa@2x.png"; path = "PaymentKit/Resources/Cards/visa@2x.png"; sourceTree = "<group>"; };
+		BFD8A1839BFCE120CC20DEF3 /* STPFormEncoder.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = STPFormEncoder.m; path = Stripe/STPFormEncoder.m; sourceTree = "<group>"; };
+		C12F0D3F80FCE3EA60F58874 /* STPBankAccount.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = STPBankAccount.m; path = Stripe/STPBankAccount.m; sourceTree = "<group>"; };
+		C79103F715E8FA9F4767AEAE /* diners@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "diners@2x.png"; path = "PaymentKit/Resources/Cards/diners@2x.png"; sourceTree = "<group>"; };
+		CBA50CC5D30CC5DA337A7497 /* STPIOSCheckoutWebViewAdapter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = STPIOSCheckoutWebViewAdapter.m; path = Stripe/Checkout/STPIOSCheckoutWebViewAdapter.m; sourceTree = "<group>"; };
+		D1B8F66E5156A5D930513BCE /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		D47BDF75F9D9D285A65ACC10 /* PTKCardNumber.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PTKCardNumber.m; path = PaymentKit/PTKCardNumber.m; sourceTree = "<group>"; };
+		DE9063FFA8AACE465555C636 /* Pods-PaymentKit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-PaymentKit-prefix.pch"; sourceTree = "<group>"; };
+		E0984741EB29B37EA3AD7A29 /* PTKView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PTKView.h; path = PaymentKit/PTKView.h; sourceTree = "<group>"; };
+		E09AAD27240C13225C4CD603 /* jcb.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = jcb.png; path = PaymentKit/Resources/Cards/jcb.png; sourceTree = "<group>"; };
+		E15CB0B9A30DCDC3466700CA /* PTKCardCVC.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PTKCardCVC.h; path = PaymentKit/PTKCardCVC.h; sourceTree = "<group>"; };
+		E5F67C59FC46810F47E7A89B /* jcb@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "jcb@2x.png"; path = "PaymentKit/Resources/Cards/jcb@2x.png"; sourceTree = "<group>"; };
+		E69EA272B0BFB5FB111B03CC /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/Security.framework; sourceTree = DEVELOPER_DIR; };
+		EBFC4C944A6FE13AC12F2B61 /* STPCheckoutViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = STPCheckoutViewController.h; path = Stripe/PublicHeaders/Checkout/STPCheckoutViewController.h; sourceTree = "<group>"; };
+		F3D679C11D8A3782F3BA1FA1 /* STPAPIConnection.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = STPAPIConnection.m; path = Stripe/STPAPIConnection.m; sourceTree = "<group>"; };
+		F3FBA6AC513D2CD06C5AA0F1 /* STPStrictURLProtocol.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = STPStrictURLProtocol.h; path = Stripe/Checkout/STPStrictURLProtocol.h; sourceTree = "<group>"; };
+		F66E3A37C220CC8096826E07 /* STPCheckoutViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = STPCheckoutViewController.m; path = Stripe/Checkout/STPCheckoutViewController.m; sourceTree = "<group>"; };
+		F6EBF2A17875B4641BFFFFE8 /* visa.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = visa.png; path = PaymentKit/Resources/Cards/visa.png; sourceTree = "<group>"; };
+		FA6D6C1F1A1A99899ACFE452 /* StripeError.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = StripeError.m; path = Stripe/StripeError.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		602CDB2CF72E71DEAA3EB446 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ABF71920FE69B143D100DA6D /* Foundation.framework in Frameworks */,
+				E8A55CC2492948587C2AD321 /* Security.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7CE48E2530A6A3F0B7BEEDAC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5D5C1CC2518F44E8261162AD /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FE5A30C87A100577A72198C7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				146D2CF2EE37A543EC8DE84E /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		053BC56D23AA3AAD7C08CBC0 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F60205D19B83925AE43E4B68 /* PaymentKit */,
+				56685162180665560A0A62F7 /* Stripe */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		16C27C3DEDE7F32D7113DBD4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				42AFA2B3CEE3694D76F3C965 /* libPods.a */,
+				3D3BE18FB9317EE71A30BC49 /* libPods-PaymentKit.a */,
+				7B1163B8FD37EEA30093EE36 /* libPods-Stripe.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		55D002290224EBD87202E5A8 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				80E89F45C1930BEC44FB6B9F /* STPAPIClient.h */,
+				28243A4F6D0B29DEC02E694F /* STPAPIClient.m */,
+				284988DD7324BEEABF78D3CA /* STPAPIConnection.h */,
+				F3D679C11D8A3782F3BA1FA1 /* STPAPIConnection.m */,
+				23EA3CE114EA988CF56DA093 /* STPBankAccount.h */,
+				C12F0D3F80FCE3EA60F58874 /* STPBankAccount.m */,
+				ABA6BE157B56BF28E6708EAE /* STPCard.h */,
+				578B62031FB51BD7331728E3 /* STPCard.m */,
+				04D18EBF0765D4074199C29B /* STPCheckoutDelegate.h */,
+				7301BFAB317B5A78E8FA0219 /* STPCheckoutInternalUIWebViewController.h */,
+				83CC954D85735382D47481EE /* STPCheckoutInternalUIWebViewController.m */,
+				45B907CC5D74115AB10AB8A4 /* STPCheckoutOptions.h */,
+				277CF5E9F471933D616919BA /* STPCheckoutOptions.m */,
+				EBFC4C944A6FE13AC12F2B61 /* STPCheckoutViewController.h */,
+				F66E3A37C220CC8096826E07 /* STPCheckoutViewController.m */,
+				74B2FCC4F7718D32243DF858 /* STPCheckoutWebViewAdapter.h */,
+				1C295CFAFD2B8F1394BD25B2 /* STPColorUtils.h */,
+				850512402BCC6825E3201895 /* STPColorUtils.m */,
+				3F9D78D37C774B17A6B742B4 /* STPFormEncoder.h */,
+				BFD8A1839BFCE120CC20DEF3 /* STPFormEncoder.m */,
+				4CEC0E1B0B101C6651CEC7F6 /* STPIOSCheckoutWebViewAdapter.h */,
+				CBA50CC5D30CC5DA337A7497 /* STPIOSCheckoutWebViewAdapter.m */,
+				3793C25FD9B8E025E0988441 /* STPOSXCheckoutWebViewAdapter.h */,
+				5C4DB9C87D23A73698B9BE25 /* STPOSXCheckoutWebViewAdapter.m */,
+				F3FBA6AC513D2CD06C5AA0F1 /* STPStrictURLProtocol.h */,
+				071917F60D008BCDF02FCCD8 /* STPStrictURLProtocol.m */,
+				A7C6BBE6B4290D4169B1A3AF /* STPToken.h */,
+				4B2A03DD452326E0133B9481 /* STPToken.m */,
+				28A437ECE62AC4675559531E /* Stripe.h */,
+				80D15FF00D8DD88A96F7EA1A /* StripeError.h */,
+				FA6D6C1F1A1A99899ACFE452 /* StripeError.m */,
+			);
+			name = Core;
+			sourceTree = "<group>";
+		};
+		56685162180665560A0A62F7 /* Stripe */ = {
+			isa = PBXGroup;
+			children = (
+				55D002290224EBD87202E5A8 /* Core */,
+				5B70E23D9680A88EA3B44A89 /* Support Files */,
+			);
+			path = Stripe;
+			sourceTree = "<group>";
+		};
+		5B70E23D9680A88EA3B44A89 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				04A4FA05F373F656A978A08B /* Pods-Stripe.xcconfig */,
+				6C6DCDB2EB8774029E8228D5 /* Pods-Stripe-Private.xcconfig */,
+				004A9DBCA6EACB238F1FA99C /* Pods-Stripe-dummy.m */,
+				50B0761836C3FAAD7D620A6C /* Pods-Stripe-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Pods-Stripe";
+			sourceTree = "<group>";
+		};
+		5F195D6E069B2FB56A8C5255 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				C2DFDDA0D61FA7DB6B023133 /* Pods */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		84D10FF926FD3C453ED65C95 = {
+			isa = PBXGroup;
+			children = (
+				D1B8F66E5156A5D930513BCE /* Podfile */,
+				A427A0DA12D6F25AC82A7D6E /* Frameworks */,
+				053BC56D23AA3AAD7C08CBC0 /* Pods */,
+				16C27C3DEDE7F32D7113DBD4 /* Products */,
+				5F195D6E069B2FB56A8C5255 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		A427A0DA12D6F25AC82A7D6E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D5D2536254DC8BDBC8C046B3 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BD10B4AB99A50624F23261F8 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				3CB313B9D63A6B4054464F05 /* Pods-PaymentKit.xcconfig */,
+				0012B5EB56614736A9A0F069 /* Pods-PaymentKit-Private.xcconfig */,
+				71C24B1DAE6303F592E38FA3 /* Pods-PaymentKit-dummy.m */,
+				DE9063FFA8AACE465555C636 /* Pods-PaymentKit-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Pods-PaymentKit";
+			sourceTree = "<group>";
+		};
+		C2DFDDA0D61FA7DB6B023133 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				09F579C5C33E6543BF3A2F4F /* Pods-acknowledgements.markdown */,
+				994292358BCCD18B665B72E9 /* Pods-acknowledgements.plist */,
+				2B6F117699DF24A4137CBBE1 /* Pods-dummy.m */,
+				24E1A4B39021E40E578EE5C0 /* Pods-environment.h */,
+				550FB5A67516917C98CD5B8B /* Pods-resources.sh */,
+				6E314E51CA5AE7F2C602C00D /* Pods.debug.xcconfig */,
+				9622800752D28FA730F5729C /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			path = "Target Support Files/Pods";
+			sourceTree = "<group>";
+		};
+		D5D2536254DC8BDBC8C046B3 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				9A2FE2210A33998E44C7EC5E /* Foundation.framework */,
+				E69EA272B0BFB5FB111B03CC /* Security.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		DBEFE811CF929B55FCCBDBA5 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				7B0DE030D2BDC2672A8863B2 /* amex.png */,
+				3869457DAA0349D0EB9D3BD5 /* amex@2x.png */,
+				839C63B62DE81294F2783A34 /* cvc.png */,
+				19223AB8116353C58DC7B29B /* cvc-amex.png */,
+				5AED4AB6CB1069888E70E705 /* cvc-amex@2x.png */,
+				62E08728C7D1650DB74DA30C /* cvc@2x.png */,
+				03C6BD7D4D819F6808625179 /* diners.png */,
+				C79103F715E8FA9F4767AEAE /* diners@2x.png */,
+				107934E1B1DC416013D90B9D /* discover.png */,
+				89B507BC0E187B700A1F02BC /* discover@2x.png */,
+				436072F27D0841244CED0845 /* gradient@2x.png */,
+				E09AAD27240C13225C4CD603 /* jcb.png */,
+				E5F67C59FC46810F47E7A89B /* jcb@2x.png */,
+				9D30CFF61E6BCFE79D231068 /* mastercard.png */,
+				345FD6F1894B829BAEF42F3D /* mastercard@2x.png */,
+				214D8935EB6571713A0D564F /* placeholder.png */,
+				28C4316341C648FA00D2A8FF /* placeholder@2x.png */,
+				7402B8581F2018B3BA1DEFDA /* textfield.png */,
+				B3685D3BEB02A0083F137130 /* textfield@2x.png */,
+				F6EBF2A17875B4641BFFFFE8 /* visa.png */,
+				BF34CF8B232670450F7CB02D /* visa@2x.png */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		F60205D19B83925AE43E4B68 /* PaymentKit */ = {
+			isa = PBXGroup;
+			children = (
+				10BF8569C898659783EB3442 /* PTKAddressZip.h */,
+				261582C8B3F18D3EBC092883 /* PTKAddressZip.m */,
+				B9E0DF352582BE9075600C8F /* PTKCard.h */,
+				7C2C774387F1E896E80EC7E2 /* PTKCard.m */,
+				E15CB0B9A30DCDC3466700CA /* PTKCardCVC.h */,
+				96999E5F25BC78279E70A704 /* PTKCardCVC.m */,
+				1A1ABA81639F12AFFDA2D0DF /* PTKCardExpiry.h */,
+				666A25F321B3E01E6AFA7F4E /* PTKCardExpiry.m */,
+				816385BEDA937EA65657373D /* PTKCardNumber.h */,
+				D47BDF75F9D9D285A65ACC10 /* PTKCardNumber.m */,
+				AB9CC96762846949B0B79028 /* PTKCardType.h */,
+				66A1F69C57A2CB30CFA49D02 /* PTKComponent.h */,
+				7E71A6041B0D498718F19285 /* PTKComponent.m */,
+				1FC3E1BC02BD11D281364511 /* PTKTextField.h */,
+				7660822B4B723BB23F142B4C /* PTKTextField.m */,
+				6A5DAD8E40A87456F8919B06 /* PTKUSAddressZip.h */,
+				B58439B3901C1FF98171AC56 /* PTKUSAddressZip.m */,
+				E0984741EB29B37EA3AD7A29 /* PTKView.h */,
+				8E4866C85BECBBE350109FAF /* PTKView.m */,
+				DBEFE811CF929B55FCCBDBA5 /* Resources */,
+				BD10B4AB99A50624F23261F8 /* Support Files */,
+			);
+			path = PaymentKit;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		186C6174A7E4CC492BB773B7 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D2FB281652C32740930A5EC /* STPAPIClient.h in Headers */,
+				F48A1157581F332D414D08C9 /* STPAPIConnection.h in Headers */,
+				B9AF53657619777F0812FD52 /* STPBankAccount.h in Headers */,
+				6AC944D3F52AD208B561D482 /* STPCard.h in Headers */,
+				DE71B30BE7CDD59DABFBE569 /* STPCheckoutDelegate.h in Headers */,
+				F940CD02B9EEC4E26F72A54C /* STPCheckoutInternalUIWebViewController.h in Headers */,
+				4C3B38B4CFDD24D329C58B76 /* STPCheckoutOptions.h in Headers */,
+				2602BD51F1CDBD83626D36EC /* STPCheckoutViewController.h in Headers */,
+				342E3158D46854887F0BD208 /* STPCheckoutWebViewAdapter.h in Headers */,
+				679B672453DDED16794D392B /* STPColorUtils.h in Headers */,
+				9DC2F037B9B9F2981B923E4A /* STPFormEncoder.h in Headers */,
+				68FE6A01253822228B086714 /* STPIOSCheckoutWebViewAdapter.h in Headers */,
+				99D34FC2BF52DC21C6A1F00B /* STPOSXCheckoutWebViewAdapter.h in Headers */,
+				8CABD7B2BC81ECCB3E1915BE /* STPStrictURLProtocol.h in Headers */,
+				F317AD12F4F2AEC0315A4C38 /* STPToken.h in Headers */,
+				825DCC6270DF9DB312700382 /* Stripe.h in Headers */,
+				52153A2139C98793C5E33D75 /* StripeError.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		65AFDA8050D58365563989AF /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				277AF5F7EEE0E240539E86C8 /* PTKAddressZip.h in Headers */,
+				7E95EADDB13DDC173BDF7F39 /* PTKCard.h in Headers */,
+				AEE950836415BE4546AE9F8A /* PTKCardCVC.h in Headers */,
+				A992B2B65CBD6EBF3AC9B5B2 /* PTKCardExpiry.h in Headers */,
+				61A12F010C298978B3ACD119 /* PTKCardNumber.h in Headers */,
+				8705E955FD2C67EB6B4546E4 /* PTKCardType.h in Headers */,
+				9D0FD4D6D9D1CA32550A9276 /* PTKComponent.h in Headers */,
+				1933C3AC2FBEFCD51CAD32D3 /* PTKTextField.h in Headers */,
+				D7502EFD865A2566E3DAC74B /* PTKUSAddressZip.h in Headers */,
+				5C37F0E4F9045628D6F29D2C /* PTKView.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		0DD6A16EB421E7603C973C0D /* Pods-Stripe */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F5CC0D139EAC6C05CEC7880A /* Build configuration list for PBXNativeTarget "Pods-Stripe" */;
+			buildPhases = (
+				9638C42B52461D39B73CEFFB /* Sources */,
+				602CDB2CF72E71DEAA3EB446 /* Frameworks */,
+				186C6174A7E4CC492BB773B7 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-Stripe";
+			productName = "Pods-Stripe";
+			productReference = 7B1163B8FD37EEA30093EE36 /* libPods-Stripe.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		38EDCB2378144A88459C979F /* Pods-PaymentKit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2932AC13E166A8C71AB10355 /* Build configuration list for PBXNativeTarget "Pods-PaymentKit" */;
+			buildPhases = (
+				14BD93D6DDCD16A88C026764 /* Sources */,
+				7CE48E2530A6A3F0B7BEEDAC /* Frameworks */,
+				65AFDA8050D58365563989AF /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-PaymentKit";
+			productName = "Pods-PaymentKit";
+			productReference = 3D3BE18FB9317EE71A30BC49 /* libPods-PaymentKit.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		984EE9B2B6C59164DA1CDB0A /* Pods */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 24EE466236AE46EC9F8373AF /* Build configuration list for PBXNativeTarget "Pods" */;
+			buildPhases = (
+				A139FA68D9B5DC369B2F7AF7 /* Sources */,
+				FE5A30C87A100577A72198C7 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E78B2C824975774E6E59C764 /* PBXTargetDependency */,
+				87AB2C73610DA2FDCEC32CF7 /* PBXTargetDependency */,
+			);
+			name = Pods;
+			productName = Pods;
+			productReference = 42AFA2B3CEE3694D76F3C965 /* libPods.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CEF5AF5E00B604B065995334 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0640;
+			};
+			buildConfigurationList = 5BEA71D247660B4BCB97AF24 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 84D10FF926FD3C453ED65C95;
+			productRefGroup = 16C27C3DEDE7F32D7113DBD4 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				984EE9B2B6C59164DA1CDB0A /* Pods */,
+				38EDCB2378144A88459C979F /* Pods-PaymentKit */,
+				0DD6A16EB421E7603C973C0D /* Pods-Stripe */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		14BD93D6DDCD16A88C026764 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D4589058F494DC49BE62C20D /* PTKAddressZip.m in Sources */,
+				E5556B0427AC396B55CC313E /* PTKCard.m in Sources */,
+				FD98AF92E2B89D511EF90A1A /* PTKCardCVC.m in Sources */,
+				0DCEB933A2C1BB6FB97C785E /* PTKCardExpiry.m in Sources */,
+				B7FBC1167DA734B7603EC168 /* PTKCardNumber.m in Sources */,
+				4152BDA006B036E6B3A26EA9 /* PTKComponent.m in Sources */,
+				7DCB35F52798EF274CABA775 /* PTKTextField.m in Sources */,
+				03EC4F6685E8D47C5834F881 /* PTKUSAddressZip.m in Sources */,
+				D61C9B6DF62FAE867E8320FB /* PTKView.m in Sources */,
+				204B308EF95CF0B0FAF9E46E /* Pods-PaymentKit-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9638C42B52461D39B73CEFFB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0EBCFCADE2145C5592FD417A /* Pods-Stripe-dummy.m in Sources */,
+				92A2AC274EA9A4D8BA7BFEE7 /* STPAPIClient.m in Sources */,
+				2507B1D99952FCCF5E84F401 /* STPAPIConnection.m in Sources */,
+				8C42125305C2318C46DC639C /* STPBankAccount.m in Sources */,
+				406D44BCCB36A218E472AACA /* STPCard.m in Sources */,
+				F7906C1B2DDBE2BACD46773D /* STPCheckoutInternalUIWebViewController.m in Sources */,
+				5E3D569988E7FDFFE7E4D965 /* STPCheckoutOptions.m in Sources */,
+				DA3ACB251C5AC8D3882280A8 /* STPCheckoutViewController.m in Sources */,
+				D6F81B2746FCF77CCAF53C2E /* STPColorUtils.m in Sources */,
+				ECA7632967AA0F05A30D9BFB /* STPFormEncoder.m in Sources */,
+				A4CC8D830080DE6D67B045DA /* STPIOSCheckoutWebViewAdapter.m in Sources */,
+				E6992283A9627734430A818B /* STPOSXCheckoutWebViewAdapter.m in Sources */,
+				E4645F380DC5B3BB80F3C33A /* STPStrictURLProtocol.m in Sources */,
+				AEDA3A6E0EB6465CB9C5D400 /* STPToken.m in Sources */,
+				C9CE3814AEBF10EEDD311B3E /* StripeError.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A139FA68D9B5DC369B2F7AF7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3E7D122390805504320A6CBD /* Pods-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		87AB2C73610DA2FDCEC32CF7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-Stripe";
+			target = 0DD6A16EB421E7603C973C0D /* Pods-Stripe */;
+			targetProxy = 46734CE9DC2E6B28A9C82D0C /* PBXContainerItemProxy */;
+		};
+		E78B2C824975774E6E59C764 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-PaymentKit";
+			target = 38EDCB2378144A88459C979F /* Pods-PaymentKit */;
+			targetProxy = A18EB948E6F434D7A741721F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		1D4B7F54F8E5F8E91149DD13 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = "RELEASE=1";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		233B0ABB9F021F0E4D97B5CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9622800752D28FA730F5729C /* Pods.release.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		28DECD95065476CF659D03FB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6C6DCDB2EB8774029E8228D5 /* Pods-Stripe-Private.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-Stripe/Pods-Stripe-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		54A18E99BDBC2DC7F70715A5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0012B5EB56614736A9A0F069 /* Pods-PaymentKit-Private.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-PaymentKit/Pods-PaymentKit-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		6001AAA5799605687F162010 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				ONLY_ACTIVE_ARCH = YES;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		919DC69B0F0643A0CF0FAE82 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0012B5EB56614736A9A0F069 /* Pods-PaymentKit-Private.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-PaymentKit/Pods-PaymentKit-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		E95B3A9B232E44B9C981C4D4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6C6DCDB2EB8774029E8228D5 /* Pods-Stripe-Private.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-Stripe/Pods-Stripe-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		E9EE860FCB9096FFA81F3468 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6E314E51CA5AE7F2C602C00D /* Pods.debug.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		24EE466236AE46EC9F8373AF /* Build configuration list for PBXNativeTarget "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E9EE860FCB9096FFA81F3468 /* Debug */,
+				233B0ABB9F021F0E4D97B5CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2932AC13E166A8C71AB10355 /* Build configuration list for PBXNativeTarget "Pods-PaymentKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				919DC69B0F0643A0CF0FAE82 /* Debug */,
+				54A18E99BDBC2DC7F70715A5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5BEA71D247660B4BCB97AF24 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6001AAA5799605687F162010 /* Debug */,
+				1D4B7F54F8E5F8E91149DD13 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F5CC0D139EAC6C05CEC7880A /* Build configuration list for PBXNativeTarget "Pods-Stripe" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				28DECD95065476CF659D03FB /* Debug */,
+				E95B3A9B232E44B9C981C4D4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CEF5AF5E00B604B065995334 /* Project object */;
+}

@@ -11,7 +11,7 @@ import Alamofire
 
 class IndividualFilmViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UICollectionViewDataSource, UICollectionViewDelegate, DonateTableViewCellDelegate, UIScrollViewDelegate, PayPalPaymentDelegate, UITextFieldDelegate, UIGestureRecognizerDelegate {
 
-    var film = Film(className: nil)
+    var film = Film(className: "Film")
 
     @IBOutlet var tableView: UITableView!
     @IBOutlet var filmImageView: PFImageView!
@@ -549,7 +549,7 @@ class IndividualFilmViewController: UIViewController, UITableViewDataSource, UIT
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell
     {
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier(kCrewCVCell, forIndexPath: indexPath) as! CrewCollectionViewCell
-        let crewMember = film.productionTeam[indexPath.row] as! CrewMember
+        let crewMember = film.productionTeam[indexPath.row] as CrewMember
         cell.crewLabel.text = crewMember.role + ": " + crewMember.name
         cell.crewImageView.file = crewMember.imageFile
         cell.crewImageView.loadInBackground(nil)
