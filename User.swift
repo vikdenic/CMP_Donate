@@ -10,7 +10,7 @@ import Foundation
 
 class User: PFUser, PFSubclassing
 {
-    override class func load()
+    override class func initialize()
     {
         self.registerSubclass()
     }

@@ -10,7 +10,7 @@ import Foundation
 
 class Profile: PFObject, PFSubclassing
 {
-    override class func load()
+    override class func initialize()
     {
         self.registerSubclass()
     }
@@ -41,7 +41,7 @@ class Profile: PFObject, PFSubclassing
             }
             else
             {
-                completed(profile: theProfile as Profile!, error: nil)
+                completed(profile: theProfile as! Profile!, error: nil)
             }
         }
         
@@ -58,8 +58,8 @@ class Profile: PFObject, PFSubclassing
             }
             else
             {
-                (theProfile as Profile).pinInBackgroundWithName("profile", nil)
-                completed(profile: theProfile as Profile!, error: nil)
+                (theProfile as! Profile).pinInBackgroundWithName("profile", block: nil)
+                completed(profile: theProfile as! Profile!, error: nil)
             }
         })
     }

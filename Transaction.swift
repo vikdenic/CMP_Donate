@@ -14,7 +14,7 @@ let kCreatedAt = "createdAt"
 
 class Transaction: PFObject, PFSubclassing
 {
-    override class func load()
+    override class func initialize()
     {
         self.registerSubclass()
     }
@@ -54,7 +54,7 @@ class Transaction: PFObject, PFSubclassing
 
             completed(transactions: transactions as? [Transaction], error: error)
 
-            if let someTransactions = transactions as [Transaction]!
+            if let someTransactions = transactions as! [Transaction]!
             {
                 PFObject.pinAllInBackground(someTransactions, withName: kPinTransactions, block: nil)
             }

@@ -10,7 +10,7 @@ import Foundation
 
 class CrewMember: PFObject, PFSubclassing
 {
-    override class func load()
+    override class func initialize()
     {
         self.registerSubclass()
     }

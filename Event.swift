@@ -11,7 +11,7 @@ import Foundation
 
 class Event: PFObject, PFSubclassing
 {
-    override class func load()
+    override class func initialize()
     {
         self.registerSubclass()
     }
@@ -44,7 +44,7 @@ class Event: PFObject, PFSubclassing
         query.findObjectsInBackgroundWithBlock({ (events, error) -> Void in
             completed(events: events as? [Event], error: error)
 
-            if let someEvents = events as [Event]!
+            if let someEvents = events as! [Event]!
             {
                 PFObject.pinAllInBackground(someEvents, withName: "categoriesPin", block: nil)
             }

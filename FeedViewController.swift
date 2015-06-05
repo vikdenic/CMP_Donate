@@ -13,7 +13,8 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
     @IBOutlet var tableView: UITableView!
     var filmsArray = [Film]()
     var fromCategory = Bool()
-    var event = Event()
+    //TODO: May not need className, check back
+    var event = Event(className: "Event")
 
     @IBOutlet var segmentedControl: UISegmentedControl!
 
@@ -95,7 +96,7 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
     //UITableView
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
     {
-        let cell = tableView.dequeueReusableCellWithIdentifier("FeedCell") as FeedTableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("FeedCell") as! FeedTableViewCell
         let film = filmsArray[indexPath.row] as Film
         cell.titleLabel.text = film.title
         cell.filmImageView.file = film.imageFile
@@ -127,7 +128,7 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
     {
         if segue.identifier == kFeedToIndividualFilmSegue
         {
-            let individualFilmVC = segue.destinationViewController as IndividualFilmViewController
+            let individualFilmVC = segue.destinationViewController as! IndividualFilmViewController
             individualFilmVC.film = filmsArray[tableView.indexPathForSelectedRow()!.row]
         }
     }

@@ -25,16 +25,16 @@ class ChangePasswordViewController: UIViewController, UITableViewDataSource, UIT
     }
 
     override func viewDidAppear(animated: Bool) {
-        let cell = tableView.cellForRowAtIndexPath(NSIndexPath(forRow: 0, inSection: 0)) as PasswordEntryTableViewCell!
+        let cell = tableView.cellForRowAtIndexPath(NSIndexPath(forRow: 0, inSection: 0)) as! PasswordEntryTableViewCell!
         cell.entryTextField.becomeFirstResponder()
     }
 
     @IBAction func onSaveTapped(sender: UIBarButtonItem) {
-        let cellOne = tableView.cellForRowAtIndexPath(NSIndexPath(forRow: 0, inSection: 0)) as PasswordEntryTableViewCell!
-        let cellTwo = tableView.cellForRowAtIndexPath(NSIndexPath(forRow: 0, inSection: 1)) as PasswordEntryTableViewCell!
-        let cellThree = tableView.cellForRowAtIndexPath(NSIndexPath(forRow: 1, inSection: 1)) as PasswordEntryTableViewCell!
+        let cellOne = tableView.cellForRowAtIndexPath(NSIndexPath(forRow: 0, inSection: 0)) as! PasswordEntryTableViewCell!
+        let cellTwo = tableView.cellForRowAtIndexPath(NSIndexPath(forRow: 0, inSection: 1)) as! PasswordEntryTableViewCell!
+        let cellThree = tableView.cellForRowAtIndexPath(NSIndexPath(forRow: 1, inSection: 1)) as! PasswordEntryTableViewCell!
 
-        if cellOne.entryTextField.text == kStandardDefaults.valueForKey(kDefaultsPword) as String! && (cellTwo.entryTextField.text as NSString).length > 5 && cellTwo.entryTextField.text == cellThree.entryTextField.text
+        if cellOne.entryTextField.text == kStandardDefaults.valueForKey(kDefaultsPword) as! String! && (cellTwo.entryTextField.text as NSString).length > 5 && cellTwo.entryTextField.text == cellThree.entryTextField.text
         {
             kProfile?.user.password = cellTwo.entryTextField.text.lowercaseString
             kProfile?.saveInBackgroundWithBlock({ (succeeded, error) -> Void in
@@ -58,8 +58,8 @@ class ChangePasswordViewController: UIViewController, UITableViewDataSource, UIT
 
         if textField.tag == kTFOneTag
         {
-            let cell = tableView.cellForRowAtIndexPath(NSIndexPath(forRow: 0, inSection: 0)) as PasswordEntryTableViewCell!
-            if textField.text != kStandardDefaults.valueForKey(kDefaultsPword) as String!
+            let cell = tableView.cellForRowAtIndexPath(NSIndexPath(forRow: 0, inSection: 0)) as! PasswordEntryTableViewCell!
+            if textField.text != kStandardDefaults.valueForKey(kDefaultsPword) as! String!
             {
                 cell.imageView!.image = UIImage(named: "lockIconRed")
             }
@@ -68,7 +68,7 @@ class ChangePasswordViewController: UIViewController, UITableViewDataSource, UIT
                 cell.imageView!.image = UIImage(named: "lockIcon")
             }
 
-            let otherCell = tableView.cellForRowAtIndexPath(NSIndexPath(forRow: 0, inSection: 1)) as PasswordEntryTableViewCell!
+            let otherCell = tableView.cellForRowAtIndexPath(NSIndexPath(forRow: 0, inSection: 1)) as! PasswordEntryTableViewCell!
             if (otherCell.entryTextField.text as NSString).length < 6
             {
 
@@ -81,7 +81,7 @@ class ChangePasswordViewController: UIViewController, UITableViewDataSource, UIT
 
         if textField.tag == kTFTwoTag
         {
-            let cell = tableView.cellForRowAtIndexPath(NSIndexPath(forRow: 0, inSection: 1)) as PasswordEntryTableViewCell!
+            let cell = tableView.cellForRowAtIndexPath(NSIndexPath(forRow: 0, inSection: 1)) as! PasswordEntryTableViewCell!
             if (textField.text as NSString).length < 6
             {
                 cell.imageView!.image = UIImage(named: "lockIconRed")
@@ -92,8 +92,8 @@ class ChangePasswordViewController: UIViewController, UITableViewDataSource, UIT
 
             }
 
-            let otherCell = tableView.cellForRowAtIndexPath(NSIndexPath(forRow: 0, inSection: 0)) as PasswordEntryTableViewCell!
-            if otherCell.entryTextField.text != kStandardDefaults.valueForKey(kDefaultsPword) as String!
+            let otherCell = tableView.cellForRowAtIndexPath(NSIndexPath(forRow: 0, inSection: 0)) as! PasswordEntryTableViewCell!
+            if otherCell.entryTextField.text != kStandardDefaults.valueForKey(kDefaultsPword) as! String!
             {
             }
             else
@@ -104,7 +104,7 @@ class ChangePasswordViewController: UIViewController, UITableViewDataSource, UIT
     }
 
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier(kPasswordEntryCell) as PasswordEntryTableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier(kPasswordEntryCell) as! PasswordEntryTableViewCell
         cell.imageView!.image = UIImage(named: "lockIcon")
         cell.entryTextField.delegate = self
 

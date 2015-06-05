@@ -55,9 +55,12 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
 
     func raiseViewsFor4S()
     {
-        for aView in self.view.subviews as [UIView]
+        if kScreenHeight == kiPhone4Height
         {
-            aView.center.y -= 65
+            for aView in self.view.subviews as! [UIView]
+            {
+                aView.center.y -= 65
+            }
         }
     }
 
@@ -92,7 +95,7 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
                     kStandardDefaults.setValue(self.passwordTextField.text, forKey: kDefaultsPword)
 
                     newProfile.saveInBackgroundWithBlock({ (succeeded, error) -> Void in
-                        let editVC = self.storyboard?.instantiateViewControllerWithIdentifier(kStoryboardIdEditGeneralInfo) as EditGeneralInfoViewController
+                        let editVC = self.storyboard?.instantiateViewControllerWithIdentifier(kStoryboardIdEditGeneralInfo) as! EditGeneralInfoViewController
                         editVC.fromRegister = true
                         self.navigationController?.pushViewController(editVC, animated: true)
                         self.spinner.stopAnimating()
@@ -113,8 +116,7 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
         editing = true
     }
 
-    override func touchesBegan(touches: NSSet, withEvent event: UIEvent)
-    {
+    override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {
         view.endEditing(true)
 
         if editing == true

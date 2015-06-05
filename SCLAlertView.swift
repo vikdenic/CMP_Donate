@@ -26,9 +26,9 @@ class SCLButton: UIButton {
     var selector:Selector!
     var action:(()->Void)!
 
-    override init() {
-        super.init()
-    }
+//    override init() {
+//        super.init()
+//    }
 
     required init(coder aDecoder: NSCoder) {
         super.init(coder:aDecoder)
@@ -101,8 +101,9 @@ class SCLAlertView: UIViewController {
         fatalError("NSCoding not supported")
     }
 
-    required override init() {
-        super.init()
+    required init() {
+        //TODO: CHECK BACK ON THIS INITIALIZER
+        super.init(nibName: nil, bundle: nil)
         // Set up main view
         view.frame = UIScreen.mainScreen().bounds
         view.autoresizingMask = UIViewAutoresizing.FlexibleHeight | UIViewAutoresizing.FlexibleWidth
@@ -190,7 +191,7 @@ class SCLAlertView: UIViewController {
         }
     }
 
-    override func touchesEnded(touches:NSSet, withEvent event:UIEvent) {
+    override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {
         if event.touchesForView(view)?.count > 0 {
             view.endEditing(true)
         }
@@ -320,7 +321,7 @@ class SCLAlertView: UIViewController {
     // showTitle(view, title, subTitle, duration, style)
     func showTitle(title: String, subTitle: String, duration: NSTimeInterval?, completeText: String?, style: SCLAlertViewStyle) -> SCLAlertViewResponder {
         view.alpha = 0
-        let rv = UIApplication.sharedApplication().keyWindow?.subviews.first as UIView
+        let rv = UIApplication.sharedApplication().keyWindow?.subviews.first as! UIView
         rv.addSubview(view)
         view.frame = rv.bounds
         baseView.frame = rv.bounds
@@ -417,7 +418,7 @@ class SCLAlertView: UIViewController {
     // showTitle(view, title, subTitle, duration, style)
     func showTitle(title: String, image : UIImage, color : UIColor, subTitle: String, duration: NSTimeInterval?, completeText: String?) -> SCLAlertViewResponder {
         view.alpha = 0
-        let rv = UIApplication.sharedApplication().keyWindow?.subviews.first as UIView
+        let rv = UIApplication.sharedApplication().keyWindow?.subviews.first as! UIView
         rv.addSubview(view)
         view.frame = rv.bounds
         baseView.frame = rv.bounds
@@ -536,8 +537,11 @@ class SCLAlertViewStyleKit : NSObject {
     }
 
     // Initialization
-    override class func load() {
-    }
+    //TODO: Check back on this
+//    override class func initialize() {
+//    }
+
+    
 
     // Drawing Methods
     class func drawCheckmark() {

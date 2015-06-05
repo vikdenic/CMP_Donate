@@ -35,7 +35,7 @@ class FilmCategoriesViewController: UIViewController, UICollectionViewDataSource
     //UICollectionView
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         //
-        let cell = collectionView.dequeueReusableCellWithReuseIdentifier(kCatCell, forIndexPath: indexPath) as CategoryCollectionViewCell
+        let cell = collectionView.dequeueReusableCellWithReuseIdentifier(kCatCell, forIndexPath: indexPath) as! CategoryCollectionViewCell
         let event = events[indexPath.row]
         cell.categoryLabel.text = event.name
         cell.categoryLabel.sizeToFit()
@@ -55,7 +55,7 @@ class FilmCategoriesViewController: UIViewController, UICollectionViewDataSource
 
     //Segue
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        let feedVC = segue.destinationViewController as FeedViewController
+        let feedVC = segue.destinationViewController as! FeedViewController
         feedVC.fromCategory = true
         let theEvent = events[collectionView.indexPathsForSelectedItems().first!.row]
         feedVC.event = theEvent

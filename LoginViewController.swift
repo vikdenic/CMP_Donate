@@ -37,7 +37,7 @@ class LoginViewController: UIViewController {
 
     func raiseViewsFor4S()
     {
-        for aView in self.view.subviews as [UIView]
+        for aView in self.view.subviews as! [UIView]
         {
             aView.center.y -= 65
         }
@@ -76,8 +76,7 @@ class LoginViewController: UIViewController {
         editing = true
     }
 
-    override func touchesBegan(touches: NSSet, withEvent event: UIEvent)
-    {
+    override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {
         view.endEditing(true)
 
         if editing == true

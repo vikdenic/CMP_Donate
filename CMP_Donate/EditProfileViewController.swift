@@ -57,7 +57,7 @@ class EditProfileViewController: UIViewController, UITableViewDataSource, UITabl
 
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
     {
-        let cell = tableView.dequeueReusableCellWithIdentifier(kEditProfileCell) as UITableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier(kEditProfileCell) as! UITableViewCell
 
         if indexPath.section == 0
         {
@@ -102,7 +102,7 @@ class EditProfileViewController: UIViewController, UITableViewDataSource, UITabl
 
     //Unwind
     @IBAction func unwindToThisViewController(segue: UIStoryboardSegue) {
-        let sourceVC = segue.sourceViewController as UpdatePaymentTypeViewController
+        let sourceVC = segue.sourceViewController as! UpdatePaymentTypeViewController
         kStandardDefaults.setValue(sourceVC.selectedStatus, forKey: kDefaultsPreferredPaymentType)
     }
 }

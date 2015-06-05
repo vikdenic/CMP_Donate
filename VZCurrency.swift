@@ -64,7 +64,7 @@ extension NSNumber {
     func formatCurrencyWithSymbol() -> String!
     {
         let theLocale = NSLocale.currentLocale()
-        let currencySymbol = theLocale.objectForKey(NSLocaleCurrencySymbol) as String!
+        let currencySymbol = theLocale.objectForKey(NSLocaleCurrencySymbol) as! String!
         var currencyFormatter = NSNumberFormatter()
         currencyFormatter.roundingMode = NSNumberFormatterRoundingMode.RoundUp
         var formattedCurrency = currencyFormatter.stringFromNumber(self) as String!
@@ -81,17 +81,17 @@ Retrieves and calculates currency conversion rate information from the JSONRates
 */
 func convertCurrency(abbrev : String, completion : (rate : Float) -> Void)
 {
-    Alamofire.request(.GET, "http://jsonrates.com/get/?from=" + abbrev + "&to=USD&apiKey=\(rateKey)").responseJSON() {
-        (_, _, data, _) in
-
-        if let someDict = data as NSDictionary!
-        {
-            let rate = 1 / (someDict.valueForKey("rate") as NSString).floatValue
-            completion(rate: rate)
-        }
-        else
-        {
-            completion(rate: 1.0)
-        }
-    }
+//    Alamofire.request(.GET, "http://jsonrates.com/get/?from=" + abbrev + "&to=USD&apiKey=\(rateKey)").responseJSON() {
+//        (_, _, data, _) in
+//
+//        if let someDict = data as NSDictionary!
+//        {
+//            let rate = 1 / (someDict.valueForKey("rate") as NSString).floatValue
+//            completion(rate: rate)
+//        }
+//        else
+//        {
+//            completion(rate: 1.0)
+//        }
+//    }
 }

@@ -34,7 +34,7 @@ class EditGeneralInfoViewController: UIViewController, UITableViewDelegate, UITa
     {
         if indexPath.section == 0
         {
-            let cell = tableView.dequeueReusableCellWithIdentifier(kGeneralInfoCell) as EditGeneralInfoTableViewCell
+            let cell = tableView.dequeueReusableCellWithIdentifier(kGeneralInfoCell) as! EditGeneralInfoTableViewCell
             cell.delegate = self
             cell.firstNameTextField.text = kProfile?.firstName
             cell.lastNameTextField.text = kProfile?.lastName
@@ -59,14 +59,14 @@ class EditGeneralInfoViewController: UIViewController, UITableViewDelegate, UITa
         }
         else
         {
-            let cell = tableView.dequeueReusableCellWithIdentifier(kCenteredTextCell) as CenteredTextTableViewCell
+            let cell = tableView.dequeueReusableCellWithIdentifier(kCenteredTextCell) as! CenteredTextTableViewCell
             return cell
         }
     }
 
     @IBAction func onSaveButtonTapped(sender: UIBarButtonItem) {
 
-        let cell = tableView.cellForRowAtIndexPath(NSIndexPath(forRow: 0, inSection: 0)) as EditGeneralInfoTableViewCell!
+        let cell = tableView.cellForRowAtIndexPath(NSIndexPath(forRow: 0, inSection: 0)) as! EditGeneralInfoTableViewCell!
 
         kProfile?.firstName = cell.firstNameTextField.text
         kProfile?.lastName = cell.lastNameTextField.text
@@ -131,7 +131,7 @@ class EditGeneralInfoViewController: UIViewController, UITableViewDelegate, UITa
     func didTapEditPhoto(passed: Bool)
     {
         presentViewController(imagePicker, animated: true) { () -> Void in
-            let cell = self.tableView.cellForRowAtIndexPath(NSIndexPath(forRow: 0, inSection: 0)) as EditGeneralInfoTableViewCell!
+            let cell = self.tableView.cellForRowAtIndexPath(NSIndexPath(forRow: 0, inSection: 0)) as! EditGeneralInfoTableViewCell!
             self.enteredFirstName = cell.firstNameTextField.text
             self.enteredLastName = cell.lastNameTextField.text
         }
@@ -142,7 +142,7 @@ class EditGeneralInfoViewController: UIViewController, UITableViewDelegate, UITa
         dismissViewControllerAnimated(true, completion: { () -> Void in
             self.selectedImage = image
 
-            let cell = self.tableView.cellForRowAtIndexPath(NSIndexPath(forRow: 0, inSection: 0)) as EditGeneralInfoTableViewCell!
+            let cell = self.tableView.cellForRowAtIndexPath(NSIndexPath(forRow: 0, inSection: 0)) as! EditGeneralInfoTableViewCell!
             cell.firstNameTextField.text = self.enteredFirstName
             cell.lastNameTextField.text = self.enteredLastName
             cell.profileImageView.image = image

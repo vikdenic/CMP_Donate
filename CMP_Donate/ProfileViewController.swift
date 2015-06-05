@@ -65,7 +65,7 @@ class ProfileViewController: UIViewController, UITableViewDataSource, UITableVie
     {
         if indexPath.row == 0
         {
-            let cell = tableView.dequeueReusableCellWithIdentifier(kProfileCell) as ProfileTableViewCell
+            let cell = tableView.dequeueReusableCellWithIdentifier(kProfileCell) as! ProfileTableViewCell
             cell.profilePicImageView.file = kProfile?.imageFile
             cell.profilePicImageView.loadInBackground(nil)
             cell.clipsToBounds = true
@@ -74,7 +74,7 @@ class ProfileViewController: UIViewController, UITableViewDataSource, UITableVie
         }
         else
         {
-            let cell = tableView.dequeueReusableCellWithIdentifier(kFundedFilmCell) as FundedFilmTableViewCell
+            let cell = tableView.dequeueReusableCellWithIdentifier(kFundedFilmCell) as! FundedFilmTableViewCell
 
             let transaction = transactionsArray[indexPath.row - 1]
             cell.filmImageView.file = transaction.film!.imageFile
@@ -114,7 +114,7 @@ class ProfileViewController: UIViewController, UITableViewDataSource, UITableVie
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == kFundedCellToIndividualSegue
         {
-            let individualVC = segue.destinationViewController as IndividualFilmViewController
+            let individualVC = segue.destinationViewController as! IndividualFilmViewController
             individualVC.film = transactionsArray[tableView.indexPathForSelectedRow()!.row - 1].film
         }
     }

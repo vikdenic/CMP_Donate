@@ -10,7 +10,7 @@ import Foundation
 
 class Film: PFObject, PFSubclassing
 {
-    override class func load()
+    override class func initialize()
     {
         self.registerSubclass()
     }
@@ -41,7 +41,7 @@ class Film: PFObject, PFSubclassing
         ldsQuery.orderByDescending("createdAt")
 
         ldsQuery.findObjectsInBackgroundWithBlock({ (films, error) -> Void in
-            completed(films: films as [Film], error: nil)
+            completed(films: films as! [Film], error: nil)
         })
 
         var query = Film.query()
@@ -57,7 +57,7 @@ class Film: PFObject, PFSubclassing
             else
             {
                 PFObject.pinAllInBackground(films, withName: "feedFilms", block: nil)
-                completed(films: films as [Film], error: nil)
+                completed(films: films as! [Film], error: nil)
             }
         })
     }
@@ -71,7 +71,7 @@ class Film: PFObject, PFSubclassing
         ldsQuery.orderByDescending("createdAt")
 
         ldsQuery.findObjectsInBackgroundWithBlock({ (films, error) -> Void in
-            completed(films: films as [Film], error: nil)
+            completed(films: films as! [Film], error: nil)
         })
 
 
@@ -89,7 +89,7 @@ class Film: PFObject, PFSubclassing
             else
             {
                 PFObject.pinAllInBackground(films, withName: event.objectId, block: nil)
-                completed(films: films as [Film], error: nil)
+                completed(films: films as! [Film], error: nil)
             }
         })
     }

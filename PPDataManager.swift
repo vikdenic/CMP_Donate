@@ -77,7 +77,7 @@ class PPDataManager {
             else
             {
                 let retrievedData: AnyObject! = NSJSONSerialization.JSONObjectWithData(data, options: nil, error: nil)!
-                let dataDict = retrievedData as NSDictionary
+                let dataDict = retrievedData as! NSDictionary
                 completion(data: dataDict, error: nil)
             }
         })

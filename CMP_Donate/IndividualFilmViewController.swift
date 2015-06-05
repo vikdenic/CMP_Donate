@@ -11,7 +11,8 @@ import Alamofire
 
 class IndividualFilmViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UICollectionViewDataSource, UICollectionViewDelegate, DonateTableViewCellDelegate, UIScrollViewDelegate, PayPalPaymentDelegate, UITextFieldDelegate, UIGestureRecognizerDelegate {
 
-    var film = Film()
+    var film = Film(className: nil)
+
     @IBOutlet var tableView: UITableView!
     @IBOutlet var filmImageView: PFImageView!
 //    var visualEffectView = UIVisualEffectView()
@@ -48,7 +49,7 @@ class IndividualFilmViewController: UIViewController, UITableViewDataSource, UIT
     let selectPaymentVC = SelectPaymentPreferenceViewController()
 
     /// The most recent payment type the user has preferred to use for contributions
-    var preferredPaymentType = kStandardDefaults.valueForKey(kDefaultsPreferredPaymentType) as String?
+    var preferredPaymentType = kStandardDefaults.valueForKey(kDefaultsPreferredPaymentType) as! String?
 
     //MARK: Currency Conversion Properties
     var convertedCurrencyStringOne : String!
@@ -94,8 +95,8 @@ class IndividualFilmViewController: UIViewController, UITableViewDataSource, UIT
         PPDataManager.httpRequestAccessToken(kPayPalClientIdProduction, secretId: kPayPalSecretIdProduction) { (data, error) -> Void in
             if let someData : AnyObject = data
             {
-                self.accessDictionary = data as NSDictionary
-                self.accessToken = self.accessDictionary.valueForKey(self.kAccessToken) as String!
+                self.accessDictionary = data as! NSDictionary
+                self.accessToken = self.accessDictionary.valueForKey(self.kAccessToken) as! String!
             }
         }
 
@@ -117,7 +118,7 @@ class IndividualFilmViewController: UIViewController, UITableViewDataSource, UIT
             }
             else
             {
-                self.shareLink = config["shareLink"] as String
+                self.shareLink = config["shareLink"] as! String
             }
         }
 
@@ -131,7 +132,7 @@ class IndividualFilmViewController: UIViewController, UITableViewDataSource, UIT
         super.viewWillAppear(true)
         PayPalMobile.preconnectWithEnvironment(PayPalEnvironmentProduction)
 
-        let cell = tableView.cellForRowAtIndexPath(NSIndexPath(forRow: 0, inSection: 0)) as CrewTableViewCell!
+        let cell = tableView.cellForRowAtIndexPath(NSIndexPath(forRow: 0, inSection: 0)) as! CrewTableViewCell!
         cell.pageDots.center.x = cell.pageDots.superview!.center.x
         cell.pageDots.numberOfPages = film.productionTeam.count
 
@@ -143,9 +144,9 @@ class IndividualFilmViewController: UIViewController, UITableViewDataSource, UIT
         VZCurrency.obtainConversationRateForCurrentLocale { (rate) -> Void in
             if rate != 1.0
             {
-                let convertedAmountOne = (self.film.suggestedAmountOne.floatValue * rate) as NSNumber
-                let convertedAmountTwo = (self.film.suggestedAmountTwo.floatValue * rate) as NSNumber
-                let convertedAmountThree = (self.film.suggestedAmountThree.floatValue * rate) as NSNumber
+                let convertedAmountOne = (self.film.suggestedAmountOne.floatValue * rate) as! NSNumber
+                let convertedAmountTwo = (self.film.suggestedAmountTwo.floatValue * rate) as! NSNumber
+                let convertedAmountThree = (self.film.suggestedAmountThree.floatValue * rate) as! NSNumber
 
                 self.convertedCurrencyStringOne = convertedAmountOne.formatCurrencyWithSymbol()
                 self.convertedCurrencyStringTwo = convertedAmountTwo.formatCurrencyWithSymbol()
@@ -178,7 +179,7 @@ class IndividualFilmViewController: UIViewController, UITableViewDataSource, UIT
         headerView.frame = headerRect
     }
 
-    override func touchesBegan(touches: NSSet, withEvent event: UIEvent)
+    override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent)
     {
         view.endEditing(true)
     }
@@ -229,19 +230,19 @@ class IndividualFilmViewController: UIViewController, UITableViewDataSource, UIT
     {
         if indexPath.row == 0
         {
-            let cell = tableView.dequeueReusableCellWithIdentifier(kCrewTVCell) as CrewTableViewCell
+            let cell = tableView.dequeueReusableCellWithIdentifier(kCrewTVCell) as! CrewTableViewCell
             return cell
         }
         else if indexPath.row == 1
         {
-            let cell = tableView.dequeueReusableCellWithIdentifier(kSynopsisCell) as SynopsisTableViewCell
+            let cell = tableView.dequeueReusableCellWithIdentifier(kSynopsisCell) as! SynopsisTableViewCell
             cell.synopsisTextView.text = film.synopsis
             theIndexPath = indexPath
             return cell
         }
         else
         {
-            let cell = tableView.dequeueReusableCellWithIdentifier(kDonateCell) as DonateTableViewCell
+            let cell = tableView.dequeueReusableCellWithIdentifier(kDonateCell) as! DonateTableViewCell
             cell.delegate = self
             let suggestedAmountOne = film.suggestedAmountOne ?? 100
             let suggestedAmountTwo = film.suggestedAmountTwo ?? 500
@@ -274,7 +275,7 @@ class IndividualFilmViewController: UIViewController, UITableViewDataSource, UIT
     {
         if indexPath.row == 0
         {
-            let customCell = cell as CrewTableViewCell
+            let customCell = cell as! CrewTableViewCell
             customCell.setCollectionViewDataSourceDelegate(dataSourceDelegate: self, index: indexPath.row)
         }
     }
@@ -305,7 +306,7 @@ class IndividualFilmViewController: UIViewController, UITableViewDataSource, UIT
         {
             let pageNumber = Int(scrollView.contentOffset.x / (scrollView.frame.size.width))
 
-            let cell = tableView.cellForRowAtIndexPath(NSIndexPath(forRow: 0, inSection: 0)) as CrewTableViewCell!
+            let cell = tableView.cellForRowAtIndexPath(NSIndexPath(forRow: 0, inSection: 0)) as! CrewTableViewCell!
             cell.pageDots.currentPage = pageNumber
         }
     }
@@ -400,7 +401,7 @@ class IndividualFilmViewController: UIViewController, UITableViewDataSource, UIT
 
         let amountToCharge = (amount as Double * 100.0)
 
-        if let customerId = kStandardDefaults.valueForKey(kDefaultsStripeCustomerID) as String!
+        if let customerId = kStandardDefaults.valueForKey(kDefaultsStripeCustomerID) as! String!
         {
             PFCloud.callFunctionInBackground("createCharge", withParameters: ["amount": amountToCharge, "customer": customerId, "description": film.title,"receipt_email": PFUser.currentUser().username]) { (chargeId, error) -> Void in
                 if error != nil
@@ -448,8 +449,8 @@ class IndividualFilmViewController: UIViewController, UITableViewDataSource, UIT
 
         //This is where we extract the paymentId from the approved payment object
         let completedConfirmation = completedPayment.confirmation as NSDictionary!
-        let response = completedConfirmation.valueForKey(kResponse) as NSDictionary!
-        thePaymentId = response.valueForKey(kId) as String!
+        let response = completedConfirmation.valueForKey(kResponse) as! NSDictionary!
+        thePaymentId = response.valueForKey(kId) as! String!
 
         let transaction = Transaction(contributor: kProfile!, film: self.film, amount: completedPayment.amount)
         transaction.saveInBackgroundWithBlock(nil)
@@ -481,7 +482,7 @@ class IndividualFilmViewController: UIViewController, UITableViewDataSource, UIT
     //MARK: Payment Helpers
     func presentPreferredPaymentMethod(amount: NSNumber)
     {
-        if let somePreference = kStandardDefaults.valueForKey(kDefaultsPreferredPaymentType) as String!
+        if let somePreference = kStandardDefaults.valueForKey(kDefaultsPreferredPaymentType) as! String!
         {
             if somePreference == "CreditCard"
             {
@@ -547,8 +548,8 @@ class IndividualFilmViewController: UIViewController, UITableViewDataSource, UIT
 
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell
     {
-        let cell = collectionView.dequeueReusableCellWithReuseIdentifier(kCrewCVCell, forIndexPath: indexPath) as CrewCollectionViewCell
-        let crewMember = film.productionTeam[indexPath.row] as CrewMember
+        let cell = collectionView.dequeueReusableCellWithReuseIdentifier(kCrewCVCell, forIndexPath: indexPath) as! CrewCollectionViewCell
+        let crewMember = film.productionTeam[indexPath.row] as! CrewMember
         cell.crewLabel.text = crewMember.role + ": " + crewMember.name
         cell.crewImageView.file = crewMember.imageFile
         cell.crewImageView.loadInBackground(nil)

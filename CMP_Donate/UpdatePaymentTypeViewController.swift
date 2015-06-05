@@ -24,7 +24,7 @@ class UpdatePaymentTypeViewController: UIViewController, UITableViewDataSource, 
         updateButton.layer.borderColor = UIColor.customRedColor().CGColor
         updateButton.layer.borderWidth = 1.0
         updateButton.layer.cornerRadius = updateButton.frame.height / 2
-        if let somePreference = kStandardDefaults.valueForKey(kDefaultsPreferredPaymentType) as String!
+        if let somePreference = kStandardDefaults.valueForKey(kDefaultsPreferredPaymentType) as! String!
         {
             selectedStatus = somePreference
             println(somePreference)
@@ -62,7 +62,7 @@ class UpdatePaymentTypeViewController: UIViewController, UITableViewDataSource, 
 
     func decideUpdateButtonAppearence()
     {
-        if let somePreference = kStandardDefaults.valueForKey(kDefaultsPreferredPaymentType) as String!
+        if let somePreference = kStandardDefaults.valueForKey(kDefaultsPreferredPaymentType) as! String!
         {
             if somePreference == "CreditCard"
             {
@@ -87,7 +87,7 @@ class UpdatePaymentTypeViewController: UIViewController, UITableViewDataSource, 
 
     //UITableView
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier(kPreferredPaymentCell) as UITableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier(kPreferredPaymentCell) as! UITableViewCell
 
         if indexPath.section == 0
         {
