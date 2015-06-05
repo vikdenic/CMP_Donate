@@ -19,6 +19,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         Parse.enableLocalDatastore()
         Profile.registerSubclass()
         CrewMember.registerSubclass()
+        Transaction.registerSubclass()
+        Event.registerSubclass()
         
         //TODO: Crash Reporting
 //        ParseCrashReporting.enable()
