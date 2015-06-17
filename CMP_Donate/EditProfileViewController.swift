@@ -29,7 +29,8 @@ class EditProfileViewController: UIViewController, UITableViewDataSource, UITabl
 
     //UITableView
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        return 2
+//        return 2
+        return 1
     }
 
     func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
@@ -70,10 +71,10 @@ class EditProfileViewController: UIViewController, UITableViewDataSource, UITabl
                 cell.textLabel?.text = "Change Password"
             }
         }
-        else
-        {
-            cell.textLabel?.text = "Preferred Payment Method"
-        }
+//        else
+//        {
+//            cell.textLabel?.text = "Preferred Payment Method"
+//        }
 
         return cell
     }
@@ -101,8 +102,8 @@ class EditProfileViewController: UIViewController, UITableViewDataSource, UITabl
     }
 
     //Unwind
-    @IBAction func unwindToThisViewController(segue: UIStoryboardSegue) {
-        let sourceVC = segue.sourceViewController as! UpdatePaymentTypeViewController
-        kStandardDefaults.setValue(sourceVC.selectedStatus, forKey: kDefaultsPreferredPaymentType)
-    }
+//    @IBAction func unwindToThisViewController(segue: UIStoryboardSegue) {
+//        let sourceVC = segue.sourceViewController as! UpdatePaymentTypeViewController
+//        kStandardDefaults.setValue(sourceVC.selectedStatus, forKey: kDefaultsPreferredPaymentType)
+//    }
 }

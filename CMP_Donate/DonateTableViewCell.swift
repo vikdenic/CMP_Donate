@@ -20,9 +20,9 @@ class DonateTableViewCell: UITableViewCell {
 
     var delegate = DonateTableViewCellDelegate?()
 
-    @IBOutlet var bubbleButtonOne: UIButton!
-    @IBOutlet var bubbleButtonTwo: UIButton!
-    @IBOutlet var bubbleButtonThree: UIButton!
+//    @IBOutlet var bubbleButtonOne: UIButton!
+//    @IBOutlet var bubbleButtonTwo: UIButton!
+//    @IBOutlet var bubbleButtonThree: UIButton!
     @IBOutlet var otherAmountButton: UIButton!
 
     override func awakeFromNib() {
@@ -42,25 +42,25 @@ class DonateTableViewCell: UITableViewCell {
         otherAmountButton.layer.cornerRadius = 5
         otherAmountButton.layer.borderColor = UIColor.customRedColor().CGColor
 
-        bubbleButtonOne.toCircular(1.0, borderColor: UIColor.customRedColor())
-        bubbleButtonTwo.toCircular(1.0, borderColor: UIColor.customRedColor())
-        bubbleButtonThree.toCircular(1.0, borderColor: UIColor.customRedColor())
+//        bubbleButtonOne.toCircular(1.0, borderColor: UIColor.customRedColor())
+//        bubbleButtonTwo.toCircular(1.0, borderColor: UIColor.customRedColor())
+//        bubbleButtonThree.toCircular(1.0, borderColor: UIColor.customRedColor())
     }
 
-    @IBAction func onBubbleOneTapped(sender: UIButton)
-    {
-        delegate?.didTapBubbleOne!(bubbleButtonOne.titleLabel!.text!.removeDollarPrefix().toInt()!)
-    }
-
-    @IBAction func onBubbleTwoTapped(sender: UIButton)
-    {
-        delegate?.didTapBubbleTwo!(bubbleButtonTwo.titleLabel!.text!.removeDollarPrefix().toInt()!)
-    }
-
-    @IBAction func onBubbleThreeTapped(sender: UIButton)
-    {
-        delegate?.didTapBubbleThree!(bubbleButtonThree.titleLabel!.text!.removeDollarPrefix().toInt()!)
-    }
+//    @IBAction func onBubbleOneTapped(sender: UIButton)
+//    {
+//        delegate?.didTapBubbleOne!(bubbleButtonOne.titleLabel!.text!.removeDollarPrefix().toInt()!)
+//    }
+//
+//    @IBAction func onBubbleTwoTapped(sender: UIButton)
+//    {
+//        delegate?.didTapBubbleTwo!(bubbleButtonTwo.titleLabel!.text!.removeDollarPrefix().toInt()!)
+//    }
+//
+//    @IBAction func onBubbleThreeTapped(sender: UIButton)
+//    {
+//        delegate?.didTapBubbleThree!(bubbleButtonThree.titleLabel!.text!.removeDollarPrefix().toInt()!)
+//    }
 
     @IBAction func onOtherAmountTapped(sender: UIButton)
     {

@@ -20,7 +20,7 @@ class IndividualFilmViewController: UIViewController, UITableViewDataSource, UIT
 
     var headerView: UIView!
     var theIndexPath = NSIndexPath()
-    var synopsisHeight : CGFloat = 28
+    var synopsisHeight : CGFloat = 147
 
     let kTableHeaderHeight: CGFloat = 120.0
 
@@ -52,9 +52,9 @@ class IndividualFilmViewController: UIViewController, UITableViewDataSource, UIT
     var preferredPaymentType = kStandardDefaults.valueForKey(kDefaultsPreferredPaymentType) as! String?
 
     //MARK: Currency Conversion Properties
-    var convertedCurrencyStringOne : String!
-    var convertedCurrencyStringTwo : String!
-    var convertedCurrencyStringThree : String!
+//    var convertedCurrencyStringOne : String!
+//    var convertedCurrencyStringTwo : String!
+//    var convertedCurrencyStringThree : String!
 
     //MARK: init
     required init(coder aDecoder: NSCoder) {
@@ -141,19 +141,19 @@ class IndividualFilmViewController: UIViewController, UITableViewDataSource, UIT
             cell.pageDots.alpha = 0
         }
 
-        VZCurrency.obtainConversationRateForCurrentLocale { (rate) -> Void in
-            if rate != 1.0
-            {
-                let convertedAmountOne = (self.film.suggestedAmountOne.floatValue * rate) as! NSNumber
-                let convertedAmountTwo = (self.film.suggestedAmountTwo.floatValue * rate) as! NSNumber
-                let convertedAmountThree = (self.film.suggestedAmountThree.floatValue * rate) as! NSNumber
-
-                self.convertedCurrencyStringOne = convertedAmountOne.formatCurrencyWithSymbol()
-                self.convertedCurrencyStringTwo = convertedAmountTwo.formatCurrencyWithSymbol()
-                self.convertedCurrencyStringThree = convertedAmountThree.formatCurrencyWithSymbol()
-            }
-            self.tableView.reloadData()
-        }
+//        VZCurrency.obtainConversationRateForCurrentLocale { (rate) -> Void in
+//            if rate != 1.0
+//            {
+//                let convertedAmountOne = (self.film.suggestedAmountOne.floatValue * rate) as! NSNumber
+//                let convertedAmountTwo = (self.film.suggestedAmountTwo.floatValue * rate) as! NSNumber
+//                let convertedAmountThree = (self.film.suggestedAmountThree.floatValue * rate) as! NSNumber
+//
+//                self.convertedCurrencyStringOne = convertedAmountOne.formatCurrencyWithSymbol()
+//                self.convertedCurrencyStringTwo = convertedAmountTwo.formatCurrencyWithSymbol()
+//                self.convertedCurrencyStringThree = convertedAmountThree.formatCurrencyWithSymbol()
+//            }
+//            self.tableView.reloadData()
+//        }
     }
 
     //MARK: View Helpers
@@ -248,24 +248,24 @@ class IndividualFilmViewController: UIViewController, UITableViewDataSource, UIT
             let suggestedAmountTwo = film.suggestedAmountTwo ?? 500
             let suggestedAmountThree = film.suggestedAmountThree ?? 1000
 
-            cell.bubbleButtonOne.setTitle("$" + suggestedAmountOne.stringValue, forState: .Normal)
-            cell.bubbleButtonTwo.setTitle("$" + suggestedAmountTwo.stringValue, forState: .Normal)
-            cell.bubbleButtonThree.setTitle("$" + suggestedAmountThree.stringValue, forState: .Normal)
+//            cell.bubbleButtonOne.setTitle("$" + suggestedAmountOne.stringValue, forState: .Normal)
+//            cell.bubbleButtonTwo.setTitle("$" + suggestedAmountTwo.stringValue, forState: .Normal)
+//            cell.bubbleButtonThree.setTitle("$" + suggestedAmountThree.stringValue, forState: .Normal)
 
-            if let someConvertedAmountOne = self.convertedCurrencyStringOne
-            {
-                cell.bubbleButtonOne.setTitle(someConvertedAmountOne, forState: .Normal)
-            }
-
-            if let someConvertedAmountTwo = self.convertedCurrencyStringTwo
-            {
-                cell.bubbleButtonTwo.setTitle(someConvertedAmountTwo, forState: .Normal)
-            }
-
-            if let someConvertedAmountThree = self.convertedCurrencyStringThree
-            {
-                cell.bubbleButtonThree.setTitle(someConvertedAmountThree, forState: .Normal)
-            }
+//            if let someConvertedAmountOne = self.convertedCurrencyStringOne
+//            {
+//                cell.bubbleButtonOne.setTitle(someConvertedAmountOne, forState: .Normal)
+//            }
+//
+//            if let someConvertedAmountTwo = self.convertedCurrencyStringTwo
+//            {
+//                cell.bubbleButtonTwo.setTitle(someConvertedAmountTwo, forState: .Normal)
+//            }
+//
+//            if let someConvertedAmountThree = self.convertedCurrencyStringThree
+//            {
+//                cell.bubbleButtonThree.setTitle(someConvertedAmountThree, forState: .Normal)
+//            }
 
             return cell
         }
@@ -292,7 +292,7 @@ class IndividualFilmViewController: UIViewController, UITableViewDataSource, UIT
         }
         else
         {
-            return 165
+            return 62
         }
     }
 
