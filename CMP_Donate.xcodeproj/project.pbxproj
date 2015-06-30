@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		079827A79E3D87E9B8F3AE36 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C690653828D3D63C095D1E3D /* libPods.a */; };
 		93045C9C1A9D8FC700E3BB3A /* FilmCategoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93045C9B1A9D8FC700E3BB3A /* FilmCategoriesViewController.swift */; };
 		93045C9E1A9D905D00E3BB3A /* CategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93045C9D1A9D905D00E3BB3A /* CategoryCollectionViewCell.swift */; };
 		930EFD6E1A738F1400AF96AF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 930EFD6D1A738F1400AF96AF /* AppDelegate.swift */; };
@@ -50,15 +49,14 @@
 		93327FC61AA7EAB400214D74 /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93327FC51AA7EAB400214D74 /* Transaction.swift */; };
 		93327FD01AA8221E00214D74 /* CustomActivityItemProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 93327FCF1AA8221E00214D74 /* CustomActivityItemProvider.m */; };
 		93379F701A857EF70054BAB8 /* CrewCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93379F6F1A857EF70054BAB8 /* CrewCollectionViewCell.swift */; };
-		9355DED51AA98CA90005058A /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9355DECC1AA982910005058A /* Alamofire.framework */; };
-		9355DED61AA98CA90005058A /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9355DECC1AA982910005058A /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		9349A3411B34F04000700AD2 /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9349A33F1B34F04000700AD2 /* Fabric.framework */; };
+		9349A3421B34F04000700AD2 /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9349A3401B34F04000700AD2 /* Crashlytics.framework */; };
 		9355DEDB1AA997460005058A /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9355DEDA1AA997460005058A /* CoreTelephony.framework */; };
 		9358A11F1A7394DC00CCE374 /* CMPConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9358A11E1A7394DC00CCE374 /* CMPConstants.swift */; };
 		9358A1261A739BB100CCE374 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9358A1251A739BB100CCE374 /* ProfileViewController.swift */; };
 		9358A1281A739E1700CCE374 /* UniversalProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9358A1271A739E1700CCE374 /* UniversalProfile.swift */; };
 		9358A12A1A741B6500CCE374 /* FeedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9358A1291A741B6500CCE374 /* FeedTableViewCell.swift */; };
 		935DB8611A86195700C9A19F /* EditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 935DB8601A86195700C9A19F /* EditProfileViewController.swift */; };
-		935DB8641A861CA700C9A19F /* UpdateCardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 935DB8631A861CA700C9A19F /* UpdateCardViewController.m */; };
 		9362E0791AA5513E00A18D7F /* ChangePasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9362E0781AA5513E00A18D7F /* ChangePasswordViewController.swift */; };
 		9362E07B1AA57F0600A18D7F /* PasswordEntryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9362E07A1AA57F0600A18D7F /* PasswordEntryTableViewCell.swift */; };
 		936477AE1A860D75000042C5 /* DonateTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 936477AD1A860D75000042C5 /* DonateTableViewCell.swift */; };
@@ -68,7 +66,6 @@
 		936C580D1A76190F0027343A /* FundedFilmTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 936C580C1A76190F0027343A /* FundedFilmTableViewCell.swift */; };
 		939ACC191A9AB8F900525152 /* libstdc++.6.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 939ACC181A9AB8F900525152 /* libstdc++.6.dylib */; };
 		939ACC1E1A9B127D00525152 /* SelectPaymentPreferenceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 939ACC1D1A9B127D00525152 /* SelectPaymentPreferenceViewController.swift */; };
-		93C0A8491A96BBAA00F9C069 /* UpdatePaymentTypeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C0A8481A96BBAA00F9C069 /* UpdatePaymentTypeViewController.swift */; };
 		93E964F01AA639B40037FB6D /* ProvideProfileInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93E964EF1AA639B40037FB6D /* ProvideProfileInfoViewController.swift */; };
 		93ED198E1A85DB0100F06FA1 /* CrewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93ED198D1A85DB0100F06FA1 /* CrewTableViewCell.swift */; };
 		93ED19921A85ED0E00F06FA1 /* SynopsisTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93ED19911A85ED0E00F06FA1 /* SynopsisTableViewCell.swift */; };
@@ -85,48 +82,6 @@
 			remoteGlobalIDString = 930EFD671A738F1400AF96AF;
 			remoteInfo = CMP_Donate;
 		};
-		9355DECB1AA982910005058A /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 9355DEC41AA982910005058A /* Alamofire.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = F8111E3319A95C8B0040E7D1;
-			remoteInfo = "Alamofire iOS";
-		};
-		9355DECD1AA982910005058A /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 9355DEC41AA982910005058A /* Alamofire.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 4DD67C0B1A5C55C900ED2280;
-			remoteInfo = "Alamofire OSX";
-		};
-		9355DECF1AA982910005058A /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 9355DEC41AA982910005058A /* Alamofire.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = F8111E3E19A95C8B0040E7D1;
-			remoteInfo = "Alamofire iOS Tests";
-		};
-		9355DED11AA982910005058A /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 9355DEC41AA982910005058A /* Alamofire.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = F829C6B21A7A94F100A2CD59;
-			remoteInfo = "Alamofire OSX Tests";
-		};
-		9355DED31AA983850005058A /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 9355DEC41AA982910005058A /* Alamofire.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = F8111E3219A95C8B0040E7D1;
-			remoteInfo = "Alamofire iOS";
-		};
-		9355DED71AA98CA90005058A /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 9355DEC41AA982910005058A /* Alamofire.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = F8111E3219A95C8B0040E7D1;
-			remoteInfo = "Alamofire iOS";
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -136,7 +91,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				9355DED61AA98CA90005058A /* Alamofire.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -208,15 +162,14 @@
 		93327FCE1AA8221E00214D74 /* CustomActivityItemProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomActivityItemProvider.h; sourceTree = "<group>"; };
 		93327FCF1AA8221E00214D74 /* CustomActivityItemProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomActivityItemProvider.m; sourceTree = "<group>"; };
 		93379F6F1A857EF70054BAB8 /* CrewCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CrewCollectionViewCell.swift; sourceTree = "<group>"; };
-		9355DEC41AA982910005058A /* Alamofire.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Alamofire.xcodeproj; path = Alamofire/Alamofire.xcodeproj; sourceTree = "<group>"; };
+		9349A33F1B34F04000700AD2 /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = "<group>"; };
+		9349A3401B34F04000700AD2 /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
 		9355DEDA1AA997460005058A /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
 		9358A11E1A7394DC00CCE374 /* CMPConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CMPConstants.swift; sourceTree = "<group>"; };
 		9358A1251A739BB100CCE374 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		9358A1271A739E1700CCE374 /* UniversalProfile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UniversalProfile.swift; path = CMP_Donate/UniversalProfile.swift; sourceTree = "<group>"; };
 		9358A1291A741B6500CCE374 /* FeedTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedTableViewCell.swift; sourceTree = "<group>"; };
 		935DB8601A86195700C9A19F /* EditProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditProfileViewController.swift; sourceTree = "<group>"; };
-		935DB8621A861CA700C9A19F /* UpdateCardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UpdateCardViewController.h; sourceTree = "<group>"; };
-		935DB8631A861CA700C9A19F /* UpdateCardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UpdateCardViewController.m; sourceTree = "<group>"; };
 		9362E0781AA5513E00A18D7F /* ChangePasswordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangePasswordViewController.swift; sourceTree = "<group>"; };
 		9362E07A1AA57F0600A18D7F /* PasswordEntryTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasswordEntryTableViewCell.swift; sourceTree = "<group>"; };
 		936477AD1A860D75000042C5 /* DonateTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DonateTableViewCell.swift; sourceTree = "<group>"; };
@@ -226,16 +179,12 @@
 		936C580C1A76190F0027343A /* FundedFilmTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FundedFilmTableViewCell.swift; sourceTree = "<group>"; };
 		939ACC181A9AB8F900525152 /* libstdc++.6.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libstdc++.6.dylib"; path = "usr/lib/libstdc++.6.dylib"; sourceTree = SDKROOT; };
 		939ACC1D1A9B127D00525152 /* SelectPaymentPreferenceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectPaymentPreferenceViewController.swift; sourceTree = "<group>"; };
-		93C0A8481A96BBAA00F9C069 /* UpdatePaymentTypeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpdatePaymentTypeViewController.swift; sourceTree = "<group>"; };
 		93E964EF1AA639B40037FB6D /* ProvideProfileInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProvideProfileInfoViewController.swift; sourceTree = "<group>"; };
 		93ED198D1A85DB0100F06FA1 /* CrewTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CrewTableViewCell.swift; sourceTree = "<group>"; };
 		93ED19911A85ED0E00F06FA1 /* SynopsisTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SynopsisTableViewCell.swift; sourceTree = "<group>"; };
 		93F53B631AA2ABE10053FABF /* EditGeneralInfoTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditGeneralInfoTableViewCell.swift; sourceTree = "<group>"; };
 		93F53B651AA2B2AD0053FABF /* EditGeneralInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditGeneralInfoViewController.swift; sourceTree = "<group>"; };
 		93FE72481ABBDD0900E09542 /* VZCurrency.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VZCurrency.swift; sourceTree = "<group>"; };
-		C690653828D3D63C095D1E3D /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		DFAD6A43BF7F86765FB2F80C /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
-		F90CD726D1BBB8E3D21FFE5D /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -245,7 +194,7 @@
 			files = (
 				9355DEDB1AA997460005058A /* CoreTelephony.framework in Frameworks */,
 				939ACC191A9AB8F900525152 /* libstdc++.6.dylib in Frameworks */,
-				9355DED51AA98CA90005058A /* Alamofire.framework in Frameworks */,
+				9349A3421B34F04000700AD2 /* Crashlytics.framework in Frameworks */,
 				931CA0221A95C9C70069B235 /* MessageUI.framework in Frameworks */,
 				931CA0201A95C9B90069B235 /* CoreMedia.framework in Frameworks */,
 				931CA01E1A95C9B40069B235 /* AVFoundation.framework in Frameworks */,
@@ -264,9 +213,9 @@
 				931CA01C1A95C9390069B235 /* libPayPalMobile.a in Frameworks */,
 				930EFD941A738F2F00AF96AF /* ParseCrashReporting.framework in Frameworks */,
 				930EFD961A738F2F00AF96AF /* ParseUI.framework in Frameworks */,
+				9349A3411B34F04000700AD2 /* Fabric.framework in Frameworks */,
 				930EFD951A738F2F00AF96AF /* ParseFacebookUtils.framework in Frameworks */,
 				930EFD921A738F2F00AF96AF /* Bolts.framework in Frameworks */,
-				079827A79E3D87E9B8F3AE36 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -283,11 +232,11 @@
 		930EFD5F1A738F1400AF96AF = {
 			isa = PBXGroup;
 			children = (
-				9355DEC41AA982910005058A /* Alamofire.xcodeproj */,
+				9349A33F1B34F04000700AD2 /* Fabric.framework */,
+				9349A3401B34F04000700AD2 /* Crashlytics.framework */,
 				930EFD6A1A738F1400AF96AF /* CMP_Donate */,
 				930EFD801A738F1500AF96AF /* CMP_DonateTests */,
 				930EFD691A738F1400AF96AF /* Products */,
-				A615DE66E0EE85B8E35956E5 /* Pods */,
 				C1AB4529CED40F599EFF73CD /* Frameworks */,
 			);
 			sourceTree = "<group>";
@@ -380,9 +329,6 @@
 				930EFDB01A73904A00AF96AF /* LoginViewController.swift */,
 				9358A1251A739BB100CCE374 /* ProfileViewController.swift */,
 				935DB8601A86195700C9A19F /* EditProfileViewController.swift */,
-				93C0A8481A96BBAA00F9C069 /* UpdatePaymentTypeViewController.swift */,
-				935DB8621A861CA700C9A19F /* UpdateCardViewController.h */,
-				935DB8631A861CA700C9A19F /* UpdateCardViewController.m */,
 				93F53B651AA2B2AD0053FABF /* EditGeneralInfoViewController.swift */,
 				9362E0781AA5513E00A18D7F /* ChangePasswordViewController.swift */,
 				93E964EF1AA639B40037FB6D /* ProvideProfileInfoViewController.swift */,
@@ -412,17 +358,6 @@
 				931CA01B1A95C9390069B235 /* PayPalProfileSharingViewController.h */,
 			);
 			path = PayPalMobile;
-			sourceTree = "<group>";
-		};
-		9355DEC51AA982910005058A /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				9355DECC1AA982910005058A /* Alamofire.framework */,
-				9355DECE1AA982910005058A /* Alamofire.framework */,
-				9355DED01AA982910005058A /* Alamofire iOS Tests.xctest */,
-				9355DED21AA982910005058A /* Alamofire OSX Tests.xctest */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 		9358A1201A7394F600CCE374 /* Data Model */ = {
@@ -491,15 +426,6 @@
 			name = "Custom Views";
 			sourceTree = "<group>";
 		};
-		A615DE66E0EE85B8E35956E5 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				F90CD726D1BBB8E3D21FFE5D /* Pods.debug.xcconfig */,
-				DFAD6A43BF7F86765FB2F80C /* Pods.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
 		C1AB4529CED40F599EFF73CD /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -508,7 +434,6 @@
 				931CA0211A95C9C70069B235 /* MessageUI.framework */,
 				931CA01F1A95C9B90069B235 /* CoreMedia.framework */,
 				931CA01D1A95C9B40069B235 /* AVFoundation.framework */,
-				C690653828D3D63C095D1E3D /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -520,18 +445,15 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 930EFD871A738F1500AF96AF /* Build configuration list for PBXNativeTarget "CMP_Donate" */;
 			buildPhases = (
-				86C5C153F8F797C301240CBD /* Check Pods Manifest.lock */,
 				930EFD641A738F1400AF96AF /* Sources */,
 				930EFD651A738F1400AF96AF /* Frameworks */,
 				930EFD661A738F1400AF96AF /* Resources */,
-				4E1D8B5BA19B2DB1A2DD7954 /* Copy Pods Resources */,
 				9355DED91AA98CAA0005058A /* Embed Frameworks */,
+				9349A33B1B34F00900700AD2 /* ShellScript */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				9355DED41AA983850005058A /* PBXTargetDependency */,
-				9355DED81AA98CA90005058A /* PBXTargetDependency */,
 			);
 			name = CMP_Donate;
 			productName = CMP_Donate;
@@ -585,12 +507,6 @@
 			mainGroup = 930EFD5F1A738F1400AF96AF;
 			productRefGroup = 930EFD691A738F1400AF96AF /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = 9355DEC51AA982910005058A /* Products */;
-					ProjectRef = 9355DEC41AA982910005058A /* Alamofire.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
 				930EFD671A738F1400AF96AF /* CMP_Donate */,
@@ -598,37 +514,6 @@
 			);
 		};
 /* End PBXProject section */
-
-/* Begin PBXReferenceProxy section */
-		9355DECC1AA982910005058A /* Alamofire.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = Alamofire.framework;
-			remoteRef = 9355DECB1AA982910005058A /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		9355DECE1AA982910005058A /* Alamofire.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = Alamofire.framework;
-			remoteRef = 9355DECD1AA982910005058A /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		9355DED01AA982910005058A /* Alamofire iOS Tests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = "Alamofire iOS Tests.xctest";
-			remoteRef = 9355DECF1AA982910005058A /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		9355DED21AA982910005058A /* Alamofire OSX Tests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = "Alamofire OSX Tests.xctest";
-			remoteRef = 9355DED11AA982910005058A /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		930EFD661A738F1400AF96AF /* Resources */ = {
@@ -651,35 +536,18 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		4E1D8B5BA19B2DB1A2DD7954 /* Copy Pods Resources */ = {
+		9349A33B1B34F00900700AD2 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		86C5C153F8F797C301240CBD /* Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
+			shellScript = "./Fabric.framework/run 3cc637e1d3824e232bd36698a150467337ec9efe c67256aef310e10b2a85568ac99ae7f1e6f3830e791d6ec6db647f30845b827a";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -709,14 +577,12 @@
 				935DB8611A86195700C9A19F /* EditProfileViewController.swift in Sources */,
 				9358A1261A739BB100CCE374 /* ProfileViewController.swift in Sources */,
 				9358A1281A739E1700CCE374 /* UniversalProfile.swift in Sources */,
-				93C0A8491A96BBAA00F9C069 /* UpdatePaymentTypeViewController.swift in Sources */,
 				936C57FD1A75D26B0027343A /* IndividualFilmViewController.swift in Sources */,
 				93F53B661AA2B2AD0053FABF /* EditGeneralInfoViewController.swift in Sources */,
 				931CA0241A95CA4F0069B235 /* PPDataManager.swift in Sources */,
 				93045C9C1A9D8FC700E3BB3A /* FilmCategoriesViewController.swift in Sources */,
 				930EFDBC1A73916C00AF96AF /* Event.swift in Sources */,
 				93ED19921A85ED0E00F06FA1 /* SynopsisTableViewCell.swift in Sources */,
-				935DB8641A861CA700C9A19F /* UpdateCardViewController.m in Sources */,
 				930EFDB31A73905600AF96AF /* RegisterViewController.swift in Sources */,
 				93379F701A857EF70054BAB8 /* CrewCollectionViewCell.swift in Sources */,
 				939ACC1E1A9B127D00525152 /* SelectPaymentPreferenceViewController.swift in Sources */,
@@ -745,16 +611,6 @@
 			isa = PBXTargetDependency;
 			target = 930EFD671A738F1400AF96AF /* CMP_Donate */;
 			targetProxy = 930EFD7E1A738F1500AF96AF /* PBXContainerItemProxy */;
-		};
-		9355DED41AA983850005058A /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "Alamofire iOS";
-			targetProxy = 9355DED31AA983850005058A /* PBXContainerItemProxy */;
-		};
-		9355DED81AA98CA90005058A /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "Alamofire iOS";
-			targetProxy = 9355DED71AA98CA90005058A /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -857,12 +713,11 @@
 		};
 		930EFD881A738F1500AF96AF /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F90CD726D1BBB8E3D21FFE5D /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Viktor Denic (RYULYFSAYQ)";
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -887,6 +742,7 @@
 					CMP_Donate/PayPalMobile/libPayPalMobile.a,
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "fa340014-1a67-4e4c-a8ff-be686006a8d1";
 				SWIFT_OBJC_BRIDGING_HEADER = "CMP_Donate/CMP_Donate-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				VALID_ARCHS = "arm64 armv7 armv7s";
@@ -895,12 +751,11 @@
 		};
 		930EFD891A738F1500AF96AF /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = DFAD6A43BF7F86765FB2F80C /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Viktor Denic (RYULYFSAYQ)";
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -925,6 +780,7 @@
 					CMP_Donate/PayPalMobile/libPayPalMobile.a,
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "fa340014-1a67-4e4c-a8ff-be686006a8d1";
 				SWIFT_OBJC_BRIDGING_HEADER = "CMP_Donate/CMP_Donate-Bridging-Header.h";
 				VALID_ARCHS = "arm64 armv7 armv7s";
 			};

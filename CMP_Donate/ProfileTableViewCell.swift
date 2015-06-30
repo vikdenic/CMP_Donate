@@ -12,15 +12,15 @@ class ProfileTableViewCell: UITableViewCell {
 
     @IBOutlet var profilePicImageView: PFImageView!
     @IBOutlet var coverPhotoImageView: PFImageView!
-    @IBOutlet var fundingLabel: UILabel!
+//    @IBOutlet var fundingLabel: UILabel!
 
     override func awakeFromNib() {
         super.awakeFromNib()
         profilePicImageView.layer.cornerRadius = 50
         profilePicImageView.clipsToBounds = true
 
-        fundingLabel.layer.cornerRadius = 3
-        fundingLabel.clipsToBounds = true
+//        fundingLabel.layer.cornerRadius = 3
+//        fundingLabel.clipsToBounds = true
     }
 
     override func setSelected(selected: Bool, animated: Bool) {

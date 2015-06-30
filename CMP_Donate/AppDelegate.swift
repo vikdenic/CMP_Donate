@@ -7,6 +7,9 @@
 //
 
 import UIKit
+import Fabric
+//import Crashlytics
+import ParseCrashReporting
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -15,23 +18,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
 
+//        Fabric.with([Crashlytics()])
         //MARK: Parse
+        ParseCrashReporting.enable()
         Parse.enableLocalDatastore()
+
         Profile.registerSubclass()
         CrewMember.registerSubclass()
         Transaction.registerSubclass()
         Event.registerSubclass()
-        
-        //TODO: Crash Reporting
-//        ParseCrashReporting.enable()
+
         Parse.setApplicationId("WKvDyqa7Hs23bkdbhPqAM4eadylYMxRlKTboJ56G", clientKey: "JhKakKAmnmp5Zt1dcrlXYtn4phHe9yf6Z3GmxuTp")
         PFAnalytics.trackAppOpenedWithLaunchOptionsInBackground(launchOptions, block: nil)
-
-        //MARK: Stripe
-        Stripe.setDefaultPublishableKey(kStripeLivePublishableKey)
-
-        //MARK: PayPal
-        PayPalMobile.initializeWithClientIdsForEnvironments([PayPalEnvironmentProduction : kPayPalClientIdProduction, PayPalEnvironmentSandbox : kPayPalClientIdSandbox])
 
         //MARK: Profile
         if PFUser.currentUser() != nil
@@ -43,6 +41,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         //MARK: UI
         setUpUI()
+        pushSetup()
+
+//        Crashlytics.sharedInstance().crash()
 
         return true
     }
@@ -52,6 +53,45 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UINavigationBar.appearance().tintColor = UIColor.customRedColor()
         UITabBar.appearance().selectedImageTintColor = UIColor.customRedColor()
     }
+
+    func pushSetup()
+    {
+        if (UIDevice.currentDevice().systemVersion as NSString).floatValue >= 8.0
+        {
+            let notificationSettings = UIUserNotificationSettings(forTypes: .Sound | .Alert | .Badge, categories: nil)
+            UIApplication.sharedApplication().registerUserNotificationSettings(notificationSettings)
+            UIApplication.sharedApplication().registerForRemoteNotifications()
+        }
+        else
+        {
+            let notificationTypes : UIRemoteNotificationType = .Alert | .Badge | .Sound
+            UIApplication.sharedApplication().registerForRemoteNotificationTypes(notificationTypes)
+        }
+    }
+
+    func application(application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: NSData)
+    {
+        let currentInstallation = PFInstallation.currentInstallation()
+        currentInstallation.setDeviceTokenFromData(deviceToken)
+        currentInstallation.addUniqueObject("Workday", forKey: "channels")
+        currentInstallation.saveInBackgroundWithBlock { (succeeded, error) -> Void in
+
+            if let someUser = PFUser.currentUser()
+            {
+                UniversalProfile.sharedInstance.profile?.setValue(currentInstallation, forKey: "installation")
+                UniversalProfile.sharedInstance.profile?.saveInBackgroundWithBlock(nil)
+
+            }
+
+            println("installation saved")
+        }
+    }
+
+    func application(application: UIApplication, didReceiveRemoteNotification userInfo: [NSObject : AnyObject])
+    {
+        PFPush.handlePush(userInfo)
+    }
+
 
     func applicationWillResignActive(application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

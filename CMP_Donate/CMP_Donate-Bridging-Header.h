@@ -12,27 +12,26 @@
 #import "CustomActivityItemProvider.h"
 
 #import "CrewTableViewCell.h"
-#import "UpdateCardViewController.h"
 
-#import "Stripe.h"
-#import "PTKView.h"
+//#import "Stripe.h"
+//#import "PTKView.h"
+//
+//#import "PayPalMobile.h"
+//#import "PayPalConfiguration.h"
+//#import "PayPalFuturePaymentViewController.h"
+//#import "PayPalOAuthScopes.h"
+//#import "PayPalPayment.h"
+//#import "PayPalPaymentViewController.h"
+//#import "PayPalProfileSharingViewController.h"
 
-#import "PayPalMobile.h"
-#import "PayPalConfiguration.h"
-#import "PayPalFuturePaymentViewController.h"
-#import "PayPalOAuthScopes.h"
-#import "PayPalPayment.h"
-#import "PayPalPaymentViewController.h"
-#import "PayPalProfileSharingViewController.h"
-
-#import "CardIO.h"
-#import "CardIOCreditCardInfo.h"
-#import "CardIODetectionMode.h"
-#import "CardIOView.h"
-#import "CardIOViewDelegate.h"
-#import "CardIOPaymentViewController.h"
-#import "CardIOPaymentViewControllerDelegate.h"
-#import "CardIOUtilities.h"
+//#import "CardIO.h"
+//#import "CardIOCreditCardInfo.h"
+//#import "CardIODetectionMode.h"
+//#import "CardIOView.h"
+//#import "CardIOViewDelegate.h"
+//#import "CardIOPaymentViewController.h"
+//#import "CardIOPaymentViewControllerDelegate.h"
+//#import "CardIOUtilities.h"
 
 @import CoreTelephony;
 

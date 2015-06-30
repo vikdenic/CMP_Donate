@@ -44,19 +44,19 @@ class ProfileViewController: UIViewController, UITableViewDataSource, UITableVie
             {
                 self.transactionsArray = transactions!
 
-                if let someProfileCell = self.tableView.cellForRowAtIndexPath(NSIndexPath(forRow: 0, inSection: 0)) as? ProfileTableViewCell
-                {
-                    if self.transactionsArray.count == 1
-                    {
-                        someProfileCell.fundingLabel.text = "Funding 1 Project"
-                    }
-                    else
-                    {
-                        someProfileCell.fundingLabel.text = "Funding \(self.transactionsArray.count) Projects"
-                    }
-
-                    self.tableView.reloadData()
-                }
+//                if let someProfileCell = self.tableView.cellForRowAtIndexPath(NSIndexPath(forRow: 0, inSection: 0)) as? ProfileTableViewCell
+//                {
+//                    if self.transactionsArray.count == 1
+//                    {
+//                        someProfileCell.fundingLabel.text = "Funding 1 Project"
+//                    }
+//                    else
+//                    {
+//                        someProfileCell.fundingLabel.text = "Funding \(self.transactionsArray.count) Projects"
+//                    }
+//
+//                    self.tableView.reloadData()
+//                }
             }
         })
     }

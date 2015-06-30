@@ -580,19 +580,10 @@
                                                     <rect key="frame" x="110" y="40" width="100" height="100"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Funding 3 projects" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Prl-rx-qZB">
-                                                    <rect key="frame" x="82" y="150" width="156" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="calibratedRGB"/>
-                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
-                                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="coverPhotoImageView" destination="k8z-tS-PTa" id="BiI-i4-BD0"/>
-                                            <outlet property="fundingLabel" destination="Prl-rx-qZB" id="qQn-eh-vVT"/>
                                             <outlet property="profilePicImageView" destination="WVF-IH-ALd" id="11I-Tn-hv5"/>
                                         </connections>
                                     </tableViewCell>
@@ -1076,9 +1067,9 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="CmG-5p-rVU"/>
-        <segue reference="pAG-Wo-0Xq"/>
-        <segue reference="GYE-dk-sxQ"/>
+        <segue reference="dWi-yy-zW2"/>
         <segue reference="6FY-ia-8KG"/>
+        <segue reference="frH-VJ-nbn"/>
+        <segue reference="GYE-dk-sxQ"/>
     </inferredMetricsTieBreakers>
 </document>

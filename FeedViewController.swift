@@ -45,11 +45,6 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
     {
         //Using selector after view has appeared suppresses "detached view controllers" warning related to modal segue
         var timer = NSTimer.scheduledTimerWithTimeInterval(0, target: self, selector: "decideIfLoggedIn", userInfo: nil, repeats: false)
-
-//        navigationController?.resetNavBar()
-
-//        navigationController?.resetNavBar()
-//        navigationController?.navigationBarHidden = true
     }
 
     //Helper
